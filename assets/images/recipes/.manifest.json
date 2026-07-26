@@ -133,5 +133,50 @@
       1200
     ],
     "builtAt": "2026-07-26"
+  },
+  "baked-mac-and-cheese:4874c3eb916440d05122caeb45a2dbe64cc69789f19feeed726df4a21cd20768": {
+    "sha256": "4874c3eb916440d05122caeb45a2dbe64cc69789f19feeed726df4a21cd20768",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "crispy-falafel:da04484a06b929109fa15b1d24b33b4930b39f1504a1e0e5b0a2119929f6b260": {
+    "sha256": "da04484a06b929109fa15b1d24b33b4930b39f1504a1e0e5b0a2119929f6b260",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "vegetable-fried-rice:6107df5b009e3a941779945770865534cf326679109fc53328e1443e423bb8f9": {
+    "sha256": "6107df5b009e3a941779945770865534cf326679109fc53328e1443e423bb8f9",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "greek-salad:56b445ece4ab9fdfa46b9ebac3e59846893b402a10155a43d6986ff9ccbe98af": {
+    "sha256": "56b445ece4ab9fdfa46b9ebac3e59846893b402a10155a43d6986ff9ccbe98af",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "mushroom-risotto:69a0ed6a93e06b2c5833997ffd7ffb9ab7ca8e6aebbdcb5cae10a0ba526bc8a8": {
+    "sha256": "69a0ed6a93e06b2c5833997ffd7ffb9ab7ca8e6aebbdcb5cae10a0ba526bc8a8",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
   }
 }

@@ -23,6 +23,7 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/categories/vegetarian.html</loc>
+    <lastmod>2026-07-26</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -32,6 +33,11 @@
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/categories/drinks.html</loc>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/baked-mac-and-cheese.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/beef-stroganoff.html</loc>
@@ -79,12 +85,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/crispy-falafel.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/french-toast.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/fresh-guacamole.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/greek-salad.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/mushroom-risotto.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -100,6 +121,11 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/tomato-basil-pasta.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/vegetable-fried-rice.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>

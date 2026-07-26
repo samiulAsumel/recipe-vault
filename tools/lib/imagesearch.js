@@ -104,17 +104,18 @@ function stripHtml(text) {
   )).replace(/\s+/g, ' ').trim();
 }
 
-// Tries the professional-stock tier first; only falls back to Commons (or
-// the rest of Openverse) if that tier comes up empty for this term.
+// Professional-stock results are ranked first, but Commons is always
+// queried too -- a semantically-loose Openverse match (a pizza for
+// "macaroni and cheese") must not crowd out Commons hits that are simply
+// exact title matches, which is Commons's real strength.
 async function searchTerm(term) {
   const openverse = await searchOpenverse(term);
   await sleep(250);
-  const preferred = openverse.filter((c) => c.preferred);
-  if (preferred.length) return preferred;
-
   const commons = await searchCommons(term);
   await sleep(250);
-  return [...openverse, ...commons];
+  const preferred = openverse.filter((c) => c.preferred);
+  const rest = openverse.filter((c) => !c.preferred);
+  return [...preferred, ...commons, ...rest];
 }
 
 async function searchCandidates(searchTerms) {

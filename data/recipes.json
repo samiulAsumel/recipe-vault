@@ -3034,6 +3034,1026 @@
       "published": "2026-07-26",
       "updated": "2026-07-26",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "baked-mac-and-cheese",
+      "title": "Baked Mac and Cheese",
+      "tagline": "Elbow pasta in a rich three-cheese sauce, baked until bubbling.",
+      "description": "A roux-based cheese sauce coats tender pasta, topped with extra cheese and baked until the top turns golden and the edges go crisp.",
+      "category": "vegetarian",
+      "cuisine": "American",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 30,
+        "restMinutes": 5
+      },
+      "servings": 6,
+      "servingUnit": "servings",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "nut-free"
+      ],
+      "keywords": [
+        "mac and cheese",
+        "pasta",
+        "baked",
+        "comfort food",
+        "cheese"
+      ],
+      "equipment": [
+        "Large pot",
+        "Saucepan",
+        "Baking dish"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 450,
+              "unit": "g",
+              "item": "elbow macaroni",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "g",
+              "item": "butter",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "g",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 720,
+              "unit": "ml",
+              "item": "milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 250,
+              "unit": "g",
+              "item": "cheddar",
+              "note": "grated",
+              "scalable": true
+            },
+            {
+              "quantity": 100,
+              "unit": "g",
+              "item": "gruyere",
+              "note": "grated",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "mustard powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": 50,
+              "unit": "g",
+              "item": "breadcrumbs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "extra cheddar, for topping",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Cook the macaroni in salted boiling water until al dente, then drain.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Melt the butter in a saucepan, whisk in the flour, and cook a minute to form a roux.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Gradually whisk in the milk and simmer until thickened.",
+          "timerMinutes": 5,
+          "tip": "Adding the milk gradually while whisking is what keeps the sauce smooth instead of lumpy."
+        },
+        {
+          "text": "Remove from heat and stir in the cheddar, gruyere, and mustard powder until melted, then season with salt and pepper.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Combine the sauce with the cooked macaroni and pour into a baking dish.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Scatter breadcrumbs and extra cheddar over the top, then bake until golden and bubbling.",
+          "timerMinutes": 20,
+          "tip": null
+        },
+        {
+          "text": "Let it rest a few minutes before serving.",
+          "timerMinutes": 5,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Swap in any melty cheese combination -- a sharp cheddar plus something meltier like gruyere or gouda balances flavor and texture.",
+        "Keeps 3 days refrigerated; reheat covered with a splash of milk stirred in."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl",
+        "calories": 520,
+        "proteinG": 22,
+        "carbsG": 48,
+        "fatG": 27,
+        "saturatedFatG": 16,
+        "fiberG": 2,
+        "sugarG": 7,
+        "sodiumMg": 560,
+        "cholesterolMg": 75,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "macaroni cheese casserole dish",
+          "mac and cheese"
+        ],
+        "alt": "Baked mac and cheese with a golden bubbling crust",
+        "caption": "The crisp edges where the cheese meets the dish are the best part.",
+        "focal": "center",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Mac and Cheese (4999893437).jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mac_and_Cheese_(4999893437).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Mac_and_Cheese_%284999893437%29.jpg",
+          "artist": "Vancouver Bites! from Vancouver, Canada",
+          "credit": "Mac and Cheese",
+          "license": {
+            "id": "CC-BY-SA-2.0",
+            "name": "CC BY-SA 2.0",
+            "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "4874c3eb916440d05122caeb45a2dbe64cc69789f19feeed726df4a21cd20768",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-lasagna",
+        "mushroom-risotto"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "crispy-falafel",
+      "title": "Crispy Falafel",
+      "tagline": "Herbed chickpea patties, fried until deeply golden and crisp.",
+      "description": "Dried chickpeas soaked and blitzed with herbs and spices, then fried until the outside shatters and the inside stays tender.",
+      "category": "vegetarian",
+      "cuisine": "Middle Eastern",
+      "times": {
+        "prepMinutes": 20,
+        "cookMinutes": 15,
+        "restMinutes": 30
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "yieldText": "about 16 falafel",
+      "difficulty": "medium",
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "dairy-free"
+      ],
+      "keywords": [
+        "falafel",
+        "chickpeas",
+        "fried",
+        "middle eastern",
+        "vegetarian"
+      ],
+      "equipment": [
+        "Food processor",
+        "Frying pot"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 250,
+              "unit": "g",
+              "item": "dried chickpeas",
+              "note": "soaked overnight and drained, not canned",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "small onion",
+              "note": "roughly chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": "clove",
+              "item": "garlic",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "cup",
+              "item": "fresh parsley",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "cup",
+              "item": "fresh cilantro",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "ground cumin",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "ground coriander",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "baking powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and pepper to taste",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "oil for frying",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To serve",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "pita bread",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "tahini sauce",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "sliced vegetables",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Combine the soaked chickpeas, onion, garlic, parsley, cilantro, cumin, and coriander in a food processor.",
+          "timerMinutes": null,
+          "tip": "Dried, soaked chickpeas hold together when fried -- canned chickpeas are too wet and the falafel falls apart in the oil."
+        },
+        {
+          "text": "Pulse until finely chopped but not pureed -- the mixture should look like coarse sand, not paste.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Transfer to a bowl, stir in the baking powder, salt, and pepper, and refrigerate.",
+          "timerMinutes": 30,
+          "tip": null
+        },
+        {
+          "text": "Shape the mixture into small balls or patties.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Heat oil to 175C (350F) and fry the falafel in batches until deeply golden.",
+          "timerMinutes": 5,
+          "tip": null
+        },
+        {
+          "text": "Drain on paper towels and serve warm in pita with tahini sauce and vegetables.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "The overnight soak is essential -- dried chickpeas need at least 12 hours in water before blending.",
+        "Baked falafel (200C/400F for 25 minutes) works as a lighter alternative but loses some crispness."
+      ],
+      "nutrition": {
+        "servingSize": "4 falafel",
+        "calories": 280,
+        "proteinG": 12,
+        "carbsG": 36,
+        "fatG": 10,
+        "saturatedFatG": 1,
+        "fiberG": 9,
+        "sugarG": 5,
+        "sodiumMg": 380,
+        "cholesterolMg": 0,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "falafel",
+          "falafel plate"
+        ],
+        "alt": "Crispy falafel balls served with tahini sauce and pita",
+        "caption": "The inside should stay a vivid green -- that's the fresh herbs, not food coloring.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Bowl of falafel",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=90471123",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Bowl_of_falafel.jpg",
+          "artist": "EvanProdromou",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "da04484a06b929109fa15b1d24b33b4930b39f1504a1e0e5b0a2119929f6b260",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-hummus",
+        "greek-salad"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "vegetable-fried-rice",
+      "title": "Vegetable Fried Rice",
+      "tagline": "Day-old rice stir-fried with egg and vegetables in a hot wok.",
+      "description": "Cold, day-old rice separates into distinct grains in a hot wok, tossed with egg and whatever vegetables are on hand -- one of the fastest ways to turn leftovers into dinner.",
+      "category": "vegetarian",
+      "cuisine": "Chinese-inspired",
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 10,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "dairy-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "fried rice",
+        "vegetables",
+        "leftovers",
+        "quick",
+        "chinese-inspired"
+      ],
+      "equipment": [
+        "Wok or large skillet"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 3,
+              "unit": "cup",
+              "item": "cooked rice",
+              "note": "cold, preferably a day old",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "vegetable oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "eggs",
+              "note": "beaten",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "carrot",
+              "note": "diced",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "cup",
+              "item": "frozen peas",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "spring onions",
+              "note": "sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "soy sauce",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "sesame oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Heat half the vegetable oil in a wok over high heat, pour in the eggs, and scramble until just set, then remove and set aside.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the remaining oil, then the garlic, carrot, and peas, and stir-fry until the carrot softens.",
+          "timerMinutes": 3,
+          "tip": null
+        },
+        {
+          "text": "Add the cold rice, breaking up any clumps, and stir-fry until heated through and starting to crisp in spots.",
+          "timerMinutes": 5,
+          "tip": "Cold, day-old rice fries up dry and separate -- fresh warm rice turns gluey in the wok."
+        },
+        {
+          "text": "Return the scrambled egg to the wok, add the spring onions, soy sauce, and sesame oil, and toss to combine.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Season with salt and pepper, and serve hot.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Freeze leftover rice in flat bags specifically for this -- it thaws and fries better than rice that's just been refrigerated a day.",
+        "Add any leftover cooked vegetables or protein along with the peas and carrot."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl",
+        "calories": 320,
+        "proteinG": 9,
+        "carbsG": 48,
+        "fatG": 11,
+        "saturatedFatG": 2,
+        "fiberG": 3,
+        "sugarG": 3,
+        "sodiumMg": 560,
+        "cholesterolMg": 95,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "vegetable fried rice",
+          "fried rice"
+        ],
+        "alt": "Wok of vegetable fried rice with scrambled egg and spring onion",
+        "caption": "A hot wok and cold rice are the two non-negotiables here.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "A plate of Vegetable Fried Rice served with a side of sauce.",
+          "descriptionUrl": "https://wordpress.org/photos/photo/655681f3f0/",
+          "originalUrl": "https://pd.w.org/2025/05/655681f3f013286e8.95976799-2048x1376.jpg",
+          "artist": "Dulcea Suresha",
+          "credit": "wordpress",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "6107df5b009e3a941779945770865534cf326679109fc53328e1443e423bb8f9",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "chicken-curry",
+        "pan-fried-dumplings"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "greek-salad",
+      "title": "Greek Salad",
+      "tagline": "Crisp vegetables and briny feta tossed in a simple oregano vinaigrette.",
+      "description": "Tomatoes, cucumber, olives, and a thick slab of feta tossed with red onion and a sharp oregano dressing -- no lettuce, and none needed.",
+      "category": "vegetarian",
+      "cuisine": "Greek",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 0,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "gluten-free"
+      ],
+      "keywords": [
+        "greek salad",
+        "feta",
+        "tomato",
+        "cucumber",
+        "salad",
+        "mediterranean"
+      ],
+      "equipment": [
+        "Large bowl"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 4,
+              "unit": null,
+              "item": "ripe tomatoes",
+              "note": "cut into wedges",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "cucumber",
+              "note": "sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "green bell pepper",
+              "note": "sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": null,
+              "item": "red onion",
+              "note": "thinly sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 150,
+              "unit": "g",
+              "item": "Kalamata olives",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "feta",
+              "note": "in a slab or cubed",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the dressing",
+          "items": [
+            {
+              "quantity": 4,
+              "unit": "tbsp",
+              "item": "olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "red wine vinegar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "dried oregano",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Combine the tomatoes, cucumber, bell pepper, red onion, and olives in a large bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Whisk the olive oil, vinegar, oregano, salt, and pepper together in a small bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour the dressing over the vegetables and toss gently.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Top with the feta, left as a slab or cubed and scattered over.",
+          "timerMinutes": null,
+          "tip": "A slab of feta left whole on top, drizzled with oil and oregano, is the traditional presentation -- crumbling it is common but not classic."
+        },
+        {
+          "text": "Serve immediately.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Salt the tomatoes lightly and let them sit a few minutes first if they need extra flavor.",
+        "This salad does not keep well once dressed -- dress only what you'll eat that sitting."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl",
+        "calories": 280,
+        "proteinG": 9,
+        "carbsG": 12,
+        "fatG": 23,
+        "saturatedFatG": 9,
+        "fiberG": 3,
+        "sugarG": 6,
+        "sodiumMg": 680,
+        "cholesterolMg": 45,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "greek salad",
+          "greek salad feta"
+        ],
+        "alt": "Greek salad with tomato, cucumber, olives, and a slab of feta",
+        "caption": "A whole slab of feta on top is the traditional way to serve it.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "greek salad feta",
+          "descriptionUrl": "https://www.rawpixel.com/image/5945418/free-public-domain-cc0-photo",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg3Njc5MDItaW1hZ2Uta3d5b2xrMXMuanBn.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "56b445ece4ab9fdfa46b9ebac3e59846893b402a10155a43d6986ff9ccbe98af",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "crispy-falafel",
+        "classic-bruschetta"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "mushroom-risotto",
+      "title": "Mushroom Risotto",
+      "tagline": "Arborio rice stirred slowly with stock until creamy, folded with mushrooms.",
+      "description": "Rice released of its starch one ladle of stock at a time, finished with sauteed mushrooms and Parmesan -- patience is the only hard part.",
+      "category": "vegetarian",
+      "cuisine": "Italian",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 35,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "medium",
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "risotto",
+        "mushroom",
+        "arborio rice",
+        "italian",
+        "vegetarian"
+      ],
+      "equipment": [
+        "Wide heavy-bottomed pan",
+        "Saucepan for stock"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 1.2,
+              "unit": "l",
+              "item": "vegetable stock",
+              "note": "kept warm",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 250,
+              "unit": "g",
+              "item": "mushrooms",
+              "note": "sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "onion",
+              "note": "finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 300,
+              "unit": "g",
+              "item": "arborio rice",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 120,
+              "unit": "ml",
+              "item": "dry white wine",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 50,
+              "unit": "g",
+              "item": "butter",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "g",
+              "item": "Parmesan",
+              "note": "grated, plus extra to serve",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "fresh parsley, chopped",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Heat half the olive oil in a wide pan and saute the mushrooms until golden, then remove and set aside.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the remaining oil to the pan and cook the onion until softened.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the rice and stir for a minute until the grains are coated and glossy.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour in the wine and stir until absorbed.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the warm stock one ladle at a time, stirring frequently and waiting until each addition is absorbed before adding the next.",
+          "timerMinutes": 25,
+          "tip": "Adding stock gradually and stirring often is what coaxes the starch out of the rice -- dump it all in at once and you get boiled rice, not risotto."
+        },
+        {
+          "text": "When the rice is tender and creamy, stir in the butter, Parmesan, and reserved mushrooms.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Season with salt and pepper, and serve immediately with parsley and extra Parmesan.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Risotto does not wait -- have your other courses ready before you start stirring.",
+        "Leftover risotto makes excellent fried arancini the next day."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl",
+        "calories": 460,
+        "proteinG": 12,
+        "carbsG": 58,
+        "fatG": 18,
+        "saturatedFatG": 9,
+        "fiberG": 3,
+        "sugarG": 3,
+        "sodiumMg": 580,
+        "cholesterolMg": 35,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "mushroom risotto",
+          "risotto"
+        ],
+        "alt": "Creamy mushroom risotto garnished with parsley and Parmesan",
+        "caption": "It should be creamy enough to slowly spread out when spooned onto a plate.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "mushroom risotto",
+          "descriptionUrl": "https://www.rawpixel.com/image/5945697/free-public-domain-cc0-photo",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg3NDUyNTktaW1hZ2Uta3d5b25uMXMuanBn.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "69a0ed6a93e06b2c5833997ffd7ffb9ab7ca8e6aebbdcb5cae10a0ba526bc8a8",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "baked-mac-and-cheese",
+        "spaghetti-carbonara"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }
