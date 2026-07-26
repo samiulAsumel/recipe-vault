@@ -28,6 +28,7 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/categories/desserts.html</loc>
+    <lastmod>2026-07-26</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -36,6 +37,11 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/baked-mac-and-cheese.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/banana-bread.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -56,6 +62,16 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/chicken-curry.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/chocolate-brownies.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/classic-apple-pie.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -85,6 +101,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/classic-tiramisu.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/crispy-falafel.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
@@ -106,6 +127,11 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/mushroom-risotto.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/new-york-cheesecake.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>

@@ -4054,6 +4054,1035 @@
       "published": "2026-07-26",
       "updated": "2026-07-26",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "classic-tiramisu",
+      "title": "Classic Tiramisu",
+      "tagline": "Coffee-soaked ladyfingers layered with a mascarpone cream, no baking required.",
+      "description": "Espresso-dunked ladyfingers layered with a whipped egg and mascarpone cream, dusted with cocoa and chilled until set -- the classic no-bake Italian dessert.",
+      "category": "desserts",
+      "cuisine": "Italian",
+      "times": {
+        "prepMinutes": 30,
+        "cookMinutes": 0,
+        "restMinutes": 240
+      },
+      "servings": 8,
+      "servingUnit": "servings",
+      "difficulty": "medium",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "tiramisu",
+        "coffee",
+        "mascarpone",
+        "no-bake",
+        "italian",
+        "dessert"
+      ],
+      "equipment": [
+        "Mixing bowls",
+        "Electric mixer",
+        "9x13 in baking dish"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 4,
+              "unit": null,
+              "item": "egg yolks",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 100,
+              "unit": "g",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 500,
+              "unit": "g",
+              "item": "mascarpone",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 240,
+              "unit": "ml",
+              "item": "heavy cream",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 350,
+              "unit": "ml",
+              "item": "strong espresso",
+              "note": "cooled",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "coffee liqueur",
+              "note": "optional",
+              "scalable": true
+            },
+            {
+              "quantity": 24,
+              "unit": null,
+              "item": "ladyfinger biscuits",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "cocoa powder",
+              "note": "for dusting",
+              "scalable": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Whisk the egg yolks and sugar together until pale and thick.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Beat in the mascarpone until smooth.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "In a separate bowl, whip the heavy cream to soft peaks, then fold into the mascarpone mixture.",
+          "timerMinutes": null,
+          "tip": "Folding rather than stirring keeps the cream light -- overmixing deflates it and the tiramisu ends up dense instead of airy."
+        },
+        {
+          "text": "Combine the espresso and coffee liqueur in a shallow dish. Dip each ladyfinger briefly and arrange in a single layer in the baking dish.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Spread half the mascarpone cream over the ladyfingers.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Repeat with a second layer of dipped ladyfingers and the remaining cream.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Cover and refrigerate until set.",
+          "timerMinutes": 240,
+          "tip": null
+        },
+        {
+          "text": "Dust with cocoa powder just before serving.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Dip the ladyfingers quickly, just a few seconds per side -- lingering too long makes the base soggy instead of tender.",
+        "Keeps 3 days refrigerated."
+      ],
+      "nutrition": {
+        "servingSize": "1 slice",
+        "calories": 420,
+        "proteinG": 7,
+        "carbsG": 28,
+        "fatG": 30,
+        "saturatedFatG": 17,
+        "fiberG": 1,
+        "sugarG": 18,
+        "sodiumMg": 90,
+        "cholesterolMg": 190,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "tiramisu",
+          "tiramisu dessert"
+        ],
+        "alt": "Slice of tiramisu dusted with cocoa powder on a plate",
+        "caption": "The cocoa dusting goes on right before serving, not before the chill.",
+        "focal": "center",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Tiramisu with blueberries and raspberries, July 2011.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tiramisu_with_blueberries_and_raspberries,_July_2011.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Tiramisu_with_blueberries_and_raspberries%2C_July_2011.jpg",
+          "artist": "Alexis Fam",
+          "credit": "Flickr: Tiramisu",
+          "license": {
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "ce7215c16752691cdc4c8c757ea60761707edad46f1861750c71b6aa34c3d571",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "new-york-cheesecake",
+        "chocolate-brownies"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "banana-bread",
+      "title": "Banana Bread",
+      "tagline": "A moist, dense loaf built on very ripe, spotty bananas.",
+      "description": "Overripe bananas mashed into a simple batter and baked into a moist loaf -- the best use for bananas too far gone to eat on their own.",
+      "category": "desserts",
+      "cuisine": "American",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 60,
+        "restMinutes": 10
+      },
+      "servings": 10,
+      "servingUnit": "servings",
+      "yieldText": "1 loaf (10 slices)",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "banana bread",
+        "baking",
+        "loaf",
+        "bananas",
+        "dessert",
+        "snack"
+      ],
+      "equipment": [
+        "Loaf pan",
+        "Mixing bowls"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "very ripe bananas",
+              "note": "mashed",
+              "scalable": true
+            },
+            {
+              "quantity": 115,
+              "unit": "g",
+              "item": "butter",
+              "note": "melted",
+              "scalable": true
+            },
+            {
+              "quantity": 150,
+              "unit": "g",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "egg",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "vanilla extract",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "baking soda",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "pinch of salt",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": 190,
+              "unit": "g",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "chopped walnuts, optional",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Preheat the oven to 175C (350F) and grease a loaf pan.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Mash the bananas well in a large bowl, then stir in the melted butter.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Stir in the sugar, egg, and vanilla.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Sprinkle the baking soda and salt over the mixture and stir in.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Fold in the flour just until combined.",
+          "timerMinutes": null,
+          "tip": "Overmixing develops the gluten in the flour and makes the loaf tough instead of tender -- stop as soon as no dry flour is visible."
+        },
+        {
+          "text": "Fold in walnuts, if using, then pour the batter into the prepared loaf pan.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Bake until a skewer inserted into the center comes out clean.",
+          "timerMinutes": 55,
+          "tip": null
+        },
+        {
+          "text": "Cool in the pan, then turn out onto a rack to cool completely.",
+          "timerMinutes": 10,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "The spottier and blacker the banana peel, the sweeter and more flavorful the bread -- avoid bananas that are still yellow and firm.",
+        "Keeps 4 days at room temperature wrapped; freezes well for up to 3 months."
+      ],
+      "nutrition": {
+        "servingSize": "1 slice",
+        "calories": 220,
+        "proteinG": 3,
+        "carbsG": 34,
+        "fatG": 9,
+        "saturatedFatG": 5,
+        "fiberG": 1,
+        "sugarG": 17,
+        "sodiumMg": 150,
+        "cholesterolMg": 35,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "banana bread",
+          "banana bread loaf"
+        ],
+        "alt": "Sliced banana bread loaf on a wooden board",
+        "caption": "Let it cool completely before slicing, or it crumbles instead of cutting clean.",
+        "focal": "center",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Banana bread slices.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Banana_bread_slices.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Banana_bread_slices.jpg",
+          "artist": "Shisma",
+          "credit": "Own work",
+          "license": {
+            "id": "CC-BY-4.0",
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "6e2e18b0787bbdfbe9780893b7aac8c9d354c9efb77537079750e3bd4a487a4b",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "chocolate-brownies",
+        "classic-apple-pie"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "chocolate-brownies",
+      "title": "Chocolate Brownies",
+      "tagline": "Dense, fudgy squares with a crackly top.",
+      "description": "Melted chocolate and butter whisked with sugar and eggs until glossy, baked just until set -- the crackly top is the sign you got it right.",
+      "category": "desserts",
+      "cuisine": "American",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 30,
+        "restMinutes": 15
+      },
+      "servings": 12,
+      "servingUnit": "servings",
+      "yieldText": "16 squares",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "brownies",
+        "chocolate",
+        "baking",
+        "fudgy",
+        "dessert"
+      ],
+      "equipment": [
+        "Saucepan",
+        "8x8 in baking pan",
+        "Mixing bowl"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "dark chocolate",
+              "note": "chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 170,
+              "unit": "g",
+              "item": "butter",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 250,
+              "unit": "g",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "eggs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "vanilla extract",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 100,
+              "unit": "g",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 30,
+              "unit": "g",
+              "item": "cocoa powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "chocolate chips, optional",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Preheat the oven to 175C (350F) and line an 8x8 in baking pan with parchment.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Melt the chocolate and butter together in a saucepan over low heat, stirring until smooth.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Remove from heat and whisk in the sugar until glossy.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Whisk in the eggs one at a time, then the vanilla.",
+          "timerMinutes": null,
+          "tip": "Whisking hard at this stage is what gives brownies their shiny, crackly top -- do not skip it."
+        },
+        {
+          "text": "Fold in the flour, cocoa powder, and salt just until no streaks remain.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour into the prepared pan, scatter with chocolate chips if using, and bake until the edges are set but the center still looks slightly underdone.",
+          "timerMinutes": 28,
+          "tip": null
+        },
+        {
+          "text": "Cool in the pan before cutting into squares.",
+          "timerMinutes": 15,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Slight underbaking is what keeps brownies fudgy -- a toothpick should come out with a few moist crumbs, not clean.",
+        "Keeps 4 days in an airtight container at room temperature."
+      ],
+      "nutrition": {
+        "servingSize": "1 square",
+        "calories": 260,
+        "proteinG": 4,
+        "carbsG": 32,
+        "fatG": 14,
+        "saturatedFatG": 8,
+        "fiberG": 2,
+        "sugarG": 23,
+        "sodiumMg": 110,
+        "cholesterolMg": 55,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "chocolate brownies",
+          "fudgy brownies"
+        ],
+        "alt": "Stack of fudgy chocolate brownies with a crackly top",
+        "caption": "A few moist crumbs on the toothpick mean it's done, not underbaked.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Free homemade chocolate brownies image",
+          "descriptionUrl": "https://www.rawpixel.com/image/5905202/photo-image-public-domain-food-chocolate",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL3B4ODE5ODczLWltYWdlLWt3dnV5bWZoLmpwZw.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "0502f0e36fe79dcf7c55bf7da210b8f61d8abc15c7a86b1b21b17c1ec4305e3e",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-tiramisu",
+        "banana-bread"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "classic-apple-pie",
+      "title": "Classic Apple Pie",
+      "tagline": "Spiced apples baked in a flaky double crust until bubbling.",
+      "description": "Sliced apples tossed with sugar and cinnamon, baked between two layers of buttery pastry until the filling bubbles through the vents.",
+      "category": "desserts",
+      "cuisine": "American",
+      "times": {
+        "prepMinutes": 40,
+        "cookMinutes": 55,
+        "restMinutes": 30
+      },
+      "servings": 8,
+      "servingUnit": "servings",
+      "difficulty": "hard",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "apple pie",
+        "baking",
+        "pastry",
+        "dessert",
+        "fall"
+      ],
+      "equipment": [
+        "9-inch pie dish",
+        "Rolling pin",
+        "Mixing bowls"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": "For the pastry",
+          "items": [
+            {
+              "quantity": 300,
+              "unit": "g",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 225,
+              "unit": "g",
+              "item": "cold butter",
+              "note": "cubed",
+              "scalable": true
+            },
+            {
+              "quantity": 75,
+              "unit": "ml",
+              "item": "ice water",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the filling",
+          "items": [
+            {
+              "quantity": 1000,
+              "unit": "g",
+              "item": "apples",
+              "note": "peeled and sliced, a mix of tart and sweet",
+              "scalable": true
+            },
+            {
+              "quantity": 150,
+              "unit": "g",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "ground cinnamon",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.25,
+              "unit": "tsp",
+              "item": "ground nutmeg",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "lemon juice",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "egg",
+              "note": "beaten, for the wash",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": "for sprinkling",
+              "scalable": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Pulse the flour, salt, and sugar with the cold butter until the mixture resembles coarse crumbs, then add ice water a tablespoon at a time until the dough just comes together.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Divide the dough in two, shape into discs, wrap, and refrigerate.",
+          "timerMinutes": 30,
+          "tip": "Cold butter and a short rest are what create flaky layers in the crust -- warm dough bakes up dense."
+        },
+        {
+          "text": "Toss the apples with the sugar, flour, cinnamon, nutmeg, and lemon juice.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Preheat the oven to 200C (400F). Roll out one disc of dough and line the pie dish.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Fill with the apple mixture, then roll out the second disc and place over the top, sealing and crimping the edges, and cut a few vents in the top.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Brush with the egg wash and sprinkle with sugar.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Bake until the crust is deep golden and the filling bubbles through the vents.",
+          "timerMinutes": 50,
+          "tip": null
+        },
+        {
+          "text": "Cool before slicing.",
+          "timerMinutes": 30,
+          "tip": "Slicing warm pie lets the filling run out -- letting it cool lets the juices set."
+        }
+      ],
+      "notes": [
+        "A mix of tart apples (Granny Smith) and sweeter ones (Honeycrisp) gives the best balance of flavor and texture.",
+        "Cover the edges with foil partway through baking if they brown too quickly."
+      ],
+      "nutrition": {
+        "servingSize": "1 slice",
+        "calories": 380,
+        "proteinG": 4,
+        "carbsG": 54,
+        "fatG": 18,
+        "saturatedFatG": 11,
+        "fiberG": 3,
+        "sugarG": 30,
+        "sodiumMg": 230,
+        "cholesterolMg": 55,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "apple pie",
+          "apple pie slice"
+        ],
+        "alt": "Slice of apple pie showing spiced apple filling and a flaky crust",
+        "caption": "Letting it cool fully is what keeps a slice from collapsing.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Apple pie",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=323125",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Apple_pie.jpg",
+          "artist": "Dan Parsons",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-SA-2.0",
+            "name": "CC BY-SA 2.0",
+            "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "64702b3e49b6eeab08079a6a7b568f31a056bdbcbb7631bc8149e1651aa50061",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "new-york-cheesecake",
+        "banana-bread"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "new-york-cheesecake",
+      "title": "New York Cheesecake",
+      "tagline": "Dense, creamy cheesecake baked over a buttery graham crust.",
+      "description": "A thick cream cheese filling baked slowly in a water bath until just set, over a graham cracker crust -- rich, dense, and worth the wait for it to chill.",
+      "category": "desserts",
+      "cuisine": "American",
+      "times": {
+        "prepMinutes": 30,
+        "cookMinutes": 70,
+        "restMinutes": 480
+      },
+      "servings": 10,
+      "servingUnit": "servings",
+      "difficulty": "hard",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "cheesecake",
+        "new york cheesecake",
+        "baking",
+        "dessert",
+        "cream cheese"
+      ],
+      "equipment": [
+        "9-inch springform pan",
+        "Roasting pan for water bath",
+        "Electric mixer"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": "For the crust",
+          "items": [
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "graham crackers",
+              "note": "crushed",
+              "scalable": true
+            },
+            {
+              "quantity": 75,
+              "unit": "g",
+              "item": "butter",
+              "note": "melted",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the filling",
+          "items": [
+            {
+              "quantity": 900,
+              "unit": "g",
+              "item": "cream cheese",
+              "note": "softened",
+              "scalable": true
+            },
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "eggs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 240,
+              "unit": "g",
+              "item": "sour cream",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "vanilla extract",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Preheat the oven to 160C (325F). Combine the crushed graham crackers, melted butter, and sugar, and press into the base of the springform pan.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Beat the cream cheese and sugar together until smooth and free of lumps.",
+          "timerMinutes": null,
+          "tip": "Lumps in cold cream cheese never fully smooth out once the eggs go in -- beat it alone first until completely smooth."
+        },
+        {
+          "text": "Beat in the eggs one at a time on low speed, then the sour cream, vanilla, and flour, mixing just until combined.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour the filling over the crust. Wrap the outside of the pan in foil and place in a roasting pan with hot water reaching partway up the sides.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Bake until the edges are set but the center still jiggles slightly.",
+          "timerMinutes": 65,
+          "tip": null
+        },
+        {
+          "text": "Turn off the oven and let the cheesecake cool inside with the door ajar for an hour, then refrigerate until fully chilled.",
+          "timerMinutes": 480,
+          "tip": "Cooling gradually in the oven is what prevents the top from cracking -- a sudden temperature change is the main cause."
+        },
+        {
+          "text": "Run a knife around the edge before releasing the springform ring.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "A water bath insulates the cheesecake from direct heat, which is what keeps the texture creamy instead of curdled.",
+        "Keeps 5 days refrigerated."
+      ],
+      "nutrition": {
+        "servingSize": "1 slice",
+        "calories": 460,
+        "proteinG": 8,
+        "carbsG": 32,
+        "fatG": 34,
+        "saturatedFatG": 20,
+        "fiberG": 1,
+        "sugarG": 25,
+        "sodiumMg": 330,
+        "cholesterolMg": 150,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "new york cheesecake",
+          "cheesecake slice"
+        ],
+        "alt": "Slice of New York cheesecake with a graham cracker crust",
+        "caption": "A clean slice takes a knife run under hot water between cuts.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "New York Cheesecake with Blueberries",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=10727386",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/New_York_Cheesecake_with_Blueberries.jpg",
+          "artist": "Kimberly Vardeman",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "04882eb452d57f9a9462b369d24ecbbd6ba3d5df14f427b4d3947ef44e32ea00",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-tiramisu",
+        "classic-apple-pie"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }

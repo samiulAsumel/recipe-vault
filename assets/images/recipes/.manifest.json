@@ -178,5 +178,50 @@
       1200
     ],
     "builtAt": "2026-07-26"
+  },
+  "classic-tiramisu:ce7215c16752691cdc4c8c757ea60761707edad46f1861750c71b6aa34c3d571": {
+    "sha256": "ce7215c16752691cdc4c8c757ea60761707edad46f1861750c71b6aa34c3d571",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "banana-bread:6e2e18b0787bbdfbe9780893b7aac8c9d354c9efb77537079750e3bd4a487a4b": {
+    "sha256": "6e2e18b0787bbdfbe9780893b7aac8c9d354c9efb77537079750e3bd4a487a4b",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "chocolate-brownies:0502f0e36fe79dcf7c55bf7da210b8f61d8abc15c7a86b1b21b17c1ec4305e3e": {
+    "sha256": "0502f0e36fe79dcf7c55bf7da210b8f61d8abc15c7a86b1b21b17c1ec4305e3e",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "classic-apple-pie:64702b3e49b6eeab08079a6a7b568f31a056bdbcbb7631bc8149e1651aa50061": {
+    "sha256": "64702b3e49b6eeab08079a6a7b568f31a056bdbcbb7631bc8149e1651aa50061",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "new-york-cheesecake:04882eb452d57f9a9462b369d24ecbbd6ba3d5df14f427b4d3947ef44e32ea00": {
+    "sha256": "04882eb452d57f9a9462b369d24ecbbd6ba3d5df14f427b4d3947ef44e32ea00",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
   }
 }
