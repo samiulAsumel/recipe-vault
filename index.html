@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Sub-part 9 (Head Deep Dive) -->
+    <meta charset="UTF-8" />
+    <!-- charset must sit within the first 1024 bytes, before any content that
+         could otherwise be misread with the wrong encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homestyle Recipe Book — Simple, Tested Recipes</title>
+    <meta
+      name="description"
+      content="A small collection of simple, tested home recipes with clear ingredients, step-by-step instructions, and nutrition info."
+    />
+    <link rel="canonical" href="https://example.com/index.html" />
+    <!-- canonical tells search engines the "real" URL if this page is ever
+         reachable at more than one address -->
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph controls how this page looks when shared on social platforms.
+         Note: og:image should be an ABSOLUTE url in a real production deploy —
+         kept relative here since this is a local, unhosted learning project. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Homestyle Recipe Book" />
+    <meta
+      property="og:description"
+      content="Simple, tested home recipes with full ingredient lists and step-by-step instructions."
+    />
+    <meta property="og:image" content="assets/images/site-preview.jpg" />
+  </head>
+  <body>
+    <!-- header/nav/footer repeated on every page - no include mechanism in plain HTML -->
+    <header>
+      <h1>Homestyle Recipe Book</h1>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes/tomato-basil-pasta.html">Tomato Basil Pasta</a></li>
+          <li><a href="recipes/chicken-curry.html">Chicken Curry</a>"</li>
+          <li><a href="submit-recipe.html">Submit a Recipe</a>"</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="intro-heading">
+        <h2 id="intro-heading">Welcome to the Homestyle Recipe Book</h2>
+        <p>
+          This is a small, growing collection of recipes that have actually been cooked and tested
+          at home - nothing fancy, nothing that needs a trip to a specialty store.
+        </p>
+      </section>
+
+      <section aria-labelledby="featured-heading">
+        <h2 id="featured-heading">Featured Recipes</h2>
+        <article>
+          <img
+            src="assets/images/pasta-thumb.jpg"
+            alt="Bowl of tomato basil pasta topped with fresh basil leaves"
+            width="320"
+            height="200"
+          />
+          <h3><a href="recipes/tomato-basil-pasta.html">Tomato Basil Pasta</a></h3>
+          <p>
+            A 30-minute weeknight pasta built on a simp;e fresh tomato sauce, with garlic, olive
+            oil, and fresh basil. This is a classic Italian dish that is easy to make and always a
+            crowd-pleaser.
+          </p>
+        </article>
+        <article>
+          <img
+            src="assets/images/curry-thumb.jpg"
+            alt="Bowl of chicken curry with rice and cilantro garnish"
+            width="320"
+            height="200"
+          />
+          <h3><a href="recipes/chicken-curry.html">Chicken Curry</a></h3>
+          <p>A one-pot chicken curry with a spice base you can adjust to taste.</p>
+        </article>
+      </section>
+      <aside aria-labelledby="tip-heading">
+        <h2 id="tip-heading">Kitchen Wisdom</h2>
+        <blockquote cite="https://example.com/kitchen-notes">
+          <p>Salt in stages, taste as you go — a dish seasoned only once is a dish seasoned by guesswork.</p>
+        </blockquote>
+        <p>— House Kitchen Notes</p>
+        <!-- Deliberately a generic in-house citation, not attributed to any real
+             named person — a quote's source should never be invented. -->
+    </main>
+    <footer>
+      <p>&copy; 2026 Homestyle Recipe Book. Built as a learning project.</p>
+      <p><a href="submit-recipe.html">Have a recipe to share?</a></p>
+    </footer>
+
+  </body>
+</html>
