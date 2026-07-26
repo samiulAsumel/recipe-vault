@@ -2,6 +2,8 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+  initActiveNav();
+
   const hamburger = document.getElementById('hamburger');
   const overlay = document.getElementById('mobile-nav-overlay');
   if (!hamburger || !overlay) return;
@@ -40,3 +42,31 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', closeNav);
   });
 });
+
+// index.html is one page serving two nav targets -- "Home" (the hero) and
+// "Recipes" (the #all section further down) -- so which one is "current"
+// depends on the hash at runtime, not just the filename. The server-side
+// aria-current (set from the page being rendered) is correct everywhere
+// else and is left alone; this only runs where that ambiguity exists.
+function initActiveNav() {
+  const allSection = document.getElementById('all');
+  if (!allSection) return;
+
+  const homeLink = document.querySelector('.nav-link[href="index.html"]');
+  const recipesLink = document.querySelector('.nav-link[href="index.html#all"]');
+  if (!homeLink || !recipesLink) return;
+
+  function update() {
+    const onRecipes = location.hash === '#all';
+    if (onRecipes) {
+      recipesLink.setAttribute('aria-current', 'page');
+      homeLink.removeAttribute('aria-current');
+    } else {
+      homeLink.setAttribute('aria-current', 'page');
+      recipesLink.removeAttribute('aria-current');
+    }
+  }
+
+  update();
+  window.addEventListener('hashchange', update);
+}
