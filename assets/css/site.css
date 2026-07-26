@@ -419,3 +419,15 @@ footer { border-top: 1px solid var(--border-dim); padding-block: 3rem 2rem; back
 /* ── 404 page ────────────────────────────────────────────── */
 .not-found { text-align: center; padding-block: 96px; }
 .not-found h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+
+/* ── Touch targets ───────────────────────────────────────── */
+/* (pointer: coarse) targets actual touch input rather than guessing from
+   viewport width -- a touch laptop or a wide tablet in landscape still
+   needs these bumped, and neither would match a narrow max-width query. */
+@media (pointer: coarse) {
+  .servings-control button { width: 40px; height: 40px; }
+  .chip { padding: .6rem 1.1rem; }
+  .icon-btn { padding: .65rem; }
+  .icon-btn .icon { width: 1.4em; height: 1.4em; }
+  .hamburger { width: 44px; height: 44px; }
+}
