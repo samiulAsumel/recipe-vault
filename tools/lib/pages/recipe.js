@@ -14,8 +14,14 @@ const DEPTH = 1; // recipes/<slug>.html
 function ingredientGroup(group) {
   const items = group.items
     .map((item) => {
+      // data-rest is the item+note text exactly as formatIngredientLine
+      // renders it, server-side -- the scaler reads it directly rather
+      // than reverse-parsing quantity tokens out of the rendered string,
+      // which breaks the moment a scaled quantity spans two words (e.g.
+      // a mixed number like "1 1/2").
+      const rest = item.item + (item.note ? ', ' + item.note : '');
       const scaleAttrs = item.scalable
-        ? ` data-qty=${attr(String(item.quantity))} data-unit=${attr(item.unit || '')}`
+        ? ` data-qty=${attr(String(item.quantity))} data-unit=${attr(item.unit || '')} data-rest=${attr(rest)}`
         : '';
       return `<li${scaleAttrs}><span class="ingredient-text">${esc(formatIngredientLine(item))}</span></li>`;
     })

@@ -245,7 +245,8 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 1.75rem; }
 .category-tile p { color: var(--text-muted); margin-bottom: 1rem; }
 .category-count { font-size: .85rem; font-weight: 600; color: var(--accent); }
 .category-page h1 { margin-bottom: .5rem; }
-.category-page > p { color: var(--text-muted); margin-bottom: .5rem; max-width: var(--max-w-prose); }
+.category-page > p { color: var(--text-muted); margin-bottom: 1rem; max-width: var(--max-w-prose); }
+.category-page > h2 { margin-top: 2rem; margin-bottom: .5rem; }
 .category-search-link { margin-bottom: 2rem; font-size: .9rem; }
 
 /* ── Filter bar ──────────────────────────────────────────── */

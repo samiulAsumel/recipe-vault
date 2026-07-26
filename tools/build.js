@@ -12,6 +12,9 @@ const { renderRecipe } = require('./lib/pages/recipe');
 const { renderCategory } = require('./lib/pages/category');
 const { renderCredits } = require('./lib/pages/credits');
 const { renderSitemap, renderRobots } = require('./lib/pages/feeds');
+const { renderSubmit } = require('./lib/pages/submit');
+const { renderAbout } = require('./lib/pages/about');
+const { renderNotFound } = require('./lib/pages/notfound');
 const { renderSearchIndex } = require('./lib/searchindex');
 
 const MANIFEST_PATH = path.join(ROOT, 'build-manifest.json');
@@ -63,6 +66,9 @@ function main() {
   }
 
   emit('credits.html', renderCredits(recipes, site));
+  emit('about.html', renderAbout(site));
+  emit('submit-recipe.html', renderSubmit(site));
+  emit('404.html', renderNotFound(site));
   emit('sitemap.xml', renderSitemap(recipes, site));
   emit('robots.txt', renderRobots(site));
   emit('assets/js/recipes-index.js', renderSearchIndex(recipes));
