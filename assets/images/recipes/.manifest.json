@@ -367,5 +367,32 @@
       1200
     ],
     "builtAt": "2026-07-27"
+  },
+  "tabbouleh:1b3e88daa1ac5db94e5f3b94ff8c59bcf43f5e95039c8b1ddd21db561ad213ab": {
+    "sha256": "1b3e88daa1ac5db94e5f3b94ff8c59bcf43f5e95039c8b1ddd21db561ad213ab",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-27"
+  },
+  "som-tam:7ddda8617731263d7bf797bc706dcdcee9a8cc421576eb5128760bb876cb9a95": {
+    "sha256": "7ddda8617731263d7bf797bc706dcdcee9a8cc421576eb5128760bb876cb9a95",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-27"
+  },
+  "shirazi-salad:f02ba4df7440227223ffd84951da923d965444b786d2d6d2d16655fe68e9798a": {
+    "sha256": "f02ba4df7440227223ffd84951da923d965444b786d2d6d2d16655fe68e9798a",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-27"
   }
 }

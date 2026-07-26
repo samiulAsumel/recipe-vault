@@ -6850,6 +6850,599 @@
       "published": "2026-07-27",
       "updated": "2026-07-27",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "tabbouleh",
+      "title": "Tabbouleh (Lebanese Parsley Salad)",
+      "tagline": "A parsley salad with a little bulgur, not a bulgur salad with a little parsley.",
+      "description": "Finely chopped flat-leaf parsley makes up most of the volume, with only a small amount of fine bulgur, ripe tomato, mint, and a lemon-olive oil dressing -- the reverse ratio of the bulgur-heavy versions common outside the Levant.",
+      "category": "vegetarian",
+      "cuisine": "Lebanese",
+      "times": {
+        "prepMinutes": 30,
+        "cookMinutes": 0,
+        "restMinutes": 20
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "medium",
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "dairy-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "tabbouleh",
+        "tabouli",
+        "lebanese salad",
+        "parsley salad",
+        "levantine",
+        "bulgur salad"
+      ],
+      "equipment": [
+        "Sharp knife",
+        "Mixing bowl",
+        "Fine sieve"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "fine bulgur (#1 grade)",
+              "note": "rinsed",
+              "scalable": true
+            },
+            {
+              "quantity": 4,
+              "unit": "cup",
+              "item": "flat-leaf parsley",
+              "note": "finely chopped, tightly packed",
+              "scalable": true
+            },
+            {
+              "quantity": 0.25,
+              "unit": "cup",
+              "item": "fresh mint leaves",
+              "note": "finely chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "ripe tomatoes",
+              "note": "finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 4,
+              "unit": null,
+              "item": "green onions",
+              "note": "finely sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "ml",
+              "item": "fresh lemon juice",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "ml",
+              "item": "extra-virgin olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and black pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To serve",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "romaine or lettuce leaves, for scooping, optional",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Rinse the bulgur under cold water, then soak it in a small bowl of water for 15 minutes until just softened. Drain very well and squeeze out excess moisture.",
+          "timerMinutes": 15,
+          "tip": "Fine (#1) bulgur only needs a soak, not cooking -- it should stay slightly chewy, not mushy, since it's a minor ingredient here, not the base."
+        },
+        {
+          "text": "While the bulgur soaks, wash the parsley and dry it thoroughly.",
+          "timerMinutes": null,
+          "tip": "Excess water clinging to the parsley will make the finished salad soggy and dilute the dressing."
+        },
+        {
+          "text": "Finely chop the parsley by hand with a sharp knife until it's almost minced.",
+          "timerMinutes": null,
+          "tip": "A food processor tends to bruise and liquefy parsley instead of cutting it cleanly -- a sharp knife and patience give the dry, fluffy texture tabbouleh is known for."
+        },
+        {
+          "text": "Finely dice the tomatoes, draining off excess juice, then finely chop the mint and thinly slice the green onions.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Combine the drained bulgur, parsley, mint, tomatoes, and green onions in a large bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Whisk the lemon juice and olive oil with salt and pepper, pour over the salad, and toss well.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Let the salad rest for 5 minutes so the flavors meld, then taste and adjust the lemon and salt before serving.",
+          "timerMinutes": 5,
+          "tip": null
+        },
+        {
+          "text": "Serve with romaine or lettuce leaves for scooping, if using.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Parsley should outweigh the bulgur by a wide margin -- if it reads as a grain salad with parsley sprinkled in, it isn't tabbouleh.",
+        "Tabbouleh is traditionally eaten by scooping with a lettuce or grape leaf rather than with a fork.",
+        "It keeps a day refrigerated, but the parsley wilts -- for the best texture, dress it close to serving."
+      ],
+      "nutrition": {
+        "servingSize": "1 cup",
+        "calories": 120,
+        "proteinG": 3,
+        "carbsG": 12,
+        "fatG": 8,
+        "saturatedFatG": 1,
+        "fiberG": 3,
+        "sugarG": 2,
+        "sodiumMg": 150,
+        "cholesterolMg": 0,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "tabbouleh salad",
+          "tabbouleh bowl"
+        ],
+        "alt": "Bowl of Lebanese tabbouleh, mostly finely chopped parsley with bulgur and tomato",
+        "caption": "Parsley is the main ingredient here -- the bulgur is a minor addition, not the base.",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Liat Portal for Foodie Disorder - Bulgur salad",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=181796556",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Liat_Portal_for_Foodie_Disorder_-_Bulgur_salad.jpg",
+          "artist": "HaJunkiyada",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "1b3e88daa1ac5db94e5f3b94ff8c59bcf43f5e95039c8b1ddd21db561ad213ab",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-27"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "greek-salad",
+        "crispy-falafel",
+        "classic-hummus"
+      ],
+      "featured": false,
+      "published": "2026-07-27",
+      "updated": "2026-07-27",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "som-tam",
+      "title": "Som Tam (Thai Green Papaya Salad)",
+      "tagline": "Shredded unripe papaya pounded with chilies, lime, and fish sauce in a mortar and pestle.",
+      "description": "Julienned green (unripe) papaya bruised and pounded together with garlic, chilies, lime juice, palm sugar, and fish sauce in a clay mortar -- the pounding, not just tossing, is what makes real som tam, and it's meant to hit sour and salty first, with sweetness only in the background.",
+      "category": "appetizers",
+      "cuisine": "Thai",
+      "times": {
+        "prepMinutes": 20,
+        "cookMinutes": 0,
+        "restMinutes": 0
+      },
+      "servings": 2,
+      "servingUnit": "servings",
+      "difficulty": "medium",
+      "dietary": [
+        "gluten-free",
+        "dairy-free",
+        "egg-free"
+      ],
+      "keywords": [
+        "som tam",
+        "som tum",
+        "thai green papaya salad",
+        "papaya salad",
+        "thai salad"
+      ],
+      "equipment": [
+        "Mortar and pestle (clay or granite)",
+        "Julienne peeler or knife"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": "For the salad",
+          "items": [
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "cloves garlic",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "Thai bird's eye chilies",
+              "note": "adjust to taste",
+              "scalable": true
+            },
+            {
+              "quantity": 100,
+              "unit": "g",
+              "item": "long beans",
+              "note": "or green beans, cut into short lengths",
+              "scalable": true
+            },
+            {
+              "quantity": 300,
+              "unit": "g",
+              "item": "green (unripe) papaya",
+              "note": "peeled and julienned",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "dried shrimp",
+              "note": "optional, traditional",
+              "scalable": true
+            },
+            {
+              "quantity": 10,
+              "unit": null,
+              "item": "cherry tomatoes",
+              "note": "halved",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the dressing",
+          "items": [
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "palm sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "fish sauce",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2.5,
+              "unit": "tbsp",
+              "item": "fresh lime juice",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "roasted peanuts",
+              "note": "roughly crushed",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "lettuce leaves, to serve",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Pound the garlic and chilies together in a mortar and pestle until roughly broken down.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the long beans and pound lightly just to bruise them, not pulverize.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the palm sugar and pound briefly to help it dissolve, then add the fish sauce and lime juice, stirring with the pestle to combine.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the shredded papaya and dried shrimp if using. Pound and toss together, turning the mixture with a spoon in one hand and the pestle in the other so everything is bruised and coated, not mashed to a pulp.",
+          "timerMinutes": null,
+          "tip": "Pounding rather than tossing is what actually defines som tam -- it bruises the papaya just enough to let it take on the dressing, while a plain toss leaves it crunchy but flavorless."
+        },
+        {
+          "text": "Add the cherry tomatoes and pound a few more times to just split them, no more.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Taste and rebalance: it should hit sour, salty, and spicy first, with sweetness only in the background -- adjust the lime, fish sauce, sugar, or chili accordingly.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Top with the crushed peanuts and serve immediately with lettuce leaves alongside.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Real som tam is aggressively sour and salty first, with sweetness only in the background -- if it tastes like a sweet slaw, the balance is off.",
+        "A wooden or clay mortar is traditional, but the technique -- bruising, not mincing -- matters more than the vessel.",
+        "Green papaya has almost no flavor of its own; it's a crunchy vehicle for the dressing, similar in role to a cucumber."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl",
+        "calories": 140,
+        "proteinG": 5,
+        "carbsG": 20,
+        "fatG": 5,
+        "saturatedFatG": 1,
+        "fiberG": 4,
+        "sugarG": 12,
+        "sodiumMg": 780,
+        "cholesterolMg": 5,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "som tam green papaya salad",
+          "thai papaya salad mortar pestle"
+        ],
+        "alt": "Plate of Thai som tam, shredded green papaya with peanuts, chili, and tomato",
+        "caption": "Pounded, not tossed -- that's what actually makes it som tam.",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Som Tum ส้มตำไทย- mortar pounded green papaya salad with palm sugar, lime juice, bird eye chile, peanuts.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Som_Tum_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2-_mortar_pounded_green_papaya_salad_with_palm_sugar,_lime_juice,_bird_eye_chile,_peanuts.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Som_Tum_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2-_mortar_pounded_green_papaya_salad_with_palm_sugar%2C_lime_juice%2C_bird_eye_chile%2C_peanuts.jpg",
+          "artist": "T.Tseng",
+          "credit": "https://www.flickr.com/photos/68147320@N02/17541556065/",
+          "license": {
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "7ddda8617731263d7bf797bc706dcdcee9a8cc421576eb5128760bb876cb9a95",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-27"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "vegetable-spring-rolls",
+        "vegetable-fried-rice"
+      ],
+      "featured": false,
+      "published": "2026-07-27",
+      "updated": "2026-07-27",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "shirazi-salad",
+      "title": "Shirazi Salad (Salad-e Shirazi)",
+      "tagline": "Finely diced cucumber, tomato, and onion with dried mint and lime -- Persia's everyday salad.",
+      "description": "Cucumber, tomato, and onion cut into a small, uniform dice, dressed simply with lime juice, olive oil, and dried mint -- named for the city of Shiraz, and served at nearly every Persian meal, from weeknight dinners to Nowruz spreads.",
+      "category": "vegetarian",
+      "cuisine": "Persian",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 0,
+        "restMinutes": 10
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "shirazi salad",
+        "salad-e shirazi",
+        "persian salad",
+        "iranian salad",
+        "cucumber tomato salad"
+      ],
+      "equipment": [
+        "Sharp knife",
+        "Mixing bowl"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "Persian cucumbers",
+              "note": "finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "ripe tomatoes",
+              "note": "finely diced, seeds and excess juice removed",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "small red onion",
+              "note": "finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "fresh lime juice",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "extra-virgin olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "dried mint",
+              "note": "crumbled",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and black pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Cut the cucumbers, tomatoes, and onion into a small, even dice, about the size of a pea.",
+          "timerMinutes": null,
+          "tip": "Draining excess tomato juice and seeds before dicing keeps the finished salad from turning watery."
+        },
+        {
+          "text": "Combine the diced vegetables in a bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the lime juice, olive oil, dried mint, salt, and pepper, and toss well.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Let the salad sit for 10 minutes so the vegetables release a little liquid and the dressing mellows, then toss again before serving.",
+          "timerMinutes": 10,
+          "tip": "Dried mint, not fresh, is traditional here -- it has a deeper, slightly musty flavor that fresh mint doesn't replicate."
+        }
+      ],
+      "notes": [
+        "Shirazi salad is named for the city of Shiraz in southern Iran, and appears alongside nearly every Persian meal, including the Nowruz (Persian New Year) spread.",
+        "Persian cucumbers are thin-skinned and nearly seedless -- if using a standard cucumber, peel it and scoop out the seedy core first.",
+        "Keep the dice small and even; this isn't a chopped salad in the Western sense, and larger pieces change the texture entirely."
+      ],
+      "nutrition": {
+        "servingSize": "3/4 cup",
+        "calories": 70,
+        "proteinG": 1,
+        "carbsG": 7,
+        "fatG": 4,
+        "saturatedFatG": 0.5,
+        "fiberG": 1.5,
+        "sugarG": 4,
+        "sodiumMg": 90,
+        "cholesterolMg": 0,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "shirazi salad persian",
+          "salad-e shirazi cucumber tomato"
+        ],
+        "alt": "Bowl of Persian Shirazi salad, finely diced cucumber, tomato, and onion",
+        "caption": "A small, even dice is part of what makes this salad recognizable.",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Shirazi salad2.JPG",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Shirazi_salad2.JPG",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Shirazi_salad2.JPG",
+          "artist": "Imansadighi",
+          "credit": "Own work",
+          "license": {
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "f02ba4df7440227223ffd84951da923d965444b786d2d6d2d16655fe68e9798a",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-27"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "greek-salad",
+        "tabbouleh"
+      ],
+      "featured": false,
+      "published": "2026-07-27",
+      "updated": "2026-07-27",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }
