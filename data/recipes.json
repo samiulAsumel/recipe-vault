@@ -6414,6 +6414,442 @@
       "published": "2026-07-27",
       "updated": "2026-07-27",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "borhani",
+      "title": "Borhani (Bangladeshi Spiced Yogurt Drink)",
+      "tagline": "A tangy, mustard-spiked yogurt drink that's inseparable from Kacchi Biryani in Old Dhaka.",
+      "description": "A savory, spiced yogurt drink built on strained mustard water, mint, and roasted cumin -- the traditional companion to Kacchi Biryani at Old Dhaka weddings and feasts, and nothing like a sweet dessert lassi.",
+      "category": "drinks",
+      "cuisine": "Bangladeshi",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 0,
+        "restMinutes": 30
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "medium",
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "borhani",
+        "bangladeshi yogurt drink",
+        "kacchi biryani drink",
+        "mustard yogurt drink",
+        "old dhaka",
+        "dhaka"
+      ],
+      "equipment": [
+        "Blender",
+        "Fine sieve or muslin cloth",
+        "Pitcher"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": "For the mustard water",
+          "items": [
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "yellow mustard seeds",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "water",
+              "note": "for soaking and grinding",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the yogurt base",
+          "items": [
+            {
+              "quantity": 500,
+              "unit": "g",
+              "item": "plain yogurt",
+              "note": "well whisked",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "small handful mint leaves",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "small handful coriander leaves",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "green chilies",
+              "note": "roughly chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "ginger",
+              "note": "grated",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "roasted cumin powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "black salt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.25,
+              "unit": "tsp",
+              "item": "white pepper",
+              "note": "or black pepper powder",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "sugar",
+              "note": "optional, just enough to balance",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt to taste",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": 250,
+              "unit": "ml",
+              "item": "chilled water",
+              "note": "to thin",
+              "scalable": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Soak the mustard seeds in the water for 20 minutes, then grind to a smooth paste and press it through a fine sieve or muslin cloth, discarding the solids, to get a small amount of sharp mustard water.",
+          "timerMinutes": 20,
+          "tip": "This strained mustard water, not whole ground mustard, is the traditional base flavor of Borhani -- straining removes the bitterness and grit, leaving just the pungent heat behind."
+        },
+        {
+          "text": "In a blender, combine the yogurt, mint, coriander, green chilies, ginger, roasted cumin powder, black salt, white pepper, sugar, and the mustard water. Blend until completely smooth.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Thin with the chilled water to a thin, pourable consistency and blend again briefly.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pass the entire mixture through a fine sieve into a pitcher, pressing on the solids to extract all the liquid, and discard what's left behind.",
+          "timerMinutes": null,
+          "tip": "Straining twice is what gives Borhani its signature silky, uniform texture -- there should be no visible flecks of herb or seed, unlike a lassi."
+        },
+        {
+          "text": "Taste and adjust the salt, sugar, and mustard heat -- it should taste tangy, savory, and sharp rather than sweet.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Chill for at least 30 minutes and serve ice-cold.",
+          "timerMinutes": 30,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Borhani is a savory, spiced drink meant to cut through the richness of biryani, not a sweet dessert lassi -- keep the sugar minimal.",
+        "In Old Dhaka, Borhani has been served alongside Kacchi Biryani at weddings and feasts for generations; the two are rarely served apart.",
+        "Add the mustard water in small amounts and taste as you go -- too much turns bitter and overwhelms the other spices."
+      ],
+      "nutrition": {
+        "servingSize": "1 glass (about 200ml)",
+        "calories": 90,
+        "proteinG": 4,
+        "carbsG": 8,
+        "fatG": 4,
+        "saturatedFatG": 2.5,
+        "fiberG": 0.5,
+        "sugarG": 6,
+        "sodiumMg": 340,
+        "cholesterolMg": 12,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "borhani bangladeshi yogurt drink",
+          "kacchi biryani borhani"
+        ],
+        "alt": "Plate of Kacchi Biryani served with a glass of Borhani, its traditional pairing",
+        "caption": "In Old Dhaka, Borhani and Kacchi Biryani are rarely served apart.",
+        "focal": "top",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Kacchi Biryani and Borhani.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kacchi_Biryani_and_Borhani.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kacchi_Biryani_and_Borhani.jpg",
+          "artist": "Solomon The Magnifico",
+          "credit": "Own work",
+          "license": {
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "22583a5af59e73c576c7079ee40fbaedf15bc5912722b047b30a18b27704e19a",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-27"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "kala-bhuna",
+        "mango-lassi"
+      ],
+      "featured": false,
+      "published": "2026-07-27",
+      "updated": "2026-07-27",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "panta-bhat",
+      "title": "Panta Bhat (Fermented Rice with Fried Ilish)",
+      "tagline": "Overnight-soaked rice with fried hilsa, raw onion, and green chili -- Bengal's oldest breakfast.",
+      "description": "Day-old rice soaked in water overnight until faintly sour and fermented, served cold or at room temperature with a drizzle of mustard oil, raw onion, green chilies, and a piece of fried Ilish (hilsa) -- the traditional farmer's breakfast eaten across Bengal for centuries, and now the centerpiece of Pohela Boishakh, the Bengali New Year.",
+      "category": "breakfast",
+      "cuisine": "Bangladeshi",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 15,
+        "restMinutes": 480
+      },
+      "servings": 2,
+      "servingUnit": "servings",
+      "difficulty": "easy",
+      "dietary": [
+        "gluten-free",
+        "dairy-free",
+        "egg-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "panta bhat",
+        "fermented rice",
+        "ilish maach",
+        "hilsa fish",
+        "pohela boishakh",
+        "bengali breakfast",
+        "bangladeshi breakfast"
+      ],
+      "equipment": [
+        "Frying pan",
+        "Large bowl with lid"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": "For the panta bhat",
+          "items": [
+            {
+              "quantity": 2,
+              "unit": "cup",
+              "item": "cooked rice",
+              "note": "day-old",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "water, enough to submerge the rice",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "For the fried Ilish",
+          "items": [
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "Ilish (hilsa) fish steaks",
+              "note": "or a firm, fatty white fish as a substitute",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "turmeric",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "mustard oil",
+              "note": "for frying",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To serve",
+          "items": [
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "small onion",
+              "note": "finely sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "green chilies",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "mustard oil",
+              "note": "raw, to drizzle",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "lime wedge, optional",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Place the cooked rice in a large bowl, cover completely with water, and season lightly with salt. Cover and let sit at room temperature overnight, about 8 hours.",
+          "timerMinutes": 480,
+          "tip": "The overnight soak is what ferments the rice slightly, giving panta bhat its faintly sour tang -- this isn't the same as just adding cold water to rice right before serving."
+        },
+        {
+          "text": "The next morning, rub the Ilish pieces with the turmeric and salt.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Heat the mustard oil in a frying pan until shimmering, and fry the fish over medium heat until deeply golden and crisp on both sides, about 4 to 5 minutes per side.",
+          "timerMinutes": 10,
+          "tip": "Ilish has a high fat content and delicate flesh, so resist moving it too soon -- let a real crust form before flipping or it will fall apart."
+        },
+        {
+          "text": "Drain the rice, discarding most of the soaking water but leaving the rice slightly moist.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Serve the panta bhat cold or at room temperature in a bowl, topped with the sliced onion and green chilies, a drizzle of raw mustard oil, and the fried fish alongside.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Panta bhat has been the everyday breakfast of Bengali farmers and laborers for centuries -- simple, cooling in the heat, and a way to use the previous night's rice rather than waste it.",
+        "On Pohela Boishakh, the Bengali New Year, panta bhat with fried Ilish and green chilies is served as a celebratory dish, even though it began as the plainest food of rural Bengal.",
+        "If Ilish isn't available, any firm, fatty fish fried the same way is a reasonable substitute -- Ilish itself is seasonal and can be hard to find outside Bengal."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl with fish",
+        "calories": 380,
+        "proteinG": 22,
+        "carbsG": 40,
+        "fatG": 16,
+        "saturatedFatG": 3,
+        "fiberG": 1,
+        "sugarG": 1,
+        "sodiumMg": 420,
+        "cholesterolMg": 55,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "panta bhat ilish fish",
+          "fermented rice bengali breakfast"
+        ],
+        "alt": "Bowl of panta bhat (fermented rice) with fried Ilish fish, onion, and green chili",
+        "caption": "The overnight soak is what gives it a faint sour tang -- not just cold water added at the table.",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Panta Ilish decorated (2417225034).jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Panta_Ilish_decorated_(2417225034).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Panta_Ilish_decorated_%282417225034%29.jpg",
+          "artist": "Tahmid Munaz from Dhaka, Bangladesh",
+          "credit": "Panta iLish Decorated",
+          "license": {
+            "id": "CC-BY-SA-2.0",
+            "name": "CC BY-SA 2.0",
+            "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "d81c0543b84b77c85cd6e42975a525e8d99982e9a3cdf1ee5987529c2dfb7307",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-27"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "kala-bhuna",
+        "borhani"
+      ],
+      "featured": false,
+      "published": "2026-07-27",
+      "updated": "2026-07-27",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }

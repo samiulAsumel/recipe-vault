@@ -340,5 +340,23 @@
       1200
     ],
     "builtAt": "2026-07-26"
+  },
+  "panta-bhat:d81c0543b84b77c85cd6e42975a525e8d99982e9a3cdf1ee5987529c2dfb7307": {
+    "sha256": "d81c0543b84b77c85cd6e42975a525e8d99982e9a3cdf1ee5987529c2dfb7307",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-27"
+  },
+  "borhani:22583a5af59e73c576c7079ee40fbaedf15bc5912722b047b30a18b27704e19a": {
+    "sha256": "22583a5af59e73c576c7079ee40fbaedf15bc5912722b047b30a18b27704e19a",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-27"
   }
 }
