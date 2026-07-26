@@ -87,13 +87,19 @@ document.addEventListener('DOMContentLoaded', function () {
     for (const card of sorted) grid.appendChild(card);
   }
 
+  // Preserves whatever hash is already there rather than forcing "#all" --
+  // changing a URL's fragment via replaceState to point at an existing
+  // element makes Chrome scroll to it, so unconditionally adding "#all"
+  // here silently auto-scrolled every fresh homepage visit straight to the
+  // recipe grid, past the hero, before the visitor did anything.
   function syncUrl(q, category, diets) {
     const params = new URLSearchParams();
     if (q) params.set('q', q);
     if (category !== 'all') params.set('category', category);
     if (diets.length) params.set('diet', diets.join(','));
     const query = params.toString();
-    const url = query ? `${location.pathname}?${query}#all` : `${location.pathname}#all`;
+    const hash = location.hash || '';
+    const url = query ? `${location.pathname}?${query}${hash}` : `${location.pathname}${hash}`;
     history.replaceState(null, '', url);
   }
 
