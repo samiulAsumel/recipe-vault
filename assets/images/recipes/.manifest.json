@@ -25,5 +25,41 @@
       1200
     ],
     "builtAt": "2026-07-26"
+  },
+  "classic-pancakes:dd0f12521dfa5dc6dcc5428b21a800229e3da50bfd6b5c901dd6923ffa496009": {
+    "sha256": "dd0f12521dfa5dc6dcc5428b21a800229e3da50bfd6b5c901dd6923ffa496009",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "french-toast:e1e4e1edaaf52d8775a212bbee59a1563226b6eee289b1a913fe97fd77ce9b51": {
+    "sha256": "e1e4e1edaaf52d8775a212bbee59a1563226b6eee289b1a913fe97fd77ce9b51",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "cheese-omelette:189052776e21618ec103f3100eb646657f480a4ce8a41b878bfe6c30211e29fa": {
+    "sha256": "189052776e21618ec103f3100eb646657f480a4ce8a41b878bfe6c30211e29fa",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "belgian-waffles:e67b37488e3112f8fcb310bb6368335972b86e1b4b9e4a931cdc2a3deb5b0f7a": {
+    "sha256": "e67b37488e3112f8fcb310bb6368335972b86e1b4b9e4a931cdc2a3deb5b0f7a",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
   }
 }

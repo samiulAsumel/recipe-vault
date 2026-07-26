@@ -1,19 +1,23 @@
 {
   "generator": "tools/build.js",
   "files": {
-    "assets/js/recipes-index.js": "622d103be0fafc0e926adcf95dad1eafd5769fa91b9994416d62ad95f230fb8f",
+    "assets/js/recipes-index.js": "e2a736f92dac70f52260cc0d42dbfd90e5ee841e0f6ebda1bcf1404d14505b0f",
     "categories/appetizers.html": "9ef83f0d3d70615fd2ce5e45a14b1235c4a7d8412b2a8ab649fec065063b2c24",
-    "categories/breakfast.html": "6e1a21745f5f9e7f174666661c7ed21c6ee7b7d04e8a309b1b0d654cb4cac4b5",
+    "categories/breakfast.html": "dc2f1d44e357f856924585f55e6873807d3befcde3546877a24404b06b8ea0e8",
     "categories/desserts.html": "bcde75c4d6f23bc5d8dbcd7c40211384febb9342eb9c95ec5db0ca941ca6e3d1",
     "categories/drinks.html": "7120de89b96853a40d096aaa4ea075d379c0669f5a07340bd639e0b059c02e74",
     "categories/mains.html": "0f688c66b94b074d5300ebd43575bd6af700584180747eac32b91a2147aa1c1b",
     "categories/vegetarian.html": "1b24e2a67d844d28797bc465d451a303071b196c78a0c5b64f26df28dabe92a6",
-    "credits.html": "4c85f82081af410dc4302d4659982c0ee5fd067fa0fac33d7194bebee0cef394",
-    "index.html": "6e376df26133ed61c6c1c710cb677b1392c386f75aff3b6431713c787d4f36ce",
+    "credits.html": "6392a76769d7e1358db74b83d925c5c8add4a9a350c7175cb11347c6a7ae3365",
+    "index.html": "6eecd723a17f4f649d8cc9436c0ebe98c7ead7bd6433c31d6c794a9b6852e31a",
+    "recipes/belgian-waffles.html": "59bd62b153118382ec41256cbe2c5c6de0148686525de70ebb15b7509cd254a3",
+    "recipes/cheese-omelette.html": "81e94ff4901016e36bbda80a2dd9f70b46c9689896dd604db208c7d65f530a8f",
     "recipes/chicken-curry.html": "84c1ab81888c1bf2f5e11669e070dd8288ef06479f3beb858b4c1126aadd80f8",
+    "recipes/classic-pancakes.html": "63232f214dd5ff5134fd54b2e6cbd63f2f71943d5119a2bdca9b818753ad446b",
     "recipes/classic-shakshuka.html": "1888d5977abc697c85713118e297e630efa56d413beda43a8342c73e2d857c7f",
+    "recipes/french-toast.html": "e3c970f3b69da64957324f30da1053c1533ee3487744fd81a84806e602e2b058",
     "recipes/tomato-basil-pasta.html": "181dc67682c43070406839227110ac9238009e8bc013a17ca0793ac5fa5d2d3a",
     "robots.txt": "3dd9cf05af4248ed657734c7897a099123e0f8942f83587c16fc8ddf5b8c55e4",
-    "sitemap.xml": "2d2d1103fdd4e99803ba9dd360b5ef40aef7cf33dbf42158f103b3449420ed12"
+    "sitemap.xml": "706380036d54cde7a05e1e0d73d23f16461cae9ccaf929d209d9d6990df46a52"
   }
 }

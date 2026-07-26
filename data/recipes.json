@@ -615,6 +615,783 @@
       "published": "2026-07-26",
       "updated": "2026-07-26",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "classic-pancakes",
+      "title": "Classic Pancakes",
+      "tagline": "Fluffy stovetop pancakes with crisp edges and a tender crumb.",
+      "description": "A basic buttermilk batter whisked together in one bowl and cooked in batches until golden -- the weekend breakfast that needs no special equipment.",
+      "category": "breakfast",
+      "cuisine": "American",
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 15,
+        "restMinutes": 5
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "yieldText": "about 12 pancakes",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "pancakes",
+        "breakfast",
+        "buttermilk",
+        "weekend",
+        "brunch"
+      ],
+      "equipment": [
+        "Large bowl",
+        "Whisk",
+        "Nonstick skillet or griddle"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 300,
+              "unit": "g",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tsp",
+              "item": "baking powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "baking soda",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "Wet ingredients",
+          "items": [
+            {
+              "quantity": 480,
+              "unit": "ml",
+              "item": "buttermilk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "eggs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "g",
+              "item": "butter",
+              "note": "melted and cooled",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "vanilla extract",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "butter, for the pan",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "maple syrup, to serve",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Whisk the flour, sugar, baking powder, baking soda, and salt together in a large bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "In a separate bowl, whisk the buttermilk, eggs, melted butter, and vanilla.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour the wet mixture into the dry and stir until just combined.",
+          "timerMinutes": null,
+          "tip": "A few lumps are fine -- overmixing is what makes pancakes tough instead of fluffy."
+        },
+        {
+          "text": "Let the batter rest while a skillet or griddle heats over medium heat.",
+          "timerMinutes": 5,
+          "tip": null
+        },
+        {
+          "text": "Melt a little butter in the skillet, then ladle in batter for each pancake.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Cook until bubbles form and the edges look set, then flip and cook until golden on the other side.",
+          "timerMinutes": 2,
+          "tip": null
+        },
+        {
+          "text": "Repeat with the remaining batter and serve warm with maple syrup.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Batter keeps refrigerated for 1 day -- expect it to thicken slightly overnight.",
+        "Stir in blueberries or chocolate chips just before cooking, if using."
+      ],
+      "nutrition": {
+        "servingSize": "3 pancakes",
+        "calories": 380,
+        "proteinG": 10,
+        "carbsG": 52,
+        "fatG": 14,
+        "saturatedFatG": 7,
+        "fiberG": 1,
+        "sugarG": 10,
+        "sodiumMg": 520,
+        "cholesterolMg": 90,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "pancakes",
+          "stack of pancakes"
+        ],
+        "alt": "Stack of pancakes with butter and maple syrup",
+        "caption": "Stack them tall and serve while the top layer is still warm.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Banana on pancake",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=500747",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Banana_on_pancake.jpg",
+          "artist": "Brandon Martin-Anderson",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-SA-2.0",
+            "name": "CC BY-SA 2.0",
+            "url": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "dd0f12521dfa5dc6dcc5428b21a800229e3da50bfd6b5c901dd6923ffa496009",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "french-toast",
+        "belgian-waffles",
+        "classic-shakshuka"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "french-toast",
+      "title": "French Toast",
+      "tagline": "Thick bread soaked in a cinnamon custard and pan-fried until golden.",
+      "description": "Day-old bread soaked in an egg and milk custard, then fried in butter until crisp outside and custardy within -- the best use for slightly stale bread.",
+      "category": "breakfast",
+      "cuisine": "French-inspired",
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 15,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "french toast",
+        "breakfast",
+        "bread",
+        "cinnamon",
+        "brunch"
+      ],
+      "equipment": [
+        "Shallow dish",
+        "Nonstick skillet"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 4,
+              "unit": null,
+              "item": "eggs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 180,
+              "unit": "ml",
+              "item": "whole milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "ground cinnamon",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "vanilla extract",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "pinch of salt",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": 8,
+              "unit": null,
+              "item": "thick bread slices",
+              "note": "slightly stale",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "butter",
+              "note": "for frying",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "maple syrup, to serve",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "fresh berries, optional",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Whisk the eggs, milk, sugar, cinnamon, vanilla, and salt together in a shallow dish.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Soak each bread slice for 20-30 seconds per side, until saturated but not falling apart.",
+          "timerMinutes": null,
+          "tip": "Slightly stale bread soaks up the custard without turning to mush -- fresh bread works too, just soak it more briefly."
+        },
+        {
+          "text": "Melt butter in a skillet over medium heat.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Fry the soaked slices until golden on both sides.",
+          "timerMinutes": 6,
+          "tip": null
+        },
+        {
+          "text": "Serve immediately with maple syrup and berries.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "A stale baguette or brioche loaf both work well here.",
+        "Keep finished slices warm in a low oven while frying the rest in batches."
+      ],
+      "nutrition": {
+        "servingSize": "2 slices",
+        "calories": 360,
+        "proteinG": 14,
+        "carbsG": 38,
+        "fatG": 17,
+        "saturatedFatG": 8,
+        "fiberG": 2,
+        "sugarG": 12,
+        "sodiumMg": 430,
+        "cholesterolMg": 240,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "french toast",
+          "french toast breakfast"
+        ],
+        "alt": "Stack of french toast slices dusted with cinnamon and drizzled with syrup",
+        "caption": "Serve the moment it comes off the pan, while the crust is still crisp.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "French Toast (16251867289)",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=45206035",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/French_Toast_%2816251867289%29.jpg",
+          "artist": "Ralph Daily from Birmingham, United States",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "e1e4e1edaaf52d8775a212bbee59a1563226b6eee289b1a913fe97fd77ce9b51",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-pancakes",
+        "belgian-waffles",
+        "classic-shakshuka"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "cheese-omelette",
+      "title": "Cheese Omelette",
+      "tagline": "A folded egg omelette with melted cheese, ready in five minutes.",
+      "description": "Whisked eggs cooked low and slow until just set, filled with melted cheese and folded -- a fast, protein-heavy breakfast that needs no fillers.",
+      "category": "breakfast",
+      "cuisine": "French-inspired",
+      "times": {
+        "prepMinutes": 5,
+        "cookMinutes": 5,
+        "restMinutes": 0
+      },
+      "servings": 1,
+      "servingUnit": "omelette",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "omelette",
+        "eggs",
+        "breakfast",
+        "quick",
+        "protein"
+      ],
+      "equipment": [
+        "Nonstick skillet",
+        "Fork"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "eggs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "milk or water",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "pinch of salt and pepper",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "butter",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 40,
+              "unit": "g",
+              "item": "cheddar or gruyere",
+              "note": "grated",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "chopped chives, optional",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Whisk the eggs with the milk, salt, and pepper until fully combined.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Melt the butter in a nonstick skillet over medium-low heat.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour in the eggs, let them sit undisturbed a few seconds, then gently push the cooked edges toward the center.",
+          "timerMinutes": null,
+          "tip": "Low heat is what keeps an omelette tender -- high heat turns the eggs rubbery."
+        },
+        {
+          "text": "When mostly set but still slightly wet on top, scatter the cheese over one half.",
+          "timerMinutes": 2,
+          "tip": null
+        },
+        {
+          "text": "Fold the omelette over the cheese and slide it onto a plate.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Swap the cheese for any melty variety, or add cooked vegetables before folding.",
+        "Three eggs makes a substantial single serving -- halve it for a lighter breakfast."
+      ],
+      "nutrition": {
+        "servingSize": "1 omelette",
+        "calories": 420,
+        "proteinG": 28,
+        "carbsG": 2,
+        "fatG": 33,
+        "saturatedFatG": 16,
+        "fiberG": 0,
+        "sugarG": 1,
+        "sodiumMg": 560,
+        "cholesterolMg": 560,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "cheese omelet",
+          "golden-brown omelet melted cheese"
+        ],
+        "alt": "Folded cheese omelette on a white plate garnished with chives",
+        "caption": "Serve the moment it's folded, before the cheese firms back up.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Free omelet ham, cheese, spinach",
+          "descriptionUrl": "https://www.rawpixel.com/image/5918615/image-background-public-domain-table",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZmNTcxNS1pbWFnZS1rd3Z4Mjd5aS5qcGc.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "189052776e21618ec103f3100eb646657f480a4ce8a41b878bfe6c30211e29fa",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-shakshuka",
+        "classic-pancakes"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "belgian-waffles",
+      "title": "Belgian Waffles",
+      "tagline": "Deep-pocketed waffles with a crisp crust and airy interior.",
+      "description": "A batter lightened with whipped egg whites, cooked in a waffle iron until deeply golden -- crisp enough to hold a pool of syrup in every pocket.",
+      "category": "breakfast",
+      "cuisine": "Belgian",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 20,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "yieldText": "4 waffles",
+      "difficulty": "medium",
+      "dietary": [
+        "vegetarian"
+      ],
+      "keywords": [
+        "waffles",
+        "belgian waffles",
+        "breakfast",
+        "brunch",
+        "weekend"
+      ],
+      "equipment": [
+        "Waffle iron",
+        "Mixing bowls",
+        "Electric mixer or whisk"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 280,
+              "unit": "g",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tsp",
+              "item": "baking powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "eggs",
+              "note": "separated",
+              "scalable": true
+            },
+            {
+              "quantity": 480,
+              "unit": "ml",
+              "item": "milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 115,
+              "unit": "g",
+              "item": "butter",
+              "note": "melted and cooled",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "vanilla extract",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "butter and maple syrup, to serve",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Whisk the flour, sugar, baking powder, and salt together in a large bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "In another bowl, whisk the egg yolks, milk, melted butter, and vanilla.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour the wet mixture into the dry and whisk until just smooth.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Beat the egg whites to soft peaks, then gently fold them into the batter.",
+          "timerMinutes": null,
+          "tip": "Folding rather than stirring keeps the air in the whites, which is what gives the waffle its lift."
+        },
+        {
+          "text": "Preheat the waffle iron and cook the batter in batches until deeply golden and crisp.",
+          "timerMinutes": 5,
+          "tip": null
+        },
+        {
+          "text": "Serve immediately with butter and maple syrup.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "The batter deflates if left standing -- cook it soon after folding in the egg whites.",
+        "Leftover waffles freeze well and reheat directly in a toaster."
+      ],
+      "nutrition": {
+        "servingSize": "1 waffle",
+        "calories": 410,
+        "proteinG": 11,
+        "carbsG": 46,
+        "fatG": 20,
+        "saturatedFatG": 11,
+        "fiberG": 1,
+        "sugarG": 8,
+        "sodiumMg": 480,
+        "cholesterolMg": 140,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "belgian waffles",
+          "waffles breakfast"
+        ],
+        "alt": "Belgian waffle with deep pockets topped with butter and maple syrup",
+        "caption": "The deep pockets exist to catch every bit of syrup.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Free close belgian waffle image",
+          "descriptionUrl": "https://www.rawpixel.com/image/5902164/photo-image-public-domain-food-free",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvc3YxOTcxMDQtaW1hZ2Uta3d2dWlna2guanBn.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "e67b37488e3112f8fcb310bb6368335972b86e1b4b9e4a931cdc2a3deb5b0f7a",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-pancakes",
+        "french-toast",
+        "classic-shakshuka"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }
