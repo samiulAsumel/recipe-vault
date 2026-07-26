@@ -7408,27 +7408,27 @@
       },
       "image": {
         "searchTerms": [
-          "shirazi salad persian",
-          "salad-e shirazi cucumber tomato"
+          "salad shirazi",
+          "iranian cucumber tomato salad"
         ],
         "alt": "Bowl of Persian Shirazi salad, finely diced cucumber, tomato, and onion",
         "caption": "A small, even dice is part of what makes this salad recognizable.",
         "source": {
           "provider": "wikimedia-commons",
-          "pageTitle": "File:Shirazi salad2.JPG",
-          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Shirazi_salad2.JPG",
-          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Shirazi_salad2.JPG",
-          "artist": "Imansadighi",
-          "credit": "Own work",
+          "pageTitle": "File:Persian salad (1712808743).jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Persian_salad_(1712808743).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Persian_salad_%281712808743%29.jpg",
+          "artist": "Titanas",
+          "credit": "Persian salad",
           "license": {
-            "id": "CC-BY-SA-4.0",
-            "name": "CC BY-SA 4.0",
-            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "id": "CC-BY-SA-2.0",
+            "name": "CC BY-SA 2.0",
+            "url": "https://creativecommons.org/licenses/by-sa/2.0/",
             "attributionRequired": true,
             "shareAlike": true
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "f02ba4df7440227223ffd84951da923d965444b786d2d6d2d16655fe68e9798a",
+          "sha256": "e71ca90af3c3e8aee2bf8f8d27d4c0d2789d3635dac6edf844ca625f22cd697a",
           "ext": "jpg",
           "fetchedAt": "2026-07-27"
         },

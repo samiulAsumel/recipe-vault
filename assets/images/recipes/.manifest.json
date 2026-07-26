@@ -394,5 +394,14 @@
       1200
     ],
     "builtAt": "2026-07-27"
+  },
+  "shirazi-salad:e71ca90af3c3e8aee2bf8f8d27d4c0d2789d3635dac6edf844ca625f22cd697a": {
+    "sha256": "e71ca90af3c3e8aee2bf8f8d27d4c0d2789d3635dac6edf844ca625f22cd697a",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-27"
   }
 }
