@@ -3,15 +3,15 @@
   "files": {
     "404.html": "11a44c3d2f2fd6f9d2b5708e6778475fc9c4f2759bb8fe3ddaf20b7bd824f396",
     "about.html": "573d3befe583b6f3869e97d85a616047e19b592918cee109bfdb9fe28c55048b",
-    "assets/js/recipes-index.js": "ee3cabf580739aab9e494319a94933a3785cd6d014b6e33a17bc759ec64e751e",
+    "assets/js/recipes-index.js": "81573a01cdd1a9f1f3615524b5bbc987c554f98270d89b2bcb098fccad36c454",
     "categories/appetizers.html": "cdd223c3a65eab4eac735e5cb22afa1a8857249a6afb82a447d33a8c8747ec04",
     "categories/breakfast.html": "a89edbda8bd164ff73145a65f1a54455712a2e16f24268989cce0b21f83d1023",
     "categories/desserts.html": "5b0442caaefb7775bbec0e543da40525722267a679c375a0c48da0398b798218",
     "categories/drinks.html": "1db2191e5bd47bb6971ece3cd6a6347764c74a78190be0ffcde8a6ad975d909c",
-    "categories/mains.html": "2a9135dc7b612c649583896a622e3781cc7baf4eae8b2f1ba657c4afe6a32ce3",
+    "categories/mains.html": "7753d98ca680de3a4b4aa3b49c51d53da023f762b9f58d1f6eebb946accb3bef",
     "categories/vegetarian.html": "051556727d003200229e07ee628788d6f138206c40eea16b7012f784e588c84a",
-    "credits.html": "a578f737fdb87c45ae1dd3bc48b0100f6a8d1566519569478d2cae73f3f48c4e",
-    "index.html": "ad291ae76c1bea2502a5af8c305b5abb439ed021c66e023788c712823b957b44",
+    "credits.html": "e2cf7ec947e5b9a5435ee65094ea6854a96ee7480c3fb8372b8b5e96dde759f9",
+    "index.html": "ca4bd7107055329a707a2525c7f3d90736a1dad2ca9014dbfa0f5964a041d1b9",
     "recipes/baked-mac-and-cheese.html": "efc3b31e70cb7d1d426004cd062e290e9d1c086d463eae44d0b1c208fceb4220",
     "recipes/banana-bread.html": "8b266d808a1534907c1f275207a3ee2226991b46e7910c1c1f8cd5670051261c",
     "recipes/beef-stroganoff.html": "77e33121b65a79695a8165b1911d15846c6367a8014426ea2a0fd91cbf36aec9",
@@ -33,6 +33,7 @@
     "recipes/greek-salad.html": "d65bc1712240af635dd670aaf0b7bafd2b65c15aea4e7dc6286111461ea441ca",
     "recipes/hot-chocolate.html": "6352b3d7011759adcc8472b0b7edae7aff80cbdb17124d4b3fcbb38078dc60e5",
     "recipes/iced-coffee.html": "72c4c44489490aeaffb1773ad2267d6c7f9b7879f4d3de713a86d13c8a871dd0",
+    "recipes/kala-bhuna.html": "e147eb1e5b21944267f397550113991a97fce6598ec9c8fbb1f14caf883f2aa6",
     "recipes/mango-lassi.html": "8d950d7acc9b29cd4daa9d1bb8834444199e7a17bc7affa3f31f5a2349d15a4f",
     "recipes/mixed-berry-smoothie.html": "a2e9ec04ed539f8789feeee634e6ad1cdf498d3225507da50acbf587c833df4a",
     "recipes/mushroom-risotto.html": "56808c7ae5256c52b3fcccc73a2e2ba26ac04810dfe1acf2c65175d79870e23b",
@@ -43,7 +44,7 @@
     "recipes/vegetable-fried-rice.html": "5914b923de78e7b656bf8e478084bcc86eaa58ef8e765682a154d4738472f17f",
     "recipes/vegetable-spring-rolls.html": "cb605eb3c7e9224f047145ee03f60a43ab51cf2620727fb1a41f2126daa4f5a3",
     "robots.txt": "29e36857667694fd1279485e83287a9b29a8cf851505ceb818dd4f863cb1edbe",
-    "sitemap.xml": "5092fd65cf0b4e838e7c5c1f2f38cb18ac56370548af1cf2ec6c06f331ebc014",
+    "sitemap.xml": "5923f51f81e9d5b91b244c8982174232b255bfc68439a86a4db5c9b62c6ff28c",
     "submit-recipe.html": "c686034ab8ead37599fc91e56744871f976f2ada646f9cec1cfada2b70e8c4e7"
   }
 }

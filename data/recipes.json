@@ -5844,6 +5844,344 @@
       "published": "2026-07-26",
       "updated": "2026-07-26",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "kala-bhuna",
+      "title": "Kala Bhuna",
+      "tagline": "Beef slow-cooked in mustard oil and spices until deeply dark and glossy.",
+      "description": "Chittagong's signature beef bhuna, cooked low and slow in caramelized onions and mustard oil with no added water, until the meat turns a deep blackish-brown and the oil separates out glossy at the edges.",
+      "category": "mains",
+      "cuisine": "Bangladeshi",
+      "times": {
+        "prepMinutes": 30,
+        "cookMinutes": 150,
+        "restMinutes": 10
+      },
+      "servings": 6,
+      "servingUnit": "servings",
+      "difficulty": "hard",
+      "dietary": [
+        "gluten-free",
+        "dairy-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "kala bhuna",
+        "beef",
+        "bangladeshi",
+        "chittagong",
+        "curry",
+        "slow-cooked"
+      ],
+      "equipment": [
+        "Heavy-bottomed pot or Dutch oven",
+        "Spice grinder or mortar and pestle"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": "For the meat",
+          "items": [
+            {
+              "quantity": 1,
+              "unit": "kg",
+              "item": "beef",
+              "note": "bone-in, cut into chunks",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "raw papaya paste",
+              "note": "optional, traditional tenderizer",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "ginger paste",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "garlic paste",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "turmeric",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "For the base",
+          "items": [
+            {
+              "quantity": 150,
+              "unit": "ml",
+              "item": "mustard oil",
+              "note": "or vegetable oil",
+              "scalable": true
+            },
+            {
+              "quantity": 4,
+              "unit": null,
+              "item": "large onions",
+              "note": "very finely sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 6,
+              "unit": null,
+              "item": "green chilies",
+              "note": "slit",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "bay leaves",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "cinnamon stick",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 4,
+              "unit": null,
+              "item": "green cardamom pods",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 4,
+              "unit": null,
+              "item": "cloves",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "red chili powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "coriander powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "cumin powder",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the bhuna masala (dry-roasted and ground)",
+          "items": [
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "cumin seeds",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "coriander seeds",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "black peppercorns",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "dried red chilies",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "cinnamon stick",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "green cardamom pods",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "cloves",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "crispy fried onions",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "green chilies",
+              "note": "slit",
+              "scalable": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Marinate the beef with the ginger paste, garlic paste, turmeric, papaya paste if using, and salt. Set aside while you prepare the rest.",
+          "timerMinutes": null,
+          "tip": "Papaya paste is the traditional tenderizer for the tougher, bone-in cuts bhuna is built on -- plain yogurt works if you can't find it."
+        },
+        {
+          "text": "Dry roast the whole spices for the bhuna masala in a dry pan until fragrant, then grind to a fine powder.",
+          "timerMinutes": null,
+          "tip": "Toasting the spices before grinding is what gives bhuna masala its deep, almost smoky aroma -- do not skip this even though the beef still has hours left to cook."
+        },
+        {
+          "text": "Heat the mustard oil in a heavy pot and fry the sliced onions over medium heat until deeply golden and starting to caramelize.",
+          "timerMinutes": 25,
+          "tip": null
+        },
+        {
+          "text": "Add the bay leaves, cinnamon, cardamom, and cloves, and cook until fragrant.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the marinated beef and sear on high heat until browned on all sides.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Stir in the red chili powder, coriander powder, and cumin powder, and cook until the oil starts to separate from the spice paste.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Reduce the heat to low, cover, and cook, stirring occasionally, without adding any water.",
+          "timerMinutes": 90,
+          "tip": "This is the defining trait of bhuna cooking -- no added water. The dish simmers in its own released juices and rendered fat, which is what concentrates the flavor and eventually turns the beef dark."
+        },
+        {
+          "text": "Once the beef is tender and the liquid has mostly cooked off, uncover, raise the heat slightly, and stir frequently until the mixture turns a deep blackish-brown and the oil visibly separates and pools at the edges.",
+          "timerMinutes": 30,
+          "tip": "This final dry-roasting stage is what \"kala\" (black) refers to -- the color comes from slow caramelization, not from burning, so keep the heat moderate and stir often."
+        },
+        {
+          "text": "Stir in the ground bhuna masala and the slit green chilies, and cook a few minutes more to let the aroma bloom.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Taste and adjust salt, then garnish with crispy fried onions and serve.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Traditionally made with beef leg or shank on the bone -- the collagen is part of what makes the sauce glossy and rich after hours of slow cooking.",
+        "Kala bhuna keeps and even improves for a day or two refrigerated; the flavor deepens as it sits."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl (about 220g)",
+        "calories": 480,
+        "proteinG": 32,
+        "carbsG": 10,
+        "fatG": 34,
+        "saturatedFatG": 10,
+        "fiberG": 2,
+        "sugarG": 3,
+        "sodiumMg": 620,
+        "cholesterolMg": 95,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "kala bhuna",
+          "bangladeshi beef bhuna",
+          "black beef curry"
+        ],
+        "alt": "Bowl of dark, glossy Bangladeshi kala bhuna beef curry",
+        "caption": "The deep blackish-brown color and glossy separated oil are the whole point.",
+        "focal": "center",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Kala bhuna 2.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kala_bhuna_2.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Kala_bhuna_2.jpg",
+          "artist": "Dolon Prova",
+          "credit": "Own work",
+          "license": {
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "d38cd29d71565c13872f8a45d99ac852de844703a85070b028aec7852e486361",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-27"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "chicken-curry",
+        "beef-stroganoff"
+      ],
+      "featured": false,
+      "published": "2026-07-27",
+      "updated": "2026-07-27",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }

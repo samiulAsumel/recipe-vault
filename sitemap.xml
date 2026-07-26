@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://samiulasumel.github.io/recipe-vault/index.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/recipe-vault/categories/mains.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -139,6 +139,11 @@
   <url>
     <loc>https://samiulasumel.github.io/recipe-vault/recipes/iced-coffee.html</loc>
     <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/recipe-vault/recipes/kala-bhuna.html</loc>
+    <lastmod>2026-07-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
