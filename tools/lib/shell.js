@@ -57,6 +57,10 @@ function header(site, opts) {
         </ul>
       </nav>
       <div class="header-right">
+        <div class="header-clock js-only" aria-hidden="true">
+          <span class="header-clock-time js-clock-time">--:--:--</span>
+          <span class="header-clock-date js-clock-date-short">--</span>
+        </div>
         <button id="theme-toggle" class="icon-btn js-only" type="button"
           aria-label="Switch to dark theme" title="Switch to dark theme">
           ${raw.ICON_SUN}
@@ -108,8 +112,8 @@ function footer(site, opts) {
       </div>
       <div class="footer-col footer-col-clock">
         <h3>Local Time</h3>
-        <p class="site-clock-time" id="site-clock-time" aria-hidden="true">--:--:--</p>
-        <p class="site-clock-date" id="site-clock-date" aria-hidden="true">-- --, ----</p>
+        <p class="site-clock-time js-clock-time" aria-hidden="true">--:--:--</p>
+        <p class="site-clock-date js-clock-date" aria-hidden="true">-- --, ----</p>
       </div>
     </div>
     <p class="footer-legal">&copy; <span id="copyright-year">2026</span> ${esc(site.siteName)}. Recipes are tested at home; nutrition values are estimates.</p>

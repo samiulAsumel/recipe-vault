@@ -189,6 +189,28 @@ section { padding-block: var(--section-py); }
 .nav-link[aria-current='page'] { color: var(--accent); border-bottom-color: var(--accent); }
 .header-right { display: flex; align-items: center; gap: .5rem; }
 
+/* Compact two-line clock in the header. Tabular figures stop the digits
+   from shifting width as they tick, which reads as jitter at this size. */
+.header-clock {
+  display: flex; flex-direction: column; align-items: flex-end;
+  line-height: 1.25; margin-right: .5rem;
+  padding-right: .9rem; border-right: 1px solid var(--border-dim);
+}
+.header-clock-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700; font-size: .9rem; color: var(--accent);
+  letter-spacing: .02em;
+}
+.header-clock-date {
+  font-size: .68rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+/* The header row gets crowded before the nav collapses at 780px -- the
+   clock is the least essential element in it, so it goes first. */
+@media (max-width: 1024px) {
+  .header-clock { display: none; }
+}
+
 .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; }
 .hamburger span { width: 22px; height: 2px; background: var(--text-primary); border-radius: 1px; transition: transform .2s ease, opacity .2s ease; }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }

@@ -39,6 +39,10 @@
         </ul>
       </nav>
       <div class="header-right">
+        <div class="header-clock js-only" aria-hidden="true">
+          <span class="header-clock-time js-clock-time">--:--:--</span>
+          <span class="header-clock-date js-clock-date-short">--</span>
+        </div>
         <button id="theme-toggle" class="icon-btn js-only" type="button"
           aria-label="Switch to dark theme" title="Switch to dark theme">
           <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
@@ -327,8 +331,8 @@
       </div>
       <div class="footer-col footer-col-clock">
         <h3>Local Time</h3>
-        <p class="site-clock-time" id="site-clock-time" aria-hidden="true">--:--:--</p>
-        <p class="site-clock-date" id="site-clock-date" aria-hidden="true">-- --, ----</p>
+        <p class="site-clock-time js-clock-time" aria-hidden="true">--:--:--</p>
+        <p class="site-clock-date js-clock-date" aria-hidden="true">-- --, ----</p>
       </div>
     </div>
     <p class="footer-legal">&copy; <span id="copyright-year">2026</span> Homestyle Recipe Book. Recipes are tested at home; nutrition values are estimates.</p>
