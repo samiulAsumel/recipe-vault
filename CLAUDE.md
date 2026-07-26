@@ -53,3 +53,11 @@ unsorted iteration order; those are bugs, not acceptable variance.
   genuinely good, professionally-lit free photo — title-matched search
   results include plenty of packaging and supermarket-shelf photos that
   a contact-sheet visual review rejects.
+- **Every recipe must be authentic, not a generic or Americanized
+  shortcut version of the dish.** Use the real technique, real
+  ingredients, and real name for the dish's specific cuisine of origin
+  (e.g. "Kala Bhuna" — Chittagong-style, no added water, dry-roasted
+  bhuna masala — not a vague "black beef curry"). Prefer a specific
+  regional/cultural attribution over a generic "-inspired" label when
+  the dish has one. This applies to every recipe added from here on,
+  and is why kala-bhuna (added 2026-07-27) was written the way it was.
