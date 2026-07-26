@@ -1,95 +1,318 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Sub-part 9 (Head Deep Dive) -->
-    <meta charset="UTF-8" />
-    <!-- charset must sit within the first 1024 bytes, before any content that
-         could otherwise be misread with the wrong encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homestyle Recipe Book — Simple, Tested Recipes</title>
-    <meta
-      name="description"
-      content="A small collection of simple, tested home recipes with clear ingredients, step-by-step instructions, and nutrition info."
-    />
-    <link rel="canonical" href="https://example.com/index.html" />
-    <!-- canonical tells search engines the "real" URL if this page is ever
-         reachable at more than one address -->
-    <link rel="icon" href="assets/images/favicon.ico" sizes="any" />
-    <meta name="robots" content="index, follow" />
-    <!-- Open Graph controls how this page looks when shared on social platforms.
-         Note: og:image should be an ABSOLUTE url in a real production deploy —
-         kept relative here since this is a local, unhosted learning project. -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Homestyle Recipe Book" />
-    <meta
-      property="og:description"
-      content="Simple, tested home recipes with full ingredient lists and step-by-step instructions."
-    />
-    <meta property="og:image" content="assets/images/site-preview.jpg" />
-  </head>
-  <body>
-    <!-- header/nav/footer repeated on every page - no include mechanism in plain HTML -->
-    <header>
-      <h1>Homestyle Recipe Book</h1>
-      <nav aria-label="Primary">
+<html lang="en" class="no-js">
+<head>
+  <script>(function(){var d=document.documentElement;d.classList.remove('no-js');try{var s=localStorage.getItem('hrb-theme');if(s==='light'||s==='dark'){d.dataset.theme=s;return;}}catch(e){}d.dataset.theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Homestyle Recipe Book -- Simple, tested recipes for cooking at home.</title>
+  <meta name="description" content="A growing collection of home-tested recipes with clear ingredients, numbered steps, and nutrition estimates — no specialty shopping required." />
+  <link rel="canonical" href="https://samiulasumel.github.io/homestyle-recipe-book/index.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" id="theme-color" content="#FDF8F1" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Homestyle Recipe Book -- Simple, tested recipes for cooking at home." />
+  <meta property="og:description" content="A growing collection of home-tested recipes with clear ingredients, numbered steps, and nutrition estimates — no specialty shopping required." />
+  <meta property="og:image" content="https://samiulasumel.github.io/homestyle-recipe-book/assets/images/og/site-og.jpg" />
+  <meta property="og:url" content="https://samiulasumel.github.io/homestyle-recipe-book/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+  
+</head>
+<body class="">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- Generated from data/recipes.json by tools/build.js -- hand edits here are overwritten on the next build. -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="header-brand" href="index.html">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h18a1 1 0 011 1 9 9 0 01-9 9H11a9 9 0 01-9-9 1 1 0 011-1z"/><path d="M7 11c0-3 1-6 1-8M12 11c0-4 1-6.5 1-9M17 11c0-3-1-5-1-7" fill="none"/></svg>
+        <span class="brand-text">Homestyle Recipe Book</span>
+      </a>
+      <nav class="header-nav" id="header-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="recipes/tomato-basil-pasta.html">Tomato Basil Pasta</a></li>
-          <li><a href="recipes/chicken-curry.html">Chicken Curry</a>"</li>
-          <li><a href="submit-recipe.html">Submit a Recipe</a>"</li>
+          <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+        <li><a class="nav-link" href="index.html#all">Recipes</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="submit-recipe.html">Submit a Recipe</a></li>
         </ul>
       </nav>
-    </header>
+      <div class="header-right">
+        <button id="theme-toggle" class="icon-btn js-only" type="button"
+          aria-label="Switch to dark theme" title="Switch to dark theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="mobile-nav-overlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true" aria-label="Mobile navigation">
+    <nav aria-label="Mobile primary">
+      <ul>
+        <li><a class="mnav-link" href="index.html">Home</a></li>
+        <li><a class="mnav-link" href="index.html#all">Recipes</a></li>
+        <li><a class="mnav-link" href="about.html">About</a></li>
+        <li><a class="mnav-link" href="submit-recipe.html">Submit a Recipe</a></li>
+      </ul>
+    </nav>
+  </div>
+  <main id="main-content">
+    <section class="hero">
+      <h1>Homestyle Recipe Book</h1>
+      <p>A growing collection of home-tested recipes with clear ingredients, numbered steps, and nutrition estimates — no specialty shopping required.</p>
+      <a class="button" href="#all">Browse all recipes</a>
+    </section>
 
-    <main>
-      <section aria-labelledby="intro-heading">
-        <h2 id="intro-heading">Welcome to the Homestyle Recipe Book</h2>
-        <p>
-          This is a small, growing collection of recipes that have actually been cooked and tested
-          at home - nothing fancy, nothing that needs a trip to a specialty store.
-        </p>
-      </section>
+    <section class="featured" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Recipes</h2>
+      <div class="card-grid">
+        <article class="card" data-slug="tomato-basil-pasta" data-category="mains"
+    data-dietary="vegetarian nut-free" data-difficulty="easy" data-total="35"
+    data-published="2026-07-26" data-title="tomato basil pasta">
+    <a class="card-media" href="recipes/tomato-basil-pasta.html" tabindex="-1" aria-hidden="true">
+      <picture>
+    <source type="image/webp" srcset="assets/images/recipes/tomato-basil-pasta-400.webp 400w, assets/images/recipes/tomato-basil-pasta-800.webp 800w, assets/images/recipes/tomato-basil-pasta-1200.webp 1200w" sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" />
+    <img src="assets/images/recipes/tomato-basil-pasta-800.jpg" srcset="assets/images/recipes/tomato-basil-pasta-400.jpg 400w, assets/images/recipes/tomato-basil-pasta-800.jpg 800w, assets/images/recipes/tomato-basil-pasta-1200.jpg 1200w"
+      sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" alt="Bowl of spaghetti in tomato sauce topped with torn basil leaves" width="1200" height="800" loading="lazy" decoding="async" />
+  </picture>
+    </a>
+    <div class="card-body">
+      <p class="card-category">Mains</p>
+      <h3 class="card-title"><a href="recipes/tomato-basil-pasta.html">Tomato Basil Pasta</a></h3>
+      <p class="card-tagline">A 30-minute weeknight pasta built on a fresh tomato sauce.</p>
+      <div class="card-meta">
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> 35 min</span>
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10M12 21V4M20 21v-7"/></svg> Easy</span>
+      </div>
+    </div>
+  </article>
+        <article class="card" data-slug="chicken-curry" data-category="mains"
+    data-dietary="gluten-free dairy-free" data-difficulty="easy" data-total="50"
+    data-published="2026-07-26" data-title="chicken curry">
+    <a class="card-media" href="recipes/chicken-curry.html" tabindex="-1" aria-hidden="true">
+      <picture>
+    <source type="image/webp" srcset="assets/images/recipes/chicken-curry-400.webp 400w, assets/images/recipes/chicken-curry-800.webp 800w, assets/images/recipes/chicken-curry-1200.webp 1200w" sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" />
+    <img src="assets/images/recipes/chicken-curry-800.jpg" srcset="assets/images/recipes/chicken-curry-400.jpg 400w, assets/images/recipes/chicken-curry-800.jpg 800w, assets/images/recipes/chicken-curry-1200.jpg 1200w"
+      sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" alt="Bowl of chicken curry with rice and cilantro garnish" width="1200" height="800" loading="lazy" decoding="async" />
+  </picture>
+    </a>
+    <div class="card-body">
+      <p class="card-category">Mains</p>
+      <h3 class="card-title"><a href="recipes/chicken-curry.html">Chicken Curry</a></h3>
+      <p class="card-tagline">A one-pot chicken curry with a spice base you can adjust to taste.</p>
+      <div class="card-meta">
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> 50 min</span>
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10M12 21V4M20 21v-7"/></svg> Easy</span>
+      </div>
+    </div>
+  </article>
+        <article class="card" data-slug="classic-shakshuka" data-category="breakfast"
+    data-dietary="vegetarian gluten-free nut-free" data-difficulty="easy" data-total="35"
+    data-published="2026-07-26" data-title="classic shakshuka">
+    <a class="card-media" href="recipes/classic-shakshuka.html" tabindex="-1" aria-hidden="true">
+      <picture>
+    <source type="image/webp" srcset="assets/images/recipes/classic-shakshuka-400.webp 400w, assets/images/recipes/classic-shakshuka-800.webp 800w, assets/images/recipes/classic-shakshuka-1200.webp 1200w" sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" />
+    <img src="assets/images/recipes/classic-shakshuka-800.jpg" srcset="assets/images/recipes/classic-shakshuka-400.jpg 400w, assets/images/recipes/classic-shakshuka-800.jpg 800w, assets/images/recipes/classic-shakshuka-1200.jpg 1200w"
+      sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" alt="Skillet of shakshuka with poached eggs in tomato sauce, garnished with herbs" width="1200" height="800" loading="lazy" decoding="async" />
+  </picture>
+    </a>
+    <div class="card-body">
+      <p class="card-category">Breakfast</p>
+      <h3 class="card-title"><a href="recipes/classic-shakshuka.html">Classic Shakshuka</a></h3>
+      <p class="card-tagline">Eggs poached in a spiced tomato and pepper sauce, one skillet start to finish.</p>
+      <div class="card-meta">
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> 35 min</span>
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10M12 21V4M20 21v-7"/></svg> Easy</span>
+      </div>
+    </div>
+  </article>
+      </div>
+    </section>
 
-      <section aria-labelledby="featured-heading">
-        <h2 id="featured-heading">Featured Recipes</h2>
-        <article>
-          <img
-            src="assets/images/pasta-thumb.jpg"
-            alt="Bowl of tomato basil pasta topped with fresh basil leaves"
-            width="320"
-            height="200"
-          />
-          <h3><a href="recipes/tomato-basil-pasta.html">Tomato Basil Pasta</a></h3>
-          <p>
-            A 30-minute weeknight pasta built on a simp;e fresh tomato sauce, with garlic, olive
-            oil, and fresh basil. This is a classic Italian dish that is easy to make and always a
-            crowd-pleaser.
-          </p>
-        </article>
-        <article>
-          <img
-            src="assets/images/curry-thumb.jpg"
-            alt="Bowl of chicken curry with rice and cilantro garnish"
-            width="320"
-            height="200"
-          />
-          <h3><a href="recipes/chicken-curry.html">Chicken Curry</a></h3>
-          <p>A one-pot chicken curry with a spice base you can adjust to taste.</p>
-        </article>
-      </section>
-      <aside aria-labelledby="tip-heading">
-        <h2 id="tip-heading">Kitchen Wisdom</h2>
-        <blockquote cite="https://example.com/kitchen-notes">
-          <p>Salt in stages, taste as you go — a dish seasoned only once is a dish seasoned by guesswork.</p>
-        </blockquote>
-        <p>— House Kitchen Notes</p>
-        <!-- Deliberately a generic in-house citation, not attributed to any real
-             named person — a quote's source should never be invented. -->
-    </main>
-    <footer>
-      <p>&copy; 2026 Homestyle Recipe Book. Built as a learning project.</p>
-      <p><a href="submit-recipe.html">Have a recipe to share?</a></p>
-    </footer>
+    <section class="categories" aria-labelledby="categories-heading">
+      <h2 id="categories-heading">Browse by Category</h2>
+      <div class="category-grid">
+        <a class="category-tile" href="categories/breakfast.html">
+    <h3>Breakfast</h3>
+    <p>Morning plates worth getting up for.</p>
+    <span class="category-count">1 recipe</span>
+  </a>
+        <a class="category-tile" href="categories/appetizers.html">
+    <h3>Appetizers</h3>
+    <p>Small plates to start a meal or share.</p>
+    <span class="category-count">0 recipes</span>
+  </a>
+        <a class="category-tile" href="categories/mains.html">
+    <h3>Mains</h3>
+    <p>The centerpiece of the meal.</p>
+    <span class="category-count">2 recipes</span>
+  </a>
+        <a class="category-tile" href="categories/vegetarian.html">
+    <h3>Vegetarian</h3>
+    <p>Meat-free mains and sides.</p>
+    <span class="category-count">0 recipes</span>
+  </a>
+        <a class="category-tile" href="categories/desserts.html">
+    <h3>Desserts</h3>
+    <p>Something sweet to finish.</p>
+    <span class="category-count">0 recipes</span>
+  </a>
+        <a class="category-tile" href="categories/drinks.html">
+    <h3>Drinks</h3>
+    <p>Something to sip alongside.</p>
+    <span class="category-count">0 recipes</span>
+  </a>
+      </div>
+    </section>
 
-  </body>
+    <section class="all-recipes" id="all" aria-labelledby="all-heading">
+      <h2 id="all-heading">All Recipes</h2>
+      <div class="filter-bar js-only" id="filter-bar">
+      <div class="filter-row">
+        <label class="visually-hidden" for="recipe-search">Search recipes</label>
+        <div class="search-input">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="search" id="recipe-search" placeholder="Search by name or ingredient..." autocomplete="off" />
+        </div>
+        <label class="visually-hidden" for="category-select">Filter by category</label>
+        <select id="category-select">
+          <option value="all">All categories</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="appetizers">Appetizers</option>
+          <option value="mains">Mains</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="desserts">Desserts</option>
+          <option value="drinks">Drinks</option>
+        </select>
+        <label class="visually-hidden" for="sort-select">Sort recipes</label>
+        <select id="sort-select">
+          <option value="az">A-Z</option>
+          <option value="quick">Quickest first</option>
+          <option value="new">Newest</option>
+        </select>
+      </div>
+      <div class="filter-row filter-chips" role="group" aria-label="Filter by dietary tag">
+        <button type="button" class="chip" data-diet="vegetarian" aria-pressed="false">Vegetarian</button>
+        <button type="button" class="chip" data-diet="vegan" aria-pressed="false">Vegan</button>
+        <button type="button" class="chip" data-diet="gluten-free" aria-pressed="false">Gluten-Free</button>
+        <button type="button" class="chip" data-diet="dairy-free" aria-pressed="false">Dairy-Free</button>
+        <button type="button" class="chip" data-diet="egg-free" aria-pressed="false">Egg-Free</button>
+        <button type="button" class="chip" data-diet="nut-free" aria-pressed="false">Nut-Free</button>
+        <button type="button" class="chip" data-diet="low-carb" aria-pressed="false">Low-Carb</button>
+        <button type="button" class="chip" data-diet="high-protein" aria-pressed="false">High-Protein</button>
+      </div>
+      <p id="filter-status" role="status" aria-live="polite"></p>
+      <div id="empty-state" hidden>
+        <p>No recipes match those filters.</p>
+        <button type="button" id="clear-filters">Clear filters</button>
+      </div>
+    </div>
+      <div class="card-grid" id="recipe-grid">
+        <article class="card" data-slug="chicken-curry" data-category="mains"
+    data-dietary="gluten-free dairy-free" data-difficulty="easy" data-total="50"
+    data-published="2026-07-26" data-title="chicken curry">
+    <a class="card-media" href="recipes/chicken-curry.html" tabindex="-1" aria-hidden="true">
+      <picture>
+    <source type="image/webp" srcset="assets/images/recipes/chicken-curry-400.webp 400w, assets/images/recipes/chicken-curry-800.webp 800w, assets/images/recipes/chicken-curry-1200.webp 1200w" sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" />
+    <img src="assets/images/recipes/chicken-curry-800.jpg" srcset="assets/images/recipes/chicken-curry-400.jpg 400w, assets/images/recipes/chicken-curry-800.jpg 800w, assets/images/recipes/chicken-curry-1200.jpg 1200w"
+      sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" alt="Bowl of chicken curry with rice and cilantro garnish" width="1200" height="800" loading="lazy" decoding="async" />
+  </picture>
+    </a>
+    <div class="card-body">
+      <p class="card-category">Mains</p>
+      <h3 class="card-title"><a href="recipes/chicken-curry.html">Chicken Curry</a></h3>
+      <p class="card-tagline">A one-pot chicken curry with a spice base you can adjust to taste.</p>
+      <div class="card-meta">
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> 50 min</span>
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10M12 21V4M20 21v-7"/></svg> Easy</span>
+      </div>
+    </div>
+  </article>
+        <article class="card" data-slug="classic-shakshuka" data-category="breakfast"
+    data-dietary="vegetarian gluten-free nut-free" data-difficulty="easy" data-total="35"
+    data-published="2026-07-26" data-title="classic shakshuka">
+    <a class="card-media" href="recipes/classic-shakshuka.html" tabindex="-1" aria-hidden="true">
+      <picture>
+    <source type="image/webp" srcset="assets/images/recipes/classic-shakshuka-400.webp 400w, assets/images/recipes/classic-shakshuka-800.webp 800w, assets/images/recipes/classic-shakshuka-1200.webp 1200w" sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" />
+    <img src="assets/images/recipes/classic-shakshuka-800.jpg" srcset="assets/images/recipes/classic-shakshuka-400.jpg 400w, assets/images/recipes/classic-shakshuka-800.jpg 800w, assets/images/recipes/classic-shakshuka-1200.jpg 1200w"
+      sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" alt="Skillet of shakshuka with poached eggs in tomato sauce, garnished with herbs" width="1200" height="800" loading="lazy" decoding="async" />
+  </picture>
+    </a>
+    <div class="card-body">
+      <p class="card-category">Breakfast</p>
+      <h3 class="card-title"><a href="recipes/classic-shakshuka.html">Classic Shakshuka</a></h3>
+      <p class="card-tagline">Eggs poached in a spiced tomato and pepper sauce, one skillet start to finish.</p>
+      <div class="card-meta">
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> 35 min</span>
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10M12 21V4M20 21v-7"/></svg> Easy</span>
+      </div>
+    </div>
+  </article>
+        <article class="card" data-slug="tomato-basil-pasta" data-category="mains"
+    data-dietary="vegetarian nut-free" data-difficulty="easy" data-total="35"
+    data-published="2026-07-26" data-title="tomato basil pasta">
+    <a class="card-media" href="recipes/tomato-basil-pasta.html" tabindex="-1" aria-hidden="true">
+      <picture>
+    <source type="image/webp" srcset="assets/images/recipes/tomato-basil-pasta-400.webp 400w, assets/images/recipes/tomato-basil-pasta-800.webp 800w, assets/images/recipes/tomato-basil-pasta-1200.webp 1200w" sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" />
+    <img src="assets/images/recipes/tomato-basil-pasta-800.jpg" srcset="assets/images/recipes/tomato-basil-pasta-400.jpg 400w, assets/images/recipes/tomato-basil-pasta-800.jpg 800w, assets/images/recipes/tomato-basil-pasta-1200.jpg 1200w"
+      sizes="(min-width: 1000px) 340px, (min-width: 640px) 45vw, 92vw" alt="Bowl of spaghetti in tomato sauce topped with torn basil leaves" width="1200" height="800" loading="lazy" decoding="async" />
+  </picture>
+    </a>
+    <div class="card-body">
+      <p class="card-category">Mains</p>
+      <h3 class="card-title"><a href="recipes/tomato-basil-pasta.html">Tomato Basil Pasta</a></h3>
+      <p class="card-tagline">A 30-minute weeknight pasta built on a fresh tomato sauce.</p>
+      <div class="card-meta">
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> 35 min</span>
+        <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10M12 21V4M20 21v-7"/></svg> Easy</span>
+      </div>
+    </div>
+  </article>
+      </div>
+    </section>
+
+    <aside class="kitchen-wisdom" aria-labelledby="tip-heading">
+      <h2 id="tip-heading">Kitchen Wisdom</h2>
+      <blockquote>
+        <p>Salt in stages, taste as you go -- a dish seasoned only once is a dish seasoned by guesswork.</p>
+      </blockquote>
+      <p>-- House Kitchen Notes</p>
+    </aside>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-brand">Homestyle Recipe Book</p>
+        <p class="footer-tagline">Simple, tested recipes for cooking at home.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="categories/breakfast.html">Breakfast</a></li>
+          <li><a href="categories/appetizers.html">Appetizers</a></li>
+          <li><a href="categories/mains.html">Mains</a></li>
+          <li><a href="categories/vegetarian.html">Vegetarian</a></li>
+          <li><a href="categories/desserts.html">Desserts</a></li>
+          <li><a href="categories/drinks.html">Drinks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Site</h3>
+        <ul>
+          <li><a href="about.html">About &amp; Nutrition Notes</a></li>
+          <li><a href="credits.html">Photo Credits</a></li>
+          <li><a href="submit-recipe.html">Submit a Recipe</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">&copy; 2026 Homestyle Recipe Book. Recipes are tested at home; nutrition values are estimates.</p>
+  </footer>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/recipes-index.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
 </html>
