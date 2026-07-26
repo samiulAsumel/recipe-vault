@@ -2388,6 +2388,652 @@
       "published": "2026-07-26",
       "updated": "2026-07-26",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "tagline": "Seared beef and mushrooms in a creamy paprika-flecked sauce, over noodles.",
+      "description": "Strips of beef seared hot and fast, then simmered briefly with mushrooms, onion, and a sour cream sauce -- classic comfort food over buttered egg noodles.",
+      "category": "mains",
+      "cuisine": "Russian-inspired",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 25,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "medium",
+      "dietary": [
+        "nut-free"
+      ],
+      "keywords": [
+        "beef stroganoff",
+        "beef",
+        "mushrooms",
+        "comfort food",
+        "egg noodles"
+      ],
+      "equipment": [
+        "Large skillet",
+        "Pot for noodles"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 500,
+              "unit": "g",
+              "item": "beef sirloin",
+              "note": "thinly sliced against the grain",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "vegetable oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "onion",
+              "note": "thinly sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 250,
+              "unit": "g",
+              "item": "mushrooms",
+              "note": "sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "butter",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 350,
+              "unit": "ml",
+              "item": "beef stock",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "Dijon mustard",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 120,
+              "unit": "g",
+              "item": "sour cream",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and black pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To serve",
+          "items": [
+            {
+              "quantity": 400,
+              "unit": "g",
+              "item": "egg noodles",
+              "note": "cooked",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "fresh parsley, chopped",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Season the beef with salt and pepper. Heat the oil in a large skillet over high heat and sear the beef in batches until browned but not cooked through, then remove and set aside.",
+          "timerMinutes": null,
+          "tip": "Crowding the pan steams the beef instead of browning it -- work in batches."
+        },
+        {
+          "text": "Add the onion and mushrooms to the same skillet and cook until softened and golden.",
+          "timerMinutes": 8,
+          "tip": null
+        },
+        {
+          "text": "Add the butter and flour, stirring to coat the vegetables, and cook for a minute to remove the raw flour taste.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Gradually whisk in the beef stock, then add the mustard, and simmer until slightly thickened.",
+          "timerMinutes": 5,
+          "tip": null
+        },
+        {
+          "text": "Stir in the sour cream and return the beef to the pan, warming through without letting it boil.",
+          "timerMinutes": null,
+          "tip": "Boiling after the sour cream goes in can make the sauce split."
+        },
+        {
+          "text": "Taste and adjust salt and pepper, then serve over the egg noodles with parsley.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Creme fraiche makes a slightly less tangy sauce than sour cream, if you prefer.",
+        "Leftovers keep 2 days refrigerated but reheat gently to avoid splitting the sauce."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl with noodles",
+        "calories": 520,
+        "proteinG": 32,
+        "carbsG": 38,
+        "fatG": 26,
+        "saturatedFatG": 11,
+        "fiberG": 2,
+        "sugarG": 4,
+        "sodiumMg": 560,
+        "cholesterolMg": 130,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "beef stroganoff",
+          "beef stroganoff noodles"
+        ],
+        "alt": "Beef stroganoff with mushrooms in creamy sauce over egg noodles",
+        "caption": "A sprinkle of parsley cuts through the richness of the sauce.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Beef Stroganoff on Pasta",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=5779011",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Beef_Stroganoff_on_Pasta.jpg",
+          "artist": "jgodsey",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "4bd5c273e8f7bd82f99e5eed6196d809ff31e53a83feee0502384c096fa5f7cc",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "spaghetti-carbonara",
+        "classic-lasagna"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "spaghetti-carbonara",
+      "title": "Spaghetti Carbonara",
+      "tagline": "Pasta tossed in a silky egg and pecorino sauce with crisp pancetta.",
+      "description": "Just five ingredients -- eggs, cheese, pancetta, pepper, and pasta -- combined off the heat so the eggs turn into a glossy sauce instead of scrambling.",
+      "category": "mains",
+      "cuisine": "Italian",
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 15,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "difficulty": "medium",
+      "dietary": [
+        "nut-free"
+      ],
+      "keywords": [
+        "carbonara",
+        "pasta",
+        "pancetta",
+        "eggs",
+        "italian",
+        "pecorino"
+      ],
+      "equipment": [
+        "Large pot",
+        "Large skillet",
+        "Mixing bowl"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 400,
+              "unit": "g",
+              "item": "spaghetti",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 150,
+              "unit": "g",
+              "item": "pancetta",
+              "note": "diced",
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "whole eggs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "egg yolks",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 80,
+              "unit": "g",
+              "item": "pecorino romano",
+              "note": "finely grated, plus extra to serve",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "plenty of black pepper",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt for the pasta water",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Bring a large pot of salted water to a boil and cook the spaghetti until al dente.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "While the pasta cooks, fry the pancetta in a large skillet over medium heat until crisp and golden.",
+          "timerMinutes": 6,
+          "tip": null
+        },
+        {
+          "text": "Whisk the whole eggs, egg yolks, pecorino, and a generous amount of black pepper together in a bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Reserve a mug of pasta water, then drain the pasta and add it to the skillet with the pancetta, off the heat.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour in the egg mixture, tossing constantly and adding splashes of the reserved pasta water until the sauce turns glossy and coats the pasta.",
+          "timerMinutes": null,
+          "tip": "The pan must be off the heat when the eggs go in -- direct heat scrambles them instead of turning them into sauce."
+        },
+        {
+          "text": "Serve immediately with extra pecorino and black pepper.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Guanciale is the traditional cut if you can find it -- pancetta is a widely available substitute.",
+        "Heavy cream is not part of a traditional carbonara -- the emulsified eggs are what make the sauce silky."
+      ],
+      "nutrition": {
+        "servingSize": "1 bowl",
+        "calories": 610,
+        "proteinG": 28,
+        "carbsG": 68,
+        "fatG": 24,
+        "saturatedFatG": 10,
+        "fiberG": 3,
+        "sugarG": 3,
+        "sodiumMg": 680,
+        "cholesterolMg": 245,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "spaghetti carbonara",
+          "carbonara pasta"
+        ],
+        "alt": "Spaghetti carbonara twisted on a fork with black pepper and pecorino",
+        "caption": "Serve the moment the sauce comes together -- it tightens as it cools.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "carbonara pasta",
+          "descriptionUrl": "https://www.rawpixel.com/image/5961325/free-public-domain-cc0-photo",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxMTU2MDI4LWltYWdlLWt3eXIxbXpsLWt3eXQ5Nmp1LmpwZw.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "fb4aab4789301779c47ac6813d178e209f6e00455d43f81659f318591419c014",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "tomato-basil-pasta",
+        "beef-stroganoff"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "classic-lasagna",
+      "title": "Classic Lasagna",
+      "tagline": "Layered pasta baked with a slow-simmered meat sauce and bechamel.",
+      "description": "Sheets of pasta layered with a long-simmered beef and tomato sauce and a creamy bechamel, baked until bubbling and golden on top.",
+      "category": "mains",
+      "cuisine": "Italian",
+      "times": {
+        "prepMinutes": 30,
+        "cookMinutes": 75,
+        "restMinutes": 15
+      },
+      "servings": 8,
+      "servingUnit": "servings",
+      "difficulty": "hard",
+      "dietary": [
+        "nut-free"
+      ],
+      "keywords": [
+        "lasagna",
+        "beef",
+        "pasta",
+        "baked",
+        "italian",
+        "family dinner"
+      ],
+      "equipment": [
+        "Large pot",
+        "Baking dish (9x13 in)",
+        "Saucepan"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": "For the meat sauce",
+          "items": [
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "onion",
+              "note": "finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 500,
+              "unit": "g",
+              "item": "ground beef",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 800,
+              "unit": "g",
+              "item": "crushed tomatoes",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "tomato paste",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "dried oregano",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and black pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "For the bechamel",
+          "items": [
+            {
+              "quantity": 50,
+              "unit": "g",
+              "item": "butter",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 50,
+              "unit": "g",
+              "item": "all-purpose flour",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 600,
+              "unit": "ml",
+              "item": "milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "pinch of nutmeg",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To assemble",
+          "items": [
+            {
+              "quantity": 12,
+              "unit": null,
+              "item": "lasagna sheets",
+              "note": "cooked according to package directions",
+              "scalable": true
+            },
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "mozzarella",
+              "note": "grated",
+              "scalable": true
+            },
+            {
+              "quantity": 50,
+              "unit": "g",
+              "item": "Parmesan",
+              "note": "grated",
+              "scalable": true
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Heat the olive oil in a large pot and cook the onion until softened.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the garlic and ground beef, and cook until the beef is browned.",
+          "timerMinutes": 8,
+          "tip": null
+        },
+        {
+          "text": "Stir in the crushed tomatoes, tomato paste, oregano, salt, and pepper, and simmer uncovered until thickened.",
+          "timerMinutes": 35,
+          "tip": "The longer, slower simmer is what makes a meat sauce taste developed instead of just cooked -- do not rush this step."
+        },
+        {
+          "text": "Meanwhile, melt the butter in a saucepan, whisk in the flour, and cook for a minute. Gradually whisk in the milk and simmer until thickened, then season with nutmeg and salt.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Preheat the oven to 190C (375F). Spread a thin layer of meat sauce in the baking dish, then layer pasta sheets, meat sauce, and bechamel, repeating to use it all up, finishing with bechamel.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Scatter the mozzarella and Parmesan over the top.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Bake until bubbling and golden on top.",
+          "timerMinutes": 35,
+          "tip": null
+        },
+        {
+          "text": "Let it rest before slicing.",
+          "timerMinutes": 15,
+          "tip": "Slicing straight from the oven collapses the layers -- resting lets the lasagna set."
+        }
+      ],
+      "notes": [
+        "Assembled, unbaked lasagna freezes well for up to 3 months -- thaw overnight before baking.",
+        "Leftovers keep 3 days refrigerated and reheat well covered in a low oven."
+      ],
+      "nutrition": {
+        "servingSize": "1 slice",
+        "calories": 560,
+        "proteinG": 34,
+        "carbsG": 42,
+        "fatG": 28,
+        "saturatedFatG": 14,
+        "fiberG": 4,
+        "sugarG": 8,
+        "sodiumMg": 680,
+        "cholesterolMg": 95,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "lasagna",
+          "baked lasagna slice"
+        ],
+        "alt": "Slice of baked lasagna showing layers of pasta, meat sauce, and cheese",
+        "caption": "Let it rest 15 minutes before cutting so the layers hold their shape.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Lasagna (1)",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=18808931",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Lasagna_%281%29.jpg",
+          "artist": "jeffreyw",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "d73813d2021e6b3abd13c15de20d6c995cc3a29a8a22f0f19e65e2afba592ce7",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "spaghetti-carbonara",
+        "beef-stroganoff"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }

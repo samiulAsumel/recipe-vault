@@ -34,6 +34,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/beef-stroganoff.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/belgian-waffles.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
@@ -59,6 +64,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/classic-lasagna.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/classic-pancakes.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
@@ -80,6 +90,11 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/pan-fried-dumplings.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/spaghetti-carbonara.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>

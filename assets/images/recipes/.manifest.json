@@ -106,5 +106,32 @@
       1200
     ],
     "builtAt": "2026-07-26"
+  },
+  "beef-stroganoff:4bd5c273e8f7bd82f99e5eed6196d809ff31e53a83feee0502384c096fa5f7cc": {
+    "sha256": "4bd5c273e8f7bd82f99e5eed6196d809ff31e53a83feee0502384c096fa5f7cc",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "spaghetti-carbonara:fb4aab4789301779c47ac6813d178e209f6e00455d43f81659f318591419c014": {
+    "sha256": "fb4aab4789301779c47ac6813d178e209f6e00455d43f81659f318591419c014",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "classic-lasagna:d73813d2021e6b3abd13c15de20d6c995cc3a29a8a22f0f19e65e2afba592ce7": {
+    "sha256": "d73813d2021e6b3abd13c15de20d6c995cc3a29a8a22f0f19e65e2afba592ce7",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
   }
 }
