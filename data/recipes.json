@@ -6603,18 +6603,18 @@
       },
       "image": {
         "searchTerms": [
-          "borhani bangladeshi yogurt drink",
-          "kacchi biryani borhani"
+          "borhani glass",
+          "doi borhani drink"
         ],
-        "alt": "Plate of Kacchi Biryani served with a glass of Borhani, its traditional pairing",
-        "caption": "In Old Dhaka, Borhani and Kacchi Biryani are rarely served apart.",
-        "focal": "top",
+        "alt": "Glass of pale, creamy Borhani, a spiced Bangladeshi yogurt drink",
+        "caption": "Silky and thin with no visible flecks -- straining twice is what gets it there.",
+        "focal": "center",
         "source": {
           "provider": "wikimedia-commons",
-          "pageTitle": "File:Kacchi Biryani and Borhani.jpg",
-          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kacchi_Biryani_and_Borhani.jpg",
-          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kacchi_Biryani_and_Borhani.jpg",
-          "artist": "Solomon The Magnifico",
+          "pageTitle": "File:A Glass of Borhani.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:A_Glass_of_Borhani.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/A_Glass_of_Borhani.jpg",
+          "artist": "DarkSpartan",
           "credit": "Own work",
           "license": {
             "id": "CC-BY-SA-4.0",
@@ -6624,7 +6624,7 @@
             "shareAlike": true
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "22583a5af59e73c576c7079ee40fbaedf15bc5912722b047b30a18b27704e19a",
+          "sha256": "8843bfda5729a7c242a1c83b43e1dc0261ff12c05ac6bc8827e1a8136e9ea584",
           "ext": "jpg",
           "fetchedAt": "2026-07-27"
         },

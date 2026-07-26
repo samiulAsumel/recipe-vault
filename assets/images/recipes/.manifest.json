@@ -358,5 +358,14 @@
       1200
     ],
     "builtAt": "2026-07-27"
+  },
+  "borhani:8843bfda5729a7c242a1c83b43e1dc0261ff12c05ac6bc8827e1a8136e9ea584": {
+    "sha256": "8843bfda5729a7c242a1c83b43e1dc0261ff12c05ac6bc8827e1a8136e9ea584",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-27"
   }
 }
