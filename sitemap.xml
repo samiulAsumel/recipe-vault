@@ -13,6 +13,7 @@
   </url>
   <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/categories/appetizers.html</loc>
+    <lastmod>2026-07-26</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -48,6 +49,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/classic-bruschetta.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/classic-hummus.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/classic-pancakes.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
@@ -63,7 +74,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/fresh-guacamole.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/pan-fried-dumplings.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/tomato-basil-pasta.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samiulasumel.github.io/homestyle-recipe-book/recipes/vegetable-spring-rolls.html</loc>
     <lastmod>2026-07-26</lastmod>
     <priority>0.8</priority>
   </url>

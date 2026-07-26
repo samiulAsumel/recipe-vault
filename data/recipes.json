@@ -1392,6 +1392,1002 @@
       "published": "2026-07-26",
       "updated": "2026-07-26",
       "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "classic-bruschetta",
+      "title": "Classic Bruschetta",
+      "tagline": "Grilled bread rubbed with garlic and piled with fresh tomatoes and basil.",
+      "description": "Toasted bread brushed with olive oil, rubbed with raw garlic, and topped with a quick tomato-basil mixture -- ready in the time it takes to toast the bread.",
+      "category": "appetizers",
+      "cuisine": "Italian",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 5,
+        "restMinutes": 10
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "yieldText": "8 pieces",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "dairy-free"
+      ],
+      "keywords": [
+        "bruschetta",
+        "appetizer",
+        "tomato",
+        "basil",
+        "italian",
+        "party"
+      ],
+      "equipment": [
+        "Grill pan or oven",
+        "Small bowl"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 8,
+              "unit": null,
+              "item": "baguette slices",
+              "note": "cut on the diagonal",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "olive oil",
+              "note": "plus extra for brushing",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "halved",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the topping",
+          "items": [
+            {
+              "quantity": 500,
+              "unit": "g",
+              "item": "ripe tomatoes",
+              "note": "diced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "small shallot",
+              "note": "finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "fresh basil",
+              "note": "torn",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "balsamic vinegar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and pepper to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Brush the bread slices with olive oil and toast or grill until golden on both sides.",
+          "timerMinutes": 4,
+          "tip": null
+        },
+        {
+          "text": "While still warm, rub each slice with the cut side of a garlic clove.",
+          "timerMinutes": null,
+          "tip": "Rubbing raw garlic onto warm toast releases just enough bite without overwhelming the topping."
+        },
+        {
+          "text": "Combine the tomatoes, shallot, basil, olive oil, and balsamic vinegar in a bowl, and season with salt and pepper.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Let the tomato mixture sit for a few minutes to release its juices.",
+          "timerMinutes": 10,
+          "tip": null
+        },
+        {
+          "text": "Spoon the tomato mixture onto the toasted bread just before serving.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Assemble just before serving, or the bread turns soggy.",
+        "Salt the tomatoes only right before topping, not while they sit."
+      ],
+      "nutrition": {
+        "servingSize": "2 pieces",
+        "calories": 180,
+        "proteinG": 4,
+        "carbsG": 24,
+        "fatG": 8,
+        "saturatedFatG": 1,
+        "fiberG": 2,
+        "sugarG": 4,
+        "sodiumMg": 260,
+        "cholesterolMg": 0,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "bruschetta",
+          "tomato bruschetta"
+        ],
+        "alt": "Bruschetta slices topped with diced tomato and basil on a wooden board",
+        "caption": "Best assembled minutes before serving, while the bread is still crisp.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Closeup Bruschetta tomatoes",
+          "descriptionUrl": "https://www.rawpixel.com/image/6040253/photo-image-public-domain-red-food",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZyYnJ1c2NoZXR0YV90b21hdG9fY2FwcmljZV9ncmlsbGVkLWltYWdlLWt5YmU0dmUwLmpwZw.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "e666d6bafcc0a05cf741302a89f063cdc4cde01cfe3e9659be74d7a72a5b6f2d",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-hummus",
+        "fresh-guacamole"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "classic-hummus",
+      "title": "Classic Hummus",
+      "tagline": "Creamy chickpea and tahini dip, blended smooth in minutes.",
+      "description": "Chickpeas blended with tahini, lemon, and garlic until silky -- better than store-bought and ready faster than a trip to buy it.",
+      "category": "appetizers",
+      "cuisine": "Middle Eastern",
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 0,
+        "restMinutes": 0
+      },
+      "servings": 6,
+      "servingUnit": "servings",
+      "yieldText": "about 2 cups",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free"
+      ],
+      "keywords": [
+        "hummus",
+        "dip",
+        "chickpeas",
+        "tahini",
+        "middle eastern",
+        "appetizer"
+      ],
+      "equipment": [
+        "Food processor"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 400,
+              "unit": "g",
+              "item": "chickpeas",
+              "note": "drained, liquid reserved",
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "g",
+              "item": "tahini",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "lemon juice",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "clove",
+              "item": "garlic",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "olive oil",
+              "note": "plus extra to serve",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "ground cumin",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "paprika, to serve",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "fresh parsley, chopped",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Combine the chickpeas, tahini, lemon juice, garlic, olive oil, cumin, and salt in a food processor.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Blend until smooth, scraping down the sides as needed.",
+          "timerMinutes": 3,
+          "tip": null
+        },
+        {
+          "text": "With the motor running, add reserved chickpea liquid a tablespoon at a time until silky.",
+          "timerMinutes": null,
+          "tip": "The starchy liquid from the can is what gives hummus its light, whipped texture -- plain water works too, but not as well."
+        },
+        {
+          "text": "Taste and adjust the salt or lemon.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Spread onto a plate, drizzle with olive oil, and dust with paprika and parsley before serving.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Keeps 4 days refrigerated in a sealed container.",
+        "Flavor improves if it sits at room temperature for an hour before serving."
+      ],
+      "nutrition": {
+        "servingSize": "1/3 cup",
+        "calories": 160,
+        "proteinG": 5,
+        "carbsG": 14,
+        "fatG": 10,
+        "saturatedFatG": 1,
+        "fiberG": 4,
+        "sugarG": 1,
+        "sodiumMg": 280,
+        "cholesterolMg": 0,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "hummus",
+          "hummus bowl"
+        ],
+        "alt": "Bowl of hummus drizzled with olive oil and dusted with paprika",
+        "caption": "A well drizzled with olive oil in the center is traditional for good reason.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Hummus Dip (30863436677)",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=79977258",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Hummus_Dip_%2830863436677%29.jpg",
+          "artist": "Ella Olsson from Stockholm, Sweden",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "a9e1eae437c6bc6fc6706fd42da59ab039cc062739b5a248a632d4fa2055db93",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-bruschetta",
+        "fresh-guacamole"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "vegetable-spring-rolls",
+      "title": "Vegetable Spring Rolls",
+      "tagline": "Crisp fried rolls packed with shredded vegetables.",
+      "description": "A shredded vegetable filling wrapped tight in spring roll pastry and fried until crackling -- a party appetizer worth the extra folding.",
+      "category": "appetizers",
+      "cuisine": "Southeast Asian",
+      "times": {
+        "prepMinutes": 30,
+        "cookMinutes": 15,
+        "restMinutes": 0
+      },
+      "servings": 6,
+      "servingUnit": "servings",
+      "yieldText": "12 rolls",
+      "difficulty": "medium",
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "dairy-free"
+      ],
+      "keywords": [
+        "spring rolls",
+        "appetizer",
+        "vegetables",
+        "fried",
+        "party"
+      ],
+      "equipment": [
+        "Wok or large pan",
+        "Spring roll wrappers",
+        "Frying pot"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 12,
+              "unit": null,
+              "item": "spring roll wrappers",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "vegetable oil",
+              "note": "for the filling",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "cup",
+              "item": "cabbage",
+              "note": "shredded",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "cup",
+              "item": "carrot",
+              "note": "julienned",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "cup",
+              "item": "bean sprouts",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "spring onions",
+              "note": "sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "soy sauce",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "sesame oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "oil for frying",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "sweet chili sauce or soy dipping sauce",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Heat the vegetable oil in a wok over high heat and stir-fry the garlic until fragrant.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the cabbage, carrot, and bean sprouts, and stir-fry until just softened.",
+          "timerMinutes": 4,
+          "tip": null
+        },
+        {
+          "text": "Stir in the spring onions, soy sauce, and sesame oil, then remove from heat and let cool completely.",
+          "timerMinutes": null,
+          "tip": "A hot filling steams the wrapper and makes it tear -- let it cool before wrapping."
+        },
+        {
+          "text": "Spoon filling onto a wrapper, fold the bottom corner over, tuck in the sides, and roll tightly, sealing the edge with a little water.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Heat oil to 175C (350F) and fry the rolls in batches until golden and crisp.",
+          "timerMinutes": 5,
+          "tip": null
+        },
+        {
+          "text": "Drain on paper towels and serve hot with dipping sauce.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Rolls can be assembled ahead and refrigerated -- fry just before serving for maximum crunch.",
+        "Baking at 200C (400F) for 20 minutes, turning once, works as a lighter alternative to frying."
+      ],
+      "nutrition": {
+        "servingSize": "2 rolls",
+        "calories": 210,
+        "proteinG": 4,
+        "carbsG": 26,
+        "fatG": 10,
+        "saturatedFatG": 1,
+        "fiberG": 2,
+        "sugarG": 3,
+        "sodiumMg": 340,
+        "cholesterolMg": 0,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "spring rolls",
+          "vegetable spring rolls"
+        ],
+        "alt": "Fried spring rolls stacked with a bowl of dipping sauce",
+        "caption": "Serve immediately -- the crispness fades fast once plated.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Spring roll 001",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=111199747",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Spring_roll_001.jpg",
+          "artist": "Ocdp",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "3453ed079b112f614e1a104ede41b01417bd84fe5b2a386aff797e4fde1daa50",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "pan-fried-dumplings",
+        "classic-bruschetta"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "fresh-guacamole",
+      "title": "Fresh Guacamole",
+      "tagline": "Mashed avocado brightened with lime, onion, and cilantro.",
+      "description": "Ripe avocados mashed to a chunky puree with lime juice, onion, and chile -- the dip that disappears faster than you can make it.",
+      "category": "appetizers",
+      "cuisine": "Mexican",
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 0,
+        "restMinutes": 0
+      },
+      "servings": 4,
+      "servingUnit": "servings",
+      "yieldText": "about 2 cups",
+      "difficulty": "easy",
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free"
+      ],
+      "keywords": [
+        "guacamole",
+        "avocado",
+        "dip",
+        "mexican",
+        "appetizer"
+      ],
+      "equipment": [
+        "Mixing bowl",
+        "Fork or molcajete"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "ripe avocados",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "lime juice",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.25,
+              "unit": "cup",
+              "item": "red onion",
+              "note": "finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "small jalapeno",
+              "note": "seeded and minced",
+              "scalable": true
+            },
+            {
+              "quantity": 0.25,
+              "unit": "cup",
+              "item": "fresh cilantro",
+              "note": "chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "small tomato",
+              "note": "diced",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "tortilla chips, to serve",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Halve the avocados, remove the pits, and scoop the flesh into a bowl.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Mash with a fork to your preferred chunkiness -- some smooth, some in pieces.",
+          "timerMinutes": null,
+          "tip": "Mashing by hand instead of blending is what keeps guacamole from turning into paste."
+        },
+        {
+          "text": "Stir in the lime juice, onion, jalapeno, cilantro, tomato, and salt.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Taste and adjust the salt or lime.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Serve immediately with tortilla chips.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Press plastic wrap directly onto the surface to slow browning if not serving right away.",
+        "A reserved avocado pit nestled in the bowl helps too, though the plastic wrap does more of the work."
+      ],
+      "nutrition": {
+        "servingSize": "1/2 cup",
+        "calories": 230,
+        "proteinG": 3,
+        "carbsG": 14,
+        "fatG": 20,
+        "saturatedFatG": 3,
+        "fiberG": 9,
+        "sugarG": 2,
+        "sodiumMg": 330,
+        "cholesterolMg": 0,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "guacamole",
+          "guacamole bowl"
+        ],
+        "alt": "Bowl of guacamole with tortilla chips and lime wedges",
+        "caption": "Chunky is traditional -- resist the urge to blend it smooth.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "2018-02-01-Guacamole mit Nachos-7937",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=66570396",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/2018-02-01-Guacamole_mit_Nachos-7937.jpg",
+          "artist": "Superbass",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "daf4fcc00f0a37197620ef145880e26027749829627cc47987fde5cf8ca91fde",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "classic-hummus",
+        "classic-bruschetta"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
+    },
+    {
+      "slug": "pan-fried-dumplings",
+      "title": "Pan-Fried Dumplings",
+      "tagline": "Pork and cabbage dumplings, steamed then crisped in the pan.",
+      "description": "A juicy pork and cabbage filling folded into wrappers, steamed until cooked through, then finished in a hot pan for a crisp golden base.",
+      "category": "appetizers",
+      "cuisine": "Chinese",
+      "times": {
+        "prepMinutes": 40,
+        "cookMinutes": 15,
+        "restMinutes": 0
+      },
+      "servings": 6,
+      "servingUnit": "servings",
+      "yieldText": "about 24 dumplings",
+      "difficulty": "medium",
+      "dietary": [
+        "dairy-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "dumplings",
+        "potstickers",
+        "pork",
+        "appetizer",
+        "chinese"
+      ],
+      "equipment": [
+        "Large skillet with lid",
+        "Steamer or kettle"
+      ],
+      "ingredientGroups": [
+        {
+          "heading": null,
+          "items": [
+            {
+              "quantity": 300,
+              "unit": "g",
+              "item": "ground pork",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "cup",
+              "item": "cabbage",
+              "note": "finely chopped and salted",
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": null,
+              "item": "spring onions",
+              "note": "finely sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "ginger",
+              "note": "grated",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "soy sauce",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "sesame oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 24,
+              "unit": null,
+              "item": "dumpling wrappers",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "vegetable oil",
+              "note": "for frying",
+              "scalable": true
+            },
+            {
+              "quantity": 120,
+              "unit": "ml",
+              "item": "water",
+              "note": "for steaming",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "soy sauce and chili oil, for dipping",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "Squeeze the salted cabbage to remove excess water, then combine with the pork, spring onions, ginger, garlic, soy sauce, sesame oil, and salt.",
+          "timerMinutes": null,
+          "tip": "Salting and squeezing the cabbage first keeps the filling from turning watery once it cooks."
+        },
+        {
+          "text": "Place a spoonful of filling in the center of each wrapper, moisten the edge with water, and pleat closed.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Heat the vegetable oil in a large skillet over medium-high heat and arrange the dumplings flat-side down.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Fry until the bottoms are golden.",
+          "timerMinutes": 3,
+          "tip": null
+        },
+        {
+          "text": "Add the water, cover immediately, and steam until the filling is cooked through.",
+          "timerMinutes": 8,
+          "tip": null
+        },
+        {
+          "text": "Uncover and let any remaining water evaporate so the bottoms re-crisp.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Serve hot with soy sauce and chili oil.",
+          "timerMinutes": null,
+          "tip": null
+        }
+      ],
+      "notes": [
+        "Uncooked dumplings freeze well laid flat on a tray before being bagged.",
+        "Cook straight from frozen, adding about 2 extra minutes to the steaming step."
+      ],
+      "nutrition": {
+        "servingSize": "4 dumplings",
+        "calories": 280,
+        "proteinG": 14,
+        "carbsG": 26,
+        "fatG": 14,
+        "saturatedFatG": 4,
+        "fiberG": 1,
+        "sugarG": 1,
+        "sodiumMg": 480,
+        "cholesterolMg": 35,
+        "basis": "estimate"
+      },
+      "image": {
+        "searchTerms": [
+          "crispy potstickers",
+          "gyoza dumplings crisped bottoms"
+        ],
+        "alt": "Pan-fried dumplings with crisp golden bottoms on a plate",
+        "caption": "The golden bottom crust is the whole point of finishing them in the pan.",
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Pan-fried gyoza dumplings with lightly crisped bottoms, arranged on a black ceramic plate.",
+          "descriptionUrl": "https://wordpress.org/photos/photo/460697306b/",
+          "originalUrl": "https://pd.w.org/2026/01/460697306bc32a624.17729416-1536x2048.jpeg",
+          "artist": "Uttkrista Chhetri",
+          "credit": "wordpress",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "eb88367136fe65b56904db6a628e0e24fea2f4cf207fa8ff25cb54aaf812a377",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
+      },
+      "related": [
+        "vegetable-spring-rolls",
+        "chicken-curry"
+      ],
+      "featured": false,
+      "published": "2026-07-26",
+      "updated": "2026-07-26",
+      "author": "Homestyle Recipe Book"
     }
   ]
 }

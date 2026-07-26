@@ -61,5 +61,50 @@
       1200
     ],
     "builtAt": "2026-07-26"
+  },
+  "classic-bruschetta:e666d6bafcc0a05cf741302a89f063cdc4cde01cfe3e9659be74d7a72a5b6f2d": {
+    "sha256": "e666d6bafcc0a05cf741302a89f063cdc4cde01cfe3e9659be74d7a72a5b6f2d",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "classic-hummus:a9e1eae437c6bc6fc6706fd42da59ab039cc062739b5a248a632d4fa2055db93": {
+    "sha256": "a9e1eae437c6bc6fc6706fd42da59ab039cc062739b5a248a632d4fa2055db93",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "vegetable-spring-rolls:3453ed079b112f614e1a104ede41b01417bd84fe5b2a386aff797e4fde1daa50": {
+    "sha256": "3453ed079b112f614e1a104ede41b01417bd84fe5b2a386aff797e4fde1daa50",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "fresh-guacamole:daf4fcc00f0a37197620ef145880e26027749829627cc47987fde5cf8ca91fde": {
+    "sha256": "daf4fcc00f0a37197620ef145880e26027749829627cc47987fde5cf8ca91fde",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "pan-fried-dumplings:eb88367136fe65b56904db6a628e0e24fea2f4cf207fa8ff25cb54aaf812a377": {
+    "sha256": "eb88367136fe65b56904db6a628e0e24fea2f4cf207fa8ff25cb54aaf812a377",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
   }
 }

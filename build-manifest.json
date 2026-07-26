@@ -1,23 +1,28 @@
 {
   "generator": "tools/build.js",
   "files": {
-    "assets/js/recipes-index.js": "e2a736f92dac70f52260cc0d42dbfd90e5ee841e0f6ebda1bcf1404d14505b0f",
-    "categories/appetizers.html": "9ef83f0d3d70615fd2ce5e45a14b1235c4a7d8412b2a8ab649fec065063b2c24",
+    "assets/js/recipes-index.js": "3f728a1d2931b6b0d7a0406e3ba46dcce8bad6a5622d6adf2401c992e3937560",
+    "categories/appetizers.html": "bc0e68a3de24f31c179e950074f9140a194c35f920f05a34e937bde5f3d8eaa0",
     "categories/breakfast.html": "dc2f1d44e357f856924585f55e6873807d3befcde3546877a24404b06b8ea0e8",
     "categories/desserts.html": "bcde75c4d6f23bc5d8dbcd7c40211384febb9342eb9c95ec5db0ca941ca6e3d1",
     "categories/drinks.html": "7120de89b96853a40d096aaa4ea075d379c0669f5a07340bd639e0b059c02e74",
     "categories/mains.html": "0f688c66b94b074d5300ebd43575bd6af700584180747eac32b91a2147aa1c1b",
     "categories/vegetarian.html": "1b24e2a67d844d28797bc465d451a303071b196c78a0c5b64f26df28dabe92a6",
-    "credits.html": "6392a76769d7e1358db74b83d925c5c8add4a9a350c7175cb11347c6a7ae3365",
-    "index.html": "6eecd723a17f4f649d8cc9436c0ebe98c7ead7bd6433c31d6c794a9b6852e31a",
+    "credits.html": "40db2528f409667f877a7d71e9916bc6f06211c8b2d9f4e90e65ff0580ee1f22",
+    "index.html": "b721407aa1271650c39b56fe9d7a6c981de11adb3364a867678e2b85568c4aae",
     "recipes/belgian-waffles.html": "59bd62b153118382ec41256cbe2c5c6de0148686525de70ebb15b7509cd254a3",
     "recipes/cheese-omelette.html": "81e94ff4901016e36bbda80a2dd9f70b46c9689896dd604db208c7d65f530a8f",
     "recipes/chicken-curry.html": "84c1ab81888c1bf2f5e11669e070dd8288ef06479f3beb858b4c1126aadd80f8",
+    "recipes/classic-bruschetta.html": "60cab19f7c8c38ca72200be3ad0dd6228970a558a3815ab0cef5bf1bb8601019",
+    "recipes/classic-hummus.html": "5c6f74afe7fa04cf4fbf4c02f1ca1ce9825e51e3bbb0979e6c67fedf9a8f08e3",
     "recipes/classic-pancakes.html": "63232f214dd5ff5134fd54b2e6cbd63f2f71943d5119a2bdca9b818753ad446b",
     "recipes/classic-shakshuka.html": "1888d5977abc697c85713118e297e630efa56d413beda43a8342c73e2d857c7f",
     "recipes/french-toast.html": "e3c970f3b69da64957324f30da1053c1533ee3487744fd81a84806e602e2b058",
+    "recipes/fresh-guacamole.html": "1c22bac68ae0119b35a1776b1dba4f055c18cc9b8b3f8b197f0fdf79a11bcd65",
+    "recipes/pan-fried-dumplings.html": "d0d191ae03f650d80bf999e286ac1302d91480a75c95bd5c2567e6df07dff076",
     "recipes/tomato-basil-pasta.html": "181dc67682c43070406839227110ac9238009e8bc013a17ca0793ac5fa5d2d3a",
+    "recipes/vegetable-spring-rolls.html": "d9349961527d4b50e2abb86d2294d222e495ea7c53f75f054909f4907695abae",
     "robots.txt": "3dd9cf05af4248ed657734c7897a099123e0f8942f83587c16fc8ddf5b8c55e4",
-    "sitemap.xml": "706380036d54cde7a05e1e0d73d23f16461cae9ccaf929d209d9d6990df46a52"
+    "sitemap.xml": "e4ae7b410660ca84231bdff7121be0681de35df610429bcc0c0086ef8d50b230"
   }
 }
