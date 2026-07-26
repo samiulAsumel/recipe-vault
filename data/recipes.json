@@ -8,46 +8,143 @@
       "description": "Ripe tomatoes cooked down with garlic and olive oil until they collapse into a sauce, finished with torn basil and starchy pasta water. One pan, one pot, no specialty shopping.",
       "category": "mains",
       "cuisine": "Italian",
-      "times": { "prepMinutes": 10, "cookMinutes": 25, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 25,
+        "restMinutes": 0
+      },
       "servings": 4,
       "servingUnit": "servings",
       "difficulty": "easy",
-      "dietary": ["vegetarian", "nut-free"],
-      "keywords": ["pasta", "tomato", "basil", "weeknight", "vegetarian", "30 minute", "spaghetti"],
-      "equipment": ["Large pot", "Wide sauté pan", "Colander"],
+      "dietary": [
+        "vegetarian",
+        "nut-free"
+      ],
+      "keywords": [
+        "pasta",
+        "tomato",
+        "basil",
+        "weeknight",
+        "vegetarian",
+        "30 minute",
+        "spaghetti"
+      ],
+      "equipment": [
+        "Large pot",
+        "Wide sauté pan",
+        "Colander"
+      ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
-            { "quantity": 400, "unit": "g", "item": "dried spaghetti", "note": null, "scalable": true },
-            { "quantity": null, "unit": null, "item": "salt for the pasta water", "note": null, "scalable": false }
+            {
+              "quantity": 400,
+              "unit": "g",
+              "item": "dried spaghetti",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt for the pasta water",
+              "note": null,
+              "scalable": false
+            }
           ]
         },
         {
           "heading": "For the sauce",
           "items": [
-            { "quantity": 3, "unit": "tbsp", "item": "extra-virgin olive oil", "note": null, "scalable": true },
-            { "quantity": 4, "unit": "clove", "item": "garlic", "note": "thinly sliced", "scalable": true },
-            { "quantity": 800, "unit": "g", "item": "ripe plum tomatoes", "note": "roughly chopped", "scalable": true },
-            { "quantity": 0.5, "unit": "tsp", "item": "chilli flakes", "note": "optional", "scalable": true },
-            { "quantity": 30, "unit": "g", "item": "fresh basil", "note": "leaves torn", "scalable": true },
-            { "quantity": null, "unit": null, "item": "salt and black pepper to taste", "note": null, "scalable": false }
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "extra-virgin olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 4,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "thinly sliced",
+              "scalable": true
+            },
+            {
+              "quantity": 800,
+              "unit": "g",
+              "item": "ripe plum tomatoes",
+              "note": "roughly chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "chilli flakes",
+              "note": "optional",
+              "scalable": true
+            },
+            {
+              "quantity": 30,
+              "unit": "g",
+              "item": "fresh basil",
+              "note": "leaves torn",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and black pepper to taste",
+              "note": null,
+              "scalable": false
+            }
           ]
         },
         {
           "heading": "To finish",
           "items": [
-            { "quantity": 40, "unit": "g", "item": "Parmesan", "note": "finely grated", "scalable": true }
+            {
+              "quantity": 40,
+              "unit": "g",
+              "item": "Parmesan",
+              "note": "finely grated",
+              "scalable": true
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Bring a large pot of water to a rolling boil and salt it until it tastes seasoned.", "timerMinutes": null, "tip": "Under-salted water is the most common reason a finished pasta tastes flat." },
-        { "text": "Warm the olive oil in a wide pan over medium-low heat, add the garlic, and cook until fragrant but not coloured.", "timerMinutes": 2, "tip": null },
-        { "text": "Add the tomatoes and chilli flakes, raise the heat, and cook until the tomatoes collapse and the sauce thickens.", "timerMinutes": 18, "tip": null },
-        { "text": "Cook the spaghetti one minute short of the package time, reserving a mug of the cooking water before draining.", "timerMinutes": 9, "tip": null },
-        { "text": "Toss the drained pasta into the sauce with a splash of the reserved water and stir hard until the sauce coats every strand.", "timerMinutes": 1, "tip": "The starch in the water is what emulsifies the sauce -- plain water will not do it." },
-        { "text": "Kill the heat, fold in the torn basil, taste for salt, and serve with the Parmesan.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Bring a large pot of water to a rolling boil and salt it until it tastes seasoned.",
+          "timerMinutes": null,
+          "tip": "Under-salted water is the most common reason a finished pasta tastes flat."
+        },
+        {
+          "text": "Warm the olive oil in a wide pan over medium-low heat, add the garlic, and cook until fragrant but not coloured.",
+          "timerMinutes": 2,
+          "tip": null
+        },
+        {
+          "text": "Add the tomatoes and chilli flakes, raise the heat, and cook until the tomatoes collapse and the sauce thickens.",
+          "timerMinutes": 18,
+          "tip": null
+        },
+        {
+          "text": "Cook the spaghetti one minute short of the package time, reserving a mug of the cooking water before draining.",
+          "timerMinutes": 9,
+          "tip": null
+        },
+        {
+          "text": "Toss the drained pasta into the sauce with a splash of the reserved water and stir hard until the sauce coats every strand.",
+          "timerMinutes": 1,
+          "tip": "The starch in the water is what emulsifies the sauce -- plain water will not do it."
+        },
+        {
+          "text": "Kill the heat, fold in the torn basil, taste for salt, and serve with the Parmesan.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "Out of season, 2 x 400g tins of good whole plum tomatoes beat fresh ones.",
@@ -55,18 +152,51 @@
       ],
       "nutrition": {
         "servingSize": "1 bowl (about 350g)",
-        "calories": 520, "proteinG": 18, "carbsG": 78, "fatG": 15,
-        "saturatedFatG": 4, "fiberG": 6, "sugarG": 9,
-        "sodiumMg": 640, "cholesterolMg": 8,
+        "calories": 520,
+        "proteinG": 18,
+        "carbsG": 78,
+        "fatG": 15,
+        "saturatedFatG": 4,
+        "fiberG": 6,
+        "sugarG": 9,
+        "sodiumMg": 640,
+        "cholesterolMg": 8,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["spaghetti al pomodoro", "tomato basil pasta"],
+        "searchTerms": [
+          "spaghetti al pomodoro",
+          "tomato basil pasta"
+        ],
         "alt": "Bowl of spaghetti in tomato sauce topped with torn basil leaves",
         "caption": "Best served the moment the pasta hits the sauce.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Spaghetti al Pomodoro",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=36935396",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Spaghetti_al_Pomodoro.JPG",
+          "artist": "Benreis",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC-BY-3.0",
+            "name": "CC BY 3.0",
+            "url": "https://creativecommons.org/licenses/by/3.0/",
+            "attributionRequired": true,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "e96054c40a9917c751170c5e52f8e336587291567ed73708d951420f13e8f773",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["chicken-curry", "classic-shakshuka"],
+      "related": [
+        "chicken-curry",
+        "classic-shakshuka"
+      ],
       "featured": true,
       "published": "2026-07-26",
       "updated": "2026-07-26",
@@ -79,37 +209,134 @@
       "description": "Onions cooked down until golden, bloomed with curry powder and ginger, then simmered with chicken thighs in coconut milk until the sauce clings. Mild for family dinners, hot if you want it.",
       "category": "mains",
       "cuisine": "Indian-inspired",
-      "times": { "prepMinutes": 15, "cookMinutes": 35, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 15,
+        "cookMinutes": 35,
+        "restMinutes": 0
+      },
       "servings": 4,
       "servingUnit": "servings",
       "difficulty": "easy",
-      "dietary": ["gluten-free", "dairy-free"],
-      "keywords": ["curry", "chicken", "coconut milk", "one pot", "weeknight"],
-      "equipment": ["Large heavy-bottomed pot"],
+      "dietary": [
+        "gluten-free",
+        "dairy-free"
+      ],
+      "keywords": [
+        "curry",
+        "chicken",
+        "coconut milk",
+        "one pot",
+        "weeknight"
+      ],
+      "equipment": [
+        "Large heavy-bottomed pot"
+      ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
-            { "quantity": 800, "unit": "g", "item": "chicken thighs", "note": "boneless, cut into pieces", "scalable": true },
-            { "quantity": 2, "unit": null, "item": "onions", "note": "finely chopped", "scalable": true },
-            { "quantity": 3, "unit": "clove", "item": "garlic", "note": "minced", "scalable": true },
-            { "quantity": 1, "unit": "tbsp", "item": "ginger", "note": "grated", "scalable": true },
-            { "quantity": 2, "unit": "tbsp", "item": "curry powder", "note": null, "scalable": true },
-            { "quantity": 400, "unit": "ml", "item": "coconut milk", "note": "1 can", "scalable": true },
-            { "quantity": 2, "unit": "tbsp", "item": "vegetable oil", "note": null, "scalable": true },
-            { "quantity": null, "unit": null, "item": "salt to taste", "note": null, "scalable": false },
-            { "quantity": null, "unit": null, "item": "fresh cilantro", "note": "to garnish", "scalable": false }
+            {
+              "quantity": 800,
+              "unit": "g",
+              "item": "chicken thighs",
+              "note": "boneless, cut into pieces",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "onions",
+              "note": "finely chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "ginger",
+              "note": "grated",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "curry powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 400,
+              "unit": "ml",
+              "item": "coconut milk",
+              "note": "1 can",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "vegetable oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt to taste",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "fresh cilantro",
+              "note": "to garnish",
+              "scalable": false
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Heat the oil in a large pot over medium heat and cook the onions until soft and golden.", "timerMinutes": 8, "tip": null },
-        { "text": "Add the garlic and ginger and cook until fragrant.", "timerMinutes": 1, "tip": null },
-        { "text": "Stir in the curry powder and cook briefly to toast the spices.", "timerMinutes": null, "tip": "Toasting the spice in the fat before adding liquid wakes up flavour that a wet pan can't." },
-        { "text": "Add the chicken pieces and cook, stirring occasionally, until lightly browned on all sides.", "timerMinutes": 6, "tip": null },
-        { "text": "Pour in the coconut milk, add salt, and bring to a gentle simmer.", "timerMinutes": null, "tip": null },
-        { "text": "Cover and simmer until the chicken is cooked through and the sauce has thickened slightly.", "timerMinutes": 22, "tip": null },
-        { "text": "Taste and adjust salt or spice, then garnish with fresh cilantro before serving.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Heat the oil in a large pot over medium heat and cook the onions until soft and golden.",
+          "timerMinutes": 8,
+          "tip": null
+        },
+        {
+          "text": "Add the garlic and ginger and cook until fragrant.",
+          "timerMinutes": 1,
+          "tip": null
+        },
+        {
+          "text": "Stir in the curry powder and cook briefly to toast the spices.",
+          "timerMinutes": null,
+          "tip": "Toasting the spice in the fat before adding liquid wakes up flavour that a wet pan can't."
+        },
+        {
+          "text": "Add the chicken pieces and cook, stirring occasionally, until lightly browned on all sides.",
+          "timerMinutes": 6,
+          "tip": null
+        },
+        {
+          "text": "Pour in the coconut milk, add salt, and bring to a gentle simmer.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Cover and simmer until the chicken is cooked through and the sauce has thickened slightly.",
+          "timerMinutes": 22,
+          "tip": null
+        },
+        {
+          "text": "Taste and adjust salt or spice, then garnish with fresh cilantro before serving.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "Swap thighs for a firm white fish in the last 8 minutes for a quicker version.",
@@ -117,18 +344,51 @@
       ],
       "nutrition": {
         "servingSize": "1 bowl (about 380g)",
-        "calories": 510, "proteinG": 42, "carbsG": 10, "fatG": 32,
-        "saturatedFatG": 18, "fiberG": 2, "sugarG": 4,
-        "sodiumMg": 580, "cholesterolMg": 140,
+        "calories": 510,
+        "proteinG": 42,
+        "carbsG": 10,
+        "fatG": 32,
+        "saturatedFatG": 18,
+        "fiberG": 2,
+        "sugarG": 4,
+        "sodiumMg": 580,
+        "cholesterolMg": 140,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["chicken curry", "butter chicken"],
+        "searchTerms": [
+          "chicken curry",
+          "butter chicken"
+        ],
         "alt": "Bowl of chicken curry with rice and cilantro garnish",
         "caption": "Serve over steamed rice or with warm flatbread.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Chicken Curry 1",
+          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=14634046",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Chicken_Curry_1.JPG",
+          "artist": "Miansari66",
+          "credit": "wikimedia",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "4d6ce963d60b6ea04ae659246c932a29fc4723e45712f67291a1a7141536cc8f",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["tomato-basil-pasta", "classic-shakshuka"],
+      "related": [
+        "tomato-basil-pasta",
+        "classic-shakshuka"
+      ],
       "featured": true,
       "published": "2026-07-26",
       "updated": "2026-07-26",
@@ -141,45 +401,164 @@
       "description": "A North African and Eastern Mediterranean breakfast of eggs gently poached in a thick, cumin-scented tomato and pepper sauce. Scoop it up with warm bread straight from the pan.",
       "category": "breakfast",
       "cuisine": "North African",
-      "times": { "prepMinutes": 10, "cookMinutes": 25, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 25,
+        "restMinutes": 0
+      },
       "servings": 3,
       "servingUnit": "servings",
       "difficulty": "easy",
-      "dietary": ["vegetarian", "gluten-free", "nut-free"],
-      "keywords": ["shakshuka", "eggs", "breakfast", "tomato", "brunch", "skillet"],
-      "equipment": ["Wide oven-safe skillet with a lid"],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "shakshuka",
+        "eggs",
+        "breakfast",
+        "tomato",
+        "brunch",
+        "skillet"
+      ],
+      "equipment": [
+        "Wide oven-safe skillet with a lid"
+      ],
       "ingredientGroups": [
         {
           "heading": "For the sauce",
           "items": [
-            { "quantity": 3, "unit": "tbsp", "item": "olive oil", "note": null, "scalable": true },
-            { "quantity": 1, "unit": null, "item": "onion", "note": "finely chopped", "scalable": true },
-            { "quantity": 1, "unit": null, "item": "red bell pepper", "note": "diced", "scalable": true },
-            { "quantity": 3, "unit": "clove", "item": "garlic", "note": "minced", "scalable": true },
-            { "quantity": 1, "unit": "tsp", "item": "ground cumin", "note": null, "scalable": true },
-            { "quantity": 1, "unit": "tsp", "item": "smoked paprika", "note": null, "scalable": true },
-            { "quantity": 0.25, "unit": "tsp", "item": "chilli flakes", "note": "optional", "scalable": true },
-            { "quantity": 800, "unit": "g", "item": "canned whole tomatoes", "note": "crushed by hand", "scalable": true },
-            { "quantity": null, "unit": null, "item": "salt and black pepper to taste", "note": null, "scalable": false }
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "olive oil",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "onion",
+              "note": "finely chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "red bell pepper",
+              "note": "diced",
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "ground cumin",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "smoked paprika",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.25,
+              "unit": "tsp",
+              "item": "chilli flakes",
+              "note": "optional",
+              "scalable": true
+            },
+            {
+              "quantity": 800,
+              "unit": "g",
+              "item": "canned whole tomatoes",
+              "note": "crushed by hand",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "salt and black pepper to taste",
+              "note": null,
+              "scalable": false
+            }
           ]
         },
         {
           "heading": "To finish",
           "items": [
-            { "quantity": 5, "unit": null, "item": "eggs", "note": null, "scalable": true },
-            { "quantity": null, "unit": null, "item": "fresh parsley or cilantro", "note": "chopped, to garnish", "scalable": false },
-            { "quantity": null, "unit": null, "item": "crumbled feta", "note": "optional", "scalable": false },
-            { "quantity": null, "unit": null, "item": "warm bread or pita", "note": "to serve", "scalable": false }
+            {
+              "quantity": 5,
+              "unit": null,
+              "item": "eggs",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "fresh parsley or cilantro",
+              "note": "chopped, to garnish",
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "crumbled feta",
+              "note": "optional",
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "warm bread or pita",
+              "note": "to serve",
+              "scalable": false
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Warm the olive oil in a wide skillet over medium heat and cook the onion and bell pepper until softened.", "timerMinutes": 8, "tip": null },
-        { "text": "Add the garlic, cumin, smoked paprika, and chilli flakes, and cook briefly until fragrant.", "timerMinutes": 1, "tip": null },
-        { "text": "Pour in the crushed tomatoes, season with salt and pepper, and simmer until thickened.", "timerMinutes": 12, "tip": "The sauce should hold its shape on a spoon before the eggs go in, or they'll swim instead of poach." },
-        { "text": "Make small wells in the sauce with a spoon and crack an egg into each one.", "timerMinutes": null, "tip": null },
-        { "text": "Cover and cook over low heat until the whites are set but the yolks are still soft.", "timerMinutes": 6, "tip": null },
-        { "text": "Scatter with parsley and feta if using, and serve straight from the pan with warm bread.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Warm the olive oil in a wide skillet over medium heat and cook the onion and bell pepper until softened.",
+          "timerMinutes": 8,
+          "tip": null
+        },
+        {
+          "text": "Add the garlic, cumin, smoked paprika, and chilli flakes, and cook briefly until fragrant.",
+          "timerMinutes": 1,
+          "tip": null
+        },
+        {
+          "text": "Pour in the crushed tomatoes, season with salt and pepper, and simmer until thickened.",
+          "timerMinutes": 12,
+          "tip": "The sauce should hold its shape on a spoon before the eggs go in, or they'll swim instead of poach."
+        },
+        {
+          "text": "Make small wells in the sauce with a spoon and crack an egg into each one.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Cover and cook over low heat until the whites are set but the yolks are still soft.",
+          "timerMinutes": 6,
+          "tip": null
+        },
+        {
+          "text": "Scatter with parsley and feta if using, and serve straight from the pan with warm bread.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "For a firmer yolk, extend the covered cooking time by 2 minutes.",
@@ -187,18 +566,51 @@
       ],
       "nutrition": {
         "servingSize": "1 portion (about 2 eggs with sauce)",
-        "calories": 340, "proteinG": 16, "carbsG": 18, "fatG": 22,
-        "saturatedFatG": 5, "fiberG": 5, "sugarG": 9,
-        "sodiumMg": 520, "cholesterolMg": 310,
+        "calories": 340,
+        "proteinG": 16,
+        "carbsG": 18,
+        "fatG": 22,
+        "saturatedFatG": 5,
+        "fiberG": 5,
+        "sugarG": 9,
+        "sodiumMg": 520,
+        "cholesterolMg": 310,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["shakshuka", "shakshuka skillet eggs"],
+        "searchTerms": [
+          "shakshuka",
+          "shakshuka skillet eggs"
+        ],
         "alt": "Skillet of shakshuka with poached eggs in tomato sauce, garnished with herbs",
         "caption": "Serve straight from the skillet with bread for scooping.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Middle eastern Shakshuka cast iron",
+          "descriptionUrl": "https://www.rawpixel.com/image/3282863/free-photo-image-food-bread-bowl",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNjYyNDE3LXdpa2ltZWRpYS1pbWFnZS1rb3diM295ZS5qcGc.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "77a67781f5debaa02ac9086ec3a462a3f834758a1d8a2134e0618f8cee69797a",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["tomato-basil-pasta", "chicken-curry"],
+      "related": [
+        "tomato-basil-pasta",
+        "chicken-curry"
+      ],
       "featured": true,
       "published": "2026-07-26",
       "updated": "2026-07-26",

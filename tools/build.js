@@ -10,6 +10,7 @@ const { writeIfChanged, sha256, prune } = require('./lib/fsx');
 const { renderHome } = require('./lib/pages/home');
 const { renderRecipe } = require('./lib/pages/recipe');
 const { renderCategory } = require('./lib/pages/category');
+const { renderCredits } = require('./lib/pages/credits');
 const { renderSitemap, renderRobots } = require('./lib/pages/feeds');
 const { renderSearchIndex } = require('./lib/searchindex');
 
@@ -61,6 +62,7 @@ function main() {
     emit(`recipes/${recipe.slug}.html`, renderRecipe(recipe, recipes, site));
   }
 
+  emit('credits.html', renderCredits(recipes, site));
   emit('sitemap.xml', renderSitemap(recipes, site));
   emit('robots.txt', renderRobots(site));
   emit('assets/js/recipes-index.js', renderSearchIndex(recipes));

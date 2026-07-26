@@ -365,6 +365,13 @@ footer { border-top: 1px solid var(--border-dim); padding-block: 3rem 2rem; back
   .footer-inner { grid-template-columns: 1fr; }
 }
 
+/* ── Credits page ────────────────────────────────────────── */
+.category-page section { margin-bottom: 2rem; }
+.category-page section h2 { font-size: 1.1rem; margin-bottom: .75rem; }
+.credit-list { display: flex; flex-direction: column; gap: .6rem; }
+.credit-row { padding: .75rem 1rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-dim); font-size: .9rem; color: var(--text-muted); }
+.credit-row a { text-decoration: underline; color: var(--text-primary); }
+
 /* ── 404 page ────────────────────────────────────────────── */
 .not-found { text-align: center; padding-block: 96px; }
 .not-found h1 { font-size: clamp(2.5rem, 6vw, 4rem); }

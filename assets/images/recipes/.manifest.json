@@ -1,0 +1,29 @@
+{
+  "tomato-basil-pasta:e96054c40a9917c751170c5e52f8e336587291567ed73708d951420f13e8f773": {
+    "sha256": "e96054c40a9917c751170c5e52f8e336587291567ed73708d951420f13e8f773",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "chicken-curry:4d6ce963d60b6ea04ae659246c932a29fc4723e45712f67291a1a7141536cc8f": {
+    "sha256": "4d6ce963d60b6ea04ae659246c932a29fc4723e45712f67291a1a7141536cc8f",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "classic-shakshuka:77a67781f5debaa02ac9086ec3a462a3f834758a1d8a2134e0618f8cee69797a": {
+    "sha256": "77a67781f5debaa02ac9086ec3a462a3f834758a1d8a2134e0618f8cee69797a",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  }
+}
