@@ -3,7 +3,7 @@
 const https = require('https');
 const { classifyLicense, parseWikimediaLicense } = require('./license');
 
-const USER_AGENT = 'homestyle-recipe-book/1.0 (https://github.com/samiulAsumel/homestyle-recipe-book; sa.sumel91@gmail.com)';
+const USER_AGENT = 'recipe-vault/1.0 (https://github.com/samiulAsumel/recipe-vault; sa.sumel91@gmail.com)';
 const MIN_WIDTH = 1200;
 // rawpixel/wordpress/stocksnap consistently return styled, professionally
 // lit food photography; the general Openverse pool is dominated by

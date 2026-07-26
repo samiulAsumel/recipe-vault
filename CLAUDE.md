@@ -33,7 +33,7 @@ unsorted iteration order; those are bugs, not acceptable variance.
 ## Constraints that aren't obvious from the code
 
 - This is a GitHub Pages **project** site (served under
-  `/homestyle-recipe-book/`), so every internal link must be
+  `/recipe-vault/`), so every internal link must be
   depth-relative via `tools/lib/paths.js`. `404.html` is the one
   exception — its own depth is unknowable, so it uses
   `basePath`-absolute URLs.
