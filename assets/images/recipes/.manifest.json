@@ -277,5 +277,68 @@
       1200
     ],
     "builtAt": "2026-07-27"
+  },
+  "vegetable-spring-rolls:16b8fea0861bb78e77922b1da8c8cb2c476228c411c22db60a2d280c19124437": {
+    "sha256": "16b8fea0861bb78e77922b1da8c8cb2c476228c411c22db60a2d280c19124437",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "chicken-curry:e0eb340fdb2300e1dd8b8ad29fcc0a748c5c8f70fe0fb1746a444581d189c80b": {
+    "sha256": "e0eb340fdb2300e1dd8b8ad29fcc0a748c5c8f70fe0fb1746a444581d189c80b",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "cheese-omelette:f2041ad685937ba121f9f9bef6b2bcf9a46672de9d5efc5b5274ea4b84901d99": {
+    "sha256": "f2041ad685937ba121f9f9bef6b2bcf9a46672de9d5efc5b5274ea4b84901d99",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "belgian-waffles:cbe426e09ef42b816c1dddb03af0f9db207d6c42c72470ae3b258991709315f4": {
+    "sha256": "cbe426e09ef42b816c1dddb03af0f9db207d6c42c72470ae3b258991709315f4",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "belgian-waffles:734007792d58b1ea88102d9fedb58da6de0ec5d82a589d8919cb8c2aaa710ed7": {
+    "sha256": "734007792d58b1ea88102d9fedb58da6de0ec5d82a589d8919cb8c2aaa710ed7",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "iced-coffee:17712355d8ddb2527dedd01f2952b82a84234cdaa630e71ac6806166df4f6310": {
+    "sha256": "17712355d8ddb2527dedd01f2952b82a84234cdaa630e71ac6806166df4f6310",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "hot-chocolate:b10a90ee06ffc95e5585fde01c3d51c794212b38b3051472038d254d44ddd0a8": {
+    "sha256": "b10a90ee06ffc95e5585fde01c3d51c794212b38b3051472038d254d44ddd0a8",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
   }
 }

@@ -3,9 +3,9 @@
   "recipes": [
     {
       "slug": "tomato-basil-pasta",
-      "title": "Tomato Basil Pasta",
-      "tagline": "A 30-minute weeknight pasta built on a fresh tomato sauce.",
-      "description": "Ripe tomatoes cooked down with garlic and olive oil until they collapse into a sauce, finished with torn basil and starchy pasta water. One pan, one pot, no specialty shopping.",
+      "title": "Spaghetti al Pomodoro",
+      "tagline": "San Marzano tomatoes and fresh basil, simmered into the simplest of all Italian pasta sauces.",
+      "description": "Tomatoes cooked down gently with garlic and olive oil until they collapse into a sauce, finished with torn basil and starchy pasta water -- no onion, no oregano, no cream. Just four real ingredients, which is the whole point of the dish.",
       "category": "mains",
       "cuisine": "Italian",
       "times": {
@@ -21,6 +21,9 @@
         "nut-free"
       ],
       "keywords": [
+        "spaghetti al pomodoro",
+        "pomodoro",
+        "san marzano",
         "pasta",
         "tomato",
         "basil",
@@ -74,8 +77,8 @@
             {
               "quantity": 800,
               "unit": "g",
-              "item": "ripe plum tomatoes",
-              "note": "roughly chopped",
+              "item": "canned whole San Marzano tomatoes",
+              "note": "crushed by hand (ripe fresh plum tomatoes in season)",
               "scalable": true
             },
             {
@@ -107,8 +110,8 @@
             {
               "quantity": 40,
               "unit": "g",
-              "item": "Parmesan",
-              "note": "finely grated",
+              "item": "Pecorino Romano",
+              "note": "finely grated (Parmesan is a common substitute)",
               "scalable": true
             }
           ]
@@ -121,9 +124,9 @@
           "tip": "Under-salted water is the most common reason a finished pasta tastes flat."
         },
         {
-          "text": "Warm the olive oil in a wide pan over medium-low heat, add the garlic, and cook until fragrant but not coloured.",
+          "text": "Combine the olive oil and sliced garlic in a wide pan while it's still cold, then set over medium-low heat and cook until the garlic turns fragrant and pale gold.",
           "timerMinutes": 2,
-          "tip": null
+          "tip": "Starting the garlic in cold oil and heating them together is what keeps it from scorching bitter -- garlic dropped into oil that's already hot burns in seconds."
         },
         {
           "text": "Add the tomatoes and chilli flakes, raise the heat, and cook until the tomatoes collapse and the sauce thickens.",
@@ -141,13 +144,14 @@
           "tip": "The starch in the water is what emulsifies the sauce -- plain water will not do it."
         },
         {
-          "text": "Kill the heat, fold in the torn basil, taste for salt, and serve with the Parmesan.",
+          "text": "Kill the heat, fold in the torn basil, taste for salt, and serve with the Pecorino.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
-        "Out of season, 2 x 400g tins of good whole plum tomatoes beat fresh ones.",
+        "San Marzano tomatoes, grown in volcanic soil near Naples, are the traditional choice -- sweeter and less acidic than most canned tomatoes, and worth seeking out even outside of Italy.",
+        "No onion and no oregano: those belong to other Italian tomato sauces, not this one. Pomodoro is deliberately just tomato, garlic, oil, and basil.",
         "Keeps 3 days refrigerated; loosen with a splash of water when reheating."
       ],
       "nutrition": {
@@ -204,36 +208,37 @@
     },
     {
       "slug": "chicken-curry",
-      "title": "Chicken Curry",
-      "tagline": "A one-pot chicken curry with a spice base you can adjust to taste.",
-      "description": "Onions cooked down until golden, bloomed with curry powder and ginger, then simmered with chicken thighs in coconut milk until the sauce clings. Mild for family dinners, hot if you want it.",
+      "title": "Butter Chicken (Murgh Makhani)",
+      "tagline": "Charred tandoori-style chicken simmered in a rich tomato-butter-cream sauce.",
+      "description": "Yogurt-marinated chicken, charred hot and fast the way a tandoor would, then simmered in a butter-and-tomato sauce finished with cream and crushed kasuri methi. Invented in 1950s Delhi to use up leftover tandoori chicken -- now one of the most-ordered dishes on earth.",
       "category": "mains",
-      "cuisine": "Indian-inspired",
+      "cuisine": "Indian (Punjabi)",
       "times": {
-        "prepMinutes": 15,
-        "cookMinutes": 35,
-        "restMinutes": 0
+        "prepMinutes": 20,
+        "cookMinutes": 40,
+        "restMinutes": 120
       },
       "servings": 4,
       "servingUnit": "servings",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "dietary": [
-        "gluten-free",
-        "dairy-free"
+        "gluten-free"
       ],
       "keywords": [
-        "curry",
-        "chicken",
-        "coconut milk",
-        "one pot",
-        "weeknight"
+        "butter chicken",
+        "murgh makhani",
+        "indian",
+        "punjabi",
+        "tandoori",
+        "curry"
       ],
       "equipment": [
+        "Grill pan or broiler",
         "Large heavy-bottomed pot"
       ],
       "ingredientGroups": [
         {
-          "heading": null,
+          "heading": "For the marinade",
           "items": [
             {
               "quantity": 800,
@@ -243,51 +248,124 @@
               "scalable": true
             },
             {
-              "quantity": 2,
-              "unit": null,
-              "item": "onions",
-              "note": "finely chopped",
-              "scalable": true
-            },
-            {
-              "quantity": 3,
-              "unit": "clove",
-              "item": "garlic",
-              "note": "minced",
+              "quantity": 150,
+              "unit": "g",
+              "item": "plain yogurt",
+              "note": null,
               "scalable": true
             },
             {
               "quantity": 1,
               "unit": "tbsp",
-              "item": "ginger",
-              "note": "grated",
-              "scalable": true
-            },
-            {
-              "quantity": 2,
-              "unit": "tbsp",
-              "item": "curry powder",
+              "item": "lemon juice",
               "note": null,
               "scalable": true
             },
             {
-              "quantity": 400,
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "ginger-garlic paste",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "kashmiri red chili powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "garam masala",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 0.5,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "For the sauce",
+          "items": [
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "butter",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "ginger-garlic paste",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 500,
+              "unit": "g",
+              "item": "tomato puree",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "kashmiri red chili powder",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "garam masala",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 120,
               "unit": "ml",
-              "item": "coconut milk",
-              "note": "1 can",
+              "item": "heavy cream",
+              "note": null,
               "scalable": true
             },
             {
-              "quantity": 2,
+              "quantity": 1,
               "unit": "tbsp",
-              "item": "vegetable oil",
-              "note": null,
+              "item": "kasuri methi",
+              "note": "dried fenugreek leaves",
               "scalable": true
             },
             {
               "quantity": null,
               "unit": null,
               "item": "salt to taste",
+              "note": null,
+              "scalable": false
+            }
+          ]
+        },
+        {
+          "heading": "To finish",
+          "items": [
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "extra cream, to swirl",
               "note": null,
               "scalable": false
             },
@@ -303,82 +381,88 @@
       ],
       "steps": [
         {
-          "text": "Heat the oil in a large pot over medium heat and cook the onions until soft and golden.",
+          "text": "Combine the chicken with the yogurt, lemon juice, ginger-garlic paste, chili powder, garam masala, and salt. Cover and refrigerate.",
+          "timerMinutes": 120,
+          "tip": "The yogurt marinade is what tenderizes and carries flavor all the way into the chicken -- a quick 20-minute marinade doesn't do the same work as a couple of hours, and overnight is better still."
+        },
+        {
+          "text": "Preheat a grill pan or broiler to its highest heat. Cook the marinated chicken in a single layer until charred in spots and cooked through.",
+          "timerMinutes": 12,
+          "tip": "Real butter chicken starts as tandoori chicken -- that char is a flavor, not a mistake, and a home broiler on high gets you closer to a tandoor than a gentle pan-fry ever will."
+        },
+        {
+          "text": "Melt the butter in a large pot, add the ginger-garlic paste, and cook until fragrant.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Stir in the tomato puree, chili powder, and garam masala, and simmer until the raw tomato smell is gone and the sauce darkens slightly.",
+          "timerMinutes": 15,
+          "tip": null
+        },
+        {
+          "text": "Stir in the sugar and cream, and simmer gently.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add the charred chicken to the sauce and simmer until warmed through and coated.",
           "timerMinutes": 8,
           "tip": null
         },
         {
-          "text": "Add the garlic and ginger and cook until fragrant.",
-          "timerMinutes": 1,
-          "tip": null
-        },
-        {
-          "text": "Stir in the curry powder and cook briefly to toast the spices.",
+          "text": "Crush the kasuri methi between your fingers and stir it in off the heat.",
           "timerMinutes": null,
-          "tip": "Toasting the spice in the fat before adding liquid wakes up flavour that a wet pan can't."
+          "tip": "This is the aroma that makes butter chicken taste like butter chicken, not a generic tomato-cream curry -- and it fades if it's cooked too long, which is why it goes in last."
         },
         {
-          "text": "Add the chicken pieces and cook, stirring occasionally, until lightly browned on all sides.",
-          "timerMinutes": 6,
-          "tip": null
-        },
-        {
-          "text": "Pour in the coconut milk, add salt, and bring to a gentle simmer.",
-          "timerMinutes": null,
-          "tip": null
-        },
-        {
-          "text": "Cover and simmer until the chicken is cooked through and the sauce has thickened slightly.",
-          "timerMinutes": 22,
-          "tip": null
-        },
-        {
-          "text": "Taste and adjust salt or spice, then garnish with fresh cilantro before serving.",
+          "text": "Taste and adjust salt, then finish with a swirl of cream and fresh cilantro.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
-        "Swap thighs for a firm white fish in the last 8 minutes for a quicker version.",
-        "Keeps 3 days refrigerated, and freezes well for up to 2 months."
+        "Murgh makhani was invented at Delhi's Moti Mahal restaurant in the 1950s, created to use up leftover tandoori chicken in a rich tomato-butter gravy -- it's a specific, dateable dish, not a generic curry.",
+        "Kasuri methi has no real substitute -- it's what separates butter chicken from an ordinary tomato-cream chicken curry, and most grocery stores carry it in the spice aisle.",
+        "Keeps 3 days refrigerated; the sauce may need a splash of cream stirred in when reheating."
       ],
       "nutrition": {
         "servingSize": "1 bowl (about 380g)",
-        "calories": 510,
-        "proteinG": 42,
-        "carbsG": 10,
-        "fatG": 32,
-        "saturatedFatG": 18,
+        "calories": 620,
+        "proteinG": 40,
+        "carbsG": 14,
+        "fatG": 44,
+        "saturatedFatG": 22,
         "fiberG": 2,
-        "sugarG": 4,
-        "sodiumMg": 580,
-        "cholesterolMg": 140,
+        "sugarG": 8,
+        "sodiumMg": 680,
+        "cholesterolMg": 170,
         "basis": "estimate"
       },
       "image": {
         "searchTerms": [
-          "chicken curry",
-          "butter chicken"
+          "butter chicken murgh makhani",
+          "butter chicken curry"
         ],
-        "alt": "Bowl of chicken curry with rice and cilantro garnish",
-        "caption": "Serve over steamed rice or with warm flatbread.",
+        "alt": "Bowl of butter chicken with a swirl of cream and rice",
+        "caption": "The swirl of cream on top is traditional, not just decoration.",
         "focal": "center",
         "source": {
-          "provider": "openverse",
-          "pageTitle": "Chicken Curry 1",
-          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=14634046",
-          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Chicken_Curry_1.JPG",
-          "artist": "Miansari66",
-          "credit": "wikimedia",
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Butter Chicken, City Grill Kottayam.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Butter_Chicken%2C_City_Grill_Kottayam.jpg",
+          "artist": "Vis M",
+          "credit": "Own work",
           "license": {
-            "id": "CC0-1.0",
-            "name": "CC0 1.0",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "attributionRequired": false,
-            "shareAlike": false
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "4d6ce963d60b6ea04ae659246c932a29fc4723e45712f67291a1a7141536cc8f",
+          "sha256": "e0eb340fdb2300e1dd8b8ad29fcc0a748c5c8f70fe0fb1746a444581d189c80b",
           "ext": "jpg",
           "fetchedAt": "2026-07-26"
         },
@@ -837,11 +921,11 @@
     },
     {
       "slug": "french-toast",
-      "title": "French Toast",
-      "tagline": "Thick bread soaked in a cinnamon custard and pan-fried until golden.",
-      "description": "Day-old bread soaked in an egg and milk custard, then fried in butter until crisp outside and custardy within -- the best use for slightly stale bread.",
+      "title": "Pain Perdu (French Toast)",
+      "tagline": "Day-old brioche soaked in a simple custard and pan-fried until golden.",
+      "description": "\"Lost bread\" -- stale brioche or baguette rescued in an egg custard and fried in butter, French home-kitchen style: lighter on sugar and spice than the American diner version, dusted with sugar rather than drowned in syrup.",
       "category": "breakfast",
-      "cuisine": "French-inspired",
+      "cuisine": "French",
       "times": {
         "prepMinutes": 10,
         "cookMinutes": 15,
@@ -854,10 +938,11 @@
         "vegetarian"
       ],
       "keywords": [
+        "pain perdu",
         "french toast",
         "breakfast",
+        "brioche",
         "bread",
-        "cinnamon",
         "brunch"
       ],
       "equipment": [
@@ -876,7 +961,7 @@
               "scalable": true
             },
             {
-              "quantity": 180,
+              "quantity": 240,
               "unit": "ml",
               "item": "whole milk",
               "note": null,
@@ -892,15 +977,8 @@
             {
               "quantity": 1,
               "unit": "tsp",
-              "item": "ground cinnamon",
-              "note": null,
-              "scalable": true
-            },
-            {
-              "quantity": 0.5,
-              "unit": "tsp",
               "item": "vanilla extract",
-              "note": null,
+              "note": "or a splash of rum",
               "scalable": true
             },
             {
@@ -913,8 +991,8 @@
             {
               "quantity": 8,
               "unit": null,
-              "item": "thick bread slices",
-              "note": "slightly stale",
+              "item": "thick brioche or baguette slices",
+              "note": "a day old",
               "scalable": true
             },
             {
@@ -932,14 +1010,14 @@
             {
               "quantity": null,
               "unit": null,
-              "item": "maple syrup, to serve",
+              "item": "sugar, for dusting",
               "note": null,
               "scalable": false
             },
             {
               "quantity": null,
               "unit": null,
-              "item": "fresh berries, optional",
+              "item": "fresh fruit, optional",
               "note": null,
               "scalable": false
             }
@@ -948,14 +1026,14 @@
       ],
       "steps": [
         {
-          "text": "Whisk the eggs, milk, sugar, cinnamon, vanilla, and salt together in a shallow dish.",
+          "text": "Whisk the eggs, milk, sugar, vanilla, and salt together in a shallow dish.",
           "timerMinutes": null,
-          "tip": null
+          "tip": "This custard is deliberately plain -- no cinnamon, which is an American addition, not a French one. The vanilla and a good bread are meant to carry the whole flavor."
         },
         {
           "text": "Soak each bread slice for 20-30 seconds per side, until saturated but not falling apart.",
           "timerMinutes": null,
-          "tip": "Slightly stale bread soaks up the custard without turning to mush -- fresh bread works too, just soak it more briefly."
+          "tip": "Stale brioche soaks up the custard without turning to mush -- fresh bread works too, just soak it more briefly."
         },
         {
           "text": "Melt butter in a skillet over medium heat.",
@@ -968,25 +1046,25 @@
           "tip": null
         },
         {
-          "text": "Serve immediately with maple syrup and berries.",
+          "text": "Serve immediately, dusted with sugar and with fresh fruit if using.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
-        "A stale baguette or brioche loaf both work well here.",
+        "A stale baguette or brioche loaf both work well here -- brioche gives the richer, more custardy result.",
         "Keep finished slices warm in a low oven while frying the rest in batches."
       ],
       "nutrition": {
         "servingSize": "2 slices",
-        "calories": 360,
+        "calories": 340,
         "proteinG": 14,
-        "carbsG": 38,
+        "carbsG": 30,
         "fatG": 17,
         "saturatedFatG": 8,
-        "fiberG": 2,
-        "sugarG": 12,
-        "sodiumMg": 430,
+        "fiberG": 1,
+        "sugarG": 8,
+        "sodiumMg": 420,
         "cholesterolMg": 240,
         "basis": "estimate"
       },
@@ -995,7 +1073,7 @@
           "french toast",
           "french toast breakfast"
         ],
-        "alt": "Stack of french toast slices dusted with cinnamon and drizzled with syrup",
+        "alt": "Stack of pain perdu slices dusted with powdered sugar and served with fresh strawberries",
         "caption": "Serve the moment it comes off the pan, while the crust is still crisp.",
         "focal": "center",
         "source": {
@@ -1032,25 +1110,27 @@
     },
     {
       "slug": "cheese-omelette",
-      "title": "Cheese Omelette",
-      "tagline": "A folded egg omelette with melted cheese, ready in five minutes.",
-      "description": "Whisked eggs cooked low and slow until just set, filled with melted cheese and folded -- a fast, protein-heavy breakfast that needs no fillers.",
+      "title": "French Omelette (Omelette au Fromage)",
+      "tagline": "Small, soft curds rolled into an oval, French bistro style -- no browning, no folding in half.",
+      "description": "Eggs cooked hot and fast while constantly stirred into tiny curds, then rolled into a pale, seamless oval around melted cheese -- the real French technique, which is nothing like the slow, folded-in-half diner omelette it gets confused with.",
       "category": "breakfast",
-      "cuisine": "French-inspired",
+      "cuisine": "French",
       "times": {
         "prepMinutes": 5,
-        "cookMinutes": 5,
+        "cookMinutes": 3,
         "restMinutes": 0
       },
       "servings": 1,
       "servingUnit": "omelette",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "dietary": [
         "vegetarian",
         "gluten-free",
         "nut-free"
       ],
       "keywords": [
+        "french omelette",
+        "omelette au fromage",
         "omelette",
         "eggs",
         "breakfast",
@@ -1059,7 +1139,7 @@
       ],
       "equipment": [
         "Nonstick skillet",
-        "Fork"
+        "Fork or chopsticks"
       ],
       "ingredientGroups": [
         {
@@ -1075,7 +1155,7 @@
             {
               "quantity": 1,
               "unit": "tbsp",
-              "item": "milk or water",
+              "item": "cold water",
               "note": null,
               "scalable": true
             },
@@ -1087,16 +1167,16 @@
               "scalable": false
             },
             {
-              "quantity": 1,
-              "unit": "tsp",
+              "quantity": 1.5,
+              "unit": "tbsp",
               "item": "butter",
-              "note": null,
+              "note": "divided",
               "scalable": true
             },
             {
               "quantity": 40,
               "unit": "g",
-              "item": "cheddar or gruyere",
+              "item": "gruyere or cheddar",
               "note": "grated",
               "scalable": true
             }
@@ -1117,33 +1197,39 @@
       ],
       "steps": [
         {
-          "text": "Whisk the eggs with the milk, salt, and pepper until fully combined.",
+          "text": "Whisk the eggs with the water, salt, and pepper until fully combined and slightly frothy.",
           "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Melt the butter in a nonstick skillet over medium-low heat.",
+          "text": "Melt half the butter in a nonstick skillet over high heat until it foams.",
+          "timerMinutes": null,
+          "tip": "A French omelette is cooked hot and fast, the opposite of the low-and-slow diner method -- the whole cook takes well under a minute once the eggs hit the pan."
+        },
+        {
+          "text": "Pour in the eggs and immediately begin stirring vigorously with a fork, holding the pan just off the heat and shaking it gently, so the eggs form small, soft curds rather than one solid sheet.",
+          "timerMinutes": null,
+          "tip": "Constant motion is what keeps the curds small and the texture creamy -- if the eggs sit still for even a few seconds over this much heat, they'll brown on the bottom before the top sets."
+        },
+        {
+          "text": "Once the eggs are mostly set but still glossy and slightly wet on top, scatter the cheese over the center and remove from the heat.",
           "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Pour in the eggs, let them sit undisturbed a few seconds, then gently push the cooked edges toward the center.",
+          "text": "Tilt the pan and use the fork to fold the near edge over the filling, then roll the omelette out onto a plate seam-side down, shaping it into an oval as it goes.",
           "timerMinutes": null,
-          "tip": "Low heat is what keeps an omelette tender -- high heat turns the eggs rubbery."
+          "tip": "A French omelette is rolled into a smooth oval, not folded flat in half -- the shape and the pale, unbrowned exterior are what identify it as done correctly."
         },
         {
-          "text": "When mostly set but still slightly wet on top, scatter the cheese over one half.",
-          "timerMinutes": 2,
-          "tip": null
-        },
-        {
-          "text": "Fold the omelette over the cheese and slide it onto a plate.",
+          "text": "Rub the remaining butter over the top for shine and serve immediately.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
-        "Swap the cheese for any melty variety, or add cooked vegetables before folding.",
+        "No color is the goal -- if the outside has browned, the heat was too low and too slow, not too high.",
+        "Swap the cheese for any melty variety, or add finely chopped herbs to the eggs before cooking.",
         "Three eggs makes a substantial single serving -- halve it for a lighter breakfast."
       ],
       "nutrition": {
@@ -1161,28 +1247,28 @@
       },
       "image": {
         "searchTerms": [
-          "cheese omelet",
-          "golden-brown omelet melted cheese"
+          "omelette nature",
+          "folded omelette pale"
         ],
-        "alt": "Folded cheese omelette on a white plate garnished with chives",
-        "caption": "Serve the moment it's folded, before the cheese firms back up.",
+        "alt": "Folded French omelette on a plate with a cherry tomato garnish",
+        "caption": "Simple and unfussy -- a French omelette needs nothing more than a good pat of butter.",
         "focal": "center",
         "source": {
-          "provider": "openverse",
-          "pageTitle": "Free omelet ham, cheese, spinach",
-          "descriptionUrl": "https://www.rawpixel.com/image/5918615/image-background-public-domain-table",
-          "originalUrl": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZmNTcxNS1pbWFnZS1rd3Z4Mjd5aS5qcGc.jpg",
-          "artist": "Unknown",
-          "credit": "rawpixel",
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Eggs omelette.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Eggs_omelette.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Eggs_omelette.jpg",
+          "artist": "Renee Comet (Photographer)",
+          "credit": "This image was released by the National Cancer Institute, an agency part of the National Institutes of Health, with the ID 2606 (image) (next).",
           "license": {
-            "id": "CC0-1.0",
-            "name": "CC0 1.0",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "id": "PDM",
+            "name": "Public Domain",
+            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
             "attributionRequired": false,
             "shareAlike": false
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "189052776e21618ec103f3100eb646657f480a4ce8a41b878bfe6c30211e29fa",
+          "sha256": "f2041ad685937ba121f9f9bef6b2bcf9a46672de9d5efc5b5274ea4b84901d99",
           "ext": "jpg",
           "fetchedAt": "2026-07-26"
         },
@@ -1200,86 +1286,80 @@
     },
     {
       "slug": "belgian-waffles",
-      "title": "Belgian Waffles",
-      "tagline": "Deep-pocketed waffles with a crisp crust and airy interior.",
-      "description": "A batter lightened with whipped egg whites, cooked in a waffle iron until deeply golden -- crisp enough to hold a pool of syrup in every pocket.",
+      "title": "Liège Waffles (Gaufres de Liège)",
+      "tagline": "A yeasted, pearl-sugar dough waffle with a crackly caramelized crust -- the real Belgian waffle.",
+      "description": "A rich, brioche-like yeasted dough studded with Belgian pearl sugar, proofed rather than whisked, then pressed in a hot iron until the sugar caramelizes into a crisp, crackly shell -- nothing like the thin batter-and-syrup waffle sold under the same name.",
       "category": "breakfast",
       "cuisine": "Belgian",
       "times": {
-        "prepMinutes": 15,
+        "prepMinutes": 30,
         "cookMinutes": 20,
-        "restMinutes": 0
+        "restMinutes": 115
       },
-      "servings": 4,
-      "servingUnit": "servings",
-      "yieldText": "4 waffles",
-      "difficulty": "medium",
+      "servings": 8,
+      "servingUnit": "waffles",
+      "yieldText": "8 waffles",
+      "difficulty": "hard",
       "dietary": [
         "vegetarian"
       ],
       "keywords": [
-        "waffles",
+        "liege waffles",
+        "gaufres de liege",
         "belgian waffles",
-        "breakfast",
-        "brunch",
-        "weekend"
+        "yeast waffles",
+        "pearl sugar",
+        "brunch"
       ],
       "equipment": [
         "Waffle iron",
-        "Mixing bowls",
-        "Electric mixer or whisk"
+        "Stand mixer with dough hook, or hands for kneading",
+        "Mixing bowls"
       ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
             {
-              "quantity": 280,
+              "quantity": 500,
               "unit": "g",
-              "item": "all-purpose flour",
+              "item": "bread flour",
               "note": null,
               "scalable": true
             },
             {
-              "quantity": 1,
-              "unit": "tbsp",
-              "item": "sugar",
+              "quantity": 7,
+              "unit": "g",
+              "item": "instant yeast",
               "note": null,
               "scalable": true
             },
             {
-              "quantity": 2,
-              "unit": "tsp",
-              "item": "baking powder",
-              "note": null,
-              "scalable": true
-            },
-            {
-              "quantity": 0.5,
-              "unit": "tsp",
-              "item": "salt",
-              "note": null,
+              "quantity": 120,
+              "unit": "ml",
+              "item": "milk",
+              "note": "lukewarm",
               "scalable": true
             },
             {
               "quantity": 2,
               "unit": null,
               "item": "eggs",
-              "note": "separated",
-              "scalable": true
-            },
-            {
-              "quantity": 480,
-              "unit": "ml",
-              "item": "milk",
               "note": null,
               "scalable": true
             },
             {
-              "quantity": 115,
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "salt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 60,
               "unit": "g",
-              "item": "butter",
-              "note": "melted and cooled",
+              "item": "sugar",
+              "note": null,
               "scalable": true
             },
             {
@@ -1288,16 +1368,35 @@
               "item": "vanilla extract",
               "note": null,
               "scalable": true
+            },
+            {
+              "quantity": 250,
+              "unit": "g",
+              "item": "butter",
+              "note": "softened",
+              "scalable": true
             }
           ]
         },
         {
-          "heading": "To finish",
+          "heading": "To fold in",
+          "items": [
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "Belgian pearl sugar (sucre perlé)",
+              "note": "do not substitute granulated sugar",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To serve",
           "items": [
             {
               "quantity": null,
               "unit": null,
-              "item": "butter and maple syrup, to serve",
+              "item": "powdered sugar, optional -- no syrup needed",
               "note": null,
               "scalable": false
             }
@@ -1306,77 +1405,88 @@
       ],
       "steps": [
         {
-          "text": "Whisk the flour, sugar, baking powder, and salt together in a large bowl.",
-          "timerMinutes": null,
-          "tip": null
-        },
-        {
-          "text": "In another bowl, whisk the egg yolks, milk, melted butter, and vanilla.",
-          "timerMinutes": null,
-          "tip": null
-        },
-        {
-          "text": "Pour the wet mixture into the dry and whisk until just smooth.",
-          "timerMinutes": null,
-          "tip": null
-        },
-        {
-          "text": "Beat the egg whites to soft peaks, then gently fold them into the batter.",
-          "timerMinutes": null,
-          "tip": "Folding rather than stirring keeps the air in the whites, which is what gives the waffle its lift."
-        },
-        {
-          "text": "Preheat the waffle iron and cook the batter in batches until deeply golden and crisp.",
+          "text": "Warm the milk until just lukewarm, whisk in the yeast, and let stand until foamy, about 5 minutes.",
           "timerMinutes": 5,
           "tip": null
         },
         {
-          "text": "Serve immediately with butter and maple syrup.",
+          "text": "Combine the flour, salt, and sugar in a stand mixer bowl. Add the yeast mixture, eggs, and vanilla, and mix into a shaggy, sticky dough.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Knead on medium speed for about 10 minutes, adding the softened butter a few tablespoons at a time once the dough comes together, until it's smooth, elastic, and pulls cleanly from the bowl.",
+          "timerMinutes": 10,
+          "tip": "This is closer to a brioche dough than a pancake batter -- the long knead with butter worked in gradually is what develops the chew Liège waffles are known for."
+        },
+        {
+          "text": "Cover and let rise in a warm place until doubled, about 90 minutes (or refrigerate overnight for a slower, more flavorful rise).",
+          "timerMinutes": 90,
+          "tip": null
+        },
+        {
+          "text": "Gently fold in the pearl sugar by hand, just until distributed.",
+          "timerMinutes": null,
+          "tip": "Real Belgian pearl sugar doesn't melt at waffle-iron temperatures the way granulated sugar does -- that's what gives Liège waffles their crackly, caramelized crust. Granulated sugar dissolves into the dough instead and won't caramelize the same way."
+        },
+        {
+          "text": "Divide the dough into 8 balls, about 100g each, and let rest, loosely covered, for 25 minutes.",
+          "timerMinutes": 25,
+          "tip": null
+        },
+        {
+          "text": "Preheat the waffle iron to medium-high. Place one dough ball in the center and cook until deep golden-amber and the sugar has caramelized around the edges, about 3 to 4 minutes.",
+          "timerMinutes": 4,
+          "tip": "Watch rather than time this one -- irons vary, and the color of the caramelized sugar is the real signal, not the clock."
+        },
+        {
+          "text": "Let each waffle sit for a minute before eating -- the caramelized sugar is molten straight out of the iron. Serve warm, plain or with a light dusting of powdered sugar.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
-        "The batter deflates if left standing -- cook it soon after folding in the egg whites.",
-        "Leftover waffles freeze well and reheat directly in a toaster."
+        "Liège waffles are a yeasted, pearl-sugar dough, not a batter -- the light, rectangular, deep-pocketed \"Brussels waffle\" is a different, separate Belgian waffle, traditionally eaten with syrup or toppings the way this one isn't.",
+        "Pearl sugar is sold as \"Belgian pearl sugar\" or \"sucre perlé\" at specialty grocers and online -- there's no substitute that gives the same crackly crust.",
+        "The dough can be made a day ahead: refrigerate it after the first rise, then shape, fold in the pearl sugar, and proof it cold-to-room-temperature the next day."
       ],
       "nutrition": {
         "servingSize": "1 waffle",
-        "calories": 410,
-        "proteinG": 11,
-        "carbsG": 46,
-        "fatG": 20,
-        "saturatedFatG": 11,
+        "calories": 430,
+        "proteinG": 7,
+        "carbsG": 52,
+        "fatG": 22,
+        "saturatedFatG": 13,
         "fiberG": 1,
-        "sugarG": 8,
-        "sodiumMg": 480,
-        "cholesterolMg": 140,
+        "sugarG": 24,
+        "sodiumMg": 220,
+        "cholesterolMg": 85,
         "basis": "estimate"
       },
       "image": {
         "searchTerms": [
-          "belgian waffles",
-          "waffles breakfast"
+          "liege waffle pearl sugar",
+          "gaufre de liege"
         ],
-        "alt": "Belgian waffle with deep pockets topped with butter and maple syrup",
-        "caption": "The deep pockets exist to catch every bit of syrup.",
+        "alt": "Three oval Liège waffles with a caramelized, crackly pearl-sugar crust, cooling on a rack",
+        "caption": "The crackle comes from pearl sugar caramelizing in the iron, not from syrup poured on top.",
         "focal": "center",
         "source": {
-          "provider": "openverse",
-          "pageTitle": "Free close belgian waffle image",
-          "descriptionUrl": "https://www.rawpixel.com/image/5902164/photo-image-public-domain-food-free",
-          "originalUrl": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvc3YxOTcxMDQtaW1hZ2Uta3d2dWlna2guanBn.jpg",
-          "artist": "Unknown",
-          "credit": "rawpixel",
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:FIG 2016-Gaufres belges (2).jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:FIG_2016-Gaufres_belges_(2).jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/FIG_2016-Gaufres_belges_%282%29.jpg",
+          "artist": "Ji-Elle",
+          "credit": "Own work",
           "license": {
-            "id": "CC0-1.0",
-            "name": "CC0 1.0",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "attributionRequired": false,
-            "shareAlike": false
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "e67b37488e3112f8fcb310bb6368335972b86e1b4b9e4a931cdc2a3deb5b0f7a",
+          "sha256": "734007792d58b1ea88102d9fedb58da6de0ec5d82a589d8919cb8c2aaa710ed7",
           "ext": "jpg",
           "fetchedAt": "2026-07-26"
         },
@@ -1777,13 +1887,13 @@
     },
     {
       "slug": "vegetable-spring-rolls",
-      "title": "Vegetable Spring Rolls",
-      "tagline": "Crisp fried rolls packed with shredded vegetables.",
-      "description": "A shredded vegetable filling wrapped tight in spring roll pastry and fried until crackling -- a party appetizer worth the extra folding.",
+      "title": "Vietnamese Spring Rolls (Chả Giò Chay)",
+      "tagline": "Crisp fried rolls packed with wood ear mushroom, glass noodles, and vegetables.",
+      "description": "The vegetarian version of Vietnam's fried spring roll -- wood ear mushroom, glass noodles, and shredded vegetables rolled tight and fried until crackling, meant to be wrapped in lettuce and herbs and dipped in a tangy nuoc cham.",
       "category": "appetizers",
-      "cuisine": "Southeast Asian",
+      "cuisine": "Vietnamese",
       "times": {
-        "prepMinutes": 30,
+        "prepMinutes": 40,
         "cookMinutes": 15,
         "restMinutes": 0
       },
@@ -1797,6 +1907,8 @@
         "dairy-free"
       ],
       "keywords": [
+        "cha gio",
+        "vietnamese spring rolls",
         "spring rolls",
         "appetizer",
         "vegetables",
@@ -1804,13 +1916,13 @@
         "party"
       ],
       "equipment": [
-        "Wok or large pan",
+        "Mixing bowl",
         "Spring roll wrappers",
         "Frying pot"
       ],
       "ingredientGroups": [
         {
-          "heading": null,
+          "heading": "For the filling",
           "items": [
             {
               "quantity": 12,
@@ -1820,45 +1932,52 @@
               "scalable": true
             },
             {
-              "quantity": 1,
-              "unit": "tbsp",
-              "item": "vegetable oil",
-              "note": "for the filling",
+              "quantity": 10,
+              "unit": "g",
+              "item": "dried wood ear mushroom",
+              "note": "soaked in hot water until soft, finely chopped",
               "scalable": true
             },
             {
-              "quantity": 2,
-              "unit": "cup",
-              "item": "cabbage",
-              "note": "shredded",
+              "quantity": 30,
+              "unit": "g",
+              "item": "dried glass noodles",
+              "note": "soaked until soft, cut into short lengths",
               "scalable": true
             },
             {
               "quantity": 1,
               "unit": "cup",
               "item": "carrot",
-              "note": "julienned",
+              "note": "finely shredded",
               "scalable": true
             },
             {
               "quantity": 1,
               "unit": "cup",
-              "item": "bean sprouts",
-              "note": null,
+              "item": "jicama or taro",
+              "note": "finely shredded",
               "scalable": true
             },
             {
               "quantity": 3,
               "unit": null,
-              "item": "spring onions",
-              "note": "sliced",
+              "item": "shiitake mushrooms",
+              "note": "finely diced",
               "scalable": true
             },
             {
-              "quantity": 2,
-              "unit": "clove",
-              "item": "garlic",
+              "quantity": 1,
+              "unit": null,
+              "item": "shallot",
               "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tsp",
+              "item": "sugar",
+              "note": null,
               "scalable": true
             },
             {
@@ -1869,11 +1988,11 @@
               "scalable": true
             },
             {
-              "quantity": 1,
-              "unit": "tsp",
-              "item": "sesame oil",
+              "quantity": null,
+              "unit": null,
+              "item": "black pepper to taste",
               "note": null,
-              "scalable": true
+              "scalable": false
             },
             {
               "quantity": null,
@@ -1885,12 +2004,59 @@
           ]
         },
         {
-          "heading": "To finish",
+          "heading": "For the nuoc cham chay (vegetarian dipping sauce)",
+          "items": [
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "soy sauce",
+              "note": "in place of fish sauce",
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "lime juice",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "warm water",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "small red chili",
+              "note": "minced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "clove",
+              "item": "garlic",
+              "note": "minced",
+              "scalable": true
+            }
+          ]
+        },
+        {
+          "heading": "To serve",
           "items": [
             {
               "quantity": null,
               "unit": null,
-              "item": "sweet chili sauce or soy dipping sauce",
+              "item": "lettuce leaves and fresh herbs (mint, perilla), for wrapping",
               "note": null,
               "scalable": false
             }
@@ -1899,19 +2065,9 @@
       ],
       "steps": [
         {
-          "text": "Heat the vegetable oil in a wok over high heat and stir-fry the garlic until fragrant.",
+          "text": "Combine the wood ear mushroom, glass noodles, carrot, jicama or taro, shiitake, and shallot in a bowl, and mix in the sugar, soy sauce, and black pepper.",
           "timerMinutes": null,
-          "tip": null
-        },
-        {
-          "text": "Add the cabbage, carrot, and bean sprouts, and stir-fry until just softened.",
-          "timerMinutes": 4,
-          "tip": null
-        },
-        {
-          "text": "Stir in the spring onions, soy sauce, and sesame oil, then remove from heat and let cool completely.",
-          "timerMinutes": null,
-          "tip": "A hot filling steams the wrapper and makes it tear -- let it cool before wrapping."
+          "tip": "The filling should be finely chopped and well-drained of excess water -- a wet filling steams the wrapper from the inside and stops it from crisping."
         },
         {
           "text": "Spoon filling onto a wrapper, fold the bottom corner over, tuck in the sides, and roll tightly, sealing the edge with a little water.",
@@ -1919,17 +2075,23 @@
           "tip": null
         },
         {
-          "text": "Heat oil to 175C (350F) and fry the rolls in batches until golden and crisp.",
-          "timerMinutes": 5,
+          "text": "Whisk together the soy sauce, lime juice, sugar, and warm water for the nuoc cham until the sugar dissolves, then stir in the chili and garlic.",
+          "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Drain on paper towels and serve hot with dipping sauce.",
+          "text": "Heat oil to 175C (350F) and fry the rolls in batches until golden and crisp.",
+          "timerMinutes": 5,
+          "tip": "Frying at a steady 175C, not hotter, is what crisps the wrapper all the way through before the outside over-browns."
+        },
+        {
+          "text": "Drain on paper towels and serve hot, wrapped in lettuce and herbs and dipped in the nuoc cham.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
+        "Traditional chả giò is often made with pork and shrimp -- this vegetarian version (chả giò chay) is a genuine, common variant, not an invented substitute, and is widely eaten at Buddhist vegetarian meals in Vietnam.",
         "Rolls can be assembled ahead and refrigerated -- fry just before serving for maximum crunch.",
         "Baking at 200C (400F) for 20 minutes, turning once, works as a lighter alternative to frying."
       ],
@@ -1948,28 +2110,28 @@
       },
       "image": {
         "searchTerms": [
-          "spring rolls",
-          "vegetable spring rolls"
+          "cha gio vietnamese spring rolls",
+          "vietnamese fried spring rolls herbs"
         ],
-        "alt": "Fried spring rolls stacked with a bowl of dipping sauce",
-        "caption": "Serve immediately -- the crispness fades fast once plated.",
+        "alt": "Fried Vietnamese spring rolls served with lettuce, herbs, and dipping sauce",
+        "caption": "Wrap each roll in lettuce and herbs before dipping -- that's how it's meant to be eaten.",
         "focal": "center",
         "source": {
-          "provider": "openverse",
-          "pageTitle": "Spring roll 001",
-          "descriptionUrl": "https://commons.wikimedia.org/w/index.php?curid=111199747",
-          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Spring_roll_001.jpg",
-          "artist": "Ocdp",
-          "credit": "wikimedia",
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Chả giò (Vietnamese Spring Rolls) - 03.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ch%E1%BA%A3_gi%C3%B2_(Vietnamese_Spring_Rolls)_-_03.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Ch%E1%BA%A3_gi%C3%B2_%28Vietnamese_Spring_Rolls%29_-_03.jpg",
+          "artist": "Satdeep Gill",
+          "credit": "Own work",
           "license": {
-            "id": "CC0-1.0",
-            "name": "CC0 1.0",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "attributionRequired": false,
-            "shareAlike": false
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "3453ed079b112f614e1a104ede41b01417bd84fe5b2a386aff797e4fde1daa50",
+          "sha256": "16b8fea0861bb78e77922b1da8c8cb2c476228c411c22db60a2d280c19124437",
           "ext": "jpg",
           "fetchedAt": "2026-07-26"
         },
@@ -2171,7 +2333,7 @@
     },
     {
       "slug": "pan-fried-dumplings",
-      "title": "Pan-Fried Dumplings",
+      "title": "Pan-Fried Dumplings (Guotie)",
       "tagline": "Pork and cabbage dumplings, steamed then crisped in the pan.",
       "description": "A juicy pork and cabbage filling folded into wrappers, steamed until cooked through, then finished in a hot pan for a crisp golden base.",
       "category": "appetizers",
@@ -2191,6 +2353,7 @@
       ],
       "keywords": [
         "dumplings",
+        "guotie",
         "potstickers",
         "pork",
         "appetizer",
@@ -2395,7 +2558,7 @@
       "tagline": "Seared beef and mushrooms in a creamy paprika-flecked sauce, over noodles.",
       "description": "Strips of beef seared hot and fast, then simmered briefly with mushrooms, onion, and a sour cream sauce -- classic comfort food over buttered egg noodles.",
       "category": "mains",
-      "cuisine": "Russian-inspired",
+      "cuisine": "Russian",
       "times": {
         "prepMinutes": 15,
         "cookMinutes": 25,
@@ -2547,6 +2710,7 @@
         }
       ],
       "notes": [
+        "Named after the Stroganov family in 19th-century Russia -- the original recipe was already this simple: beef, sour cream, and mustard.",
         "Creme fraiche makes a slightly less tangy sauce than sour cream, if you prefer.",
         "Leftovers keep 2 days refrigerated but reheat gently to avoid splitting the sauce."
       ],
@@ -2605,10 +2769,10 @@
     {
       "slug": "spaghetti-carbonara",
       "title": "Spaghetti Carbonara",
-      "tagline": "Pasta tossed in a silky egg and pecorino sauce with crisp pancetta.",
-      "description": "Just five ingredients -- eggs, cheese, pancetta, pepper, and pasta -- combined off the heat so the eggs turn into a glossy sauce instead of scrambling.",
+      "tagline": "Pasta tossed in a silky egg and pecorino sauce with crisp guanciale.",
+      "description": "Just five ingredients -- eggs, pecorino, guanciale, pepper, and pasta -- combined off the heat so the eggs turn into a glossy sauce instead of scrambling. No garlic and no cream: real Roman carbonara doesn't use either.",
       "category": "mains",
-      "cuisine": "Italian",
+      "cuisine": "Italian (Roman)",
       "times": {
         "prepMinutes": 10,
         "cookMinutes": 15,
@@ -2623,9 +2787,11 @@
       "keywords": [
         "carbonara",
         "pasta",
+        "guanciale",
         "pancetta",
         "eggs",
         "italian",
+        "roman",
         "pecorino"
       ],
       "equipment": [
@@ -2647,8 +2813,8 @@
             {
               "quantity": 150,
               "unit": "g",
-              "item": "pancetta",
-              "note": "diced",
+              "item": "guanciale",
+              "note": "diced (pancetta if you can't find guanciale)",
               "scalable": true
             },
             {
@@ -2696,7 +2862,7 @@
           "tip": null
         },
         {
-          "text": "While the pasta cooks, fry the pancetta in a large skillet over medium heat until crisp and golden.",
+          "text": "While the pasta cooks, fry the guanciale in a large skillet over medium heat until crisp and golden, rendering out its fat.",
           "timerMinutes": 6,
           "tip": null
         },
@@ -2706,7 +2872,7 @@
           "tip": null
         },
         {
-          "text": "Reserve a mug of pasta water, then drain the pasta and add it to the skillet with the pancetta, off the heat.",
+          "text": "Reserve a mug of pasta water, then drain the pasta and add it to the skillet with the guanciale, off the heat.",
           "timerMinutes": null,
           "tip": null
         },
@@ -2722,7 +2888,7 @@
         }
       ],
       "notes": [
-        "Guanciale is the traditional cut if you can find it -- pancetta is a widely available substitute.",
+        "Guanciale (cured pork jowl) is what real Roman carbonara is made with -- it renders a more delicate, distinctly porky fat than pancetta, which is a widely available but secondary substitute.",
         "Heavy cream is not part of a traditional carbonara -- the emulsified eggs are what make the sauce silky."
       ],
       "nutrition": {
@@ -2779,14 +2945,14 @@
     },
     {
       "slug": "classic-lasagna",
-      "title": "Classic Lasagna",
-      "tagline": "Layered pasta baked with a slow-simmered meat sauce and bechamel.",
-      "description": "Sheets of pasta layered with a long-simmered beef and tomato sauce and a creamy bechamel, baked until bubbling and golden on top.",
+      "title": "Lasagne alla Bolognese",
+      "tagline": "Emilia-Romagna's own layered pasta, built on a slow-simmered ragù and besciamella.",
+      "description": "Fresh egg pasta layered with a true ragù alla bolognese -- soffritto, beef and pork, white wine, and milk, simmered for hours -- and besciamella, with no ricotta and no mozzarella; just Parmigiano-Reggiano, the way Bologna makes it.",
       "category": "mains",
-      "cuisine": "Italian",
+      "cuisine": "Italian (Emilia-Romagna)",
       "times": {
-        "prepMinutes": 30,
-        "cookMinutes": 75,
+        "prepMinutes": 35,
+        "cookMinutes": 180,
         "restMinutes": 15
       },
       "servings": 8,
@@ -2796,54 +2962,86 @@
         "nut-free"
       ],
       "keywords": [
+        "lasagne alla bolognese",
         "lasagna",
+        "ragu",
+        "bolognese",
         "beef",
         "pasta",
         "baked",
         "italian",
+        "emilia-romagna",
         "family dinner"
       ],
       "equipment": [
-        "Large pot",
+        "Large heavy-bottomed pot",
         "Baking dish (9x13 in)",
         "Saucepan"
       ],
       "ingredientGroups": [
         {
-          "heading": "For the meat sauce",
+          "heading": "For the ragu alla bolognese",
           "items": [
             {
-              "quantity": 1,
+              "quantity": 2,
               "unit": "tbsp",
-              "item": "olive oil",
-              "note": null,
+              "item": "butter",
+              "note": "or olive oil",
               "scalable": true
             },
             {
               "quantity": 1,
               "unit": null,
               "item": "onion",
+              "note": "very finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "carrot",
+              "note": "very finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": null,
+              "item": "celery stalk",
+              "note": "very finely diced",
+              "scalable": true
+            },
+            {
+              "quantity": 100,
+              "unit": "g",
+              "item": "pancetta",
               "note": "finely diced",
               "scalable": true
             },
             {
-              "quantity": 2,
-              "unit": "clove",
-              "item": "garlic",
-              "note": "minced",
-              "scalable": true
-            },
-            {
-              "quantity": 500,
+              "quantity": 300,
               "unit": "g",
               "item": "ground beef",
               "note": null,
               "scalable": true
             },
             {
-              "quantity": 800,
+              "quantity": 200,
               "unit": "g",
-              "item": "crushed tomatoes",
+              "item": "ground pork",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 120,
+              "unit": "ml",
+              "item": "dry white wine",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 300,
+              "unit": "ml",
+              "item": "whole milk",
               "note": null,
               "scalable": true
             },
@@ -2855,10 +3053,10 @@
               "scalable": true
             },
             {
-              "quantity": 1,
-              "unit": "tsp",
-              "item": "dried oregano",
-              "note": null,
+              "quantity": 400,
+              "unit": "ml",
+              "item": "beef or chicken stock",
+              "note": "plus more as needed",
               "scalable": true
             },
             {
@@ -2871,7 +3069,7 @@
           ]
         },
         {
-          "heading": "For the bechamel",
+          "heading": "For the besciamella",
           "items": [
             {
               "quantity": 50,
@@ -2916,22 +3114,15 @@
             {
               "quantity": 12,
               "unit": null,
-              "item": "lasagna sheets",
-              "note": "cooked according to package directions",
+              "item": "fresh egg lasagna sheets",
+              "note": "dried lasagna, cooked per package directions, is a fair substitute",
               "scalable": true
             },
             {
-              "quantity": 200,
+              "quantity": 100,
               "unit": "g",
-              "item": "mozzarella",
-              "note": "grated",
-              "scalable": true
-            },
-            {
-              "quantity": 50,
-              "unit": "g",
-              "item": "Parmesan",
-              "note": "grated",
+              "item": "Parmigiano-Reggiano",
+              "note": "finely grated",
               "scalable": true
             }
           ]
@@ -2939,32 +3130,42 @@
       ],
       "steps": [
         {
-          "text": "Heat the olive oil in a large pot and cook the onion until softened.",
+          "text": "Melt the butter in a large heavy-bottomed pot and cook the onion, carrot, celery, and pancetta over low heat until the vegetables are soft, not browned.",
+          "timerMinutes": 15,
+          "tip": "This soffritto is the flavor base of the whole ragu -- rushing it with high heat browns the vegetables instead of softening them, and the ragu never quite tastes right afterward."
+        },
+        {
+          "text": "Add the ground beef and pork, raise the heat, and cook, breaking it apart, until no longer pink.",
+          "timerMinutes": 10,
+          "tip": null
+        },
+        {
+          "text": "Pour in the white wine and simmer until it evaporates.",
+          "timerMinutes": 5,
+          "tip": null
+        },
+        {
+          "text": "Add the milk and simmer until it's mostly absorbed, then stir in the tomato paste.",
+          "timerMinutes": 10,
+          "tip": "Adding milk before the tomato is traditional in Bologna -- it tenderizes the meat and rounds out the tomato's acidity, which is why this ragu tastes rounder than a tomato-forward Sunday sauce."
+        },
+        {
+          "text": "Add the stock, season with salt and pepper, and simmer very gently, uncovered, adding more stock or water if it dries out, until deeply developed.",
+          "timerMinutes": 120,
+          "tip": "A true ragu alla bolognese simmers for at least two hours, sometimes three or four -- there is no shortcut to the flavor this builds."
+        },
+        {
+          "text": "Meanwhile, melt the butter for the besciamella in a saucepan, whisk in the flour, and cook for a minute. Gradually whisk in the milk and simmer until thickened, then season with nutmeg and salt.",
           "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Add the garlic and ground beef, and cook until the beef is browned.",
-          "timerMinutes": 8,
-          "tip": null
-        },
-        {
-          "text": "Stir in the crushed tomatoes, tomato paste, oregano, salt, and pepper, and simmer uncovered until thickened.",
-          "timerMinutes": 35,
-          "tip": "The longer, slower simmer is what makes a meat sauce taste developed instead of just cooked -- do not rush this step."
-        },
-        {
-          "text": "Meanwhile, melt the butter in a saucepan, whisk in the flour, and cook for a minute. Gradually whisk in the milk and simmer until thickened, then season with nutmeg and salt.",
+          "text": "Preheat the oven to 190C (375F). Spread a thin layer of ragu in the baking dish, then layer pasta sheets, ragu, and besciamella, repeating to use it all up, finishing with besciamella.",
           "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Preheat the oven to 190C (375F). Spread a thin layer of meat sauce in the baking dish, then layer pasta sheets, meat sauce, and bechamel, repeating to use it all up, finishing with bechamel.",
-          "timerMinutes": null,
-          "tip": null
-        },
-        {
-          "text": "Scatter the mozzarella and Parmesan over the top.",
+          "text": "Scatter the Parmigiano-Reggiano over the top.",
           "timerMinutes": null,
           "tip": null
         },
@@ -2980,6 +3181,7 @@
         }
       ],
       "notes": [
+        "No ricotta and no mozzarella -- a proper lasagne alla bolognese is built from just ragu, besciamella, fresh pasta, and Parmigiano-Reggiano. Both are common in Italian-American versions, but neither is traditional to Emilia-Romagna.",
         "Assembled, unbaked lasagna freezes well for up to 3 months -- thaw overnight before baking.",
         "Leftovers keep 3 days refrigerated and reheat well covered in a low oven."
       ],
@@ -3001,7 +3203,7 @@
           "lasagna",
           "baked lasagna slice"
         ],
-        "alt": "Slice of baked lasagna showing layers of pasta, meat sauce, and cheese",
+        "alt": "Slice of baked lasagne alla bolognese showing layers of pasta, ragu, and besciamella",
         "caption": "Let it rest 15 minutes before cutting so the layers hold their shape.",
         "focal": "center",
         "source": {
@@ -3466,11 +3668,11 @@
     },
     {
       "slug": "vegetable-fried-rice",
-      "title": "Vegetable Fried Rice",
-      "tagline": "Day-old rice stir-fried with egg and vegetables in a hot wok.",
-      "description": "Cold, day-old rice separates into distinct grains in a hot wok, tossed with egg and whatever vegetables are on hand -- one of the fastest ways to turn leftovers into dinner.",
+      "title": "Chinese Vegetable Fried Rice (Su Chao Fan)",
+      "tagline": "Day-old rice stir-fried with egg and vegetables in a screaming-hot wok.",
+      "description": "Cold, day-old rice separates into distinct grains in a hot wok, tossed with egg and vegetables until it takes on wok hei -- the faint char and smoky depth that only comes from real high heat, not a nonstick pan on medium.",
       "category": "vegetarian",
-      "cuisine": "Chinese-inspired",
+      "cuisine": "Chinese",
       "times": {
         "prepMinutes": 10,
         "cookMinutes": 10,
@@ -3486,10 +3688,12 @@
       ],
       "keywords": [
         "fried rice",
+        "su chao fan",
+        "wok hei",
         "vegetables",
         "leftovers",
         "quick",
-        "chinese-inspired"
+        "chinese"
       ],
       "equipment": [
         "Wok or large skillet"
@@ -3508,8 +3712,8 @@
             {
               "quantity": 2,
               "unit": "tbsp",
-              "item": "vegetable oil",
-              "note": null,
+              "item": "peanut oil",
+              "note": "or another high-smoke-point oil",
               "scalable": true
             },
             {
@@ -3573,9 +3777,9 @@
       ],
       "steps": [
         {
-          "text": "Heat half the vegetable oil in a wok over high heat, pour in the eggs, and scramble until just set, then remove and set aside.",
+          "text": "Heat half the oil in a wok over the highest heat your stove has, pour in the eggs, and scramble until just set, then remove and set aside.",
           "timerMinutes": null,
-          "tip": null
+          "tip": "Real wok hei comes from heat most home stoves can't fully reach, but getting the wok smoking hot before anything goes in is what gets you closest -- a lukewarm pan just steams the ingredients instead."
         },
         {
           "text": "Add the remaining oil, then the garlic, carrot, and peas, and stir-fry until the carrot softens.",
@@ -3656,7 +3860,7 @@
     },
     {
       "slug": "greek-salad",
-      "title": "Greek Salad",
+      "title": "Greek Village Salad (Horiatiki)",
       "tagline": "Crisp vegetables and briny feta tossed in a simple oregano vinaigrette.",
       "description": "Tomatoes, cucumber, olives, and a thick slab of feta tossed with red onion and a sharp oregano dressing -- no lettuce, and none needed.",
       "category": "vegetarian",
@@ -3675,6 +3879,7 @@
       ],
       "keywords": [
         "greek salad",
+        "horiatiki",
         "feta",
         "tomato",
         "cucumber",
@@ -3851,7 +4056,7 @@
     },
     {
       "slug": "mushroom-risotto",
-      "title": "Mushroom Risotto",
+      "title": "Mushroom Risotto (Risotto ai Funghi)",
       "tagline": "Arborio rice stirred slowly with stock until creamy, folded with mushrooms.",
       "description": "Rice released of its starch one ladle of stock at a time, finished with sauteed mushrooms and Parmesan -- patience is the only hard part.",
       "category": "vegetarian",
@@ -3871,6 +4076,7 @@
       ],
       "keywords": [
         "risotto",
+        "risotto ai funghi",
         "mushroom",
         "arborio rice",
         "italian",
@@ -5224,14 +5430,14 @@
     },
     {
       "slug": "iced-coffee",
-      "title": "Iced Coffee",
-      "tagline": "Strong coffee cooled and poured over ice with milk.",
-      "description": "Coffee brewed double-strength, cooled, and poured over ice with milk -- a far better result than pouring hot coffee straight over ice, which waters it down as it melts.",
+      "title": "Vietnamese Iced Coffee (Cà Phê Sữa Đá)",
+      "tagline": "Dark-roast coffee dripped straight over sweetened condensed milk, then poured over ice.",
+      "description": "Coarse dark-roast coffee slow-dripped through a phin filter directly onto sweetened condensed milk, stirred together while still hot, then poured over ice -- the condensed milk supplies both the sweetness and the body, with no added milk or syrup.",
       "category": "drinks",
-      "cuisine": "American",
+      "cuisine": "Vietnamese",
       "times": {
-        "prepMinutes": 5,
-        "cookMinutes": 0,
+        "prepMinutes": 2,
+        "cookMinutes": 5,
         "restMinutes": 0
       },
       "servings": 1,
@@ -5243,24 +5449,41 @@
         "nut-free"
       ],
       "keywords": [
+        "vietnamese iced coffee",
+        "ca phe sua da",
+        "phin coffee",
+        "condensed milk coffee",
         "iced coffee",
         "coffee",
-        "drink",
-        "cold brew"
+        "drink"
       ],
       "equipment": [
-        "Coffee maker or French press",
-        "Tall glass"
+        "Phin filter (Vietnamese drip filter)",
+        "Glass or cup"
       ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
             {
-              "quantity": 240,
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "sweetened condensed milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 3,
+              "unit": "tbsp",
+              "item": "coarsely ground dark-roast coffee",
+              "note": "traditionally Vietnamese robusta",
+              "scalable": true
+            },
+            {
+              "quantity": 150,
               "unit": "ml",
-              "item": "strong brewed coffee",
-              "note": "cooled",
+              "item": "hot water",
+              "note": "just off the boil",
               "scalable": true
             },
             {
@@ -5269,87 +5492,83 @@
               "item": "ice cubes",
               "note": null,
               "scalable": true
-            },
-            {
-              "quantity": 60,
-              "unit": "ml",
-              "item": "milk or cream",
-              "note": "to taste",
-              "scalable": true
-            },
-            {
-              "quantity": 1,
-              "unit": "tbsp",
-              "item": "simple syrup",
-              "note": "optional",
-              "scalable": true
             }
           ]
         }
       ],
       "steps": [
         {
-          "text": "Brew the coffee double the usual strength, then let it cool to room temperature or chill it.",
-          "timerMinutes": null,
-          "tip": "Brewing it extra strong is what keeps the coffee from tasting watery once the ice starts to melt."
-        },
-        {
-          "text": "Fill a tall glass with ice cubes.",
+          "text": "Spoon the condensed milk into the bottom of a heatproof glass.",
           "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Pour the cooled coffee over the ice.",
+          "text": "Set the phin filter on top of the glass, add the ground coffee, and tamp it lightly level with the press insert.",
           "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Add milk and simple syrup to taste, and stir.",
+          "text": "Pour a small splash of hot water over the grounds to let them bloom, wait 30 seconds, then fill the chamber the rest of the way and cover with the lid.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Let the coffee drip through slowly, about 4 to 5 minutes.",
+          "timerMinutes": 5,
+          "tip": "The slow drip through the phin is what gives Vietnamese coffee its strength and body -- a fast pour-over or drip machine won't extract the same way."
+        },
+        {
+          "text": "Remove the phin and stir vigorously until the condensed milk is fully dissolved into the coffee.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Fill a separate glass with ice and pour the sweetened coffee over it.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
-        "Brew a batch ahead and refrigerate it specifically for iced coffee -- pouring hot coffee straight over ice dilutes it fast.",
-        "Cold brew concentrate works even better if you have the time to make it."
+        "Sweetened condensed milk isn't a substitute for milk here -- it's the traditional base, supplying the sweetness and the body in one ingredient. There's no separate sugar or syrup.",
+        "A moka pot or a very strong drip brew works if a phin filter isn't available, though the flavor and strength won't be quite the same."
       ],
       "nutrition": {
         "servingSize": "1 glass",
-        "calories": 60,
-        "proteinG": 1,
-        "carbsG": 6,
-        "fatG": 3,
-        "saturatedFatG": 2,
+        "calories": 220,
+        "proteinG": 4,
+        "carbsG": 38,
+        "fatG": 5,
+        "saturatedFatG": 3,
         "fiberG": 0,
-        "sugarG": 6,
-        "sodiumMg": 15,
-        "cholesterolMg": 10,
+        "sugarG": 36,
+        "sodiumMg": 60,
+        "cholesterolMg": 15,
         "basis": "estimate"
       },
       "image": {
         "searchTerms": [
-          "iced coffee",
-          "iced coffee glass"
+          "vietnamese iced coffee phin",
+          "ca phe sua da"
         ],
-        "alt": "Tall glass of iced coffee with milk swirled through it",
-        "caption": "Brewing it double-strength is what keeps it from tasting watery as the ice melts.",
+        "alt": "Phin filter dripping coffee into a glass, with a glass of ice on the side",
+        "caption": "The slow drip through the phin is what gives the coffee its strength.",
         "focal": "center",
         "source": {
-          "provider": "openverse",
-          "pageTitle": "Iced Coffee",
-          "descriptionUrl": "https://stocksnap.io/photo/iced-coffee-NKM1I7VRK3",
-          "originalUrl": "https://cdn.stocksnap.io/img-thumbs/960w/NKM1I7VRK3.jpg",
-          "artist": "Andrew E Weber",
-          "credit": "stocksnap",
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Vietnamese Iced Coffee Ba Chi Canteen.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vietnamese_Iced_Coffee_Ba_Chi_Canteen.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Vietnamese_Iced_Coffee_Ba_Chi_Canteen.jpg",
+          "artist": "Infrogmation of New Orleans",
+          "credit": "Flickr: Vietnamese Iced Coffee Ba Chi Canteen",
           "license": {
-            "id": "CC0-1.0",
-            "name": "CC0 1.0",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "attributionRequired": false,
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
             "shareAlike": false
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "4b6181aeeb3e6c000f2d5d9955e524538267a59eb86a50d43ce8c254c53ed69d",
+          "sha256": "17712355d8ddb2527dedd01f2952b82a84234cdaa630e71ac6806166df4f6310",
           "ext": "jpg",
           "fetchedAt": "2026-07-26"
         },
@@ -5684,11 +5903,11 @@
     },
     {
       "slug": "hot-chocolate",
-      "title": "Hot Chocolate",
-      "tagline": "Melted chocolate and milk whisked into a thick, rich drink.",
-      "description": "Real chocolate melted directly into warm milk, not just cocoa powder stirred in -- the difference is a drink that's genuinely thick and rich, not just sweet.",
+      "title": "Spanish Hot Chocolate (Chocolate a la Taza)",
+      "tagline": "Thick, pudding-like drinking chocolate made for dipping churros.",
+      "description": "Milk and dark chocolate thickened with cornstarch into a spoon-coating, pudding-like drink -- traditionally served alongside churros for dipping, and deliberately less sweet than a mug of American hot chocolate.",
       "category": "drinks",
-      "cuisine": "European",
+      "cuisine": "Spanish",
       "times": {
         "prepMinutes": 5,
         "cookMinutes": 10,
@@ -5696,32 +5915,34 @@
       },
       "servings": 2,
       "servingUnit": "servings",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "dietary": [
         "vegetarian",
         "gluten-free",
         "nut-free"
       ],
       "keywords": [
-        "hot chocolate",
-        "chocolate",
-        "winter",
-        "drink",
-        "cocoa"
+        "spanish hot chocolate",
+        "chocolate a la taza",
+        "chocolate caliente",
+        "churros dip",
+        "drinking chocolate",
+        "hot chocolate"
       ],
       "equipment": [
         "Saucepan",
-        "Whisk"
+        "Whisk",
+        "Small bowl"
       ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
             {
-              "quantity": 480,
+              "quantity": 500,
               "unit": "ml",
               "item": "whole milk",
-              "note": null,
+              "note": "divided",
               "scalable": true
             },
             {
@@ -5732,17 +5953,17 @@
               "scalable": true
             },
             {
-              "quantity": 1,
+              "quantity": 2,
               "unit": "tbsp",
-              "item": "sugar",
-              "note": "or to taste",
+              "item": "cornstarch",
+              "note": null,
               "scalable": true
             },
             {
-              "quantity": 0.25,
-              "unit": "tsp",
-              "item": "vanilla extract",
-              "note": null,
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": "or to taste -- this is meant to be less sweet than American hot chocolate",
               "scalable": true
             },
             {
@@ -5755,12 +5976,12 @@
           ]
         },
         {
-          "heading": "To finish",
+          "heading": "To serve",
           "items": [
             {
               "quantity": null,
               "unit": null,
-              "item": "whipped cream or marshmallows, optional",
+              "item": "churros, for dipping",
               "note": null,
               "scalable": false
             }
@@ -5769,67 +5990,78 @@
       ],
       "steps": [
         {
-          "text": "Warm the milk in a saucepan over medium-low heat until steaming but not boiling.",
+          "text": "Whisk the cornstarch with 3 tablespoons of the cold milk in a small bowl until smooth, and set aside.",
           "timerMinutes": null,
           "tip": null
         },
         {
-          "text": "Remove from heat and whisk in the chopped chocolate until fully melted and smooth.",
+          "text": "Warm the rest of the milk in a saucepan over medium heat until steaming but not boiling.",
           "timerMinutes": null,
-          "tip": "Melting the chocolate off the heat, whisking constantly, keeps it from seizing or scorching against the bottom of the pan."
-        },
-        {
-          "text": "Return to low heat and whisk in the sugar, vanilla, and salt, warming through without boiling.",
-          "timerMinutes": 3,
           "tip": null
         },
         {
-          "text": "Pour into mugs and top with whipped cream or marshmallows, if using.",
+          "text": "Reduce the heat to low and whisk in the chopped chocolate until fully melted and smooth.",
+          "timerMinutes": null,
+          "tip": "Melting the chocolate over low heat, whisking constantly, keeps it from seizing or scorching against the bottom of the pan."
+        },
+        {
+          "text": "Whisk in the sugar, salt, and the cornstarch slurry.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Cook over low heat, whisking constantly, until the mixture thickens to a pudding-like consistency, about 5 minutes.",
+          "timerMinutes": 5,
+          "tip": "It should be thick enough to coat the back of a spoon and hold a dipped churro -- if it still pours like a thin drink, it hasn't cooked long enough for the cornstarch to set up."
+        },
+        {
+          "text": "Pour into small cups and serve immediately with churros for dipping.",
           "timerMinutes": null,
           "tip": null
         }
       ],
       "notes": [
+        "The cornstarch, not extra chocolate, is what gives this its signature pudding-like thickness -- that's what separates chocolate a la taza from a regular mug of hot chocolate.",
         "Use the best dark chocolate you have -- this recipe has so few ingredients that the chocolate's quality is the whole drink.",
-        "Steaming, not boiling, the milk is what keeps it from developing a skin."
+        "No whipped cream or marshmallows -- the traditional pairing is churros, and the drink itself is kept on the less-sweet side."
       ],
       "nutrition": {
-        "servingSize": "1 mug",
-        "calories": 320,
-        "proteinG": 9,
-        "carbsG": 28,
-        "fatG": 20,
-        "saturatedFatG": 12,
+        "servingSize": "1 cup",
+        "calories": 300,
+        "proteinG": 8,
+        "carbsG": 30,
+        "fatG": 17,
+        "saturatedFatG": 10,
         "fiberG": 3,
-        "sugarG": 22,
-        "sodiumMg": 120,
-        "cholesterolMg": 25,
+        "sugarG": 18,
+        "sodiumMg": 110,
+        "cholesterolMg": 20,
         "basis": "estimate"
       },
       "image": {
         "searchTerms": [
-          "hot chocolate",
-          "hot chocolate mug"
+          "chocolate a la taza churros",
+          "spanish thick hot chocolate"
         ],
-        "alt": "Mug of hot chocolate topped with whipped cream",
-        "caption": "Real chopped chocolate, not just cocoa powder, is what makes it thick.",
+        "alt": "Small cup of thick Spanish hot chocolate served with churros for dipping",
+        "caption": "Thick enough to coat a churro -- that's the point, not an accident.",
         "focal": "center",
         "source": {
-          "provider": "openverse",
-          "pageTitle": "Hot Chocolate",
-          "descriptionUrl": "https://stocksnap.io/photo/hot-chocolate-NOXXUWUBGJ",
-          "originalUrl": "https://cdn.stocksnap.io/img-thumbs/960w/NOXXUWUBGJ.jpg",
-          "artist": "Tim Sullivan",
-          "credit": "stocksnap",
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Chocolate con churros de lazo.jpg",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Chocolate_con_churros_de_lazo.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Chocolate_con_churros_de_lazo.jpg",
+          "artist": "LWY from Pasadena, USA",
+          "credit": "Madrid",
           "license": {
-            "id": "CC0-1.0",
-            "name": "CC0 1.0",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "attributionRequired": false,
+            "id": "CC-BY-2.0",
+            "name": "CC BY 2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0/",
+            "attributionRequired": true,
             "shareAlike": false
           },
           "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
-          "sha256": "b678740999cb93260c7195eec5aec0529c5241aa4f0bb9140d4c4e90fa1864c5",
+          "sha256": "b10a90ee06ffc95e5585fde01c3d51c794212b38b3051472038d254d44ddd0a8",
           "ext": "jpg",
           "fetchedAt": "2026-07-26"
         },
