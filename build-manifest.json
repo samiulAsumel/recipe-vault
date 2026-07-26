@@ -1,15 +1,15 @@
 {
   "generator": "tools/build.js",
   "files": {
-    "assets/js/recipes-index.js": "9a5bf5f3322fad75b78dabceed391b3d6106b6135933bce24fc4a78a98fc8e25",
+    "assets/js/recipes-index.js": "ee3cabf580739aab9e494319a94933a3785cd6d014b6e33a17bc759ec64e751e",
     "categories/appetizers.html": "bc0e68a3de24f31c179e950074f9140a194c35f920f05a34e937bde5f3d8eaa0",
     "categories/breakfast.html": "dc2f1d44e357f856924585f55e6873807d3befcde3546877a24404b06b8ea0e8",
     "categories/desserts.html": "579163f1f9aaf8ba94e94f484d2e5028bf3fc68c589f9b591c7b15b91e1cb108",
-    "categories/drinks.html": "7120de89b96853a40d096aaa4ea075d379c0669f5a07340bd639e0b059c02e74",
+    "categories/drinks.html": "bca911c6f4b7e750d6f1b8a6c46127afc1be4eda62f19b9e9472b88e3c4b1343",
     "categories/mains.html": "81587d3483214a9905f499a82a147458cece0642a364aa5d25707d3bfeb98018",
     "categories/vegetarian.html": "9594ef6d2e3d6da7360359329a0ab23db533160e91481695423fe0028bd362f0",
-    "credits.html": "1d9889161dc2f47b1d62eb56aa871ee3edda4965b29036920ea90f6223788986",
-    "index.html": "a5205288caf2de89525c07d6b7b9ee08fd2620a3c2575f7e9cbdf71d5694307d",
+    "credits.html": "ea84cf744bc052c527bf15e25f0e4c23aa1a2aefbd06ea45ad6256e30060f81c",
+    "index.html": "d4ea39a1860779e02e7d91e5b4e12e558658b63b78b23e8784589bc147201904",
     "recipes/baked-mac-and-cheese.html": "a6748ac09d20100dfd1e775a33c0ddf5a4fc6d2cf37849574c40d7b018ae944a",
     "recipes/banana-bread.html": "81b53389a8a5405317e90e2b5d4cb78047937cece7d969f178a0d0d66d398331",
     "recipes/beef-stroganoff.html": "c4cb8de9eb4c70daf1e35f4cca939ec2039d1c433a909225afc2ca1cfff65a74",
@@ -27,7 +27,12 @@
     "recipes/crispy-falafel.html": "3517a4ec5aaf64d8043a4f546b1668e95ce1c649ea95a4a440b484ab20e2f175",
     "recipes/french-toast.html": "e3c970f3b69da64957324f30da1053c1533ee3487744fd81a84806e602e2b058",
     "recipes/fresh-guacamole.html": "1c22bac68ae0119b35a1776b1dba4f055c18cc9b8b3f8b197f0fdf79a11bcd65",
+    "recipes/fresh-lemonade.html": "d9991187175ede61bc9901294af2edf61b372e7238ee88ed656f82ce8acc9612",
     "recipes/greek-salad.html": "5584b3ff4443050b7b98eae0631b84cdaf16c1b4c9461e3dce61aa0884b6fb43",
+    "recipes/hot-chocolate.html": "b39997a34e1a85c2a37efa92a62e48f42b3948cc47cb905414d6ccc139ff86f1",
+    "recipes/iced-coffee.html": "37144003a87fb850ed1b57a3e55e3b9290500a6c1e8bbf7b537229095055c5ae",
+    "recipes/mango-lassi.html": "6cc730fff815d6646f0fa21f6ef4cfa3c4f8aa49aafd2400d61f9ddc6fc37d1c",
+    "recipes/mixed-berry-smoothie.html": "14a01f3ec0aae5e8ed759a9dba94dc71eda98e3d9b7935aa3b8c2b70d2bcf210",
     "recipes/mushroom-risotto.html": "7df886549f5a90bd15d9efd8360f47a75764d1f10a07928b2251534c44c67245",
     "recipes/new-york-cheesecake.html": "baf3a53393919acde30d7f07aaec67f0a558d98c352118da49b125eaaeeb655e",
     "recipes/pan-fried-dumplings.html": "d0d191ae03f650d80bf999e286ac1302d91480a75c95bd5c2567e6df07dff076",
@@ -36,6 +41,6 @@
     "recipes/vegetable-fried-rice.html": "88737d898da8ae61692201fe8fdefc4b129b2bf3ffc9f5904863047ffa2e3ef0",
     "recipes/vegetable-spring-rolls.html": "d9349961527d4b50e2abb86d2294d222e495ea7c53f75f054909f4907695abae",
     "robots.txt": "3dd9cf05af4248ed657734c7897a099123e0f8942f83587c16fc8ddf5b8c55e4",
-    "sitemap.xml": "c6e736588753013cfb1e9027cf3c18d593cd9d58c4655b436d8e9c0f1a62466d"
+    "sitemap.xml": "200a1bd691a50575c42606d235c98d6371263f3c4a7e3343db004f93b859bad5"
   }
 }

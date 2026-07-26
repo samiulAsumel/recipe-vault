@@ -223,5 +223,50 @@
       1200
     ],
     "builtAt": "2026-07-26"
+  },
+  "mixed-berry-smoothie:0cdcf4db70d90602312ee16538b8fff84afb2f5ca4b595416ba2404d57b3d89a": {
+    "sha256": "0cdcf4db70d90602312ee16538b8fff84afb2f5ca4b595416ba2404d57b3d89a",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "iced-coffee:4b6181aeeb3e6c000f2d5d9955e524538267a59eb86a50d43ce8c254c53ed69d": {
+    "sha256": "4b6181aeeb3e6c000f2d5d9955e524538267a59eb86a50d43ce8c254c53ed69d",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "fresh-lemonade:73de8b1ae71923574d18529737836a8e8793c48cc12146b8333729c37cfbaab8": {
+    "sha256": "73de8b1ae71923574d18529737836a8e8793c48cc12146b8333729c37cfbaab8",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "mango-lassi:c1b02355140adad096e56d4289b576a6c3f71a5e83f1cca4608767870aed365f": {
+    "sha256": "c1b02355140adad096e56d4289b576a6c3f71a5e83f1cca4608767870aed365f",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
+  },
+  "hot-chocolate:b678740999cb93260c7195eec5aec0529c5241aa4f0bb9140d4c4e90fa1864c5": {
+    "sha256": "b678740999cb93260c7195eec5aec0529c5241aa4f0bb9140d4c4e90fa1864c5",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "builtAt": "2026-07-26"
   }
 }

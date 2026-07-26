@@ -5091,28 +5091,80 @@
       "description": "Frozen mixed berries blended with yogurt and a splash of milk until thick and cold -- no bananas required, so the berry flavor stays front and center.",
       "category": "drinks",
       "cuisine": "American",
-      "times": { "prepMinutes": 5, "cookMinutes": 0, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 5,
+        "cookMinutes": 0,
+        "restMinutes": 0
+      },
       "servings": 2,
       "servingUnit": "servings",
       "difficulty": "easy",
-      "dietary": ["vegetarian", "gluten-free", "nut-free"],
-      "keywords": ["smoothie", "berries", "breakfast", "drink", "healthy"],
-      "equipment": ["Blender"],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "smoothie",
+        "berries",
+        "breakfast",
+        "drink",
+        "healthy"
+      ],
+      "equipment": [
+        "Blender"
+      ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
-            { "quantity": 300, "unit": "g", "item": "frozen mixed berries", "note": null, "scalable": true },
-            { "quantity": 200, "unit": "g", "item": "plain yogurt", "note": null, "scalable": true },
-            { "quantity": 120, "unit": "ml", "item": "milk", "note": null, "scalable": true },
-            { "quantity": 1, "unit": "tbsp", "item": "honey", "note": "or to taste", "scalable": true }
+            {
+              "quantity": 300,
+              "unit": "g",
+              "item": "frozen mixed berries",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "plain yogurt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 120,
+              "unit": "ml",
+              "item": "milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "honey",
+              "note": "or to taste",
+              "scalable": true
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Combine the frozen berries, yogurt, milk, and honey in a blender.", "timerMinutes": null, "tip": null },
-        { "text": "Blend until smooth and thick, adding a splash more milk if it's too thick to pour.", "timerMinutes": null, "tip": "Starting with less milk and adding more as needed keeps the smoothie thick instead of watery -- you can always loosen it, but you can't easily thicken it back up." },
-        { "text": "Taste and adjust honey, then pour into glasses and serve immediately.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Combine the frozen berries, yogurt, milk, and honey in a blender.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Blend until smooth and thick, adding a splash more milk if it's too thick to pour.",
+          "timerMinutes": null,
+          "tip": "Starting with less milk and adding more as needed keeps the smoothie thick instead of watery -- you can always loosen it, but you can't easily thicken it back up."
+        },
+        {
+          "text": "Taste and adjust honey, then pour into glasses and serve immediately.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "Frozen berries make a colder, thicker smoothie than fresh -- no ice needed.",
@@ -5120,18 +5172,51 @@
       ],
       "nutrition": {
         "servingSize": "1 glass",
-        "calories": 190, "proteinG": 8, "carbsG": 34, "fatG": 3,
-        "saturatedFatG": 1, "fiberG": 5, "sugarG": 24,
-        "sodiumMg": 70, "cholesterolMg": 10,
+        "calories": 190,
+        "proteinG": 8,
+        "carbsG": 34,
+        "fatG": 3,
+        "saturatedFatG": 1,
+        "fiberG": 5,
+        "sugarG": 24,
+        "sodiumMg": 70,
+        "cholesterolMg": 10,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["berry smoothie", "mixed berry smoothie"],
+        "searchTerms": [
+          "berry smoothie",
+          "mixed berry smoothie"
+        ],
         "alt": "Glass of mixed berry smoothie topped with fresh berries",
         "caption": "Frozen fruit is what gives it that thick, milkshake-like body.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "berry smoothie",
+          "descriptionUrl": "https://www.rawpixel.com/image/5946694/free-public-domain-cc0-photo",
+          "originalUrl": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg2OTg5NTctaW1hZ2Uta3d5b3NtZmMuanBn.jpg",
+          "artist": "Unknown",
+          "credit": "rawpixel",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "0cdcf4db70d90602312ee16538b8fff84afb2f5ca4b595416ba2404d57b3d89a",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["mango-lassi", "fresh-lemonade"],
+      "related": [
+        "mango-lassi",
+        "fresh-lemonade"
+      ],
       "featured": false,
       "published": "2026-07-26",
       "updated": "2026-07-26",
@@ -5144,29 +5229,85 @@
       "description": "Coffee brewed double-strength, cooled, and poured over ice with milk -- a far better result than pouring hot coffee straight over ice, which waters it down as it melts.",
       "category": "drinks",
       "cuisine": "American",
-      "times": { "prepMinutes": 5, "cookMinutes": 0, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 5,
+        "cookMinutes": 0,
+        "restMinutes": 0
+      },
       "servings": 1,
       "servingUnit": "serving",
       "difficulty": "easy",
-      "dietary": ["vegetarian", "gluten-free", "nut-free"],
-      "keywords": ["iced coffee", "coffee", "drink", "cold brew"],
-      "equipment": ["Coffee maker or French press", "Tall glass"],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "iced coffee",
+        "coffee",
+        "drink",
+        "cold brew"
+      ],
+      "equipment": [
+        "Coffee maker or French press",
+        "Tall glass"
+      ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
-            { "quantity": 240, "unit": "ml", "item": "strong brewed coffee", "note": "cooled", "scalable": true },
-            { "quantity": 1, "unit": "cup", "item": "ice cubes", "note": null, "scalable": true },
-            { "quantity": 60, "unit": "ml", "item": "milk or cream", "note": "to taste", "scalable": true },
-            { "quantity": 1, "unit": "tbsp", "item": "simple syrup", "note": "optional", "scalable": true }
+            {
+              "quantity": 240,
+              "unit": "ml",
+              "item": "strong brewed coffee",
+              "note": "cooled",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "cup",
+              "item": "ice cubes",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 60,
+              "unit": "ml",
+              "item": "milk or cream",
+              "note": "to taste",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "simple syrup",
+              "note": "optional",
+              "scalable": true
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Brew the coffee double the usual strength, then let it cool to room temperature or chill it.", "timerMinutes": null, "tip": "Brewing it extra strong is what keeps the coffee from tasting watery once the ice starts to melt." },
-        { "text": "Fill a tall glass with ice cubes.", "timerMinutes": null, "tip": null },
-        { "text": "Pour the cooled coffee over the ice.", "timerMinutes": null, "tip": null },
-        { "text": "Add milk and simple syrup to taste, and stir.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Brew the coffee double the usual strength, then let it cool to room temperature or chill it.",
+          "timerMinutes": null,
+          "tip": "Brewing it extra strong is what keeps the coffee from tasting watery once the ice starts to melt."
+        },
+        {
+          "text": "Fill a tall glass with ice cubes.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Pour the cooled coffee over the ice.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Add milk and simple syrup to taste, and stir.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "Brew a batch ahead and refrigerate it specifically for iced coffee -- pouring hot coffee straight over ice dilutes it fast.",
@@ -5174,18 +5315,51 @@
       ],
       "nutrition": {
         "servingSize": "1 glass",
-        "calories": 60, "proteinG": 1, "carbsG": 6, "fatG": 3,
-        "saturatedFatG": 2, "fiberG": 0, "sugarG": 6,
-        "sodiumMg": 15, "cholesterolMg": 10,
+        "calories": 60,
+        "proteinG": 1,
+        "carbsG": 6,
+        "fatG": 3,
+        "saturatedFatG": 2,
+        "fiberG": 0,
+        "sugarG": 6,
+        "sodiumMg": 15,
+        "cholesterolMg": 10,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["iced coffee", "iced coffee glass"],
+        "searchTerms": [
+          "iced coffee",
+          "iced coffee glass"
+        ],
         "alt": "Tall glass of iced coffee with milk swirled through it",
         "caption": "Brewing it double-strength is what keeps it from tasting watery as the ice melts.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Iced Coffee",
+          "descriptionUrl": "https://stocksnap.io/photo/iced-coffee-NKM1I7VRK3",
+          "originalUrl": "https://cdn.stocksnap.io/img-thumbs/960w/NKM1I7VRK3.jpg",
+          "artist": "Andrew E Weber",
+          "credit": "stocksnap",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "4b6181aeeb3e6c000f2d5d9955e524538267a59eb86a50d43ce8c254c53ed69d",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["hot-chocolate", "mixed-berry-smoothie"],
+      "related": [
+        "hot-chocolate",
+        "mixed-berry-smoothie"
+      ],
       "featured": false,
       "published": "2026-07-26",
       "updated": "2026-07-26",
@@ -5198,37 +5372,107 @@
       "description": "Fresh lemon juice mixed with a simple syrup and cold water -- brighter and less cloying than anything from a powdered mix or a bottle.",
       "category": "drinks",
       "cuisine": "American",
-      "times": { "prepMinutes": 10, "cookMinutes": 5, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 10,
+        "cookMinutes": 5,
+        "restMinutes": 0
+      },
       "servings": 6,
       "servingUnit": "servings",
       "yieldText": "about 1.5L",
       "difficulty": "easy",
-      "dietary": ["vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free"],
-      "keywords": ["lemonade", "lemon", "drink", "summer", "refreshing"],
-      "equipment": ["Small saucepan", "Pitcher", "Citrus juicer"],
+      "dietary": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "lemonade",
+        "lemon",
+        "drink",
+        "summer",
+        "refreshing"
+      ],
+      "equipment": [
+        "Small saucepan",
+        "Pitcher",
+        "Citrus juicer"
+      ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
-            { "quantity": 200, "unit": "g", "item": "sugar", "note": null, "scalable": true },
-            { "quantity": 240, "unit": "ml", "item": "water", "note": "for the syrup", "scalable": true },
-            { "quantity": 240, "unit": "ml", "item": "fresh lemon juice", "note": "about 6-8 lemons", "scalable": true },
-            { "quantity": 1, "unit": "l", "item": "cold water", "note": "plus ice to serve", "scalable": true }
+            {
+              "quantity": 200,
+              "unit": "g",
+              "item": "sugar",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 240,
+              "unit": "ml",
+              "item": "water",
+              "note": "for the syrup",
+              "scalable": true
+            },
+            {
+              "quantity": 240,
+              "unit": "ml",
+              "item": "fresh lemon juice",
+              "note": "about 6-8 lemons",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "l",
+              "item": "cold water",
+              "note": "plus ice to serve",
+              "scalable": true
+            }
           ]
         },
         {
           "heading": "To finish",
           "items": [
-            { "quantity": null, "unit": null, "item": "lemon slices and mint, to garnish", "note": null, "scalable": false }
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "lemon slices and mint, to garnish",
+              "note": null,
+              "scalable": false
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Combine the sugar and water in a small saucepan and heat until the sugar dissolves completely, then let cool.", "timerMinutes": 3, "tip": null },
-        { "text": "Juice the lemons, straining out the seeds.", "timerMinutes": null, "tip": null },
-        { "text": "Combine the lemon juice, sugar syrup, and cold water in a pitcher.", "timerMinutes": null, "tip": "Making a syrup instead of stirring sugar directly into cold water is what dissolves it fully -- sugar stirred into cold liquid alone often stays grainy." },
-        { "text": "Taste and adjust the balance of sweet and tart with more syrup or lemon juice.", "timerMinutes": null, "tip": null },
-        { "text": "Serve over ice, garnished with lemon slices and mint.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Combine the sugar and water in a small saucepan and heat until the sugar dissolves completely, then let cool.",
+          "timerMinutes": 3,
+          "tip": null
+        },
+        {
+          "text": "Juice the lemons, straining out the seeds.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Combine the lemon juice, sugar syrup, and cold water in a pitcher.",
+          "timerMinutes": null,
+          "tip": "Making a syrup instead of stirring sugar directly into cold water is what dissolves it fully -- sugar stirred into cold liquid alone often stays grainy."
+        },
+        {
+          "text": "Taste and adjust the balance of sweet and tart with more syrup or lemon juice.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Serve over ice, garnished with lemon slices and mint.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "Keeps 5 days refrigerated; the flavor is best within the first 2 days.",
@@ -5236,18 +5480,51 @@
       ],
       "nutrition": {
         "servingSize": "1 glass",
-        "calories": 90, "proteinG": 0, "carbsG": 24, "fatG": 0,
-        "saturatedFatG": 0, "fiberG": 0, "sugarG": 23,
-        "sodiumMg": 5, "cholesterolMg": 0,
+        "calories": 90,
+        "proteinG": 0,
+        "carbsG": 24,
+        "fatG": 0,
+        "saturatedFatG": 0,
+        "fiberG": 0,
+        "sugarG": 23,
+        "sodiumMg": 5,
+        "cholesterolMg": 0,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["lemonade", "fresh lemonade pitcher"],
+        "searchTerms": [
+          "tall glasses fizzy lemon drink",
+          "fresh lemonade pitcher"
+        ],
         "alt": "Pitcher of lemonade with lemon slices and ice",
         "caption": "A sugar syrup dissolves fully -- stirring sugar into cold water alone often doesn't.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Three tall glasses of a fizzy, light-colored drink with lemon slices and ice are on a brown tray.",
+          "descriptionUrl": "https://wordpress.org/photos/photo/45268ac3ff/",
+          "originalUrl": "https://pd.w.org/2025/08/45268ac3ff8ca2e39.96941415-1536x2048.jpg",
+          "artist": "Alina Kakshapati",
+          "credit": "wordpress",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "73de8b1ae71923574d18529737836a8e8793c48cc12146b8333729c37cfbaab8",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["mixed-berry-smoothie", "mango-lassi"],
+      "related": [
+        "mixed-berry-smoothie",
+        "mango-lassi"
+      ],
       "featured": false,
       "published": "2026-07-26",
       "updated": "2026-07-26",
@@ -5260,30 +5537,94 @@
       "description": "Sweet ripe mango blended with yogurt, a little sugar, and a pinch of cardamom -- a cooling drink that's just as at home with a spicy meal as on its own.",
       "category": "drinks",
       "cuisine": "Indian",
-      "times": { "prepMinutes": 5, "cookMinutes": 0, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 5,
+        "cookMinutes": 0,
+        "restMinutes": 0
+      },
       "servings": 2,
       "servingUnit": "servings",
       "difficulty": "easy",
-      "dietary": ["vegetarian", "gluten-free", "nut-free"],
-      "keywords": ["mango lassi", "yogurt", "mango", "indian", "drink"],
-      "equipment": ["Blender"],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "mango lassi",
+        "yogurt",
+        "mango",
+        "indian",
+        "drink"
+      ],
+      "equipment": [
+        "Blender"
+      ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
-            { "quantity": 2, "unit": null, "item": "ripe mangoes", "note": "peeled and chopped, or 300g mango pulp", "scalable": true },
-            { "quantity": 250, "unit": "g", "item": "plain yogurt", "note": null, "scalable": true },
-            { "quantity": 120, "unit": "ml", "item": "milk", "note": null, "scalable": true },
-            { "quantity": 2, "unit": "tbsp", "item": "sugar", "note": "or to taste", "scalable": true },
-            { "quantity": null, "unit": null, "item": "pinch of ground cardamom", "note": null, "scalable": false },
-            { "quantity": null, "unit": null, "item": "ice cubes, to serve", "note": null, "scalable": false }
+            {
+              "quantity": 2,
+              "unit": null,
+              "item": "ripe mangoes",
+              "note": "peeled and chopped, or 300g mango pulp",
+              "scalable": true
+            },
+            {
+              "quantity": 250,
+              "unit": "g",
+              "item": "plain yogurt",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 120,
+              "unit": "ml",
+              "item": "milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 2,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": "or to taste",
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "pinch of ground cardamom",
+              "note": null,
+              "scalable": false
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "ice cubes, to serve",
+              "note": null,
+              "scalable": false
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Combine the mango, yogurt, milk, sugar, and cardamom in a blender.", "timerMinutes": null, "tip": null },
-        { "text": "Blend until completely smooth.", "timerMinutes": null, "tip": "Very ripe, fragrant mangoes make all the difference here -- an underripe mango makes a thin, tart lassi that no amount of sugar fixes." },
-        { "text": "Taste and adjust sugar, then blend briefly with ice cubes or pour over ice to serve.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Combine the mango, yogurt, milk, sugar, and cardamom in a blender.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Blend until completely smooth.",
+          "timerMinutes": null,
+          "tip": "Very ripe, fragrant mangoes make all the difference here -- an underripe mango makes a thin, tart lassi that no amount of sugar fixes."
+        },
+        {
+          "text": "Taste and adjust sugar, then blend briefly with ice cubes or pour over ice to serve.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "Frozen mango chunks work well out of season and give an even thicker, colder lassi.",
@@ -5291,18 +5632,51 @@
       ],
       "nutrition": {
         "servingSize": "1 glass",
-        "calories": 210, "proteinG": 7, "carbsG": 40, "fatG": 3,
-        "saturatedFatG": 2, "fiberG": 2, "sugarG": 34,
-        "sodiumMg": 65, "cholesterolMg": 15,
+        "calories": 210,
+        "proteinG": 7,
+        "carbsG": 40,
+        "fatG": 3,
+        "saturatedFatG": 2,
+        "fiberG": 2,
+        "sugarG": 34,
+        "sodiumMg": 65,
+        "cholesterolMg": 15,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["mango lassi", "mango lassi glass"],
+        "searchTerms": [
+          "mango lassi",
+          "mango lassi glass"
+        ],
         "alt": "Glass of mango lassi garnished with a pinch of cardamom",
         "caption": "How ripe the mango is matters more than any other ingredient here.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageTitle": "File:Wikipedia-Stammtisch Augsburg 2021-09-19 Mango Lassi (cropped).JPG",
+          "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Wikipedia-Stammtisch_Augsburg_2021-09-19_Mango_Lassi_(cropped).JPG",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Wikipedia-Stammtisch_Augsburg_2021-09-19_Mango_Lassi_%28cropped%29.JPG",
+          "artist": "Neitram",
+          "credit": "Own work",
+          "license": {
+            "id": "CC-BY-SA-4.0",
+            "name": "CC BY-SA 4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attributionRequired": true,
+            "shareAlike": true
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "c1b02355140adad096e56d4289b576a6c3f71a5e83f1cca4608767870aed365f",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["fresh-lemonade", "mixed-berry-smoothie"],
+      "related": [
+        "fresh-lemonade",
+        "mixed-berry-smoothie"
+      ],
       "featured": false,
       "published": "2026-07-26",
       "updated": "2026-07-26",
@@ -5315,36 +5689,105 @@
       "description": "Real chocolate melted directly into warm milk, not just cocoa powder stirred in -- the difference is a drink that's genuinely thick and rich, not just sweet.",
       "category": "drinks",
       "cuisine": "European",
-      "times": { "prepMinutes": 5, "cookMinutes": 10, "restMinutes": 0 },
+      "times": {
+        "prepMinutes": 5,
+        "cookMinutes": 10,
+        "restMinutes": 0
+      },
       "servings": 2,
       "servingUnit": "servings",
       "difficulty": "easy",
-      "dietary": ["vegetarian", "gluten-free", "nut-free"],
-      "keywords": ["hot chocolate", "chocolate", "winter", "drink", "cocoa"],
-      "equipment": ["Saucepan", "Whisk"],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "keywords": [
+        "hot chocolate",
+        "chocolate",
+        "winter",
+        "drink",
+        "cocoa"
+      ],
+      "equipment": [
+        "Saucepan",
+        "Whisk"
+      ],
       "ingredientGroups": [
         {
           "heading": null,
           "items": [
-            { "quantity": 480, "unit": "ml", "item": "whole milk", "note": null, "scalable": true },
-            { "quantity": 100, "unit": "g", "item": "dark chocolate", "note": "finely chopped", "scalable": true },
-            { "quantity": 1, "unit": "tbsp", "item": "sugar", "note": "or to taste", "scalable": true },
-            { "quantity": 0.25, "unit": "tsp", "item": "vanilla extract", "note": null, "scalable": true },
-            { "quantity": null, "unit": null, "item": "pinch of salt", "note": null, "scalable": false }
+            {
+              "quantity": 480,
+              "unit": "ml",
+              "item": "whole milk",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": 100,
+              "unit": "g",
+              "item": "dark chocolate",
+              "note": "finely chopped",
+              "scalable": true
+            },
+            {
+              "quantity": 1,
+              "unit": "tbsp",
+              "item": "sugar",
+              "note": "or to taste",
+              "scalable": true
+            },
+            {
+              "quantity": 0.25,
+              "unit": "tsp",
+              "item": "vanilla extract",
+              "note": null,
+              "scalable": true
+            },
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "pinch of salt",
+              "note": null,
+              "scalable": false
+            }
           ]
         },
         {
           "heading": "To finish",
           "items": [
-            { "quantity": null, "unit": null, "item": "whipped cream or marshmallows, optional", "note": null, "scalable": false }
+            {
+              "quantity": null,
+              "unit": null,
+              "item": "whipped cream or marshmallows, optional",
+              "note": null,
+              "scalable": false
+            }
           ]
         }
       ],
       "steps": [
-        { "text": "Warm the milk in a saucepan over medium-low heat until steaming but not boiling.", "timerMinutes": null, "tip": null },
-        { "text": "Remove from heat and whisk in the chopped chocolate until fully melted and smooth.", "timerMinutes": null, "tip": "Melting the chocolate off the heat, whisking constantly, keeps it from seizing or scorching against the bottom of the pan." },
-        { "text": "Return to low heat and whisk in the sugar, vanilla, and salt, warming through without boiling.", "timerMinutes": 3, "tip": null },
-        { "text": "Pour into mugs and top with whipped cream or marshmallows, if using.", "timerMinutes": null, "tip": null }
+        {
+          "text": "Warm the milk in a saucepan over medium-low heat until steaming but not boiling.",
+          "timerMinutes": null,
+          "tip": null
+        },
+        {
+          "text": "Remove from heat and whisk in the chopped chocolate until fully melted and smooth.",
+          "timerMinutes": null,
+          "tip": "Melting the chocolate off the heat, whisking constantly, keeps it from seizing or scorching against the bottom of the pan."
+        },
+        {
+          "text": "Return to low heat and whisk in the sugar, vanilla, and salt, warming through without boiling.",
+          "timerMinutes": 3,
+          "tip": null
+        },
+        {
+          "text": "Pour into mugs and top with whipped cream or marshmallows, if using.",
+          "timerMinutes": null,
+          "tip": null
+        }
       ],
       "notes": [
         "Use the best dark chocolate you have -- this recipe has so few ingredients that the chocolate's quality is the whole drink.",
@@ -5352,18 +5795,51 @@
       ],
       "nutrition": {
         "servingSize": "1 mug",
-        "calories": 320, "proteinG": 9, "carbsG": 28, "fatG": 20,
-        "saturatedFatG": 12, "fiberG": 3, "sugarG": 22,
-        "sodiumMg": 120, "cholesterolMg": 25,
+        "calories": 320,
+        "proteinG": 9,
+        "carbsG": 28,
+        "fatG": 20,
+        "saturatedFatG": 12,
+        "fiberG": 3,
+        "sugarG": 22,
+        "sodiumMg": 120,
+        "cholesterolMg": 25,
         "basis": "estimate"
       },
       "image": {
-        "searchTerms": ["hot chocolate", "hot chocolate mug"],
+        "searchTerms": [
+          "hot chocolate",
+          "hot chocolate mug"
+        ],
         "alt": "Mug of hot chocolate topped with whipped cream",
         "caption": "Real chopped chocolate, not just cocoa powder, is what makes it thick.",
-        "focal": "center"
+        "focal": "center",
+        "source": {
+          "provider": "openverse",
+          "pageTitle": "Hot Chocolate",
+          "descriptionUrl": "https://stocksnap.io/photo/hot-chocolate-NOXXUWUBGJ",
+          "originalUrl": "https://cdn.stocksnap.io/img-thumbs/960w/NOXXUWUBGJ.jpg",
+          "artist": "Tim Sullivan",
+          "credit": "stocksnap",
+          "license": {
+            "id": "CC0-1.0",
+            "name": "CC0 1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attributionRequired": false,
+            "shareAlike": false
+          },
+          "modifications": "Cropped to 3:2 and re-encoded as WebP/JPEG for web delivery.",
+          "sha256": "b678740999cb93260c7195eec5aec0529c5241aa4f0bb9140d4c4e90fa1864c5",
+          "ext": "jpg",
+          "fetchedAt": "2026-07-26"
+        },
+        "width": 1200,
+        "height": 800
       },
-      "related": ["iced-coffee", "classic-tiramisu"],
+      "related": [
+        "iced-coffee",
+        "classic-tiramisu"
+      ],
       "featured": false,
       "published": "2026-07-26",
       "updated": "2026-07-26",
