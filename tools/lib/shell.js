@@ -28,6 +28,7 @@ function head(site, opts) {
   <meta property="og:url" content=${attr(canonical)} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href=${attr(rel(opts.depth, 'assets/css/site.css'))} />
+  <link rel="stylesheet" href=${attr(rel(opts.depth, 'assets/css/print.css'))} media="print" />
   ${ld}
 </head>
 <body class=${attr(opts.bodyClass || '')}>

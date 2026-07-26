@@ -1,0 +1,15 @@
+/* Printed from a recipe page: strip chrome, force light colors regardless of
+   the on-screen theme, and stop step check-off state from being lost on a
+   printed copy that's meant to be checked off by hand with a pen. */
+@media print {
+  #site-header, .mobile-nav-overlay, footer, .breadcrumb, .filter-bar,
+  .related-recipes, .skip-link, .servings-control button, .step-timer {
+    display: none !important;
+  }
+  html, body { background: #FFFFFF; color: #000000; }
+  .recipe-hero { break-inside: avoid; }
+  .step-list > li, .ingredient-group { break-inside: avoid; }
+  .step-check { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: underline; }
+  .recipe-body { grid-template-columns: 1fr 1.4fr; }
+}
