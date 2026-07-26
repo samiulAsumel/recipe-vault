@@ -61,3 +61,12 @@ unsorted iteration order; those are bugs, not acceptable variance.
   regional/cultural attribution over a generic "-inspired" label when
   the dish has one. This applies to every recipe added from here on,
   and is why kala-bhuna (added 2026-07-27) was written the way it was.
+- **Whenever the user asks for a new recipe to be added, always pick
+  the historic, authentic, and best version of that dish** — never a
+  shortcut, fusion, or modern watered-down variant, even if the user's
+  request is generic (e.g. "add a Bangladeshi drink" should become a
+  specific dish like Borhani, not an invented placeholder). Research
+  the dish's real regional origin, its traditional technique, and what
+  makes it historically significant before writing it, the same way
+  Panta Bhat was written as the centuries-old farmer's breakfast and
+  Pohela Boishakh dish, not just "rice soaked in water."
