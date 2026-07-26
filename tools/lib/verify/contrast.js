@@ -9,6 +9,7 @@ const REQUIRED_PAIRS = [
   ['--text-muted', '--bg-page', 4.5],
   ['--text-muted', '--bg-card', 4.5],
   ['--accent', '--bg-page', 4.5],
+  ['--accent', '--bg-card', 4.5],
   ['--accent-on', '--accent', 4.5],
 ];
 

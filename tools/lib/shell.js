@@ -106,11 +106,17 @@ function footer(site, opts) {
           <li><a href=${attr(rel(depth, 'submit-recipe.html'))}>Submit a Recipe</a></li>
         </ul>
       </div>
+      <div class="footer-col footer-col-clock">
+        <h3>Local Time</h3>
+        <p class="site-clock-time" id="site-clock-time" aria-hidden="true">--:--:--</p>
+        <p class="site-clock-date" id="site-clock-date" aria-hidden="true">-- --, ----</p>
+      </div>
     </div>
-    <p class="footer-legal">&copy; 2026 ${esc(site.siteName)}. Recipes are tested at home; nutrition values are estimates.</p>
+    <p class="footer-legal">&copy; <span id="copyright-year">2026</span> ${esc(site.siteName)}. Recipes are tested at home; nutrition values are estimates.</p>
   </footer>
   <script src=${attr(rel(depth, 'assets/js/nav.js'))}></script>
   <script src=${attr(rel(depth, 'assets/js/theme.js'))}></script>
+  <script src=${attr(rel(depth, 'assets/js/clock.js'))}></script>
   ${opts.extraScripts ? opts.extraScripts.map((s) => `<script src=${attr(rel(depth, s))}></script>`).join('\n  ') : ''}
 </body>
 </html>`;
