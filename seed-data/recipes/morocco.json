@@ -1,0 +1,157 @@
+[
+  {
+    "id": "ma-pastilla",
+    "slug": "pastilla",
+    "name": "Pastilla",
+
+    "country": "Morocco",
+    "countrySlug": "morocco",
+    "continent": "Africa",
+    "continentSlug": "africa",
+
+    "mealTime": ["Lunch", "Dinner"],
+    "occasion": ["Festival", "Wedding"],
+    "streetFood": false,
+
+    "dietary": {
+      "vegetarian": false,
+      "vegan": false,
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": false,
+      "lowCarb": false,
+      "highProtein": true
+    },
+
+    "difficulty": "Hard",
+    "totalTimeMinutes": 150,
+    "historicNote": "Pastilla (also spelled bastilla or b'stilla) traces back to Andalusian cooks who brought thin warqa pastry and sweet-savory pairings to Fez after the Reconquista, where the dish was refined into its present form. It was traditionally built around pigeon, layered with saffron-and-cinnamon spiced eggs, toasted almonds, and warqa pastry, then dusted with powdered sugar and cinnamon on top - sugar and meat in the same dish being the signature of its Andalusian ancestry.",
+    "whenEaten": "An opening course at Moroccan weddings and formal feasts, traditionally the dish that announces a celebration is a serious one.",
+    "pairedDrink": ["Moroccan mint tea"],
+    "confidenceLevel": "high",
+
+    "shortDescription": "A sweet-and-savory pie of spiced shredded poultry, saffron eggs, and toasted almonds wrapped in paper-thin warqa pastry, dusted with cinnamon and sugar.",
+    "heroImage": "/images/morocco/pastilla-1.jpg",
+
+    "category": "Mains",
+
+    "fullRecipeAvailable": true,
+
+    "baseServings": 6,
+    "headnote": "Warqa pastry is the traditional wrapper, but it is genuinely difficult to make at home and rarely sold outside Morocco - filo pastry, brushed layer by layer with melted butter, is the honest, widely-used substitute and is what this recipe calls for. The filling can be made a day ahead; assembling and baking is the quick part.",
+
+    "timing": {
+      "prepMinutes": 60,
+      "marinateMinutes": 0,
+      "activeCookMinutes": 60,
+      "restMinutes": 30,
+      "totalMinutes": 150
+    },
+    "equipment": [
+      "Wide, shallow pan for braising the poultry",
+      "Round pie dish or ovenproof skillet for assembly",
+      "Pastry brush for buttering the filo layers"
+    ],
+    "miseEnPlace": [
+      "Bring the filo pastry to room temperature and keep it covered with a damp cloth while working",
+      "Toast and roughly chop the almonds ahead of time",
+      "Shred the cooked poultry while still warm, discarding the bones"
+    ],
+
+    "ingredientGroups": [
+      {
+        "groupName": "For the braised filling",
+        "items": [
+          { "id": "0001", "name": "chicken thighs, bone-in", "amount": 1, "unit": "kg", "prepNote": "traditionally pigeon or squab; chicken thigh is the common substitute", "pantryStaple": false },
+          { "id": "0002", "name": "onion", "amount": 2, "unit": null, "prepNote": "grated", "pantryStaple": true },
+          { "id": "0003", "name": "saffron threads", "amount": 1, "unit": "pinch", "prepNote": "bloomed in 2 tbsp warm water", "pantryStaple": false },
+          { "id": "0004", "name": "ground ginger", "amount": 1, "unit": "tsp", "prepNote": null, "pantryStaple": true },
+          { "id": "0005", "name": "ground cinnamon", "amount": 1, "unit": "tsp", "prepNote": null, "pantryStaple": true },
+          { "id": "0006", "name": "eggs", "amount": 4, "unit": null, "prepNote": "beaten", "pantryStaple": true },
+          { "id": "0007", "name": "fresh coriander and parsley", "amount": 4, "unit": "tbsp", "prepNote": "finely chopped, mixed", "pantryStaple": false }
+        ]
+      },
+      {
+        "groupName": "For assembly",
+        "items": [
+          { "id": "0008", "name": "filo pastry sheets", "amount": 12, "unit": null, "prepNote": "kept covered with a damp cloth while working", "pantryStaple": false },
+          { "id": "0009", "name": "butter", "amount": 150, "unit": "g", "prepNote": "melted, for brushing between layers", "pantryStaple": true },
+          { "id": "0010", "name": "almonds", "amount": 150, "unit": "g", "prepNote": "toasted and roughly chopped", "pantryStaple": false },
+          { "id": "0011", "name": "powdered sugar", "amount": 3, "unit": "tbsp", "prepNote": "for dusting on top", "pantryStaple": true },
+          { "id": "0012", "name": "ground cinnamon", "amount": 1, "unit": "tsp", "prepNote": "for dusting on top, kept separate from the filling's cinnamon", "pantryStaple": true }
+        ]
+      }
+    ],
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Braise the poultry",
+        "instruction": "Simmer {0001} with {0002}, {0003}, {0004}, and {0005} in a covered pan with a little water until fully tender.",
+        "durationMinutes": 40,
+        "heat": { "level": "low", "flameNote": "gentle simmer, lid on", "tempC": null },
+        "technique": "Slow braise in the grated onion's own moisture, no added stock needed",
+        "visualCue": "Meat pulls away from the bone with no resistance",
+        "commonMistake": "Boiling hard instead of simmering toughens the meat and breaks the sauce"
+      },
+      {
+        "stepNumber": 2,
+        "title": "Shred and finish the filling",
+        "instruction": "Remove the meat from {0001}, discard the bones, and shred it back into the pan juices. Stir in {0006} and cook gently until just set, then fold through {0007}.",
+        "durationMinutes": 8,
+        "heat": { "level": "low", "flameNote": "low enough that the eggs curd softly rather than scramble hard", "tempC": null },
+        "technique": "Cooking the eggs directly in the reduced braising juices is what gives the filling its distinctive saffron-egg texture",
+        "visualCue": "Eggs form soft, custardy curds that cling to the shredded meat rather than a dry scramble",
+        "commonMistake": "High heat here turns the eggs rubbery instead of soft-set"
+      },
+      {
+        "stepNumber": 3,
+        "title": "Layer the pastry",
+        "instruction": "Brush a pie dish with {0009} and layer half of {0008} into it, brushing butter between every sheet and letting the edges overhang.",
+        "durationMinutes": 10,
+        "heat": null,
+        "technique": "Butter between every single layer is what makes filo shatter into shards rather than turn soggy",
+        "visualCue": "Each sheet is visibly glossy with butter before the next one goes on",
+        "commonMistake": "Skipping butter on even one layer creates a gummy spot once baked"
+      },
+      {
+        "stepNumber": 4,
+        "title": "Fill and seal",
+        "instruction": "Spread the meat filling evenly, scatter {0010} over it, then fold the overhanging pastry over the top and layer the remaining {0008} on top, tucking the edges under.",
+        "durationMinutes": 10,
+        "heat": null,
+        "technique": "A fully enclosed parcel keeps the filling moist while the outer layers crisp",
+        "visualCue": "No filling is visible through the sealed top",
+        "commonMistake": "Leaving gaps in the seal lets steam escape and dries out the filling"
+      },
+      {
+        "stepNumber": 5,
+        "title": "Bake",
+        "instruction": "Bake until deeply golden and crisp all over.",
+        "durationMinutes": 30,
+        "heat": { "level": "oven, moderate-high", "flameNote": "even heat, no direct flame", "tempC": 190 },
+        "technique": "Dry oven heat crisps the buttered filo without drying the egg-and-meat filling underneath",
+        "visualCue": "The top is an even deep golden-brown, not pale",
+        "commonMistake": "Pulling it early leaves the middle layers soft instead of shattering-crisp"
+      }
+    ],
+
+    "chefTips": [
+      "Make the filling a full day ahead and refrigerate it - cold filling is easier to spread evenly and the flavour deepens overnight",
+      "Dust the powdered sugar and cinnamon on separately, in stripes or a lattice pattern, rather than mixed together, for the traditional presentation"
+    ],
+
+    "donenessSummary": "The pastry is uniformly deep golden and audibly crisp when tapped; the filling inside is moist, not dry.",
+    "platingNote": "Dust the top with powdered sugar first, then a fine lattice of cinnamon over it, and serve warm, cut into wedges at the table.",
+    "storageNote": "Best eaten the day it's baked; if needed, refrigerate up to 2 days and re-crisp in a hot oven rather than a microwave.",
+    "substitutions": [
+      { "original": "Chicken thighs", "swap": "Squab or quail (bone-in)", "impact": "Closer to the traditional pigeon flavour, richer and slightly gamey" }
+    ],
+    "regionalVariations": [
+      "Fez versions favor a finer, sweeter almond layer, while Rabat-style pastilla is often made with seafood instead of poultry"
+    ],
+
+    "nutritionEstimate": { "calories": 540, "proteinG": 28, "carbsG": 38, "fatG": 30 }
+  }
+]

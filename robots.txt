@@ -1,4 +1,0 @@
-# Generated from data/site.json by tools/build.js -- hand edits here are overwritten on the next build.
-User-agent: *
-Allow: /
-Sitemap: https://samiulasumel.github.io/recipe-vault/sitemap.xml

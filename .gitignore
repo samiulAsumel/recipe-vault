@@ -1,23 +1,11 @@
-# Claude Code session data
-.claude/
-
-# OS artifacts
-.DS_Store
-Thumbs.db
-
-# Editor artifacts
-*.swp
-*.swo
-*~
-.vscode/
-.idea/
-
-# Secrets — never commit
-*.key
-*.pem
-*.gpg
-secrets.conf
+node_modules/
+.next/
+.vercel/
+.wrangler/
+.open-next/
+out/
+*.log
 .env
-
-# Build tooling cache — raw image downloads are re-fetchable, derivatives are committed
-.cache/
+.env.local
+.dev.vars
+.DS_Store

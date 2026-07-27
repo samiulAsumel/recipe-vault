@@ -1,0 +1,149 @@
+[
+  {
+    "id": "mx-cochinita-pibil",
+    "slug": "cochinita-pibil",
+    "name": "Cochinita Pibil",
+
+    "country": "Mexico",
+    "countrySlug": "mexico",
+    "continent": "Americas",
+    "continentSlug": "americas",
+
+    "mealTime": ["Lunch", "Dinner"],
+    "occasion": ["Festival", "Everyday"],
+    "streetFood": true,
+
+    "dietary": {
+      "vegetarian": false,
+      "vegan": false,
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "lowCarb": true,
+      "highProtein": true
+    },
+
+    "difficulty": "Medium",
+    "totalTimeMinutes": 320,
+    "historicNote": "\"Pibil\" comes from the Yucatec Maya word for \"buried\", after the pib - an underground earth oven the Maya used long before the Spanish arrived. Pork (introduced by Spanish colonizers) took the place of earlier game meats, marinated in achiote (annatto seed) paste and the juice of the bitter Seville orange native to the Yucatan, then wrapped in banana leaves and pit-roasted for hours. The banana-leaf wrapping and citrus marinade remain the two things that define real cochinita pibil.",
+    "whenEaten": "A weekend and festival dish across the Yucatan Peninsula, traditionally served at gatherings large enough to justify roasting a whole marinated pork shoulder or more.",
+    "pairedDrink": ["Horchata"],
+    "confidenceLevel": "high",
+
+    "shortDescription": "Pork shoulder marinated in achiote and bitter orange, wrapped in banana leaves, and slow-roasted until it shreds apart.",
+    "heroImage": "/images/mexico/cochinita-pibil-1.jpg",
+
+    "category": "Mains",
+
+    "fullRecipeAvailable": true,
+
+    "baseServings": 8,
+    "headnote": "A real underground pib is not something most kitchens can replicate, so this recipe uses a low, covered oven roast, which gets remarkably close as long as the pork stays wrapped tight in banana leaf the entire time - that's what keeps it self-basting instead of drying out over the long cook.",
+
+    "timing": {
+      "prepMinutes": 30,
+      "marinateMinutes": 240,
+      "activeCookMinutes": 20,
+      "restMinutes": 30,
+      "totalMinutes": 320
+    },
+    "equipment": [
+      "Banana leaves (fresh or frozen, thawed), passed briefly over a flame to soften",
+      "Deep roasting pan with a tight-fitting lid or foil seal",
+      "Molcajete or blender for the marinade paste"
+    ],
+    "miseEnPlace": [
+      "Pass the banana leaves briefly over an open flame or into a hot dry pan until pliable, not brittle",
+      "Marinate the pork at least 4 hours, ideally overnight, refrigerated",
+      "Pickle the red onions at least 1 hour before serving so they turn bright pink"
+    ],
+
+    "ingredientGroups": [
+      {
+        "groupName": "For the achiote marinade",
+        "items": [
+          { "id": "0001", "name": "pork shoulder", "amount": 2, "unit": "kg", "prepNote": "cut into large chunks", "pantryStaple": false },
+          { "id": "0002", "name": "achiote (annatto) paste", "amount": 100, "unit": "g", "prepNote": null, "pantryStaple": false },
+          { "id": "0003", "name": "bitter (Seville) orange juice", "amount": 250, "unit": "ml", "prepNote": "or a mix of regular orange and lime juice as a substitute", "pantryStaple": false },
+          { "id": "0004", "name": "garlic cloves", "amount": 4, "unit": null, "prepNote": "crushed", "pantryStaple": true },
+          { "id": "0005", "name": "salt", "amount": 1, "unit": "tbsp", "prepNote": null, "pantryStaple": true }
+        ]
+      },
+      {
+        "groupName": "For wrapping and roasting",
+        "items": [
+          { "id": "0006", "name": "banana leaves", "amount": 4, "unit": "piece", "prepNote": "large sheets, softened over flame", "pantryStaple": false }
+        ]
+      },
+      {
+        "groupName": "For serving",
+        "items": [
+          { "id": "0007", "name": "red onion", "amount": 1, "unit": null, "prepNote": "thinly sliced, for pickling", "pantryStaple": true },
+          { "id": "0008", "name": "lime juice", "amount": 60, "unit": "ml", "prepNote": "for the pickled onion", "pantryStaple": true },
+          { "id": "0009", "name": "habanero chili", "amount": 1, "unit": null, "prepNote": "thinly sliced, for the pickled onion", "pantryStaple": false }
+        ]
+      }
+    ],
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Make the marinade and coat the pork",
+        "instruction": "Blend {0002} with {0003}, {0004}, and {0005} into a smooth, brick-red paste. Coat {0001} completely, cover, and refrigerate.",
+        "durationMinutes": 240,
+        "heat": null,
+        "technique": "Achiote-citrus marination - the acid tenderizes while the annatto colours and flavours the meat all the way through",
+        "visualCue": "The pork is uniformly stained deep red-orange with no pale patches",
+        "commonMistake": "Marinating under 4 hours leaves the flavour only on the surface"
+      },
+      {
+        "stepNumber": 2,
+        "title": "Wrap in banana leaf",
+        "instruction": "Line a roasting pan with {0006}, overlapping the sheets. Place the marinated {0001} in the centre and fold the leaves completely over the top to enclose it.",
+        "durationMinutes": 10,
+        "heat": null,
+        "technique": "A fully sealed banana-leaf parcel steams the pork in its own juices, the closest a home oven gets to a pib",
+        "visualCue": "No pork or marinade is visible through the wrap",
+        "commonMistake": "Leaving any gap in the wrap lets moisture escape and the meat dries out over the long roast"
+      },
+      {
+        "stepNumber": 3,
+        "title": "Slow-roast",
+        "instruction": "Cover the pan tightly with a lid or foil and roast low and slow until the pork shreds apart with no resistance.",
+        "durationMinutes": 240,
+        "heat": { "level": "oven, low", "flameNote": "sealed, no direct flame", "tempC": 150 },
+        "technique": "Low, moist, sealed heat over several hours breaks down the shoulder's connective tissue the way underground pit heat would",
+        "visualCue": "Juices pooling in the banana leaf are deep red and the meat pulls apart with a fork with almost no effort",
+        "commonMistake": "Opening the wrap partway through lets steam escape and stalls the tenderizing"
+      },
+      {
+        "stepNumber": 4,
+        "title": "Pickle the onions and rest",
+        "instruction": "While the pork roasts, combine {0007}, {0008}, and {0009} and let sit until bright pink. Once the pork is done, rest it still wrapped before shredding.",
+        "durationMinutes": 30,
+        "heat": null,
+        "technique": "A short acid pickle turns raw onion from sharp to bright and crunchy",
+        "visualCue": "Onion slices have turned from purple-white to vivid pink",
+        "commonMistake": "Shredding the pork immediately out of the oven loses juices that reabsorb during a proper rest"
+      }
+    ],
+
+    "chefTips": [
+      "Save every drop of the roasting liquid left in the banana leaf and spoon it back over the shredded meat - it carries most of the achiote flavour",
+      "Toast the banana leaves just until pliable and fragrant; too long over the flame makes them brittle and prone to tearing"
+    ],
+
+    "donenessSummary": "The pork shreds into strands under light pressure from two forks, with no tough or dry patches.",
+    "platingNote": "Pile the shredded pork onto warm corn tortillas and top with the pickled onion and habanero.",
+    "storageNote": "Refrigerate up to 4 days in its own juices, or freeze up to 2 months; reheat gently with a splash of the reserved liquid.",
+    "substitutions": [
+      { "original": "Bitter (Seville) orange juice", "swap": "Equal parts regular orange juice and lime juice", "impact": "Close in flavour; slightly less bitter edge than the true Yucatan citrus" }
+    ],
+    "regionalVariations": [
+      "In parts of Yucatan the pork is still cooked in a true underground pib for large gatherings, wrapped with whole allspice leaves alongside the banana leaf"
+    ],
+
+    "nutritionEstimate": { "calories": 410, "proteinG": 34, "carbsG": 6, "fatG": 26 }
+  }
+]

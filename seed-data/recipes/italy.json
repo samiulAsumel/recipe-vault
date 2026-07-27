@@ -1,0 +1,147 @@
+[
+  {
+    "id": "it-osso-buco-alla-milanese",
+    "slug": "osso-buco-alla-milanese",
+    "name": "Osso Buco alla Milanese",
+
+    "country": "Italy",
+    "countrySlug": "italy",
+    "continent": "Europe",
+    "continentSlug": "europe",
+
+    "mealTime": ["Lunch", "Dinner"],
+    "occasion": ["Festival", "Everyday"],
+    "streetFood": false,
+
+    "dietary": {
+      "vegetarian": false,
+      "vegan": false,
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "lowCarb": true,
+      "highProtein": true
+    },
+
+    "difficulty": "Medium",
+    "totalTimeMinutes": 165,
+    "historicNote": "\"Osso buco\" literally means \"bone with a hole\", after the marrow-filled cross-cut veal shank the dish is built around. It emerged in 19th-century Milan, in Lombardy, where the original recipe (in bianco) used no tomato at all - just wine, broth, and vegetables - finished with gremolata, a raw mix of lemon zest, garlic, and parsley stirred in just before serving to cut through the richness.",
+    "whenEaten": "A Sunday and holiday main course across Lombardy, traditionally paired with risotto alla Milanese so the saffron risotto can be eaten alongside the marrow spooned straight from the bone.",
+    "pairedDrink": ["Italian red wine (Barbera or Nebbiolo)"],
+    "confidenceLevel": "high",
+
+    "shortDescription": "Cross-cut veal shanks braised low and slow until the meat falls from the bone, finished with a bright lemon-garlic-parsley gremolata.",
+    "heroImage": "/images/italy/osso-buco-alla-milanese-1.jpg",
+
+    "category": "Mains",
+
+    "fullRecipeAvailable": true,
+
+    "baseServings": 4,
+    "headnote": "The one thing worth being strict about is the cut itself: ask for cross-cut veal shank (osso buco cut), each piece tied around the middle with kitchen string so the marrow stays put while it braises. Everything else - the braising liquid, the vegetables underneath - is genuinely forgiving.",
+
+    "timing": {
+      "prepMinutes": 25,
+      "marinateMinutes": 0,
+      "activeCookMinutes": 20,
+      "restMinutes": 120,
+      "totalMinutes": 165
+    },
+    "equipment": [
+      "Wide, heavy-bottomed braising pan or dutch oven with a lid",
+      "Kitchen string to tie each shank",
+      "Fine grater or zester for the gremolata"
+    ],
+    "miseEnPlace": [
+      "Tie each veal shank around its middle with kitchen string before searing",
+      "Finely dice the onion, carrot, and celery (the soffritto) before starting",
+      "Zest the lemon just before making the gremolata so the oils stay fragrant"
+    ],
+
+    "ingredientGroups": [
+      {
+        "groupName": "For the braise",
+        "items": [
+          { "id": "0001", "name": "veal shank, cross-cut (osso buco cut)", "amount": 4, "unit": "piece", "prepNote": "about 4cm thick, tied around the middle with string", "pantryStaple": false },
+          { "id": "0002", "name": "all-purpose flour", "amount": 3, "unit": "tbsp", "prepNote": "for dusting the shanks before searing", "pantryStaple": true },
+          { "id": "0003", "name": "butter", "amount": 3, "unit": "tbsp", "prepNote": null, "pantryStaple": true },
+          { "id": "0004", "name": "onion", "amount": 1, "unit": null, "prepNote": "finely diced", "pantryStaple": true },
+          { "id": "0005", "name": "carrot", "amount": 1, "unit": null, "prepNote": "finely diced", "pantryStaple": true },
+          { "id": "0006", "name": "celery stalk", "amount": 1, "unit": null, "prepNote": "finely diced", "pantryStaple": true },
+          { "id": "0007", "name": "dry white wine", "amount": 250, "unit": "ml", "prepNote": null, "pantryStaple": false },
+          { "id": "0008", "name": "beef or veal stock", "amount": 500, "unit": "ml", "prepNote": "hot", "pantryStaple": false },
+          { "id": "0009", "name": "bay leaf", "amount": 1, "unit": null, "prepNote": null, "pantryStaple": true }
+        ]
+      },
+      {
+        "groupName": "For the gremolata",
+        "items": [
+          { "id": "0010", "name": "lemon zest", "amount": 1, "unit": null, "prepNote": "from one lemon, finely grated", "pantryStaple": false },
+          { "id": "0011", "name": "garlic clove", "amount": 1, "unit": null, "prepNote": "minced very fine", "pantryStaple": true },
+          { "id": "0012", "name": "flat-leaf parsley", "amount": 3, "unit": "tbsp", "prepNote": "finely chopped", "pantryStaple": false }
+        ]
+      }
+    ],
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Sear the shanks",
+        "instruction": "Dust {0001} in {0002} and shake off the excess, then brown well on both sides in {0003}. Set the shanks aside.",
+        "durationMinutes": 10,
+        "heat": { "level": "medium-high", "flameNote": "hot enough to brown quickly without burning the butter", "tempC": null },
+        "technique": "Dry-dusting before searing builds a fond that thickens the braise later",
+        "visualCue": "Both cut faces are deep golden-brown, not grey",
+        "commonMistake": "Crowding the pan steams the meat instead of browning it - sear in batches if needed"
+      },
+      {
+        "stepNumber": 2,
+        "title": "Build the soffritto and deglaze",
+        "instruction": "In the same pan, soften {0004}, {0005}, and {0006} in the rendered fat. Pour in {0007} and scrape up the browned bits from the bottom.",
+        "durationMinutes": 8,
+        "heat": { "level": "medium", "flameNote": "steady heat, not so high the wine reduces before the fond dissolves", "tempC": null },
+        "technique": "Deglazing lifts the fond into the braising liquid instead of leaving it stuck to the pan",
+        "visualCue": "The wine has reduced by about half and the pan bottom is clean of stuck bits",
+        "commonMistake": "Skipping the deglaze loses most of the flavour the searing step built"
+      },
+      {
+        "stepNumber": 3,
+        "title": "Braise low and slow",
+        "instruction": "Return the shanks to the pan standing upright so the marrow stays in the bone, add {0008} and {0009} until the liquid comes about two-thirds up the sides, cover, and braise.",
+        "durationMinutes": 120,
+        "heat": { "level": "low", "flameNote": "a bare simmer, lid on, on the stovetop or in a 160C oven", "tempC": 160 },
+        "technique": "Long, gentle braise breaks down the connective tissue without drying out the lean muscle",
+        "visualCue": "The meat has pulled back slightly from the bone and yields to a fork with no resistance",
+        "commonMistake": "Letting the braise boil rather than simmer toughens the meat instead of tenderizing it"
+      },
+      {
+        "stepNumber": 4,
+        "title": "Finish with gremolata",
+        "instruction": "Combine {0010}, {0011}, and {0012}. Remove the string from the shanks and scatter the gremolata over the top just before serving.",
+        "durationMinutes": 2,
+        "heat": null,
+        "technique": "Gremolata is added raw at the very end so its citrus and garlic stay bright against the rich braise",
+        "visualCue": "The gremolata sits visibly on top, not stirred into the sauce",
+        "commonMistake": "Adding the gremolata too early lets the heat dull its flavour"
+      }
+    ],
+
+    "chefTips": [
+      "Tying the shanks keeps the marrow from falling out mid-braise - always remove the string before plating",
+      "Make the braise a day ahead if possible; it reheats gently and tastes even better once the flavours settle"
+    ],
+
+    "donenessSummary": "The meat separates from the bone with light pressure from a fork, and the marrow is soft enough to scoop straight out.",
+    "platingNote": "Serve one shank per person standing in a shallow pool of its own braising liquid, gremolata scattered on top, alongside risotto alla Milanese or soft polenta.",
+    "storageNote": "Refrigerate up to 3 days in its braising liquid; reheat gently on the stovetop so the meat doesn't dry out.",
+    "substitutions": [
+      { "original": "Veal shank", "swap": "Bone-in beef shank", "impact": "Deeper, beefier flavour; needs roughly 30 extra minutes of braising" }
+    ],
+    "regionalVariations": [
+      "A tomato-based version (in umido) is common outside Milan and in modern trattorias, though the original Milanese recipe is tomato-free"
+    ],
+
+    "nutritionEstimate": { "calories": 480, "proteinG": 38, "carbsG": 9, "fatG": 28 }
+  }
+]
