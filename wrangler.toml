@@ -1,0 +1,3 @@
+name = "world-kitchen-atlas-proxy"
+main = "worker/index.ts"
+compatibility_date = "2026-07-28"

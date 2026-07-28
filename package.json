@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "node node_modules/next/dist/bin/next dev",
     "build": "node node_modules/next/dist/bin/next build",
-    "lint": "node node_modules/eslint/bin/eslint.js ."
+    "lint": "node node_modules/eslint/bin/eslint.js .",
+    "worker:dev": "node node_modules/wrangler/bin/wrangler.js dev",
+    "worker:deploy": "node node_modules/wrangler/bin/wrangler.js deploy"
   },
   "dependencies": {
     "next": "16.2.12",
@@ -13,6 +15,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -20,6 +23,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4"
   }
 }
