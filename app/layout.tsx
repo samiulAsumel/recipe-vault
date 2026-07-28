@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { ContentProtection } from "@/components/layout/ContentProtection";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import "./globals.css";
@@ -40,6 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}>
       <body className="flex min-h-screen flex-col bg-parchment text-ink">
+        <ContentProtection />
         <SiteHeader />
         <div className="flex-1">{children}</div>
         <SiteFooter />

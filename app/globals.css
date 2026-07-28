@@ -56,10 +56,25 @@
   --font-meta: var(--font-plex-mono);
 }
 
+/* Section 14 cosmetic content-protection layer on body/img — deters casual
+   copy-paste of recipe text, not real scraping. Form controls are explicitly
+   exempted so the search box and servings stepper stay usable. */
 body {
   background-color: var(--parchment);
   color: var(--ink);
   font-family: var(--font-body);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img {
+  pointer-events: none;
 }
 
 :focus-visible {

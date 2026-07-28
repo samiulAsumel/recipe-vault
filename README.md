@@ -87,6 +87,18 @@ blocker, and must land before this site can be deployed. Verified locally by poi
 `/asia/bangladesh` and `/asia/bangladesh/test-dish` correctly and the old `sample-country` /
 `sample-dish` paths were gone.
 
+## Content protection
+
+Section 14: a cosmetic client-side deterrent layer (`components/layout/ContentProtection.tsx` +
+`app/globals.css` — right-click/select disabled, DevTools shortcuts blocked) plus a `robots.txt`
+disallow list for known AI-training crawlers (`app/robots.ts`) are in the codebase. The two settings
+that actually stop bulk scraping have no code representation and are dashboard-only, done once at
+deploy time alongside the GitHub PAT / KV namespace / domain decisions above:
+
+- **Cloudflare dashboard → Security → Bots**: enable Bot Fight Mode (free tier).
+- **Cloudflare dashboard → Security → WAF → Rate limiting rules**: add a rule blocking/challenging
+  any single IP making an abnormal number of requests per minute.
+
 ## Status
 
 Phase 2 (data layer + Worker read endpoint) complete: recipe schema (`lib/types/recipe.ts`), the
