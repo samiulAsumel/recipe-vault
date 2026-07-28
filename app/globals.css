@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #241b14;
+  --parchment: #faf3e7;
+  --turmeric: #d89b2a;
+  --paprika: #b5482e;
+  --cardamom: #4a6357;
+  --clay-line: #c9b89a;
+
+  /* Default accent triad for pages with no continent context (home, search, about) */
+  --accent-1: #d89b2a;
+  --accent-2: #b5482e;
+  --accent-3: #4a6357;
+}
+
+[data-region="asia"] {
+  --accent-1: #2c4870;
+  --accent-2: #a83232;
+  --accent-3: #4a6b4e;
+}
+[data-region="europe"] {
+  --accent-1: #6b2737;
+  --accent-2: #6e7548;
+  --accent-3: #a8863e;
+}
+[data-region="africa"] {
+  --accent-1: #b5651d;
+  --accent-2: #8b4a2b;
+  --accent-3: #2c4870;
+}
+[data-region="americas"] {
+  --accent-1: #a8283f;
+  --accent-2: #d4941e;
+  --accent-3: #3a8e8c;
+}
+[data-region="oceania"] {
+  --accent-1: #a85a2e;
+  --accent-2: #1e5a6e;
+  --accent-3: #e8e0d0;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-parchment: var(--parchment);
+  --color-turmeric: var(--turmeric);
+  --color-paprika: var(--paprika);
+  --color-cardamom: var(--cardamom);
+  --color-clay-line: var(--clay-line);
+  --color-accent-1: var(--accent-1);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+  --font-meta: var(--font-plex-mono);
+}
+
+body {
+  background-color: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--turmeric);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
