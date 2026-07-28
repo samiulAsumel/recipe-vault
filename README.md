@@ -32,20 +32,25 @@ This repo lives on an exFAT-mounted drive, which doesn't support symlinks. `.npm
 ## Data layer
 
 `world-kitchen-atlas-proxy` (`worker/index.ts`, deployed via `wrangler`) is a read-only proxy in
-front of the GitHub Contents API for the private `world-kitchen-atlas-data` repo:
+front of the GitHub Contents API for the private `world-kitchen-atlas-data` repo, plus a visit
+counter:
 
 | Route | Returns |
 |---|---|
 | `GET /` | `{ countries: CountrySummary[] }` |
 | `GET /dishes` | every dish entry across every country, merged |
 | `GET /countries/{slug}` | one country's entries (`X-Data-Sha` header), 404 if unknown |
+| `GET /api/track?page=&id=` | `{ ok: true }` — increments Cloudflare KV visit counters (Section 10); no cookies, no personal data. `page=country`/`dish` + a valid `id` also increments that item's own counter; any other input still counts toward the site-wide/daily totals rather than erroring |
 
 ```bash
 # local development — put the PAT in .dev.vars (gitignored), never commit it
+# (wrangler dev's local mode simulates the ANALYTICS KV binding automatically,
+# so the placeholder id in wrangler.toml is fine until you deploy for real)
 echo 'GITHUB_TOKEN=...' > .dev.vars
 npm run worker:dev
 
 # deploy
+node node_modules/wrangler/bin/wrangler.js kv namespace create ANALYTICS   # paste the id into wrangler.toml first
 node node_modules/wrangler/bin/wrangler.js secret put GITHUB_TOKEN
 npm run worker:deploy
 ```

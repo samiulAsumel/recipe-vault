@@ -8,14 +8,19 @@
 //  Secret to configure (`wrangler secret put GITHUB_TOKEN`):
 //    GITHUB_TOKEN   fine-grained PAT with Contents: Read on world-kitchen-atlas-data
 //
+//  KV binding (see wrangler.toml — `wrangler kv namespace create ANALYTICS`):
+//    ANALYTICS   visit counters, no cookies/personal data (Section 10)
+//
 //  Endpoints:
-//    GET  /                    -> { countries: CountrySummary[] }
-//    GET  /dishes               -> DishEntry[]  (every country's entries, merged)
-//    GET  /countries/{slug}      -> DishEntry[]  (+ X-Data-Sha header), 404 if unknown
+//    GET  /                        -> { countries: CountrySummary[] }
+//    GET  /dishes                   -> DishEntry[]  (every country's entries, merged)
+//    GET  /countries/{slug}          -> DishEntry[]  (+ X-Data-Sha header), 404 if unknown
+//    GET  /api/track?page=&id=       -> { ok: true }  (fire-and-forget visit counter)
 // ============================================================================
 
 interface Env {
   GITHUB_TOKEN: string;
+  ANALYTICS: KVNamespace;
 }
 
 interface GitHubContentItem {
@@ -53,6 +58,15 @@ function errorResponse(status: number, error: string, message: string): Response
     status,
     headers: { ...CORS, "Content-Type": "application/json" },
   });
+}
+
+// KV has no atomic increment — this get-then-put can under-count on truly
+// concurrent hits, an accepted tradeoff of the KV-for-counters design Section
+// 10 explicitly chose over a more complex mechanism (e.g. a Durable Object).
+async function incrementKvCounter(kv: KVNamespace, key: string): Promise<void> {
+  const current = await kv.get(key);
+  const next = (Number(current) || 0) + 1;
+  await kv.put(key, String(next));
 }
 
 // decode GitHub's base64 (may contain newlines) back to a UTF-8 string
@@ -160,6 +174,27 @@ export default {
         return json(JSON.parse(fromBase64Utf8(meta.content)), 200, {
           "X-Data-Sha": meta.sha,
         });
+      }
+
+      // GET /api/track?page=&id=  — fire-and-forget visit counter, never errors
+      // on malformed input (see worker doc comment / plan): total + daily always
+      // increment, and a per-item counter (country/dish) only when page and id
+      // are recognized and id passes the same slug guard as /countries/{slug}.
+      if (segments.length === 2 && segments[0] === "api" && segments[1] === "track") {
+        const page = url.searchParams.get("page");
+        const id = url.searchParams.get("id");
+        const today = new Date().toISOString().slice(0, 10);
+
+        const tasks = [
+          incrementKvCounter(env.ANALYTICS, "visits:total"),
+          incrementKvCounter(env.ANALYTICS, `visits:daily:${today}`),
+        ];
+        if ((page === "country" || page === "dish") && id && SLUG_PATTERN.test(id)) {
+          tasks.push(incrementKvCounter(env.ANALYTICS, `visits:${page}:${id}`));
+        }
+        await Promise.all(tasks);
+
+        return json({ ok: true });
       }
 
       return errorResponse(404, "not_found", `No route for ${url.pathname}.`);
