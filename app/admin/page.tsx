@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PagePlaceholder } from "@/components/layout/PagePlaceholder";
+import { AdminApp } from "@/components/admin/AdminApp";
 
 export const metadata: Metadata = {
   title: "Admin",
@@ -7,10 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function AdminPage(): React.JSX.Element {
-  return (
-    <PagePlaceholder
-      title="Admin"
-      description="Login, analytics dashboard, and recipe management land here in a later phase."
-    />
-  );
+  return <AdminApp />;
 }

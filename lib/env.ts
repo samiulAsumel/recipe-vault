@@ -27,6 +27,16 @@ export function getDataApiUrl(): string {
 }
 
 /**
+ * Same Worker URL as getDataApiUrl(), but for the browser: the /admin panel is a
+ * client component (static export has no server runtime) and must reach the
+ * Worker's /admin/* endpoints directly, so this is NEXT_PUBLIC_-prefixed and
+ * inlined into client JS at build time.
+ */
+export function getPublicDataApiUrl(): string {
+  return requireEnv("NEXT_PUBLIC_DATA_API_URL").replace(/\/+$/, "");
+}
+
+/**
  * Production domain, e.g. https://worldkitchenatlas.com — used to build absolute
  * canonical/OG URLs. Optional and undefined until a domain is chosen; pages fall
  * back to relative URLs (still valid metadata) rather than failing the build.

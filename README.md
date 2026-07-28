@@ -31,9 +31,9 @@ This repo lives on an exFAT-mounted drive, which doesn't support symlinks. `.npm
 
 ## Data layer
 
-`world-kitchen-atlas-proxy` (`worker/index.ts`, deployed via `wrangler`) is a read-only proxy in
-front of the GitHub Contents API for the private `world-kitchen-atlas-data` repo, plus a visit
-counter:
+`world-kitchen-atlas-proxy` (`worker/`, split into `routes/public.ts` + `routes/admin.ts` +
+`lib/*`, deployed via `wrangler`) proxies the GitHub Contents API for the private
+`world-kitchen-atlas-data` repo and backs the `/admin` panel's auth + CRUD, plus a visit counter:
 
 | Route | Returns |
 |---|---|
@@ -41,17 +41,28 @@ counter:
 | `GET /dishes` | every dish entry across every country, merged |
 | `GET /countries/{slug}` | one country's entries (`X-Data-Sha` header), 404 if unknown |
 | `GET /api/track?page=&id=` | `{ ok: true }` — increments Cloudflare KV visit counters (Section 10); no cookies, no personal data. `page=country`/`dish` + a valid `id` also increments that item's own counter; any other input still counts toward the site-wide/daily totals rather than erroring |
+| `POST /admin/login` | `{ token, expiresAt, mustChangePassword }` — PBKDF2 credential check, throttled after 8 failed attempts/IP/15min |
+| `GET /admin/session` | validates a Bearer token (used on page reload) |
+| `POST /admin/password` | changes the admin password, bumps `passwordVersion` (invalidates every existing token) |
+| `GET /admin/countries` | country summaries for the Manage Recipes picker |
+| `GET /admin/countries/{slug}` | `{ dishes, sha }` — `sha` is the optimistic-lock handle for writes |
+| `POST /admin/countries/{slug}/dishes` | create a dish (`409` on duplicate slug or stale `sha`) |
+| `PUT /admin/countries/{slug}/dishes/{dishSlug}` | replace a dish |
+| `DELETE /admin/countries/{slug}/dishes/{dishSlug}` | remove a dish |
+
+All `/admin/*` routes except `login`/`session`/`password` require the stored password to have
+already been changed from the `admin`/`123456` default (`403 password_change_required` otherwise).
 
 ```bash
-# local development — put the PAT in .dev.vars (gitignored), never commit it
-# (wrangler dev's local mode simulates the ANALYTICS KV binding automatically,
-# so the placeholder id in wrangler.toml is fine until you deploy for real)
-echo 'GITHUB_TOKEN=...' > .dev.vars
+# local development — put both in .dev.vars (gitignored), never commit them
+# (wrangler dev's local mode simulates the ANALYTICS KV binding automatically)
+echo 'GITHUB_TOKEN=...' >> .dev.vars
+echo 'SESSION_SECRET=...' >> .dev.vars   # openssl rand -base64 32
 npm run worker:dev
 
-# deploy
-node node_modules/wrangler/bin/wrangler.js kv namespace create ANALYTICS   # paste the id into wrangler.toml first
+# deploy — GITHUB_TOKEN needs Contents: Read and write once the admin panel is deployed
 node node_modules/wrangler/bin/wrangler.js secret put GITHUB_TOKEN
+node node_modules/wrangler/bin/wrangler.js secret put SESSION_SECRET
 npm run worker:deploy
 ```
 

@@ -2,11 +2,15 @@ name = "world-kitchen-atlas-proxy"
 main = "worker/index.ts"
 compatibility_date = "2026-07-28"
 
-# Visit counters (Section 10) — no cookies/personal data. Create with:
-#   wrangler kv namespace create ANALYTICS
-# then replace the placeholder id below with the one it prints. wrangler dev's
-# local mode simulates KV automatically, so the placeholder is fine for local
-# testing before this namespace actually exists in Cloudflare.
+# Shared by visit counters (Section 10, "visits:"-prefixed keys) and the admin
+# panel's credentials/session-throttle state ("admin:"-prefixed keys) — one
+# namespace, two independent key spaces, no collision.
 [[kv_namespaces]]
 binding = "ANALYTICS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "ec7d5dbcc7ef4089bdae873701eb7d27"
+
+# Secrets (never committed):
+#   wrangler secret put GITHUB_TOKEN     fine-grained PAT, Contents: Read & write
+#                                        on samiulAsumel/world-kitchen-atlas-data
+#   wrangler secret put SESSION_SECRET   32 random bytes, base64
+#                                        (openssl rand -base64 32)
