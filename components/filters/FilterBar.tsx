@@ -2,9 +2,14 @@
 
 import { useCallback } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { DIETARY_FLAGS, MEAL_TIMES } from "@/lib/constants";
+import { CONTINENTS, DIETARY_FLAGS, MEAL_TIMES } from "@/lib/constants";
 
-const PARAM = { dietary: "diet", mealTime: "meal", occasion: "occasion" } as const;
+const PARAM = {
+  dietary: "diet",
+  mealTime: "meal",
+  occasion: "occasion",
+  continent: "continent",
+} as const;
 
 function toggleValue(current: string[], value: string): string[] {
   return current.includes(value) ? current.filter((v) => v !== value) : [...current, value];
@@ -18,12 +23,16 @@ interface FilterBarProps {
    * the Breakfast hub has no use for a "Meal time" filter row of its own axis. */
   hideMealTime?: boolean;
   hideOccasion?: boolean;
+  /** Only the Search page needs a continent facet — every other page is already
+   * continent-scoped (or, for hubs, cross-continent by design). */
+  showContinent?: boolean;
 }
 
 export function FilterBar({
   occasionOptions,
   hideMealTime = false,
   hideOccasion = false,
+  showContinent = false,
 }: FilterBarProps): React.JSX.Element {
   const router = useRouter();
   const pathname = usePathname();
@@ -51,10 +60,20 @@ export function FilterBar({
   const dietaryValues = getValues(PARAM.dietary);
   const mealValues = getValues(PARAM.mealTime);
   const occasionValues = getValues(PARAM.occasion);
-  const hasActiveFilters = dietaryValues.length + mealValues.length + occasionValues.length > 0;
+  const continentValues = getValues(PARAM.continent);
+  const hasActiveFilters =
+    dietaryValues.length + mealValues.length + occasionValues.length + continentValues.length > 0;
 
   return (
     <div className="sticky top-0 z-10 flex flex-col gap-4 border-b border-clay-line bg-parchment/95 py-4 backdrop-blur-sm">
+      {showContinent && (
+        <FilterGroup
+          legend="Continent"
+          options={CONTINENTS.map((continent) => ({ value: continent.slug, label: continent.name }))}
+          active={continentValues}
+          onToggle={(value) => setValues(PARAM.continent, toggleValue(continentValues, value))}
+        />
+      )}
       <FilterGroup
         legend="Dietary"
         options={DIETARY_FLAGS.map((flag) => ({ value: flag.key, label: flag.label }))}

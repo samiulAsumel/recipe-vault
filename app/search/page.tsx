@@ -1,13 +1,28 @@
 import type { Metadata } from "next";
-import { PagePlaceholder } from "@/components/layout/PagePlaceholder";
+import { Suspense } from "react";
+import { AtlasRule } from "@/components/atlas/AtlasRule";
+import { SearchResults } from "@/components/search/SearchResults";
+import { getAllDishes } from "@/lib/data/source";
 
-export const metadata: Metadata = { title: "Search" };
+export const metadata: Metadata = {
+  title: "Search",
+  description:
+    "Search every documented dish by name, country, or description, with continent, meal-time, dietary, and occasion filters.",
+};
 
-export default function SearchPage(): React.JSX.Element {
+export default async function SearchPage(): Promise<React.JSX.Element> {
+  const dishes = await getAllDishes();
+
   return (
-    <PagePlaceholder
-      title="Search"
-      description="Filter sidebar (continent, meal-time, dietary, occasion) + Fuse.js result grid comes here."
-    />
+    <main className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-16">
+      <header className="flex flex-col gap-4">
+        <h1 className="font-display text-5xl text-ink">Search</h1>
+        <AtlasRule />
+      </header>
+
+      <Suspense fallback={<div className="h-32" aria-hidden />}>
+        <SearchResults dishes={dishes} />
+      </Suspense>
+    </main>
   );
 }

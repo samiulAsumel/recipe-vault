@@ -1,12 +1,18 @@
+import type { ContinentSlug } from "@/lib/constants";
 import type { DietaryFlags, DishEntry, MealTime, Occasion } from "@/lib/types/recipe";
 
 export interface DishFilters {
-  continentSlug?: string;
+  continentSlugs?: ContinentSlug[];
   countrySlug?: string;
   mealTime?: MealTime[];
   occasion?: Occasion[];
   dietary?: Array<keyof DietaryFlags>;
   streetFood?: boolean;
+}
+
+function matchesContinent(entry: DishEntry, continentSlugs: ContinentSlug[] | undefined): boolean {
+  if (!continentSlugs || continentSlugs.length === 0) return true;
+  return continentSlugs.includes(entry.continentSlug);
 }
 
 function matchesMealTime(entry: DishEntry, mealTime: MealTime[] | undefined): boolean {
@@ -25,12 +31,12 @@ function matchesDietary(entry: DishEntry, dietary: Array<keyof DietaryFlags> | u
 }
 
 /**
- * Section 6: dietary filters are AND logic; meal-time/occasion are OR within
- * their own category, AND across categories (continent/country/streetFood
- * behave as additional AND-joined criteria).
+ * Section 6: dietary filters are AND logic; meal-time/occasion/continent are OR
+ * within their own category, AND across categories (country/streetFood behave
+ * as additional AND-joined criteria).
  */
 export function matchesFilters(entry: DishEntry, filters: DishFilters): boolean {
-  if (filters.continentSlug && entry.continentSlug !== filters.continentSlug) return false;
+  if (!matchesContinent(entry, filters.continentSlugs)) return false;
   if (filters.countrySlug && entry.countrySlug !== filters.countrySlug) return false;
   if (filters.streetFood !== undefined && entry.streetFood !== filters.streetFood) return false;
   if (!matchesMealTime(entry, filters.mealTime)) return false;
