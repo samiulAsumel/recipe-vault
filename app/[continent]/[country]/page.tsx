@@ -7,6 +7,7 @@ import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
 import { FilteredDishes } from "@/components/filters/FilteredDishes";
 import { CONTINENTS, isContinentSlug } from "@/lib/constants";
 import { getAllDishes, getCountriesByContinent, getDishesByCountry } from "@/lib/data/source";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -28,13 +29,14 @@ export async function generateMetadata({
 }: {
   params: Promise<{ continent: string; country: string }>;
 }): Promise<Metadata> {
-  const { country } = await params;
+  const { continent, country } = await params;
   const dishes = await getDishesByCountry(country);
   const name = dishes[0]?.country ?? country;
-  return {
+  return buildPageMetadata({
     title: name,
     description: `${dishes.length} dish ${dishes.length === 1 ? "entry" : "entries"} from ${name} — history, occasion, and traditional drink pairings.`,
-  };
+    path: `/${continent}/${country}/`,
+  });
 }
 
 export default async function CountryPage({

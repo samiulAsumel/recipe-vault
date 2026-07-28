@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { AtlasPin } from "@/components/atlas/AtlasPin";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { SearchBar } from "@/components/home/SearchBar";
 import { CONTINENTS, MEAL_TIMES, OCCASIONS } from "@/lib/constants";
 import { getAllDishes, getCountries } from "@/lib/data/source";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "World Kitchen Atlas",
+  description:
+    "A global culinary encyclopedia organized by continent, country, and dish — with history, occasion, and traditional drink pairings for every entry.",
+  path: "/",
+  isHome: true,
+});
 
 export default async function HomePage(): Promise<React.JSX.Element> {
   const [countries, dishes] = await Promise.all([getCountries(), getAllDishes()]);

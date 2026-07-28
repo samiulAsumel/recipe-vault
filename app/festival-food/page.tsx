@@ -4,11 +4,13 @@ import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { FilteredDishes } from "@/components/filters/FilteredDishes";
 import { isFestivalDish } from "@/lib/data/filters";
 import { getAllDishes } from "@/lib/data/source";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Festival Food",
   description: "Festival dishes from every documented country, with dietary and meal-time filters.",
-};
+  path: "/festival-food/",
+});
 
 export default async function FestivalFoodPage(): Promise<React.JSX.Element> {
   const allDishes = await getAllDishes();

@@ -4,11 +4,13 @@ import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { FilteredDishes } from "@/components/filters/FilteredDishes";
 import { filterDishes } from "@/lib/data/filters";
 import { getAllDishes } from "@/lib/data/source";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Snacks",
   description: "Snack dishes from every documented country, with dietary and occasion filters.",
-};
+  path: "/snacks/",
+});
 
 export default async function SnacksPage(): Promise<React.JSX.Element> {
   const allDishes = await getAllDishes();

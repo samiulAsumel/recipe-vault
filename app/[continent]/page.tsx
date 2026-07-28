@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { CONTINENTS, isContinentSlug } from "@/lib/constants";
 import { getCountriesByContinent } from "@/lib/data/source";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -19,10 +20,11 @@ export async function generateMetadata({
   const { continent } = await params;
   const match = CONTINENTS.find((c) => c.slug === continent);
   const name = match?.name ?? continent;
-  return {
+  return buildPageMetadata({
     title: name,
     description: `Countries and dishes from ${name}, part of the World Kitchen Atlas.`,
-  };
+    path: `/${continent}/`,
+  });
 }
 
 export default async function ContinentHubPage({
