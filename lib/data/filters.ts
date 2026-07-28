@@ -42,3 +42,14 @@ export function matchesFilters(entry: DishEntry, filters: DishFilters): boolean 
 export function filterDishes(entries: DishEntry[], filters: DishFilters): DishEntry[] {
   return entries.filter((entry) => matchesFilters(entry, filters));
 }
+
+const FESTIVAL_OCCASION_TAGS = new Set(["festival", "festival food"]);
+
+/**
+ * occasion is free-form (Section 4), and the route slug "festival-food" doesn't
+ * literally match the spec's own example tag "Festival" — tolerate both phrasings
+ * rather than requiring exact-string discipline from every future content addition.
+ */
+export function isFestivalDish(entry: DishEntry): boolean {
+  return entry.occasion.some((tag) => FESTIVAL_OCCASION_TAGS.has(tag.toLowerCase()));
+}

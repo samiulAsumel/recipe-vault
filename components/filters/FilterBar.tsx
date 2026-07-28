@@ -14,9 +14,17 @@ interface FilterBarProps {
   /** Occasion tags actually present in the current dataset — occasion is free-form
    * per Section 4, so options are derived from the data, not a fixed list. */
   occasionOptions: string[];
+  /** Hide a category when it's already the hub page's own fixed criterion — e.g.
+   * the Breakfast hub has no use for a "Meal time" filter row of its own axis. */
+  hideMealTime?: boolean;
+  hideOccasion?: boolean;
 }
 
-export function FilterBar({ occasionOptions }: FilterBarProps): React.JSX.Element {
+export function FilterBar({
+  occasionOptions,
+  hideMealTime = false,
+  hideOccasion = false,
+}: FilterBarProps): React.JSX.Element {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -53,13 +61,15 @@ export function FilterBar({ occasionOptions }: FilterBarProps): React.JSX.Elemen
         active={dietaryValues}
         onToggle={(value) => setValues(PARAM.dietary, toggleValue(dietaryValues, value))}
       />
-      <FilterGroup
-        legend="Meal time"
-        options={MEAL_TIMES.map((meal) => ({ value: meal.name, label: meal.name }))}
-        active={mealValues}
-        onToggle={(value) => setValues(PARAM.mealTime, toggleValue(mealValues, value))}
-      />
-      {occasionOptions.length > 0 && (
+      {!hideMealTime && (
+        <FilterGroup
+          legend="Meal time"
+          options={MEAL_TIMES.map((meal) => ({ value: meal.name, label: meal.name }))}
+          active={mealValues}
+          onToggle={(value) => setValues(PARAM.mealTime, toggleValue(mealValues, value))}
+        />
+      )}
+      {!hideOccasion && occasionOptions.length > 0 && (
         <FilterGroup
           legend="Occasion"
           options={occasionOptions.map((occasion) => ({ value: occasion, label: occasion }))}

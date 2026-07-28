@@ -10,6 +10,8 @@ import type { DietaryFlags, DishEntry, MealTime } from "@/lib/types/recipe";
 interface FilteredDishesProps {
   dishes: DishEntry[];
   emptyMessage?: string;
+  hideMealTime?: boolean;
+  hideOccasion?: boolean;
 }
 
 function parseFilters(params: URLSearchParams): DishFilters {
@@ -26,6 +28,8 @@ function parseFilters(params: URLSearchParams): DishFilters {
 export function FilteredDishes({
   dishes,
   emptyMessage = "No dishes match these filters.",
+  hideMealTime = false,
+  hideOccasion = false,
 }: FilteredDishesProps): React.JSX.Element {
   const searchParams = useSearchParams();
   const filters = useMemo(() => parseFilters(searchParams), [searchParams]);
@@ -41,7 +45,11 @@ export function FilteredDishes({
 
   return (
     <div className="flex flex-col gap-6">
-      <FilterBar occasionOptions={occasionOptions} />
+      <FilterBar
+        occasionOptions={occasionOptions}
+        hideMealTime={hideMealTime}
+        hideOccasion={hideOccasion}
+      />
       <DishGrid dishes={filtered} emptyMessage={emptyMessage} />
     </div>
   );

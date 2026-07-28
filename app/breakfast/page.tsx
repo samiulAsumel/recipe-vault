@@ -1,13 +1,33 @@
 import type { Metadata } from "next";
-import { PagePlaceholder } from "@/components/layout/PagePlaceholder";
+import { Suspense } from "react";
+import { AtlasRule } from "@/components/atlas/AtlasRule";
+import { FilteredDishes } from "@/components/filters/FilteredDishes";
+import { filterDishes } from "@/lib/data/filters";
+import { getAllDishes } from "@/lib/data/source";
 
-export const metadata: Metadata = { title: "Breakfast" };
+export const metadata: Metadata = {
+  title: "Breakfast",
+  description: "Breakfast dishes from every documented country, with dietary and occasion filters.",
+};
 
-export default function BreakfastPage(): React.JSX.Element {
+export default async function BreakfastPage(): Promise<React.JSX.Element> {
+  const allDishes = await getAllDishes();
+  const dishes = filterDishes(allDishes, { mealTime: ["Breakfast"] });
+
   return (
-    <PagePlaceholder
-      title="Breakfast"
-      description="Meal-time hub — cross-country dish card grid + filter bar comes here."
-    />
+    <main className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-16">
+      <header className="flex flex-col gap-4">
+        <h1 className="font-display text-5xl text-ink">Breakfast</h1>
+        <AtlasRule />
+      </header>
+
+      <Suspense fallback={<div className="h-32" aria-hidden />}>
+        <FilteredDishes
+          dishes={dishes}
+          emptyMessage="No breakfast dishes documented yet."
+          hideMealTime
+        />
+      </Suspense>
+    </main>
   );
 }
