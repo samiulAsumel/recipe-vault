@@ -25,3 +25,13 @@ function requireEnv(name: string): string {
 export function getDataApiUrl(): string {
   return requireEnv("DATA_API_URL").replace(/\/+$/, "");
 }
+
+/**
+ * Production domain, e.g. https://worldkitchenatlas.com — used to build absolute
+ * canonical/OG URLs. Optional and undefined until a domain is chosen; pages fall
+ * back to relative URLs (still valid metadata) rather than failing the build.
+ */
+export function getSiteUrl(): string | undefined {
+  const value = process.env.NEXT_PUBLIC_SITE_URL;
+  return value ? value.replace(/\/+$/, "") : undefined;
+}

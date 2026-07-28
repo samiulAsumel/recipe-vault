@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
+import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
 import { FilteredDishes } from "@/components/filters/FilteredDishes";
 import { CONTINENTS, isContinentSlug } from "@/lib/constants";
 import { getAllDishes, getCountriesByContinent, getDishesByCountry } from "@/lib/data/source";
@@ -52,7 +53,6 @@ export default async function CountryPage({
   }
 
   const continentMeta = CONTINENTS.find((c) => c.slug === continent);
-  const dishByName = new Map(allDishes.map((dish) => [dish.name.toLowerCase(), dish]));
   const pairedDrinks = [...new Set(dishes.flatMap((dish) => dish.pairedDrink))];
 
   return (
@@ -80,27 +80,7 @@ export default async function CountryPage({
           <h2 id="drinks-heading" className="font-display text-2xl text-ink">
             Traditional Drinks
           </h2>
-          <ul className="flex flex-wrap gap-2">
-            {pairedDrinks.map((drink) => {
-              const drinkDish = dishByName.get(drink.toLowerCase());
-              return (
-                <li key={drink}>
-                  {drinkDish ? (
-                    <Link
-                      href={`/${drinkDish.continentSlug}/${drinkDish.countrySlug}/${drinkDish.slug}/`}
-                      className="border border-clay-line px-4 py-2 font-body text-sm text-ink/80 hover:border-ink hover:text-ink"
-                    >
-                      {drink}
-                    </Link>
-                  ) : (
-                    <span className="border border-dashed border-clay-line px-4 py-2 font-body text-sm text-ink/60">
-                      {drink}
-                    </span>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+          <PairedDrinkList drinks={pairedDrinks} allDishes={allDishes} />
         </section>
       )}
     </main>
