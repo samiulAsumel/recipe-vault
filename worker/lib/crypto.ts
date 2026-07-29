@@ -1,7 +1,10 @@
 // PBKDF2 password hashing + HMAC session-token signing, both via WebCrypto
 // (available in the Workers runtime, no npm crypto dependency needed).
 
-export const PBKDF2_ITERATIONS = 210_000;
+// Cloudflare Workers' crypto.subtle hard-caps PBKDF2 at 100,000 iterations —
+// deriveBits throws "iteration counts above 100000 are not supported" past that,
+// so this is the maximum the platform allows, not a tuned security choice.
+export const PBKDF2_ITERATIONS = 100_000;
 
 function toBase64Url(bytes: Uint8Array): string {
   let bin = "";
