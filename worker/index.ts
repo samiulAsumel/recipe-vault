@@ -24,6 +24,7 @@
 //    POST   /admin/login
 //    GET    /admin/session
 //    POST   /admin/password
+//    GET    /admin/analytics
 //    GET    /admin/countries
 //    GET    /admin/countries/{slug}
 //    POST   /admin/countries/{slug}/dishes
@@ -43,6 +44,7 @@ import {
   handleCreateDish,
   handleUpdateDish,
   handleDeleteDish,
+  handleAnalytics,
 } from "./routes/admin";
 
 export default {
@@ -85,6 +87,9 @@ export default {
       }
       if (request.method === "GET" && rest.length === 1 && rest[0] === "countries") {
         return await handleAdminCountries(env, request);
+      }
+      if (request.method === "GET" && rest.length === 1 && rest[0] === "analytics") {
+        return await handleAnalytics(env, request);
       }
       if (request.method === "GET" && rest.length === 2 && rest[0] === "countries") {
         return await handleAdminCountryDetail(env, request, rest[1]);

@@ -12,9 +12,20 @@ import {
 } from "../lib/credentials";
 import { issueToken, verifyToken, extractBearerToken, type Session } from "../lib/session";
 import { validateDish } from "../lib/validateDish";
+import { getAnalyticsSummary } from "../lib/analytics";
 
 function clientIp(request: Request): string {
   return request.headers.get("CF-Connecting-IP") ?? "unknown";
+}
+
+// json()'s default Cache-Control (public, max-age=60) is correct for the public
+// read routes in routes/public.ts but wrong here: session tokens, analytics, and
+// recipe data all change per-request, and a browser genuinely serving a cached
+// admin response (proven while testing the Analytics tab — stale KV data was
+// served from HTTP cache instead of hitting the network) is a real bug, not a
+// hypothetical one. Every admin response overrides it to no-store.
+function adminJson(body: unknown, status = 200): Response {
+  return json(body, status, { "Cache-Control": "no-store" });
 }
 
 interface AuthResult {
@@ -75,14 +86,14 @@ export async function handleLogin(env: Env, request: Request): Promise<Response>
 
   await clearLoginFailures(env, ip);
   const { token, expiresAt } = await issueToken(env, creds.username, creds.passwordVersion);
-  return json({ token, expiresAt, mustChangePassword: creds.mustChangePassword });
+  return adminJson({ token, expiresAt, mustChangePassword: creds.mustChangePassword });
 }
 
 export async function handleSession(env: Env, request: Request): Promise<Response> {
   const result = await authenticate(env, request);
   if (result instanceof Response) return result;
   return withSessionHeader(
-    json({
+    adminJson({
       username: result.session.username,
       expiresAt: result.session.expiresAt,
       mustChangePassword: result.mustChangePassword,
@@ -115,7 +126,7 @@ export async function handlePasswordChange(env: Env, request: Request): Promise<
 
   const updated = await setPassword(env, body.newPassword);
   const { token, expiresAt } = await issueToken(env, updated.username, updated.passwordVersion);
-  return json({ token, expiresAt });
+  return adminJson({ token, expiresAt });
 }
 
 export async function handleAdminCountries(env: Env, request: Request): Promise<Response> {
@@ -137,7 +148,15 @@ export async function handleAdminCountries(env: Env, request: Request): Promise<
     }
   }
   const files = await listCountryFiles(env);
-  return withSessionHeader(json({ countries: [...bySlug.values()], countryFiles: files }), result.renewedToken);
+  return withSessionHeader(adminJson({ countries: [...bySlug.values()], countryFiles: files }), result.renewedToken);
+}
+
+export async function handleAnalytics(env: Env, request: Request): Promise<Response> {
+  const result = await requireFullAuth(env, request);
+  if (result instanceof Response) return result;
+
+  const summary = await getAnalyticsSummary(env.ANALYTICS);
+  return withSessionHeader(adminJson(summary), result.renewedToken);
 }
 
 export async function handleAdminCountryDetail(env: Env, request: Request, slug: string): Promise<Response> {
@@ -146,7 +165,7 @@ export async function handleAdminCountryDetail(env: Env, request: Request, slug:
   if (!SLUG_PATTERN.test(slug)) return errorResponse(400, "invalid_slug", "Country slug must match ^[a-z0-9-]+$.");
 
   const { dishes, sha } = await readCountryFile(env, slug);
-  return withSessionHeader(json({ dishes, sha: sha ?? null }), result.renewedToken);
+  return withSessionHeader(adminJson({ dishes, sha: sha ?? null }), result.renewedToken);
 }
 
 interface DishWritePayload {
@@ -177,7 +196,7 @@ export async function handleCreateDish(env: Env, request: Request, countrySlug: 
 
   const issues = validateDish(payload.dish);
   if (issues.length > 0) {
-    return json({ error: "validation_error", message: "Dish payload failed validation.", details: issues }, 400);
+    return adminJson({ error: "validation_error", message: "Dish payload failed validation.", details: issues }, 400);
   }
 
   const dish = payload.dish as Dish;
@@ -201,7 +220,7 @@ export async function handleCreateDish(env: Env, request: Request, countrySlug: 
       `feat(data): add ${dish.name} to ${dish.country}`,
       sha,
     );
-    return withSessionHeader(json({ dish, sha: newSha }, 201), result.renewedToken);
+    return withSessionHeader(adminJson({ dish, sha: newSha }, 201), result.renewedToken);
   } catch (err) {
     return conflictOrThrow(err);
   }
@@ -224,7 +243,7 @@ export async function handleUpdateDish(
 
   const issues = validateDish(payload.dish);
   if (issues.length > 0) {
-    return json({ error: "validation_error", message: "Dish payload failed validation.", details: issues }, 400);
+    return adminJson({ error: "validation_error", message: "Dish payload failed validation.", details: issues }, 400);
   }
 
   const dish = payload.dish as Dish;
@@ -251,7 +270,7 @@ export async function handleUpdateDish(
       `chore(data): update ${dish.name} in ${dish.country}`,
       sha,
     );
-    return withSessionHeader(json({ dish, sha: newSha }), result.renewedToken);
+    return withSessionHeader(adminJson({ dish, sha: newSha }), result.renewedToken);
   } catch (err) {
     return conflictOrThrow(err);
   }
@@ -287,7 +306,7 @@ export async function handleDeleteDish(
       `chore(data): remove ${removed.name} from ${removed.country}`,
       sha,
     );
-    return withSessionHeader(json({ sha: newSha }), result.renewedToken);
+    return withSessionHeader(adminJson({ sha: newSha }), result.renewedToken);
   } catch (err) {
     return conflictOrThrow(err);
   }

@@ -31,9 +31,21 @@ export function getDataApiUrl(): string {
  * client component (static export has no server runtime) and must reach the
  * Worker's /admin/* endpoints directly, so this is NEXT_PUBLIC_-prefixed and
  * inlined into client JS at build time.
+ *
+ * Deliberately reads `process.env.NEXT_PUBLIC_DATA_API_URL` as a static literal
+ * rather than going through requireEnv(name)'s `process.env[name]` — Next.js's
+ * build-time inlining of NEXT_PUBLIC_ vars only recognizes the literal dot-access
+ * form; a dynamic bracket lookup is never replaced, so in the browser bundle it
+ * would silently resolve to undefined regardless of what's actually configured.
+ * getDataApiUrl() above is unaffected since it only ever runs server-side at
+ * build time, where the real process.env exists and dynamic lookup works fine.
  */
 export function getPublicDataApiUrl(): string {
-  return requireEnv("NEXT_PUBLIC_DATA_API_URL").replace(/\/+$/, "");
+  const value = process.env.NEXT_PUBLIC_DATA_API_URL;
+  if (!value) {
+    throw new MissingEnvError("NEXT_PUBLIC_DATA_API_URL");
+  }
+  return value.replace(/\/+$/, "");
 }
 
 /**

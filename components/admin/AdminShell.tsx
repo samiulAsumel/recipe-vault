@@ -2,17 +2,18 @@
 
 import { useState } from "react";
 import { logout } from "@/lib/admin/client";
+import { AnalyticsDashboard } from "./AnalyticsDashboard";
 import { RecipeList } from "./RecipeList";
 import { PasswordChangeForm } from "./PasswordChangeForm";
 
-type Tab = "recipes" | "settings";
+type Tab = "analytics" | "recipes" | "settings";
 
 interface AdminShellProps {
   onLogout: () => void;
 }
 
 export function AdminShell({ onLogout }: AdminShellProps): React.JSX.Element {
-  const [tab, setTab] = useState<Tab>("recipes");
+  const [tab, setTab] = useState<Tab>("analytics");
 
   const handleLogout = (): void => {
     logout();
@@ -32,6 +33,9 @@ export function AdminShell({ onLogout }: AdminShellProps): React.JSX.Element {
         </button>
       </div>
       <nav className="mt-6 flex gap-2 border-b border-clay-line">
+        <TabButton active={tab === "analytics"} onClick={() => setTab("analytics")}>
+          Analytics
+        </TabButton>
         <TabButton active={tab === "recipes"} onClick={() => setTab("recipes")}>
           Manage Recipes
         </TabButton>
@@ -39,7 +43,11 @@ export function AdminShell({ onLogout }: AdminShellProps): React.JSX.Element {
           Settings
         </TabButton>
       </nav>
-      <div className="py-6">{tab === "recipes" ? <RecipeList /> : <PasswordChangeForm />}</div>
+      <div className="py-6">
+        {tab === "analytics" && <AnalyticsDashboard />}
+        {tab === "recipes" && <RecipeList />}
+        {tab === "settings" && <PasswordChangeForm />}
+      </div>
     </main>
   );
 }
