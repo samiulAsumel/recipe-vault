@@ -181,7 +181,7 @@ export function DiscoveryFields({ dish, onChange, errors, countryLocked }: Disco
         value={dish.heroImage}
         onChange={(v) => set("heroImage", v)}
         error={fieldError(errors, "heroImage")}
-        placeholder="/images/bangladesh/kacchi-biryani.jpg"
+        placeholder="/images/country-slug/dish-slug.jpg"
       />
 
       <CheckboxRow
