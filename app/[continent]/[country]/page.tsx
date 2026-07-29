@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
 import { FilteredDishes } from "@/components/filters/FilteredDishes";
-import { CONTINENTS, isContinentSlug } from "@/lib/constants";
+import { CONTINENTS, EMPTY_STATIC_PARAM, isContinentSlug } from "@/lib/constants";
 import { getAllDishes, getCountriesByContinent, getDishesByCountry } from "@/lib/data/source";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -21,7 +21,10 @@ export async function generateStaticParams(): Promise<Array<{ continent: string;
       return countries.map((country) => ({ continent: continent.slug, country: country.slug }));
     }),
   );
-  return perContinent.flat();
+  const params = perContinent.flat();
+  return params.length > 0
+    ? params
+    : [{ continent: CONTINENTS[0].slug, country: EMPTY_STATIC_PARAM }];
 }
 
 export async function generateMetadata({

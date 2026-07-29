@@ -11,6 +11,7 @@ import { DiscoveryDetail } from "@/components/recipe/DiscoveryDetail";
 import { RecipeSteps } from "@/components/recipe/RecipeSteps";
 import { RecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
 import { ServingsIngredients } from "@/components/recipe/ServingsIngredients";
+import { CONTINENTS, EMPTY_STATIC_PARAM } from "@/lib/constants";
 import { getAllDishes, getDish } from "@/lib/data/source";
 import { getSiteUrl } from "@/lib/env";
 import { buildFaqJsonLd, buildRecipeJsonLd } from "@/lib/recipe/jsonld";
@@ -27,6 +28,11 @@ export async function generateStaticParams(): Promise<
   }>
 > {
   const dishes = await getAllDishes();
+  if (dishes.length === 0) {
+    return [
+      { continent: CONTINENTS[0].slug, country: EMPTY_STATIC_PARAM, dish: EMPTY_STATIC_PARAM },
+    ];
+  }
   return dishes.map((dish) => ({
     continent: dish.continentSlug,
     country: dish.countrySlug,

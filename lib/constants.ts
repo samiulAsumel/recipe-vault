@@ -36,3 +36,10 @@ export type ContinentSlug = (typeof CONTINENTS)[number]["slug"];
 export function isContinentSlug(value: string): value is ContinentSlug {
   return CONTINENTS.some((continent) => continent.slug === value);
 }
+
+// Sentinel path segment for generateStaticParams() when the data source has zero
+// entries. Next.js fails the entire `output: 'export'` build if a dynamic route's
+// generateStaticParams() returns [] (vercel/next.js#71862, unresolved as of 16.2.12)
+// — a leading underscore guarantees this never collides with a real slug, which
+// the worker restricts to ^[a-z0-9-]+$. The page itself still 404s on this slug.
+export const EMPTY_STATIC_PARAM = "_empty";
