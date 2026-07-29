@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AtlasPin } from "@/components/atlas/AtlasPin";
+import { ConfidenceBadge } from "@/components/dish/ConfidenceBadge";
 import type { DishEntry } from "@/lib/types/recipe";
 
 interface DishCardProps {
@@ -8,13 +8,11 @@ interface DishCardProps {
 }
 
 export function DishCard({ dish }: DishCardProps): React.JSX.Element {
-  const hasOccasion = dish.streetFood || dish.occasion.length > 0;
-
   return (
     <Link
       href={`/${dish.continentSlug}/${dish.countrySlug}/${dish.slug}/`}
       data-region={dish.continentSlug}
-      className="group flex h-full flex-col border border-clay-line bg-parchment transition-colors hover:border-ink"
+      className="group flex h-full flex-col border border-clay-line bg-parchment shadow-[0_1px_2px_rgba(36,27,20,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[0_10px_24px_rgba(36,27,20,0.14)]"
     >
       <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-clay-line">
         {dish.heroImage ? (
@@ -23,7 +21,7 @@ export function DishCard({ dish }: DishCardProps): React.JSX.Element {
             alt={dish.name}
             fill
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-clay-line/10">
@@ -35,7 +33,7 @@ export function DishCard({ dish }: DishCardProps): React.JSX.Element {
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="flex items-start justify-between gap-3">
           <h3 className="line-clamp-2 font-display text-lg leading-tight text-ink">{dish.name}</h3>
-          <AtlasPin confidenceLevel={dish.confidenceLevel} hasOccasion={hasOccasion} />
+          <ConfidenceBadge confidenceLevel={dish.confidenceLevel} />
         </div>
 
         <p className="line-clamp-2 font-body text-sm text-ink/70">{dish.shortDescription}</p>
