@@ -35,14 +35,14 @@ export function DiscoveryFields({ dish, onChange, errors, countryLocked }: Disco
           value={dish.country}
           onChange={(v) => set("country", v)}
           error={fieldError(errors, "country")}
-          placeholder={countryLocked ? undefined : "e.g. Bangladesh"}
+          placeholder={countryLocked ? undefined : "e.g. Country name"}
         />
         <TextField
           label="Country slug"
           value={dish.countrySlug}
           onChange={(v) => set("countrySlug", v)}
           error={fieldError(errors, "countrySlug")}
-          placeholder={countryLocked ? undefined : "e.g. bangladesh"}
+          placeholder={countryLocked ? undefined : "e.g. country-slug"}
         />
       </div>
       {countryLocked && (

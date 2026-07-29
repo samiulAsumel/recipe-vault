@@ -129,7 +129,7 @@ export function RecipeList(): React.JSX.Element {
               type="text"
               value={newCountrySlug}
               onChange={(e) => setNewCountrySlug(e.target.value)}
-              placeholder="e.g. vietnam"
+              placeholder="e.g. country-slug"
               className="border border-clay-line bg-parchment px-3 py-2 font-body text-sm text-ink focus-visible:outline-2 focus-visible:outline-turmeric"
             />
           </label>
