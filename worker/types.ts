@@ -36,6 +36,13 @@ export interface IngredientItem {
   unit: string | null;
   prepNote: string | null;
   pantryStaple: boolean;
+  localName?: string;
+  scientificName?: string;
+  image?: string;
+  alternatives?: string[];
+  purpose?: string;
+  storageTips?: string;
+  optional?: boolean;
 }
 
 export interface IngredientGroup {
@@ -58,12 +65,18 @@ export interface RecipeStep {
   technique: string;
   visualCue: string;
   commonMistake: string;
+  image?: string;
+  professionalTip?: string;
+  warning?: string;
 }
 
 export interface Substitution {
   original: string;
   swap: string;
   impact: string;
+  flavorDifference?: string;
+  textureDifference?: string;
+  quantityAdjustment?: string;
 }
 
 export interface NutritionEstimate {
@@ -71,6 +84,80 @@ export interface NutritionEstimate {
   proteinG: number;
   carbsG: number;
   fatG: number;
+  fiberG?: number;
+  sugarG?: number;
+  sodiumMg?: number;
+  potassiumMg?: number;
+  ironMg?: number;
+  calciumMg?: number;
+  vitaminAMcg?: number;
+  vitaminCMg?: number;
+  vitaminDMcg?: number;
+  cholesterolMg?: number;
+}
+
+export interface Story {
+  history?: string;
+  origin?: string;
+  culturalSignificance?: string;
+  traditionalBackground?: string;
+  interestingFacts?: string[];
+}
+
+export interface Gallery {
+  finishedDish?: string[];
+  ingredients?: string[];
+  preparation?: string[];
+  cookingSteps?: string[];
+  servingStyle?: string[];
+  traditionalPresentation?: string[];
+}
+
+export type SpiceLevel = "Mild" | "Medium" | "Hot" | "Very Hot";
+
+export interface EstimatedCost {
+  costPerServing: number;
+  currency: string;
+  countryContext?: string;
+}
+
+export interface StorageDetails {
+  refrigerator?: string;
+  freezer?: string;
+  shelfLife?: string;
+  reheatingInstructions?: string;
+  foodSafetyNotes?: string;
+  freezerFriendly?: boolean;
+}
+
+export interface ServingSuggestions {
+  rice?: string[];
+  bread?: string[];
+  sideDish?: string[];
+  salad?: string[];
+  drinks?: string[];
+  desserts?: string[];
+  sauces?: string[];
+}
+
+export interface RecipeVariation {
+  type: string;
+  description: string;
+}
+
+export interface PreparationStep {
+  category: string;
+  instruction: string;
+}
+
+export interface ChefTipCategory {
+  category: string;
+  tip: string;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
 }
 
 export interface Dish {
@@ -103,6 +190,17 @@ export interface Dish {
 
   fullRecipeAvailable: boolean;
 
+  nativeName?: string;
+  region?: string;
+  regionSlug?: string;
+  cuisine?: string;
+  cuisineSlug?: string;
+  cookingMethod?: string;
+  spiceLevel?: SpiceLevel;
+  season?: string[];
+  suitableFor?: string[];
+  story?: Story;
+
   baseServings?: number;
   headnote?: string;
   timing?: Timing;
@@ -117,6 +215,17 @@ export interface Dish {
   substitutions?: Substitution[];
   regionalVariations?: string[];
   nutritionEstimate?: NutritionEstimate;
+
+  gallery?: Gallery;
+  alternativeEquipment?: string[];
+  preparationSteps?: PreparationStep[];
+  chefTipCategories?: ChefTipCategory[];
+  commonMistakesSummary?: string[];
+  estimatedCost?: EstimatedCost;
+  storageDetails?: StorageDetails;
+  servingSuggestions?: ServingSuggestions;
+  recipeVariations?: RecipeVariation[];
+  faq?: FaqItem[];
 }
 
 export interface GitHubContentItem {

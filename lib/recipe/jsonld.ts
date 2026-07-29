@@ -54,6 +54,40 @@ export function buildRecipeJsonLd(dish: FullRecipe, siteUrl?: string): Record<st
       proteinContent: `${dish.nutritionEstimate.proteinG}g`,
       carbohydrateContent: `${dish.nutritionEstimate.carbsG}g`,
       fatContent: `${dish.nutritionEstimate.fatG}g`,
+      // fiber/sugar/sodium/cholesterol are the only v2 micronutrient fields with a
+      // real schema.org NutritionInformation property — potassium/iron/calcium/
+      // vitamins have no standard property and stay display-only, not structured data.
+      ...(dish.nutritionEstimate.fiberG !== undefined
+        ? { fiberContent: `${dish.nutritionEstimate.fiberG}g` }
+        : {}),
+      ...(dish.nutritionEstimate.sugarG !== undefined
+        ? { sugarContent: `${dish.nutritionEstimate.sugarG}g` }
+        : {}),
+      ...(dish.nutritionEstimate.sodiumMg !== undefined
+        ? { sodiumContent: `${dish.nutritionEstimate.sodiumMg}mg` }
+        : {}),
+      ...(dish.nutritionEstimate.cholesterolMg !== undefined
+        ? { cholesterolContent: `${dish.nutritionEstimate.cholesterolMg}mg` }
+        : {}),
     },
+  };
+}
+
+/** Returns null when the dish has no FAQ content, rather than emitting an empty
+ * FAQPage block. */
+export function buildFaqJsonLd(dish: FullRecipe): Record<string, unknown> | null {
+  if (!dish.faq || dish.faq.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: dish.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 }

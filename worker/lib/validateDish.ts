@@ -20,9 +20,22 @@ const DIETARY_KEYS = [
   "lowCarb",
   "highProtein",
 ] as const;
+const SPICE_LEVELS = ["Mild", "Medium", "Hot", "Very Hot"];
 
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
+}
+
+/** Shape-level check for a v2 optional array field — only validated when present,
+ * since none of these fields are required. Not exhaustive per-item validation. */
+function checkOptionalArray(
+  value: unknown,
+  field: string,
+  fail: (field: string, message: string) => void,
+): void {
+  if (value !== undefined && !Array.isArray(value)) {
+    fail(field, `${field} must be an array when present`);
+  }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -86,6 +99,18 @@ export function validateDish(dish: any): ValidationIssue[] {
 
   if (typeof dish?.fullRecipeAvailable !== "boolean") {
     fail("fullRecipeAvailable", "fullRecipeAvailable must be a boolean");
+  }
+
+  // v2 discovery-tier enrichments — shape-checked only when present, never required.
+  if (dish?.spiceLevel !== undefined && !SPICE_LEVELS.includes(dish.spiceLevel)) {
+    fail("spiceLevel", `spiceLevel must be one of: ${SPICE_LEVELS.join(", ")}`);
+  }
+  checkOptionalArray(dish?.season, "season", fail);
+  checkOptionalArray(dish?.suitableFor, "suitableFor", fail);
+  if (dish?.story !== undefined && (typeof dish.story !== "object" || dish.story === null)) {
+    fail("story", "story must be an object when present");
+  } else if (dish?.story?.interestingFacts !== undefined) {
+    checkOptionalArray(dish.story.interestingFacts, "story.interestingFacts", fail);
   }
 
   if (dish?.fullRecipeAvailable) {
@@ -162,5 +187,33 @@ function validateFullRecipe(dish: any, fail: (field: string, message: string) =>
   }
   if (typeof dish.nutritionEstimate !== "object" || dish.nutritionEstimate === null) {
     fail("nutritionEstimate", "nutritionEstimate is required for a full recipe");
+  }
+
+  // v2 full-recipe-tier enrichments — shape-checked only when present.
+  checkOptionalArray(dish.alternativeEquipment, "alternativeEquipment", fail);
+  checkOptionalArray(dish.commonMistakesSummary, "commonMistakesSummary", fail);
+  checkOptionalArray(dish.recipeVariations, "recipeVariations", fail);
+  checkOptionalArray(dish.faq, "faq", fail);
+  checkOptionalArray(dish.preparationSteps, "preparationSteps", fail);
+  checkOptionalArray(dish.chefTipCategories, "chefTipCategories", fail);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (dish.recipeVariations ?? []).forEach((variation: any, index: number) => {
+    if (!isNonEmptyString(variation?.type) || !isNonEmptyString(variation?.description)) {
+      fail(`recipeVariations[${index}]`, "each variation needs a type and a description");
+    }
+  });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (dish.faq ?? []).forEach((item: any, index: number) => {
+    if (!isNonEmptyString(item?.question) || !isNonEmptyString(item?.answer)) {
+      fail(`faq[${index}]`, "each FAQ entry needs a question and an answer");
+    }
+  });
+  if (dish.estimatedCost !== undefined) {
+    if (typeof dish.estimatedCost?.costPerServing !== "number") {
+      fail("estimatedCost.costPerServing", "costPerServing must be a number");
+    }
+    if (!isNonEmptyString(dish.estimatedCost?.currency)) {
+      fail("estimatedCost.currency", "currency is required when estimatedCost is set");
+    }
   }
 }

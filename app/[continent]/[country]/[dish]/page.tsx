@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { AtlasPin } from "@/components/atlas/AtlasPin";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
+import { CookMode } from "@/components/recipe/CookMode";
+import { CookModeLauncher } from "@/components/recipe/CookModeLauncher";
 import { DiscoveryDetail } from "@/components/recipe/DiscoveryDetail";
 import { RecipeSteps } from "@/components/recipe/RecipeSteps";
+import { RecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
 import { ServingsIngredients } from "@/components/recipe/ServingsIngredients";
 import { getAllDishes, getDish } from "@/lib/data/source";
 import { getSiteUrl } from "@/lib/env";
-import { buildRecipeJsonLd } from "@/lib/recipe/jsonld";
+import { buildFaqJsonLd, buildRecipeJsonLd } from "@/lib/recipe/jsonld";
 import { isFullRecipe } from "@/lib/types/recipe";
 
 export const dynamicParams = false;
@@ -77,16 +81,26 @@ export default async function DishPage({
   }
 
   const jsonLd = buildRecipeJsonLd(dish, getSiteUrl());
+  const faqJsonLd = buildFaqJsonLd(dish);
   const hasOccasion = dish.streetFood || dish.occasion.length > 0;
 
   return (
-    <>
-      {/* schema.org Recipe JSON-LD; "<" is escaped below to guard against a </script> breakout once this data becomes admin-editable (Phase 7) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
-      <main className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16">
+    <Suspense>
+      <RecipeWorkspace dish={dish}>
+        {/* schema.org Recipe JSON-LD; "<" is escaped below to guard against a </script> breakout once this data becomes admin-editable (Phase 7) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+        />
+        {faqJsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+            }}
+          />
+        )}
+        <main className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16">
         <header className="flex flex-col gap-4">
           <div className="flex items-center gap-3 font-meta text-xs uppercase tracking-wide text-ink/50">
             <Link href={`/${dish.continentSlug}/`} className="hover:text-turmeric">
@@ -102,7 +116,10 @@ export default async function DishPage({
           </div>
           <div className="flex items-start justify-between gap-4">
             <h1 className="font-display text-4xl text-ink sm:text-5xl">{dish.name}</h1>
-            <AtlasPin confidenceLevel={dish.confidenceLevel} hasOccasion={hasOccasion} size={40} />
+            <div className="flex items-center gap-4">
+              <CookModeLauncher />
+              <AtlasPin confidenceLevel={dish.confidenceLevel} hasOccasion={hasOccasion} size={40} />
+            </div>
           </div>
           <AtlasRule />
           <p className="max-w-prose font-body text-base text-ink/80">{dish.headnote}</p>
@@ -141,7 +158,10 @@ export default async function DishPage({
             <ServingsIngredients dish={dish} />
           </aside>
 
-          <div>
+          <div className="flex flex-col gap-4">
+            <div className="flex justify-end">
+              <CookModeLauncher />
+            </div>
             <RecipeSteps dish={dish} />
           </div>
         </div>
@@ -204,7 +224,9 @@ export default async function DishPage({
             <PairedDrinkList drinks={dish.pairedDrink} allDishes={allDishes} />
           </section>
         )}
-      </main>
-    </>
+        </main>
+        <CookMode dish={dish} />
+      </RecipeWorkspace>
+    </Suspense>
   );
 }

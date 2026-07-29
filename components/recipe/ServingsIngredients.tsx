@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
 import { formatAmount, scaleAndRound, scaleNutrition } from "@/lib/recipe/scaling";
 import type { FullRecipe } from "@/lib/types/recipe";
 
@@ -9,7 +9,7 @@ interface ServingsIngredientsProps {
 }
 
 export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.JSX.Element {
-  const [servings, setServings] = useState(dish.baseServings);
+  const { servings, setServings } = useRecipeWorkspace();
   const nutrition = scaleNutrition(dish.nutritionEstimate, dish.baseServings, servings);
 
   return (
@@ -20,7 +20,7 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
           <button
             type="button"
             aria-label="Decrease servings"
-            onClick={() => setServings((current) => Math.max(1, current - 1))}
+            onClick={() => setServings(Math.max(1, servings - 1))}
             className="flex h-7 w-7 items-center justify-center border border-clay-line font-meta text-ink hover:border-ink"
           >
             −
@@ -29,7 +29,7 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
           <button
             type="button"
             aria-label="Increase servings"
-            onClick={() => setServings((current) => current + 1)}
+            onClick={() => setServings(servings + 1)}
             className="flex h-7 w-7 items-center justify-center border border-clay-line font-meta text-ink hover:border-ink"
           >
             +

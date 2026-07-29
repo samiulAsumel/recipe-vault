@@ -7,9 +7,22 @@ const MEAL_TIMES = ["Breakfast", "Lunch", "Dinner", "Snacks", "Dessert", "Drinks
 const DIFFICULTIES = ["Easy", "Medium", "Hard"];
 const CONFIDENCE_LEVELS = ["high", "medium", "low"];
 const CATEGORIES = ["Mains", "Sides", "Snacks", "Desserts", "Drinks", "Breads", "Soups"];
+const SPICE_LEVELS = ["Mild", "Medium", "Hot", "Very Hot"];
 
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
+}
+
+/** Shape-level check for a v2 optional array field — only validated when present,
+ * since none of these fields are required. Not exhaustive per-item validation. */
+function checkOptionalArray(
+  value: unknown,
+  field: string,
+  fail: (field: string, message: string) => void,
+): void {
+  if (value !== undefined && !Array.isArray(value)) {
+    fail(field, `${field} must be an array when present`);
+  }
 }
 
 /**
@@ -57,6 +70,16 @@ export function validateDish(dish: DishEntry): ValidationIssue[] {
   if (!isNonEmptyString(dish.shortDescription)) fail("shortDescription", "Short description is required");
   if (!isNonEmptyString(dish.heroImage)) fail("heroImage", "Hero image path is required");
   if (!CATEGORIES.includes(dish.category)) fail("category", "Category is required");
+
+  // v2 discovery-tier enrichments — shape-checked only when present, never required.
+  if (dish.spiceLevel !== undefined && !SPICE_LEVELS.includes(dish.spiceLevel)) {
+    fail("spiceLevel", `Spice level must be one of: ${SPICE_LEVELS.join(", ")}`);
+  }
+  checkOptionalArray(dish.season, "season", fail);
+  checkOptionalArray(dish.suitableFor, "suitableFor", fail);
+  if (dish.story?.interestingFacts !== undefined) {
+    checkOptionalArray(dish.story.interestingFacts, "story.interestingFacts", fail);
+  }
 
   if (dish.fullRecipeAvailable) {
     validateFullRecipe(dish, fail);
@@ -111,5 +134,39 @@ function validateFullRecipe(dish: DishEntry, fail: (field: string, message: stri
 
   if (!isNonEmptyString(dish.donenessSummary)) {
     fail("donenessSummary", "Doneness summary is required for a full recipe");
+  }
+
+  // v2 full-recipe-tier enrichments — shape-checked only when present.
+  checkOptionalArray(dish.alternativeEquipment, "alternativeEquipment", fail);
+  checkOptionalArray(dish.commonMistakesSummary, "commonMistakesSummary", fail);
+  checkOptionalArray(dish.recipeVariations, "recipeVariations", fail);
+  checkOptionalArray(dish.faq, "faq", fail);
+  dish.recipeVariations?.forEach((variation, index) => {
+    if (!isNonEmptyString(variation.type) || !isNonEmptyString(variation.description)) {
+      fail(`recipeVariations[${index}]`, "Each variation needs a type and a description");
+    }
+  });
+  dish.faq?.forEach((item, index) => {
+    if (!isNonEmptyString(item.question) || !isNonEmptyString(item.answer)) {
+      fail(`faq[${index}]`, "Each FAQ entry needs a question and an answer");
+    }
+  });
+  dish.preparationSteps?.forEach((step, index) => {
+    if (!isNonEmptyString(step.category) || !isNonEmptyString(step.instruction)) {
+      fail(`preparationSteps[${index}]`, "Each preparation step needs a category and an instruction");
+    }
+  });
+  dish.chefTipCategories?.forEach((tip, index) => {
+    if (!isNonEmptyString(tip.category) || !isNonEmptyString(tip.tip)) {
+      fail(`chefTipCategories[${index}]`, "Each chef tip needs a category and a tip");
+    }
+  });
+  if (dish.estimatedCost !== undefined) {
+    if (!Number.isFinite(dish.estimatedCost.costPerServing)) {
+      fail("estimatedCost.costPerServing", "Cost per serving must be a number");
+    }
+    if (!isNonEmptyString(dish.estimatedCost.currency)) {
+      fail("estimatedCost.currency", "Currency is required when estimated cost is set");
+    }
   }
 }

@@ -36,6 +36,13 @@ export interface IngredientItem {
   unit: string | null;
   prepNote: string | null;
   pantryStaple: boolean;
+  localName?: string;
+  scientificName?: string;
+  image?: string;
+  alternatives?: string[];
+  purpose?: string;
+  storageTips?: string;
+  optional?: boolean;
 }
 
 export interface IngredientGroup {
@@ -58,12 +65,18 @@ export interface RecipeStep {
   technique: string;
   visualCue: string;
   commonMistake: string;
+  image?: string;
+  professionalTip?: string;
+  warning?: string;
 }
 
 export interface Substitution {
   original: string;
   swap: string;
   impact: string;
+  flavorDifference?: string;
+  textureDifference?: string;
+  quantityAdjustment?: string;
 }
 
 export interface NutritionEstimate {
@@ -71,6 +84,84 @@ export interface NutritionEstimate {
   proteinG: number;
   carbsG: number;
   fatG: number;
+  fiberG?: number;
+  sugarG?: number;
+  sodiumMg?: number;
+  potassiumMg?: number;
+  ironMg?: number;
+  calciumMg?: number;
+  vitaminAMcg?: number;
+  vitaminCMg?: number;
+  vitaminDMcg?: number;
+  cholesterolMg?: number;
+}
+
+/** Story/history section — a deeper optional layer on top of the always-present
+ * historicNote/whenEaten fields, not a replacement for them. */
+export interface Story {
+  history?: string;
+  origin?: string;
+  culturalSignificance?: string;
+  traditionalBackground?: string;
+  interestingFacts?: string[];
+}
+
+export interface Gallery {
+  finishedDish?: string[];
+  ingredients?: string[];
+  preparation?: string[];
+  cookingSteps?: string[];
+  servingStyle?: string[];
+  traditionalPresentation?: string[];
+}
+
+export type SpiceLevel = "Mild" | "Medium" | "Hot" | "Very Hot";
+
+/** Stored per-serving — costPerServing is the base metric; scaleCost() derives a
+ * total for any target serving count rather than storing two numbers that could drift. */
+export interface EstimatedCost {
+  costPerServing: number;
+  currency: string;
+  countryContext?: string;
+}
+
+export interface StorageDetails {
+  refrigerator?: string;
+  freezer?: string;
+  shelfLife?: string;
+  reheatingInstructions?: string;
+  foodSafetyNotes?: string;
+  freezerFriendly?: boolean;
+}
+
+export interface ServingSuggestions {
+  rice?: string[];
+  bread?: string[];
+  sideDish?: string[];
+  salad?: string[];
+  drinks?: string[];
+  desserts?: string[];
+  sauces?: string[];
+}
+
+export interface RecipeVariation {
+  type: string;
+  description: string;
+}
+
+export interface PreparationStep {
+  category: string;
+  instruction: string;
+}
+
+export interface ChefTipCategory {
+  category: string;
+  tip: string;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
 }
 
 /** Discovery-tier fields — present on every entry, full recipe or not. */
@@ -104,6 +195,20 @@ export interface DishEntry {
 
   fullRecipeAvailable: boolean;
 
+  // v2 discovery-tier enrichments — optional on every entry, full recipe or not,
+  // since a discovery-only entry can still have a native name, region, cuisine
+  // tag, or a deeper story even without full cooking steps.
+  nativeName?: string;
+  region?: string;
+  regionSlug?: string;
+  cuisine?: string;
+  cuisineSlug?: string;
+  cookingMethod?: string;
+  spiceLevel?: SpiceLevel;
+  season?: string[];
+  suitableFor?: string[];
+  story?: Story;
+
   // Full-recipe fields — present only when fullRecipeAvailable is true.
   // Use isFullRecipe() to narrow rather than casting.
   baseServings?: number;
@@ -120,6 +225,19 @@ export interface DishEntry {
   substitutions?: Substitution[];
   regionalVariations?: string[];
   nutritionEstimate?: NutritionEstimate;
+
+  // v2 full-recipe-tier enrichments — optional additive siblings of the fields
+  // above, not replacements (e.g. storageDetails sits alongside storageNote).
+  gallery?: Gallery;
+  alternativeEquipment?: string[];
+  preparationSteps?: PreparationStep[];
+  chefTipCategories?: ChefTipCategory[];
+  commonMistakesSummary?: string[];
+  estimatedCost?: EstimatedCost;
+  storageDetails?: StorageDetails;
+  servingSuggestions?: ServingSuggestions;
+  recipeVariations?: RecipeVariation[];
+  faq?: FaqItem[];
 }
 
 /** A DishEntry narrowed to guarantee its full-recipe fields are present. */
