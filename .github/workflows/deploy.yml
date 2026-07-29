@@ -1,0 +1,49 @@
+name: Deploy to Cloudflare Pages
+
+# Rebuilds the static export and redeploys it whenever:
+#  - this repo's main branch changes (design/UI work), or
+#  - the data repo dispatches "data-updated" after a recipes/** push
+#    (see world-kitchen-atlas-data/.github/workflows/trigger-site-rebuild.yml)
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [data-updated]
+  workflow_dispatch: {}
+
+# Collapse rapid-fire triggers (e.g. several recipes added back to back)
+# into a single deploy instead of racing multiple in parallel.
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # DATA_API_URL / NEXT_PUBLIC_DATA_API_URL are the same Worker URL — the
+      # non-public one is read at build time (generateStaticParams), the
+      # NEXT_PUBLIC_ one is inlined into client JS for the /admin panel.
+      # See lib/env.ts and .env.example.
+      - run: npm run build
+        env:
+          DATA_API_URL: ${{ secrets.DATA_API_URL }}
+          NEXT_PUBLIC_DATA_API_URL: ${{ secrets.DATA_API_URL }}
+
+      # Invoked via `node node_modules/...` rather than a bare `wrangler`
+      # binary, matching this repo's package.json scripts convention (see
+      # .npmrc: bin-links=false, needed because the working copy lives on an
+      # exFAT drive that doesn't support the symlinks npm normally creates).
+      - run: node node_modules/wrangler/bin/wrangler.js pages deploy out --project-name=kitchenatlas
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
