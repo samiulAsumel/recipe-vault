@@ -19,11 +19,11 @@ export function DishGrid({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {dishes.map((dish, index) => (
         <div
           key={dish.id}
-          className="fade-up-item"
+          className="fade-up-item h-full"
           style={{ "--fade-index": index % 12 } as React.CSSProperties}
         >
           <DishCard dish={dish} />
