@@ -2,6 +2,7 @@
 
 import { useRecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
 import { formatAmount, scaleAndRound, scaleNutrition } from "@/lib/recipe/scaling";
+import { toImperialAmount } from "@/lib/recipe/units";
 import type { FullRecipe } from "@/lib/types/recipe";
 
 interface ServingsIngredientsProps {
@@ -60,6 +61,7 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
                   dish.baseServings,
                   servings,
                 );
+                const imperial = toImperialAmount(scaledAmount, item.unit);
                 return (
                   <li
                     key={item.id}
@@ -70,6 +72,7 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
                     <span className="font-meta">
                       {formatAmount(scaledAmount)}
                       {item.unit ? ` ${item.unit}` : ""}
+                      {imperial && <span className="text-ink/50"> ({imperial})</span>}
                     </span>{" "}
                     {item.name}
                     {item.prepNote && (
@@ -104,6 +107,12 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
             <dt className="text-ink/50">Fat</dt>
             <dd>{nutrition.fatG}g</dd>
           </div>
+          {nutrition.saturatedFatG !== undefined && (
+            <div>
+              <dt className="text-ink/50">Sat. fat</dt>
+              <dd>{nutrition.saturatedFatG}g</dd>
+            </div>
+          )}
         </dl>
       </div>
     </div>

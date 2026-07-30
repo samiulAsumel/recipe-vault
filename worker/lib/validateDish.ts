@@ -187,6 +187,11 @@ function validateFullRecipe(dish: any, fail: (field: string, message: string) =>
   }
   if (typeof dish.nutritionEstimate !== "object" || dish.nutritionEstimate === null) {
     fail("nutritionEstimate", "nutritionEstimate is required for a full recipe");
+  } else if (
+    dish.nutritionEstimate.saturatedFatG !== undefined &&
+    typeof dish.nutritionEstimate.saturatedFatG !== "number"
+  ) {
+    fail("nutritionEstimate.saturatedFatG", "saturatedFatG must be a number when present");
   }
 
   // v2 full-recipe-tier enrichments — shape-checked only when present.
@@ -196,6 +201,13 @@ function validateFullRecipe(dish: any, fail: (field: string, message: string) =>
   checkOptionalArray(dish.faq, "faq", fail);
   checkOptionalArray(dish.preparationSteps, "preparationSteps", fail);
   checkOptionalArray(dish.chefTipCategories, "chefTipCategories", fail);
+  if (dish.healthInfo !== undefined && (typeof dish.healthInfo !== "object" || dish.healthInfo === null)) {
+    fail("healthInfo", "healthInfo must be an object when present");
+  } else {
+    checkOptionalArray(dish.healthInfo?.benefits, "healthInfo.benefits", fail);
+    checkOptionalArray(dish.healthInfo?.allergens, "healthInfo.allergens", fail);
+    checkOptionalArray(dish.healthInfo?.dietaryConsiderations, "healthInfo.dietaryConsiderations", fail);
+  }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (dish.recipeVariations ?? []).forEach((variation: any, index: number) => {
     if (!isNonEmptyString(variation?.type) || !isNonEmptyString(variation?.description)) {

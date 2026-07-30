@@ -3,8 +3,9 @@
 import { StepTimer } from "@/components/recipe/StepTimer";
 import type { StepTimerInfo } from "@/components/recipe/useCookTimers";
 import { tokenizeInstruction } from "@/lib/recipe/instructions";
-import { formatAmount, scaleAndRound } from "@/lib/recipe/scaling";
+import { scaleAndRound } from "@/lib/recipe/scaling";
 import { formatMinutesLabel } from "@/lib/recipe/timers";
+import { formatAmountWithImperial, formatTemperature } from "@/lib/recipe/units";
 import type { IngredientItem, RecipeStep } from "@/lib/types/recipe";
 
 interface CookStepProps {
@@ -55,7 +56,7 @@ export function CookStep({
       {step.heat && (
         <p className="font-meta text-sm text-paprika">
           {step.heat.level}
-          {step.heat.tempC !== null ? ` · ${step.heat.tempC}°C` : ""}
+          {formatTemperature(step.heat.tempC) ? ` · ${formatTemperature(step.heat.tempC)}` : ""}
           {step.heat.flameNote ? ` — ${step.heat.flameNote}` : ""}
         </p>
       )}
@@ -69,8 +70,11 @@ export function CookStep({
               key={index}
               className="font-medium text-ink underline decoration-clay-line decoration-2 underline-offset-2"
             >
-              {formatAmount(scaleAndRound(token.item.amount, token.item.unit, baseServings, servings))}
-              {token.item.unit ? ` ${token.item.unit}` : ""} {token.item.name}
+              {formatAmountWithImperial(
+                scaleAndRound(token.item.amount, token.item.unit, baseServings, servings),
+                token.item.unit,
+              )}{" "}
+              {token.item.name}
             </strong>
           ),
         )}

@@ -54,9 +54,13 @@ export function buildRecipeJsonLd(dish: FullRecipe, siteUrl?: string): Record<st
       proteinContent: `${dish.nutritionEstimate.proteinG}g`,
       carbohydrateContent: `${dish.nutritionEstimate.carbsG}g`,
       fatContent: `${dish.nutritionEstimate.fatG}g`,
-      // fiber/sugar/sodium/cholesterol are the only v2 micronutrient fields with a
-      // real schema.org NutritionInformation property — potassium/iron/calcium/
-      // vitamins have no standard property and stay display-only, not structured data.
+      // saturatedFat/fiber/sugar/sodium/cholesterol are the only v2 nutrition
+      // fields with a real schema.org NutritionInformation property —
+      // potassium/iron/calcium/vitamins have no standard property and stay
+      // display-only, not structured data.
+      ...(dish.nutritionEstimate.saturatedFatG !== undefined
+        ? { saturatedFatContent: `${dish.nutritionEstimate.saturatedFatG}g` }
+        : {}),
       ...(dish.nutritionEstimate.fiberG !== undefined
         ? { fiberContent: `${dish.nutritionEstimate.fiberG}g` }
         : {}),

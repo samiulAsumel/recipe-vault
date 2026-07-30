@@ -80,6 +80,9 @@ export function validateDish(dish: DishEntry): ValidationIssue[] {
   if (dish.story?.interestingFacts !== undefined) {
     checkOptionalArray(dish.story.interestingFacts, "story.interestingFacts", fail);
   }
+  checkOptionalArray(dish.healthInfo?.benefits, "healthInfo.benefits", fail);
+  checkOptionalArray(dish.healthInfo?.allergens, "healthInfo.allergens", fail);
+  checkOptionalArray(dish.healthInfo?.dietaryConsiderations, "healthInfo.dietaryConsiderations", fail);
 
   if (dish.fullRecipeAvailable) {
     validateFullRecipe(dish, fail);
@@ -134,6 +137,13 @@ function validateFullRecipe(dish: DishEntry, fail: (field: string, message: stri
 
   if (!isNonEmptyString(dish.donenessSummary)) {
     fail("donenessSummary", "Doneness summary is required for a full recipe");
+  }
+
+  if (
+    dish.nutritionEstimate?.saturatedFatG !== undefined &&
+    !Number.isFinite(dish.nutritionEstimate.saturatedFatG)
+  ) {
+    fail("nutritionEstimate.saturatedFatG", "Saturated fat must be a number when present");
   }
 
   // v2 full-recipe-tier enrichments — shape-checked only when present.

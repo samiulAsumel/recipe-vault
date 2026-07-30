@@ -1,4 +1,5 @@
 import { buildIngredientMap, tokenizeInstruction } from "@/lib/recipe/instructions";
+import { formatTemperature } from "@/lib/recipe/units";
 import type { FullRecipe } from "@/lib/types/recipe";
 
 interface RecipeStepsProps {
@@ -37,7 +38,7 @@ export function RecipeSteps({ dish }: RecipeStepsProps): React.JSX.Element {
             {step.heat && (
               <p className="mt-1 font-meta text-xs text-paprika">
                 {step.heat.level}
-                {step.heat.tempC !== null ? ` · ${step.heat.tempC}°C` : ""}
+                {formatTemperature(step.heat.tempC) ? ` · ${formatTemperature(step.heat.tempC)}` : ""}
                 {step.heat.flameNote ? ` — ${step.heat.flameNote}` : ""}
               </p>
             )}

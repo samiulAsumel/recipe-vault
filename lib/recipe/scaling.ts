@@ -50,6 +50,7 @@ export function formatAmount(value: number): string {
 }
 
 const OPTIONAL_NUTRITION_KEYS = [
+  "saturatedFatG",
   "fiberG",
   "sugarG",
   "sodiumMg",

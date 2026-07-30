@@ -84,6 +84,7 @@ export interface NutritionEstimate {
   proteinG: number;
   carbsG: number;
   fatG: number;
+  saturatedFatG?: number;
   fiberG?: number;
   sugarG?: number;
   sodiumMg?: number;
@@ -138,6 +139,15 @@ export interface ServingSuggestions {
   drinks?: string[];
   desserts?: string[];
   sauces?: string[];
+}
+
+/** v3 standard Section 17 — informational only, never medical advice.
+ * Allergens are named per the broader of the EU/UK Annex II 14 and the
+ * US FDA "Big 9", so mustard and coconut are always listed when present. */
+export interface HealthInfo {
+  benefits?: string[];
+  allergens?: string[];
+  dietaryConsiderations?: string[];
 }
 
 export interface RecipeVariation {
@@ -226,6 +236,7 @@ export interface Dish {
   servingSuggestions?: ServingSuggestions;
   recipeVariations?: RecipeVariation[];
   faq?: FaqItem[];
+  healthInfo?: HealthInfo;
 }
 
 export interface GitHubContentItem {

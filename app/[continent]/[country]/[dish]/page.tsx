@@ -8,7 +8,10 @@ import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
 import { CookMode } from "@/components/recipe/CookMode";
 import { CookModeLauncher } from "@/components/recipe/CookModeLauncher";
 import { DiscoveryDetail } from "@/components/recipe/DiscoveryDetail";
+import { HealthInformation } from "@/components/recipe/HealthInformation";
 import { RecipeSteps } from "@/components/recipe/RecipeSteps";
+import { RecipeStory } from "@/components/recipe/RecipeStory";
+import { RecipeSummary } from "@/components/recipe/RecipeSummary";
 import { RecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
 import { ServingsIngredients } from "@/components/recipe/ServingsIngredients";
 import { CONTINENTS, EMPTY_STATIC_PARAM } from "@/lib/constants";
@@ -131,6 +134,8 @@ export default async function DishPage({
           <p className="max-w-prose font-body text-base text-ink/80">{dish.headnote}</p>
         </header>
 
+        <RecipeSummary dish={dish} />
+
         {dish.equipment.length > 0 && (
           <section className="flex flex-col gap-2">
             <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">Equipment</h2>
@@ -223,6 +228,10 @@ export default async function DishPage({
             </ul>
           </section>
         )}
+
+        {dish.healthInfo && <HealthInformation healthInfo={dish.healthInfo} />}
+
+        {dish.story && <RecipeStory story={dish.story} />}
 
         {dish.pairedDrink.length > 0 && (
           <section className="flex flex-col gap-3 border-t border-clay-line pt-8">
