@@ -1,16 +1,10 @@
 import { buildIngredientMap, tokenizeInstruction } from "@/lib/recipe/instructions";
+import { formatMinutesLabel } from "@/lib/recipe/timers";
 import { formatTemperature } from "@/lib/recipe/units";
 import type { FullRecipe } from "@/lib/types/recipe";
 
 interface RecipeStepsProps {
   dish: FullRecipe;
-}
-
-function formatDuration(minutes: number): string {
-  if (minutes < 60) return `${minutes} min`;
-  const hours = Math.floor(minutes / 60);
-  const remainder = minutes % 60;
-  return remainder === 0 ? `${hours} hr` : `${hours} hr ${remainder} min`;
 }
 
 export function RecipeSteps({ dish }: RecipeStepsProps): React.JSX.Element {
@@ -31,7 +25,7 @@ export function RecipeSteps({ dish }: RecipeStepsProps): React.JSX.Element {
                 {step.title}
               </h3>
               <span className="whitespace-nowrap font-meta text-xs text-ink/60">
-                {formatDuration(step.durationMinutes)}
+                {formatMinutesLabel(step.durationMinutes)}
               </span>
             </div>
 

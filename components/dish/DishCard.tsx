@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ConfidenceBadge } from "@/components/dish/ConfidenceBadge";
+import { formatMinutesLabel } from "@/lib/recipe/timers";
 import type { DishEntry } from "@/lib/types/recipe";
 
 interface DishCardProps {
@@ -39,7 +40,7 @@ export function DishCard({ dish }: DishCardProps): React.JSX.Element {
         <p className="line-clamp-2 font-body text-sm text-ink/70">{dish.shortDescription}</p>
 
         <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-2 font-meta text-xs text-ink/60">
-          <span>{dish.totalTimeMinutes} min</span>
+          <span>{formatMinutesLabel(dish.totalTimeMinutes)}</span>
           <span aria-hidden>·</span>
           <span>{dish.difficulty}</span>
           <span aria-hidden>·</span>
