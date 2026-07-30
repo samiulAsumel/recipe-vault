@@ -54,6 +54,7 @@ export async function generateMetadata({
 
   const siteUrl = getSiteUrl();
   const path = `/${dish.continentSlug}/${dish.countrySlug}/${dish.slug}/`;
+  const bnPath = `/bn${path}`;
   const absoluteImage = dish.heroImage
     ? siteUrl
       ? `${siteUrl}${dish.heroImage}`
@@ -63,11 +64,19 @@ export async function generateMetadata({
   return {
     title: dish.name,
     description: dish.shortDescription,
-    ...(siteUrl ? { alternates: { canonical: `${siteUrl}${path}` } } : {}),
+    ...(siteUrl
+      ? {
+          alternates: {
+            canonical: `${siteUrl}${path}`,
+            languages: { en: `${siteUrl}${path}`, bn: `${siteUrl}${bnPath}` },
+          },
+        }
+      : {}),
     openGraph: {
       title: dish.name,
       description: dish.shortDescription,
       type: "article",
+      locale: "en_US",
       ...(absoluteImage ? { images: [absoluteImage] } : {}),
     },
   };

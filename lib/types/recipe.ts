@@ -174,6 +174,72 @@ export interface FaqItem {
   answer: string;
 }
 
+/** Per-language override of the dish's free-text fields. Only translatable
+ * prose lives here — structural/enum/numeric fields (id, dietary, timing,
+ * nutritionEstimate, etc.) never change between languages, so they are never
+ * duplicated into a translation. Nested arrays that mix structural and
+ * translatable data are keyed by the array item's existing stable id rather
+ * than position, so a translation never desyncs if the English array is
+ * reordered: ingredientItems by IngredientItem.id, steps by
+ * RecipeStep.stepNumber. Arrays with no existing stable id (faq,
+ * substitutions, recipeVariations) are a full parallel array, expected to be
+ * the same length as the English one. */
+export interface DishTranslation {
+  name?: string;
+  historicNote?: string;
+  whenEaten?: string;
+  shortDescription?: string;
+  region?: string;
+  cuisine?: string;
+  cookingMethod?: string;
+  suitableFor?: string[];
+  /** Display label only — the underlying English pairedDrink[] values remain
+   * the match key used to link to another dish's page (see lib/data/pairedDrink.ts). */
+  pairedDrink?: string[];
+  headnote?: string;
+  equipment?: string[];
+  miseEnPlace?: string[];
+  chefTips?: string[];
+  donenessSummary?: string;
+  platingNote?: string;
+  storageNote?: string;
+  regionalVariations?: string[];
+  alternativeEquipment?: string[];
+  commonMistakesSummary?: string[];
+  story?: Story;
+  healthInfo?: HealthInfo;
+  servingSuggestions?: ServingSuggestions;
+  storageDetails?: Pick<
+    StorageDetails,
+    "refrigerator" | "freezer" | "shelfLife" | "reheatingInstructions" | "foodSafetyNotes"
+  >;
+  /** Keyed by IngredientGroup.groupName (English) -> translated group name. */
+  ingredientGroupNames?: Record<string, string>;
+  /** Keyed by IngredientItem.id, e.g. "0001". */
+  ingredientItems?: Record<
+    string,
+    { name?: string; unit?: string; prepNote?: string; alternatives?: string[] }
+  >;
+  /** Keyed by RecipeStep.stepNumber. */
+  steps?: Record<
+    number,
+    {
+      title?: string;
+      instruction?: string;
+      technique?: string;
+      visualCue?: string;
+      commonMistake?: string;
+    }
+  >;
+  substitutions?: Substitution[];
+  recipeVariations?: RecipeVariation[];
+  faq?: FaqItem[];
+}
+
+export interface Translations {
+  bn?: DishTranslation;
+}
+
 /** Discovery-tier fields — present on every entry, full recipe or not. */
 export interface DishEntry {
   id: string;
@@ -249,6 +315,7 @@ export interface DishEntry {
   recipeVariations?: RecipeVariation[];
   faq?: FaqItem[];
   healthInfo?: HealthInfo;
+  translations?: Translations;
 }
 
 /** A DishEntry narrowed to guarantee its full-recipe fields are present. */

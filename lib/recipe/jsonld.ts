@@ -1,4 +1,5 @@
-import { buildIngredientMap, resolveInstructionText } from "@/lib/recipe/instructions";
+import type { Locale } from "@/lib/i18n";
+import { applyIngredientTranslations, buildIngredientMap, resolveInstructionText } from "@/lib/recipe/instructions";
 import { formatAmount } from "@/lib/recipe/scaling";
 import type { FullRecipe, IngredientItem } from "@/lib/types/recipe";
 
@@ -20,37 +21,66 @@ function formatIngredientLine(item: IngredientItem): string {
   return parts.join(" ");
 }
 
+/** Words baked directly into JSON-LD string values (not just UI labels), so a
+ * Bengali page's structured data reads correctly rather than mixing English
+ * words into Bengali-tagged (inLanguage: "bn") markup. */
+const WORDS: Record<Locale, { servings: string; calories: string }> = {
+  en: { servings: "servings", calories: "calories" },
+  bn: { servings: "পরিবেশন", calories: "ক্যালরি" },
+};
+
 /** Requires the isFullRecipe-narrowed type — a discovery-only entry has no real
  * recipeInstructions, and emitting Recipe JSON-LD without them risks Google
  * ignoring or penalizing the markup. */
-export function buildRecipeJsonLd(dish: FullRecipe, siteUrl?: string): Record<string, unknown> {
-  const ingredientMap = buildIngredientMap(dish.ingredientGroups);
-  const pagePath = `/${dish.continentSlug}/${dish.countrySlug}/${dish.slug}/`;
+export function buildRecipeJsonLd(
+  dish: FullRecipe,
+  siteUrl?: string,
+  locale: Locale = "en",
+): Record<string, unknown> {
+  const bn = locale === "bn" ? dish.translations?.bn : undefined;
+  const ingredientGroups = applyIngredientTranslations(dish.ingredientGroups, bn);
+  const ingredientMap = buildIngredientMap(ingredientGroups);
+  const pagePath =
+    locale === "bn"
+      ? `/bn/${dish.continentSlug}/${dish.countrySlug}/${dish.slug}/`
+      : `/${dish.continentSlug}/${dish.countrySlug}/${dish.slug}/`;
+  const words = WORDS[locale];
+  const name = bn?.name ?? dish.name;
+  const description = bn?.shortDescription ?? dish.shortDescription;
+  const steps = dish.steps.map((step) => {
+    const t = bn?.steps?.[step.stepNumber];
+    return {
+      stepNumber: step.stepNumber,
+      title: t?.title ?? step.title,
+      instruction: t?.instruction ?? step.instruction,
+    };
+  });
 
   return {
     "@context": "https://schema.org",
     "@type": "Recipe",
-    name: dish.name,
-    description: dish.shortDescription,
+    name,
+    description,
+    inLanguage: locale,
     ...(dish.heroImage ? { image: [toAbsoluteUrl(dish.heroImage, siteUrl)] } : {}),
     url: toAbsoluteUrl(pagePath, siteUrl),
     recipeCategory: dish.category,
     recipeCuisine: dish.country,
-    recipeYield: `${dish.baseServings} servings`,
+    recipeYield: `${dish.baseServings} ${words.servings}`,
     prepTime: toIsoDuration(dish.timing.prepMinutes),
     cookTime: toIsoDuration(dish.timing.activeCookMinutes),
     totalTime: toIsoDuration(dish.timing.totalMinutes),
-    recipeIngredient: dish.ingredientGroups.flatMap((group) =>
+    recipeIngredient: ingredientGroups.flatMap((group) =>
       group.items.map((item) => formatIngredientLine(item)),
     ),
-    recipeInstructions: dish.steps.map((step) => ({
+    recipeInstructions: steps.map((step) => ({
       "@type": "HowToStep",
       name: step.title,
       text: resolveInstructionText(step.instruction, ingredientMap),
     })),
     nutrition: {
       "@type": "NutritionInformation",
-      calories: `${dish.nutritionEstimate.calories} calories`,
+      calories: `${dish.nutritionEstimate.calories} ${words.calories}`,
       proteinContent: `${dish.nutritionEstimate.proteinG}g`,
       carbohydrateContent: `${dish.nutritionEstimate.carbsG}g`,
       fatContent: `${dish.nutritionEstimate.fatG}g`,
@@ -79,13 +109,16 @@ export function buildRecipeJsonLd(dish: FullRecipe, siteUrl?: string): Record<st
 
 /** Returns null when the dish has no FAQ content, rather than emitting an empty
  * FAQPage block. */
-export function buildFaqJsonLd(dish: FullRecipe): Record<string, unknown> | null {
+export function buildFaqJsonLd(dish: FullRecipe, locale: Locale = "en"): Record<string, unknown> | null {
   if (!dish.faq || dish.faq.length === 0) return null;
+  const bn = locale === "bn" ? dish.translations?.bn : undefined;
+  const faq = bn?.faq && bn.faq.length === dish.faq.length ? bn.faq : dish.faq;
 
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: dish.faq.map((item) => ({
+    inLanguage: locale,
+    mainEntity: faq.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

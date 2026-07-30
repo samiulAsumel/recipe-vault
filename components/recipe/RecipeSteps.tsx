@@ -1,19 +1,28 @@
-import { buildIngredientMap, tokenizeInstruction } from "@/lib/recipe/instructions";
+import { getDictionary, type Locale } from "@/lib/i18n";
+import { applyIngredientTranslations, buildIngredientMap, tokenizeInstruction } from "@/lib/recipe/instructions";
 import { formatMinutesLabel } from "@/lib/recipe/timers";
 import { formatTemperature } from "@/lib/recipe/units";
 import type { FullRecipe } from "@/lib/types/recipe";
 
 interface RecipeStepsProps {
   dish: FullRecipe;
+  locale?: Locale;
 }
 
-export function RecipeSteps({ dish }: RecipeStepsProps): React.JSX.Element {
-  const ingredientMap = buildIngredientMap(dish.ingredientGroups);
+export function RecipeSteps({ dish, locale = "en" }: RecipeStepsProps): React.JSX.Element {
+  const dict = getDictionary(locale);
+  const bn = locale === "bn" ? dish.translations?.bn : undefined;
+  const ingredientGroups = applyIngredientTranslations(dish.ingredientGroups, bn);
+  const ingredientMap = buildIngredientMap(ingredientGroups);
 
   return (
     <ol className="flex flex-col gap-6">
       {dish.steps.map((step) => {
         const tokens = tokenizeInstruction(step.instruction, ingredientMap);
+        const translatedStep = bn?.steps?.[step.stepNumber];
+        const title = translatedStep?.title ?? step.title;
+        const visualCue = translatedStep?.visualCue ?? step.visualCue;
+        const commonMistake = translatedStep?.commonMistake ?? step.commonMistake;
 
         return (
           <li key={step.stepNumber} className="border border-clay-line p-5">
@@ -22,17 +31,19 @@ export function RecipeSteps({ dish }: RecipeStepsProps): React.JSX.Element {
                 <span className="mr-2 font-meta text-sm text-ink/40">
                   {String(step.stepNumber).padStart(2, "0")}
                 </span>
-                {step.title}
+                {title}
               </h3>
               <span className="whitespace-nowrap font-meta text-xs text-ink/60">
-                {formatMinutesLabel(step.durationMinutes)}
+                {formatMinutesLabel(step.durationMinutes, locale)}
               </span>
             </div>
 
             {step.heat && (
               <p className="mt-1 font-meta text-xs text-paprika">
                 {step.heat.level}
-                {formatTemperature(step.heat.tempC) ? ` · ${formatTemperature(step.heat.tempC)}` : ""}
+                {formatTemperature(step.heat.tempC)
+                  ? ` · ${formatTemperature(step.heat.tempC)}`
+                  : ""}
                 {step.heat.flameNote ? ` — ${step.heat.flameNote}` : ""}
               </p>
             )}
@@ -55,15 +66,15 @@ export function RecipeSteps({ dish }: RecipeStepsProps): React.JSX.Element {
             <div className="mt-4 flex flex-col gap-2">
               <p className="border-l-2 border-cardamom pl-3 font-body text-xs text-ink/70">
                 <span className="font-meta uppercase tracking-wide text-cardamom">
-                  Visual cue —{" "}
+                  {dict.recipeSteps.visualCue}
                 </span>
-                {step.visualCue}
+                {visualCue}
               </p>
               <p className="border-l-2 border-paprika pl-3 font-body text-xs text-ink/70">
                 <span className="font-meta uppercase tracking-wide text-paprika">
-                  Common mistake —{" "}
+                  {dict.recipeSteps.commonMistake}
                 </span>
-                {step.commonMistake}
+                {commonMistake}
               </p>
             </div>
           </li>

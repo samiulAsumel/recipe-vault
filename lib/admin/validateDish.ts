@@ -1,4 +1,4 @@
-import type { DishEntry } from "@/lib/types/recipe";
+import type { DishEntry, Translations } from "@/lib/types/recipe";
 import { CONTINENTS, DIETARY_FLAGS } from "@/lib/constants";
 import type { ValidationIssue } from "./client";
 
@@ -23,6 +23,27 @@ function checkOptionalArray(
   if (value !== undefined && !Array.isArray(value)) {
     fail(field, `${field} must be an array when present`);
   }
+}
+
+/** Shape-only check for translations.bn — mirrors the worker's looser
+ * validateTranslations. Not exhaustive per-item validation. */
+function validateTranslations(
+  value: Translations | undefined,
+  fail: (field: string, message: string) => void,
+): void {
+  const bn = value?.bn;
+  if (bn === undefined) return;
+  checkOptionalArray(bn.suitableFor, "translations.bn.suitableFor", fail);
+  checkOptionalArray(bn.pairedDrink, "translations.bn.pairedDrink", fail);
+  checkOptionalArray(bn.equipment, "translations.bn.equipment", fail);
+  checkOptionalArray(bn.miseEnPlace, "translations.bn.miseEnPlace", fail);
+  checkOptionalArray(bn.chefTips, "translations.bn.chefTips", fail);
+  checkOptionalArray(bn.regionalVariations, "translations.bn.regionalVariations", fail);
+  checkOptionalArray(bn.alternativeEquipment, "translations.bn.alternativeEquipment", fail);
+  checkOptionalArray(bn.commonMistakesSummary, "translations.bn.commonMistakesSummary", fail);
+  checkOptionalArray(bn.substitutions, "translations.bn.substitutions", fail);
+  checkOptionalArray(bn.recipeVariations, "translations.bn.recipeVariations", fail);
+  checkOptionalArray(bn.faq, "translations.bn.faq", fail);
 }
 
 /**
@@ -83,6 +104,7 @@ export function validateDish(dish: DishEntry): ValidationIssue[] {
   checkOptionalArray(dish.healthInfo?.benefits, "healthInfo.benefits", fail);
   checkOptionalArray(dish.healthInfo?.allergens, "healthInfo.allergens", fail);
   checkOptionalArray(dish.healthInfo?.dietaryConsiderations, "healthInfo.dietaryConsiderations", fail);
+  validateTranslations(dish.translations, fail);
 
   if (dish.fullRecipeAvailable) {
     validateFullRecipe(dish, fail);

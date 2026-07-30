@@ -1,4 +1,4 @@
-import type { IngredientGroup, IngredientItem } from "@/lib/types/recipe";
+import type { DishTranslation, IngredientGroup, IngredientItem } from "@/lib/types/recipe";
 
 export function buildIngredientMap(groups: IngredientGroup[]): Map<string, IngredientItem> {
   const map = new Map<string, IngredientItem>();
@@ -8,6 +8,34 @@ export function buildIngredientMap(groups: IngredientGroup[]): Map<string, Ingre
     }
   }
   return map;
+}
+
+/** Substitutes each ingredient's translated name/unit/prepNote (keyed by
+ * IngredientItem.id in translations.bn.ingredientItems) over the English
+ * groups, so every downstream consumer — the ingredient list, the inline
+ * {id} references inside step instructions, Cook Mode — shows the same
+ * translated name rather than each re-deriving it separately. Falls back to
+ * the English field per-item when a specific ingredient isn't translated
+ * yet. */
+export function applyIngredientTranslations(
+  groups: IngredientGroup[],
+  translation: DishTranslation | undefined,
+): IngredientGroup[] {
+  if (!translation) return groups;
+  return groups.map((group) => ({
+    groupName: translation.ingredientGroupNames?.[group.groupName] ?? group.groupName,
+    items: group.items.map((item) => {
+      const t = translation.ingredientItems?.[item.id];
+      if (!t) return item;
+      return {
+        ...item,
+        name: t.name ?? item.name,
+        unit: t.unit ?? item.unit,
+        prepNote: t.prepNote ?? item.prepNote,
+        alternatives: t.alternatives ?? item.alternatives,
+      };
+    }),
+  }));
 }
 
 export type InstructionToken =

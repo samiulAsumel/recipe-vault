@@ -1,6 +1,8 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import type { StepTimerInfo } from "@/components/recipe/useCookTimers";
+import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
 import { formatClockTime, formatCountdown } from "@/lib/recipe/timers";
 
 const LONG_TIMER_THRESHOLD_MINUTES = 60;
@@ -26,13 +28,15 @@ export function StepTimer({
   onReset,
   onAddMinute,
 }: StepTimerProps): React.JSX.Element {
+  const locale = getLocaleFromPathname(usePathname());
+  const dict = getDictionary(locale);
   const isLong = durationMinutes >= LONG_TIMER_THRESHOLD_MINUTES;
 
   // Long timers (marinating, dum-cooking) show a target clock time rather than
   // a ticking countdown — "ready at 9:40 PM" is more useful than "7:58:12".
   const readout =
     info.status === "running" && isLong && info.endsAt !== null
-      ? `Ready at ${formatClockTime(info.endsAt)}`
+      ? dict.stepTimer.readyAt(formatClockTime(info.endsAt, locale))
       : formatCountdown(info.remainingMs);
 
   return (
@@ -43,37 +47,37 @@ export function StepTimer({
       }`}
     >
       <span className="min-w-[6.5rem] tabular-nums">
-        {info.status === "done" ? "Timer done" : readout}
+        {info.status === "done" ? dict.stepTimer.timerDone : readout}
       </span>
       <div className="flex flex-wrap items-center gap-2">
         {info.status === "idle" && (
           <button type="button" onClick={onStart} className={buttonClass}>
-            Start
+            {dict.stepTimer.start}
           </button>
         )}
         {info.status === "running" && (
           <>
             <button type="button" onClick={onPause} className={buttonClass}>
-              Pause
+              {dict.stepTimer.pause}
             </button>
             <button type="button" onClick={onAddMinute} className={buttonClass}>
-              +1 min
+              {dict.stepTimer.addMinute}
             </button>
           </>
         )}
         {info.status === "paused" && (
           <>
             <button type="button" onClick={onResume} className={buttonClass}>
-              Resume
+              {dict.stepTimer.resume}
             </button>
             <button type="button" onClick={onAddMinute} className={buttonClass}>
-              +1 min
+              {dict.stepTimer.addMinute}
             </button>
           </>
         )}
         {info.status !== "idle" && (
           <button type="button" onClick={onReset} className="font-meta text-xs text-paprika hover:underline">
-            Reset
+            {dict.stepTimer.reset}
           </button>
         )}
       </div>

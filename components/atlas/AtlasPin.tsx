@@ -1,3 +1,4 @@
+import { getDictionary, type Locale } from "@/lib/i18n";
 import type { ConfidenceLevel } from "@/lib/types/recipe";
 
 const CONFIDENCE_TICKS: Record<ConfidenceLevel, number> = {
@@ -13,6 +14,7 @@ interface AtlasPinProps {
   hasOccasion?: boolean;
   /** Pin height in px — the tick marks and occasion dot scale with it. */
   size?: number;
+  locale?: Locale;
   className?: string;
 }
 
@@ -20,19 +22,27 @@ export function AtlasPin({
   confidenceLevel,
   hasOccasion,
   size = 22,
+  locale = "en",
   className,
 }: AtlasPinProps): React.JSX.Element {
   const ticks = confidenceLevel ? CONFIDENCE_TICKS[confidenceLevel] : 0;
   const tickWidth = Math.max(2, Math.round(size * 0.09));
+  const dict = getDictionary(locale);
+  const confidenceLabel =
+    confidenceLevel === "high"
+      ? dict.confidence.high
+      : confidenceLevel === "medium"
+        ? dict.confidence.medium
+        : confidenceLevel === "low"
+          ? dict.confidence.low
+          : undefined;
 
   return (
     <span
       className={`inline-flex items-center gap-[3px] ${className ?? ""}`}
       aria-hidden={confidenceLevel === undefined && hasOccasion === undefined}
       role={confidenceLevel !== undefined ? "img" : undefined}
-      aria-label={
-        confidenceLevel !== undefined ? `Confidence: ${confidenceLevel}` : undefined
-      }
+      aria-label={confidenceLabel !== undefined ? dict.confidence.ariaLabel(confidenceLabel) : undefined}
     >
       <svg
         width={size}

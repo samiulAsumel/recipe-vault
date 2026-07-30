@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { DishGrid } from "@/components/dish/DishGrid";
 import { FilterBar } from "@/components/filters/FilterBar";
 import { filterDishes, type DishFilters } from "@/lib/data/filters";
+import { getLocaleFromPathname } from "@/lib/i18n";
 import type { DietaryFlags, DishEntry, MealTime } from "@/lib/types/recipe";
 
 interface FilteredDishesProps {
@@ -27,11 +28,12 @@ function parseFilters(params: URLSearchParams): DishFilters {
 
 export function FilteredDishes({
   dishes,
-  emptyMessage = "No dishes match these filters.",
+  emptyMessage,
   hideMealTime = false,
   hideOccasion = false,
 }: FilteredDishesProps): React.JSX.Element {
   const searchParams = useSearchParams();
+  const locale = getLocaleFromPathname(usePathname());
   const filters = useMemo(() => parseFilters(searchParams), [searchParams]);
   const filtered = useMemo(() => filterDishes(dishes, filters), [dishes, filters]);
 
@@ -50,7 +52,7 @@ export function FilteredDishes({
         hideMealTime={hideMealTime}
         hideOccasion={hideOccasion}
       />
-      <DishGrid dishes={filtered} emptyMessage={emptyMessage} />
+      <DishGrid dishes={filtered} emptyMessage={emptyMessage} locale={locale} />
     </div>
   );
 }

@@ -170,6 +170,60 @@ export interface FaqItem {
   answer: string;
 }
 
+/** Mirrors lib/types/recipe.ts's DishTranslation — see that file for the
+ * full rationale on why nested arrays are keyed by stable id rather than
+ * position. */
+export interface DishTranslation {
+  name?: string;
+  historicNote?: string;
+  whenEaten?: string;
+  shortDescription?: string;
+  region?: string;
+  cuisine?: string;
+  cookingMethod?: string;
+  suitableFor?: string[];
+  pairedDrink?: string[];
+  headnote?: string;
+  equipment?: string[];
+  miseEnPlace?: string[];
+  chefTips?: string[];
+  donenessSummary?: string;
+  platingNote?: string;
+  storageNote?: string;
+  regionalVariations?: string[];
+  alternativeEquipment?: string[];
+  commonMistakesSummary?: string[];
+  story?: Story;
+  healthInfo?: HealthInfo;
+  servingSuggestions?: ServingSuggestions;
+  storageDetails?: Pick<
+    StorageDetails,
+    "refrigerator" | "freezer" | "shelfLife" | "reheatingInstructions" | "foodSafetyNotes"
+  >;
+  ingredientGroupNames?: Record<string, string>;
+  ingredientItems?: Record<
+    string,
+    { name?: string; unit?: string; prepNote?: string; alternatives?: string[] }
+  >;
+  steps?: Record<
+    number,
+    {
+      title?: string;
+      instruction?: string;
+      technique?: string;
+      visualCue?: string;
+      commonMistake?: string;
+    }
+  >;
+  substitutions?: Substitution[];
+  recipeVariations?: RecipeVariation[];
+  faq?: FaqItem[];
+}
+
+export interface Translations {
+  bn?: DishTranslation;
+}
+
 export interface Dish {
   id: string;
   slug: string;
@@ -237,6 +291,7 @@ export interface Dish {
   recipeVariations?: RecipeVariation[];
   faq?: FaqItem[];
   healthInfo?: HealthInfo;
+  translations?: Translations;
 }
 
 export interface GitHubContentItem {

@@ -1,7 +1,9 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { StepTimer } from "@/components/recipe/StepTimer";
 import type { StepTimerInfo } from "@/components/recipe/useCookTimers";
+import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
 import { tokenizeInstruction } from "@/lib/recipe/instructions";
 import { scaleAndRound } from "@/lib/recipe/scaling";
 import { formatMinutesLabel } from "@/lib/recipe/timers";
@@ -9,6 +11,8 @@ import { formatAmountWithImperial, formatTemperature } from "@/lib/recipe/units"
 import type { IngredientItem, RecipeStep } from "@/lib/types/recipe";
 
 interface CookStepProps {
+  /** Already merged with any translation by the caller (CookMode) — this
+   * component itself does no translation lookup, just formatting. */
   step: RecipeStep;
   ingredientMap: Map<string, IngredientItem>;
   baseServings: number;
@@ -37,6 +41,8 @@ export function CookStep({
   onResetTimer,
   onAddMinuteTimer,
 }: CookStepProps): React.JSX.Element {
+  const locale = getLocaleFromPathname(usePathname());
+  const dict = getDictionary(locale);
   const tokens = tokenizeInstruction(step.instruction, ingredientMap);
 
   return (
@@ -49,7 +55,7 @@ export function CookStep({
           {step.title}
         </h2>
         <span className="whitespace-nowrap font-meta text-sm text-ink/60">
-          {formatMinutesLabel(step.durationMinutes)}
+          {formatMinutesLabel(step.durationMinutes, locale)}
         </span>
       </div>
 
@@ -96,11 +102,15 @@ export function CookStep({
 
       <div className="flex flex-col gap-2">
         <p className="border-l-2 border-cardamom pl-3 font-body text-sm text-ink/70">
-          <span className="font-meta uppercase tracking-wide text-cardamom">Visual cue — </span>
+          <span className="font-meta uppercase tracking-wide text-cardamom">
+            {dict.recipeSteps.visualCue}
+          </span>
           {step.visualCue}
         </p>
         <p className="border-l-2 border-paprika pl-3 font-body text-sm text-ink/70">
-          <span className="font-meta uppercase tracking-wide text-paprika">Common mistake — </span>
+          <span className="font-meta uppercase tracking-wide text-paprika">
+            {dict.recipeSteps.commonMistake}
+          </span>
           {step.commonMistake}
         </p>
       </div>
@@ -112,7 +122,7 @@ export function CookStep({
           onChange={onToggleChecked}
           className="h-4 w-4 accent-turmeric"
         />
-        Mark step done
+        {dict.cookMode.markStepDone}
       </label>
     </div>
   );

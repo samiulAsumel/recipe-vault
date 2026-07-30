@@ -1,12 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { CookStep } from "@/components/recipe/CookStep";
 import { useRecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
 import { useCookTimers, type TimerEntry } from "@/components/recipe/useCookTimers";
 import { useWakeLock } from "@/components/recipe/useWakeLock";
+import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
 import { primeTimerAudio, playTimerBeep } from "@/lib/recipe/beep";
-import { buildIngredientMap } from "@/lib/recipe/instructions";
+import { applyIngredientTranslations, buildIngredientMap } from "@/lib/recipe/instructions";
 import { readJson, remove, writeJson } from "@/lib/storage/local";
 import type { FullRecipe } from "@/lib/types/recipe";
 
@@ -28,31 +30,52 @@ interface CookModeProps {
 
 export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
   const { isCookMode, closeCookMode, servings, setServings } = useRecipeWorkspace();
+  const locale = getLocaleFromPathname(usePathname());
+  const dict = getDictionary(locale);
+  const bn = locale === "bn" ? dish.translations?.bn : undefined;
+  const dishName = bn?.name ?? dish.name;
+  const miseEnPlace = bn?.miseEnPlace ?? dish.miseEnPlace;
+  const steps = useMemo(
+    () =>
+      dish.steps.map((step) => {
+        const t = bn?.steps?.[step.stepNumber];
+        if (!t) return step;
+        return {
+          ...step,
+          title: t.title ?? step.title,
+          instruction: t.instruction ?? step.instruction,
+          technique: t.technique ?? step.technique,
+          visualCue: t.visualCue ?? step.visualCue,
+          commonMistake: t.commonMistake ?? step.commonMistake,
+        };
+      }),
+    [dish.steps, bn],
+  );
   const storageKey = `cook:${dish.id}`;
-  const hasMiseEnPlace = dish.miseEnPlace.length > 0;
+  const hasMiseEnPlace = miseEnPlace.length > 0;
 
   const [currentIndex, setCurrentIndex] = useState(hasMiseEnPlace ? -1 : 0);
   const [checkedSteps, setCheckedSteps] = useState<number[]>([]);
-  const [prepChecked, setPrepChecked] = useState<boolean[]>(() => dish.miseEnPlace.map(() => false));
+  const [prepChecked, setPrepChecked] = useState<boolean[]>(() => miseEnPlace.map(() => false));
   const [timerAnnouncement, setTimerAnnouncement] = useState("");
   const hasRestoredRef = useRef(false);
   const dialogRef = useRef<HTMLDivElement>(null);
 
   const handleTimerComplete = useCallback(
     (stepNumber: number) => {
-      const step = dish.steps.find((s) => s.stepNumber === stepNumber);
-      setTimerAnnouncement(`Timer for ${step ? step.title : `step ${stepNumber}`} is done.`);
+      const step = steps.find((s) => s.stepNumber === stepNumber);
+      setTimerAnnouncement(dict.cookMode.timerDoneAnnouncement(step ? step.title : `#${stepNumber}`));
       playTimerBeep();
     },
-    [dish.steps],
+    [steps, dict],
   );
 
   const timers = useCookTimers(handleTimerComplete);
   useWakeLock(isCookMode);
 
   const ingredientMap = useMemo(
-    () => buildIngredientMap(dish.ingredientGroups),
-    [dish.ingredientGroups],
+    () => buildIngredientMap(applyIngredientTranslations(dish.ingredientGroups, bn)),
+    [dish.ingredientGroups, bn],
   );
 
   // Restore persisted progress once per mount, after hydration — never read localStorage during
@@ -112,15 +135,15 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
 
   if (!isCookMode) return null;
 
-  const totalSteps = dish.steps.length;
+  const totalSteps = steps.length;
   const isPrepPhase = currentIndex === -1;
   const isAtStart = currentIndex <= (hasMiseEnPlace ? -1 : 0);
   const isLastStep = currentIndex === totalSteps - 1;
   // Derived directly from render state (not an effect) — the aria-live region announces
   // this automatically whenever its text changes, which is exactly on step navigation.
   const stepAnnouncement = isPrepPhase
-    ? "Mise en place"
-    : `Step ${currentIndex + 1} of ${totalSteps}: ${dish.steps[currentIndex].title}`;
+    ? dict.cookMode.miseEnPlace
+    : dict.cookMode.stepAnnouncement(currentIndex + 1, totalSteps, steps[currentIndex].title);
 
   function goNext(): void {
     if (currentIndex < totalSteps - 1) setCurrentIndex(currentIndex + 1);
@@ -146,7 +169,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
       ref={dialogRef}
       role="dialog"
       aria-modal="true"
-      aria-label={`Cook Mode — ${dish.name}`}
+      aria-label={dict.cookMode.ariaLabel(dishName)}
       tabIndex={-1}
       className="fixed inset-0 z-50 flex flex-col bg-parchment"
     >
@@ -159,17 +182,19 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
 
       <header className="flex items-center justify-between gap-4 border-b border-clay-line px-6 py-4">
         <div className="flex items-center gap-3">
-          <h1 className="font-display text-xl text-ink">{dish.name}</h1>
+          <h1 className="font-display text-xl text-ink">{dishName}</h1>
           <span className="font-meta text-xs uppercase tracking-wide text-ink/50">
-            {isPrepPhase ? "Mise en place" : `Step ${currentIndex + 1} / ${totalSteps}`}
+            {isPrepPhase ? dict.cookMode.miseEnPlace : dict.cookMode.stepStatus(currentIndex + 1, totalSteps)}
           </span>
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2 border border-clay-line px-3 py-1">
-            <span className="font-meta text-xs uppercase tracking-wide text-ink/50">Servings</span>
+            <span className="font-meta text-xs uppercase tracking-wide text-ink/50">
+              {dict.cookMode.servings}
+            </span>
             <button
               type="button"
-              aria-label="Decrease servings"
+              aria-label={dict.cookMode.decreaseServings}
               onClick={() => setServings(Math.max(1, servings - 1))}
               className="flex h-6 w-6 items-center justify-center border border-clay-line hover:border-ink"
             >
@@ -178,7 +203,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
             <span className="w-5 text-center font-meta text-sm">{servings}</span>
             <button
               type="button"
-              aria-label="Increase servings"
+              aria-label={dict.cookMode.increaseServings}
               onClick={() => setServings(servings + 1)}
               className="flex h-6 w-6 items-center justify-center border border-clay-line hover:border-ink"
             >
@@ -186,14 +211,14 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
             </button>
           </div>
           <button type="button" onClick={closeCookMode} className="font-meta text-sm text-paprika hover:underline">
-            Close
+            {dict.cookMode.close}
           </button>
         </div>
       </header>
 
       <div className="flex flex-1 overflow-hidden">
         <nav
-          aria-label="Steps"
+          aria-label={dict.cookMode.stepsAriaLabel}
           className="hidden w-64 shrink-0 overflow-y-auto border-r border-clay-line p-4 sm:block"
         >
           <ol className="flex flex-col gap-1">
@@ -209,11 +234,11 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
                       : "border-transparent text-ink/60 hover:text-ink"
                   }`}
                 >
-                  Mise en place
+                  {dict.cookMode.miseEnPlace}
                 </button>
               </li>
             )}
-            {dish.steps.map((step, index) => {
+            {steps.map((step, index) => {
               const info = timers.getInfo(step.stepNumber, step.durationMinutes);
               const isActive = currentIndex === index;
               return (
@@ -248,9 +273,9 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
           <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-8 px-6 py-8">
             {isPrepPhase ? (
               <div className="flex flex-col gap-4">
-                <h2 className="font-display text-2xl text-ink">Mise en place</h2>
+                <h2 className="font-display text-2xl text-ink">{dict.cookMode.miseEnPlace}</h2>
                 <ul className="flex flex-col gap-3">
-                  {dish.miseEnPlace.map((item, index) => (
+                  {miseEnPlace.map((item, index) => (
                     <li key={item}>
                       <label className="flex items-center gap-3 font-body text-base text-ink/90">
                         <input
@@ -267,34 +292,34 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
               </div>
             ) : (
               <CookStep
-                step={dish.steps[currentIndex]}
+                step={steps[currentIndex]}
                 ingredientMap={ingredientMap}
                 baseServings={dish.baseServings}
                 servings={servings}
-                isChecked={checkedSteps.includes(dish.steps[currentIndex].stepNumber)}
-                onToggleChecked={() => toggleStepChecked(dish.steps[currentIndex].stepNumber)}
+                isChecked={checkedSteps.includes(steps[currentIndex].stepNumber)}
+                onToggleChecked={() => toggleStepChecked(steps[currentIndex].stepNumber)}
                 timerInfo={timers.getInfo(
-                  dish.steps[currentIndex].stepNumber,
-                  dish.steps[currentIndex].durationMinutes,
+                  steps[currentIndex].stepNumber,
+                  steps[currentIndex].durationMinutes,
                 )}
                 onStartTimer={() => {
                   primeTimerAudio();
-                  timers.start(dish.steps[currentIndex].stepNumber, dish.steps[currentIndex].durationMinutes);
+                  timers.start(steps[currentIndex].stepNumber, steps[currentIndex].durationMinutes);
                 }}
-                onPauseTimer={() => timers.pause(dish.steps[currentIndex].stepNumber)}
+                onPauseTimer={() => timers.pause(steps[currentIndex].stepNumber)}
                 onResumeTimer={() => {
                   primeTimerAudio();
-                  timers.resume(dish.steps[currentIndex].stepNumber);
+                  timers.resume(steps[currentIndex].stepNumber);
                 }}
-                onResetTimer={() => timers.reset(dish.steps[currentIndex].stepNumber)}
-                onAddMinuteTimer={() => timers.addMinute(dish.steps[currentIndex].stepNumber)}
+                onResetTimer={() => timers.reset(steps[currentIndex].stepNumber)}
+                onAddMinuteTimer={() => timers.addMinute(steps[currentIndex].stepNumber)}
               />
             )}
           </div>
 
           <footer className="sticky bottom-0 flex items-center justify-between gap-4 border-t border-clay-line bg-parchment px-6 py-4">
             <button type="button" onClick={goPrevious} disabled={isAtStart} className={navButtonClass}>
-              Previous
+              {dict.cookMode.previous}
             </button>
             {isLastStep ? (
               <button
@@ -302,11 +327,11 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
                 onClick={finish}
                 className="border border-cardamom bg-cardamom/10 px-4 py-2 font-meta text-sm text-cardamom hover:border-ink"
               >
-                Finish
+                {dict.cookMode.finish}
               </button>
             ) : (
               <button type="button" onClick={goNext} className={navButtonClass}>
-                Next
+                {dict.cookMode.next}
               </button>
             )}
           </footer>

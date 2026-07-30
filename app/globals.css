@@ -40,6 +40,17 @@
   --accent-3: #e8e0d0;
 }
 
+/* Bengali pages wrap their content in a [lang="bn"] element (see
+   app/bn/layout.tsx) rather than swapping the shared <html> font — none of
+   the three Latin fonts above have Bengali glyphs, and Bengali typography
+   doesn't need separate display/body/meta families the way Latin does, so
+   one font covers all three roles here. */
+[lang="bn"] {
+  --font-display: var(--font-noto-bengali);
+  --font-body: var(--font-noto-bengali);
+  --font-meta: var(--font-noto-bengali);
+}
+
 @theme inline {
   --color-ink: var(--ink);
   --color-parchment: var(--parchment);

@@ -7,6 +7,7 @@ import { DishGrid } from "@/components/dish/DishGrid";
 import { FilterBar } from "@/components/filters/FilterBar";
 import type { ContinentSlug } from "@/lib/constants";
 import { filterDishes, matchesFilters, type DishFilters } from "@/lib/data/filters";
+import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
 import type { DietaryFlags, DishEntry, MealTime } from "@/lib/types/recipe";
 
 interface SearchResultsProps {
@@ -30,6 +31,8 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const locale = useMemo(() => getLocaleFromPathname(pathname), [pathname]);
+  const dict = getDictionary(locale);
   const query = searchParams.get("q")?.trim() ?? "";
 
   // Resets the input when `q` changes from outside (back/forward, a fresh link)
@@ -46,18 +49,34 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
 
   // Built once per dataset — structured filters are applied as a post-filter over
   // Fuse's ranked output below, rather than re-indexing per filter change.
+  // Bengali pages search the Bengali fields (falling back to English when a
+  // dish isn't translated yet) plus nativeName, rather than the English-only
+  // fields — matches by name/country/description alone previously ignored
+  // both nativeName and any translated content entirely.
   const fuse = useMemo(
     () =>
       new Fuse(dishes, {
-        keys: [
-          { name: "name", weight: 2 },
-          { name: "country", weight: 1 },
-          { name: "shortDescription", weight: 0.5 },
-        ],
+        keys:
+          locale === "bn"
+            ? [
+                { name: "name", weight: 2, getFn: (dish: DishEntry) => dish.translations?.bn?.name ?? dish.name },
+                { name: "nativeName", weight: 1.5 },
+                { name: "country", weight: 1 },
+                {
+                  name: "shortDescription",
+                  weight: 0.5,
+                  getFn: (dish: DishEntry) => dish.translations?.bn?.shortDescription ?? dish.shortDescription,
+                },
+              ]
+            : [
+                { name: "name", weight: 2 },
+                { name: "country", weight: 1 },
+                { name: "shortDescription", weight: 0.5 },
+              ],
         threshold: 0.35,
         ignoreLocation: true,
       }),
-    [dishes],
+    [dishes, locale],
   );
 
   const results = useMemo(() => {
@@ -67,8 +86,9 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
         .map((result) => result.item)
         .filter((dish) => matchesFilters(dish, filters));
     }
-    return [...filterDishes(dishes, filters)].sort((a, b) => a.name.localeCompare(b.name));
-  }, [dishes, filters, fuse, query]);
+    const collatorLocale = locale === "bn" ? "bn-BD" : "en-US";
+    return [...filterDishes(dishes, filters)].sort((a, b) => a.name.localeCompare(b.name, collatorLocale));
+  }, [dishes, filters, fuse, query, locale]);
 
   const occasionOptions = useMemo(() => {
     const tags = new Set<string>();
@@ -101,28 +121,29 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
         className="flex w-full max-w-xl items-center border border-clay-line bg-parchment focus-within:border-ink"
       >
         <label htmlFor="search-results-query" className="sr-only">
-          Search dishes, countries, or ingredients
+          {dict.search.srLabel}
         </label>
         <input
           id="search-results-query"
           type="search"
           value={queryInput}
           onChange={(event) => setQueryInput(event.target.value)}
-          placeholder="Search dishes, countries, or ingredients…"
+          placeholder={dict.search.placeholder}
           className="w-full bg-transparent px-4 py-3 font-body text-sm text-ink placeholder:text-ink/40 focus:outline-none"
         />
         <button
           type="submit"
           className="border-l border-clay-line px-4 py-3 font-meta text-xs uppercase tracking-wide text-ink/70 hover:text-turmeric"
         >
-          Search
+          {dict.search.submit}
         </button>
       </form>
 
       <FilterBar occasionOptions={occasionOptions} showContinent />
       <DishGrid
         dishes={results}
-        emptyMessage={query ? `No dishes match "${query}".` : "No dishes match these filters."}
+        emptyMessage={query ? dict.search.noResultsForQuery(query) : dict.search.noResultsFilters}
+        locale={locale}
       />
     </div>
   );

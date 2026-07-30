@@ -38,6 +38,67 @@ function checkOptionalArray(
   }
 }
 
+/** Shape-only check for translations.bn (DishTranslation) — mirrors the
+ * looseness of the healthInfo/story checks: every field is optional, arrays
+ * are checked for being arrays, ingredientItems/steps are checked for being
+ * plain keyed objects (not arrays) since they're Record<id, {...}> rather
+ * than positional lists. Not exhaustive per-item validation. */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function validateTranslations(value: any, fail: (field: string, message: string) => void): void {
+  if (value === undefined) return;
+  if (typeof value !== "object" || value === null) {
+    fail("translations", "translations must be an object when present");
+    return;
+  }
+  const bn = value.bn;
+  if (bn === undefined) return;
+  if (typeof bn !== "object" || bn === null) {
+    fail("translations.bn", "translations.bn must be an object when present");
+    return;
+  }
+  checkOptionalArray(bn.suitableFor, "translations.bn.suitableFor", fail);
+  checkOptionalArray(bn.pairedDrink, "translations.bn.pairedDrink", fail);
+  checkOptionalArray(bn.equipment, "translations.bn.equipment", fail);
+  checkOptionalArray(bn.miseEnPlace, "translations.bn.miseEnPlace", fail);
+  checkOptionalArray(bn.chefTips, "translations.bn.chefTips", fail);
+  checkOptionalArray(bn.regionalVariations, "translations.bn.regionalVariations", fail);
+  checkOptionalArray(bn.alternativeEquipment, "translations.bn.alternativeEquipment", fail);
+  checkOptionalArray(bn.commonMistakesSummary, "translations.bn.commonMistakesSummary", fail);
+  checkOptionalArray(bn.substitutions, "translations.bn.substitutions", fail);
+  checkOptionalArray(bn.recipeVariations, "translations.bn.recipeVariations", fail);
+  checkOptionalArray(bn.faq, "translations.bn.faq", fail);
+  if (bn.story !== undefined && (typeof bn.story !== "object" || bn.story === null)) {
+    fail("translations.bn.story", "must be an object when present");
+  }
+  if (bn.healthInfo !== undefined && (typeof bn.healthInfo !== "object" || bn.healthInfo === null)) {
+    fail("translations.bn.healthInfo", "must be an object when present");
+  }
+  if (
+    bn.servingSuggestions !== undefined &&
+    (typeof bn.servingSuggestions !== "object" || bn.servingSuggestions === null)
+  ) {
+    fail("translations.bn.servingSuggestions", "must be an object when present");
+  }
+  if (bn.storageDetails !== undefined && (typeof bn.storageDetails !== "object" || bn.storageDetails === null)) {
+    fail("translations.bn.storageDetails", "must be an object when present");
+  }
+  if (
+    bn.ingredientGroupNames !== undefined &&
+    (typeof bn.ingredientGroupNames !== "object" || bn.ingredientGroupNames === null || Array.isArray(bn.ingredientGroupNames))
+  ) {
+    fail("translations.bn.ingredientGroupNames", "must be a keyed object when present");
+  }
+  if (
+    bn.ingredientItems !== undefined &&
+    (typeof bn.ingredientItems !== "object" || bn.ingredientItems === null || Array.isArray(bn.ingredientItems))
+  ) {
+    fail("translations.bn.ingredientItems", "must be a keyed object when present, not an array");
+  }
+  if (bn.steps !== undefined && (typeof bn.steps !== "object" || bn.steps === null || Array.isArray(bn.steps))) {
+    fail("translations.bn.steps", "must be a keyed object when present, not an array");
+  }
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function validateDish(dish: any): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
@@ -112,6 +173,7 @@ export function validateDish(dish: any): ValidationIssue[] {
   } else if (dish?.story?.interestingFacts !== undefined) {
     checkOptionalArray(dish.story.interestingFacts, "story.interestingFacts", fail);
   }
+  validateTranslations(dish?.translations, fail);
 
   if (dish?.fullRecipeAvailable) {
     validateFullRecipe(dish, fail);

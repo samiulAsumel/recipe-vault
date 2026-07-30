@@ -3,6 +3,13 @@
 import { useCallback } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { CONTINENTS, DIETARY_FLAGS, MEAL_TIMES } from "@/lib/constants";
+import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
+import {
+  localizeContinentName,
+  localizeDietaryLabel,
+  localizeOccasionName,
+  MEAL_TIME_LABELS,
+} from "@/lib/i18n/labels";
 
 const PARAM = {
   dietary: "diet",
@@ -37,6 +44,8 @@ export function FilterBar({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const locale = getLocaleFromPathname(pathname);
+  const dict = getDictionary(locale);
 
   const getValues = (param: string): string[] => {
     const raw = searchParams.get(param);
@@ -68,30 +77,42 @@ export function FilterBar({
     <div className="sticky top-0 z-10 flex flex-col gap-4 border-b border-clay-line bg-parchment/95 py-4 backdrop-blur-sm">
       {showContinent && (
         <FilterGroup
-          legend="Continent"
-          options={CONTINENTS.map((continent) => ({ value: continent.slug, label: continent.name }))}
+          legend={dict.filters.continent}
+          options={CONTINENTS.map((continent) => ({
+            value: continent.slug,
+            label: localizeContinentName(continent.name, locale),
+          }))}
           active={continentValues}
           onToggle={(value) => setValues(PARAM.continent, toggleValue(continentValues, value))}
         />
       )}
       <FilterGroup
-        legend="Dietary"
-        options={DIETARY_FLAGS.map((flag) => ({ value: flag.key, label: flag.label }))}
+        legend={dict.filters.dietary}
+        options={DIETARY_FLAGS.map((flag) => ({
+          value: flag.key,
+          label: localizeDietaryLabel(flag.label, locale),
+        }))}
         active={dietaryValues}
         onToggle={(value) => setValues(PARAM.dietary, toggleValue(dietaryValues, value))}
       />
       {!hideMealTime && (
         <FilterGroup
-          legend="Meal time"
-          options={MEAL_TIMES.map((meal) => ({ value: meal.name, label: meal.name }))}
+          legend={dict.filters.mealTime}
+          options={MEAL_TIMES.map((meal) => ({
+            value: meal.name,
+            label: MEAL_TIME_LABELS[locale][meal.name],
+          }))}
           active={mealValues}
           onToggle={(value) => setValues(PARAM.mealTime, toggleValue(mealValues, value))}
         />
       )}
       {!hideOccasion && occasionOptions.length > 0 && (
         <FilterGroup
-          legend="Occasion"
-          options={occasionOptions.map((occasion) => ({ value: occasion, label: occasion }))}
+          legend={dict.filters.occasion}
+          options={occasionOptions.map((occasion) => ({
+            value: occasion,
+            label: localizeOccasionName(occasion, locale),
+          }))}
           active={occasionValues}
           onToggle={(value) => setValues(PARAM.occasion, toggleValue(occasionValues, value))}
         />
@@ -102,7 +123,7 @@ export function FilterBar({
           onClick={() => router.replace(pathname, { scroll: false })}
           className="self-start font-meta text-xs text-paprika hover:underline"
         >
-          Clear all filters
+          {dict.filters.clearAll}
         </button>
       )}
     </div>
