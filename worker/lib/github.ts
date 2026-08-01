@@ -35,14 +35,21 @@ export function gh(env: Env, path: string, init: RequestInit = {}): Promise<Resp
   });
 }
 
-/** Reads recipes/{filename}, returns its parsed dish array. Throws if the file is missing. */
+/**
+ * Reads recipes/{filename}, returns its parsed dish array. Throws if the file is missing.
+ * Uses the raw media type rather than the default JSON+base64 response: GitHub's Contents
+ * API only inlines `content` for files under 1MB, and country files (e.g. bangladesh.json
+ * with full Section 4-23 content for 50+ dishes) now exceed that. The raw media type
+ * supports files up to 100MB.
+ */
 export async function fetchCountryFile(env: Env, filename: string): Promise<Dish[]> {
-  const res = await gh(env, `contents/${DIR}/${filename}?ref=${BRANCH}`);
+  const res = await gh(env, `contents/${DIR}/${filename}?ref=${BRANCH}`, {
+    headers: { Accept: "application/vnd.github.raw+json" },
+  });
   if (!res.ok) {
     throw new Error(`failed to read ${filename}: ${res.status}`);
   }
-  const meta = (await res.json()) as GitHubFileContent;
-  return JSON.parse(fromBase64Utf8(meta.content)) as Dish[];
+  return JSON.parse(await res.text()) as Dish[];
 }
 
 /**
@@ -63,7 +70,12 @@ export async function readCountryFile(
     throw new Error(`failed to read ${slug}.json: ${res.status}`);
   }
   const meta = (await res.json()) as GitHubFileContent;
-  return { dishes: JSON.parse(fromBase64Utf8(meta.content)) as Dish[], sha: meta.sha };
+  if (meta.content) {
+    return { dishes: JSON.parse(fromBase64Utf8(meta.content)) as Dish[], sha: meta.sha };
+  }
+  // Over the 1MB inline-content limit — meta.sha is still present, fall back to
+  // a raw fetch for the body (see fetchCountryFile).
+  return { dishes: await fetchCountryFile(env, `${slug}.json`), sha: meta.sha };
 }
 
 /**
