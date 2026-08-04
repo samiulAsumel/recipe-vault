@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ConfidenceBadge } from "@/components/dish/ConfidenceBadge";
 import { getDictionary, type Locale } from "@/lib/i18n";
-import { DIFFICULTY_LABELS } from "@/lib/i18n/labels";
+import { DIFFICULTY_LABELS, localizeCountryName } from "@/lib/i18n/labels";
 import { formatMinutesLabel } from "@/lib/recipe/timers";
 import type { DishEntry } from "@/lib/types/recipe";
 
@@ -41,7 +41,9 @@ export function DishCard({ dish, locale = "en" }: DishCardProps): React.JSX.Elem
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-clay-line/10">
-            <span className="font-meta text-xs uppercase tracking-wide text-ink/30">{dish.country}</span>
+            <span className="font-meta text-xs uppercase tracking-wide text-ink/30">
+              {localizeCountryName(dish.country, locale)}
+            </span>
           </div>
         )}
       </div>

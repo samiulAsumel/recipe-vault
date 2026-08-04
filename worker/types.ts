@@ -217,6 +217,7 @@ export interface DishTranslation {
       technique?: string;
       visualCue?: string;
       commonMistake?: string;
+      heat?: { level?: string; flameNote?: string };
     }
   >;
   substitutions?: Substitution[];

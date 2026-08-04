@@ -220,7 +220,8 @@ export interface DishTranslation {
     string,
     { name?: string; unit?: string; prepNote?: string; alternatives?: string[] }
   >;
-  /** Keyed by RecipeStep.stepNumber. */
+  /** Keyed by RecipeStep.stepNumber. tempC is never translated — it's a
+   * number, not prose — only the descriptive level/flameNote text is. */
   steps?: Record<
     number,
     {
@@ -229,6 +230,7 @@ export interface DishTranslation {
       technique?: string;
       visualCue?: string;
       commonMistake?: string;
+      heat?: { level?: string; flameNote?: string };
     }
   >;
   substitutions?: Substitution[];

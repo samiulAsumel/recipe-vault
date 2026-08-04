@@ -47,6 +47,11 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
           technique: t.technique ?? step.technique,
           visualCue: t.visualCue ?? step.visualCue,
           commonMistake: t.commonMistake ?? step.commonMistake,
+          heat: step.heat && {
+            ...step.heat,
+            level: t.heat?.level ?? step.heat.level,
+            flameNote: t.heat?.flameNote ?? step.heat.flameNote,
+          },
         };
       }),
     [dish.steps, bn],

@@ -68,6 +68,14 @@ const CONTINENT_LABELS_BN: Record<string, string> = {
   Oceania: "ওশেনিয়া",
 };
 
+// Only the countries with published recipes need an entry — an untranslated
+// country not yet in this table falls back to its English name (see
+// localizeCountryName below), same convention as occasion tags.
+const COUNTRY_LABELS_BN: Record<string, string> = {
+  Bangladesh: "বাংলাদেশ",
+  India: "ভারত",
+};
+
 const OCCASION_LABELS_BN: Record<string, string> = {
   "Street Food": "স্ট্রিট ফুড",
   "Festival Food": "উৎসবের খাবার",
@@ -91,6 +99,10 @@ const DIETARY_LABELS_BN: Record<string, string> = {
  * rather than showing nothing. */
 export function localizeContinentName(name: string, locale: Locale): string {
   return locale === "bn" ? (CONTINENT_LABELS_BN[name] ?? name) : name;
+}
+
+export function localizeCountryName(name: string, locale: Locale): string {
+  return locale === "bn" ? (COUNTRY_LABELS_BN[name] ?? name) : name;
 }
 
 export function localizeOccasionName(name: string, locale: Locale): string {

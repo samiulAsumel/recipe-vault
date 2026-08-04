@@ -23,6 +23,8 @@ export function RecipeSteps({ dish, locale = "en" }: RecipeStepsProps): React.JS
         const title = translatedStep?.title ?? step.title;
         const visualCue = translatedStep?.visualCue ?? step.visualCue;
         const commonMistake = translatedStep?.commonMistake ?? step.commonMistake;
+        const heatLevel = translatedStep?.heat?.level ?? step.heat?.level;
+        const heatFlameNote = translatedStep?.heat?.flameNote ?? step.heat?.flameNote;
 
         return (
           <li key={step.stepNumber} className="border border-clay-line p-5">
@@ -40,11 +42,11 @@ export function RecipeSteps({ dish, locale = "en" }: RecipeStepsProps): React.JS
 
             {step.heat && (
               <p className="mt-1 font-meta text-xs text-paprika">
-                {step.heat.level}
+                {heatLevel}
                 {formatTemperature(step.heat.tempC)
                   ? ` · ${formatTemperature(step.heat.tempC)}`
                   : ""}
-                {step.heat.flameNote ? ` — ${step.heat.flameNote}` : ""}
+                {heatFlameNote ? ` — ${heatFlameNote}` : ""}
               </p>
             )}
 

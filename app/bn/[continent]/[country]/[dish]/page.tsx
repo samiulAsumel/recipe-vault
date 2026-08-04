@@ -18,7 +18,7 @@ import { CONTINENTS, EMPTY_STATIC_PARAM } from "@/lib/constants";
 import { getAllDishes, getDish } from "@/lib/data/source";
 import { getSiteUrl } from "@/lib/env";
 import { bn as dict } from "@/lib/i18n/dictionaries/bn";
-import { localizeContinentName } from "@/lib/i18n/labels";
+import { localizeContinentName, localizeCountryName } from "@/lib/i18n/labels";
 import { buildFaqJsonLd, buildRecipeJsonLd } from "@/lib/recipe/jsonld";
 import { isFullRecipe } from "@/lib/types/recipe";
 
@@ -148,7 +148,7 @@ export default async function DishPageBn({
               href={`/bn/${dish.continentSlug}/${dish.countrySlug}/`}
               className="hover:text-turmeric"
             >
-              {dish.country}
+              {localizeCountryName(dish.country, "bn")}
             </Link>
           </div>
           <div className="flex items-start justify-between gap-4">

@@ -8,7 +8,7 @@ import { FilteredDishes } from "@/components/filters/FilteredDishes";
 import { CONTINENTS, EMPTY_STATIC_PARAM, isContinentSlug } from "@/lib/constants";
 import { getAllDishes, getCountriesByContinent, getDishesByCountry } from "@/lib/data/source";
 import { bn as dict } from "@/lib/i18n/dictionaries/bn";
-import { localizeContinentName } from "@/lib/i18n/labels";
+import { localizeContinentName, localizeCountryName } from "@/lib/i18n/labels";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
@@ -36,7 +36,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { continent, country } = await params;
   const dishes = await getDishesByCountry(country);
-  const name = dishes[0]?.country ?? country;
+  const name = localizeCountryName(dishes[0]?.country ?? country, "bn");
   return buildPageMetadata({
     title: name,
     description: dict.country.metaDescription(dishes.length, name),
@@ -71,7 +71,9 @@ export default async function CountryPageBn({
         >
           {localizeContinentName(continentMeta?.name ?? continent, "bn")}
         </Link>
-        <h1 className="font-display text-5xl text-ink">{dishes[0].country}</h1>
+        <h1 className="font-display text-5xl text-ink">
+          {localizeCountryName(dishes[0].country, "bn")}
+        </h1>
         <AtlasRule />
       </header>
 

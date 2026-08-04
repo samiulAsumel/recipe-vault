@@ -3,7 +3,7 @@ import { AtlasPin } from "@/components/atlas/AtlasPin";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
 import { getDictionary, type Locale } from "@/lib/i18n";
-import { localizeContinentName } from "@/lib/i18n/labels";
+import { localizeContinentName, localizeCountryName } from "@/lib/i18n/labels";
 import type { DishEntry } from "@/lib/types/recipe";
 
 interface DiscoveryDetailProps {
@@ -38,7 +38,7 @@ export function DiscoveryDetail({
             href={`${prefix}/${dish.continentSlug}/${dish.countrySlug}/`}
             className="hover:text-turmeric"
           >
-            {dish.country}
+            {localizeCountryName(dish.country, locale)}
           </Link>
         </div>
         <div className="flex items-start justify-between gap-4">
