@@ -2,12 +2,21 @@ name = "world-kitchen-atlas-proxy"
 main = "worker/index.ts"
 compatibility_date = "2026-07-28"
 
-# Shared by visit counters (Section 10, "visits:"-prefixed keys) and the admin
-# panel's credentials/session-throttle state ("admin:"-prefixed keys) — one
-# namespace, two independent key spaces, no collision.
+# Admin panel's credentials/login-throttle state ("admin:"-prefixed keys).
 [[kv_namespaces]]
 binding = "ANALYTICS"
 id = "ec7d5dbcc7ef4089bdae873701eb7d27"
+
+# Section 10 visit counters — SQLite-backed Durable Object, not KV: KV caps
+# writes at 1/second per key and 1,000/day on the free plan, both of which a
+# per-pageview counter on "visits:total" would hit under real traffic.
+[[durable_objects.bindings]]
+name = "VISITS"
+class_name = "VisitCounter"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VisitCounter"]
 
 # Secrets (never committed):
 #   wrangler secret put GITHUB_TOKEN     fine-grained PAT, Contents: Read & write

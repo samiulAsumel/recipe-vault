@@ -10,9 +10,12 @@
 //    wrangler secret put SESSION_SECRET   32 random bytes, base64 (openssl rand -base64 32)
 //
 //  KV binding: ANALYTICS (see wrangler.toml)
-//    visits:total / visits:daily:{date} / visits:country:{id} / visits:dish:{id}
 //    admin:credentials         — PBKDF2 hash + mustChangePassword + passwordVersion
 //    admin:loginfail:{ip}      — failed-login throttle counter, 900s TTL
+//
+//  Durable Object binding: VISITS (see wrangler.toml, worker/VisitCounter.ts)
+//    SQLite-backed visit counters — pageviews, unique visitors, top
+//    country/dish pages, visitor geography, top referrers.
 //
 //  Public endpoints:
 //    GET  /                                        -> { countries: CountrySummary[] }
@@ -47,6 +50,8 @@ import {
   handleAnalytics,
 } from "./routes/admin";
 
+export { VisitCounter } from "./VisitCounter";
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     if (request.method === "OPTIONS") {
@@ -68,7 +73,7 @@ export default {
           return await handleCountryBySlug(env, segments[1]);
         }
         if (segments.length === 2 && segments[0] === "api" && segments[1] === "track") {
-          return await handleTrack(env, url);
+          return await handleTrack(env, request, url);
         }
         return errorResponse(404, "not_found", `No route for ${url.pathname}.`);
       }

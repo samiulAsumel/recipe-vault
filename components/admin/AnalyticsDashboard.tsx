@@ -29,9 +29,11 @@ export function AnalyticsDashboard(): React.JSX.Element {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="grid grid-cols-2 gap-4 sm:max-w-sm">
-        <StatTile label="Total visits" value={summary.total} />
-        <StatTile label="Today" value={summary.today} />
+      <div className="grid grid-cols-2 gap-4 sm:max-w-lg sm:grid-cols-4">
+        <StatTile label="Total views" value={summary.total} />
+        <StatTile label="Views today" value={summary.today} />
+        <StatTile label="Unique today" value={summary.uniqueToday} />
+        <StatTile label="Unique total" value={summary.uniqueTotal} />
       </div>
 
       <DailyChart daily={summary.daily} />
@@ -39,6 +41,8 @@ export function AnalyticsDashboard(): React.JSX.Element {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <TopList title="Top countries" entries={summary.topCountries} />
         <TopList title="Top dishes" entries={summary.topDishes} />
+        <TopList title="Visitor geography" entries={summary.topGeo} />
+        <TopList title="Top referrers" entries={summary.topReferrers} />
       </div>
     </div>
   );
@@ -85,17 +89,19 @@ const GRID_FRACTIONS = [0.25, 0.5, 0.75, 1];
 
 function DailyChart({ daily }: { daily: DailyCount[] }): React.JSX.Element {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
-  const max = Math.max(1, ...daily.map((d) => d.count));
+  const max = Math.max(1, ...daily.map((d) => d.views));
   const innerWidth = CHART_WIDTH - CHART_PADDING * 2;
   const innerHeight = CHART_HEIGHT - CHART_PADDING * 2;
 
-  const points = daily.map((d, index) => ({
-    ...d,
-    x: CHART_PADDING + (daily.length === 1 ? 0 : (index / (daily.length - 1)) * innerWidth),
-    y: CHART_HEIGHT - CHART_PADDING - (d.count / max) * innerHeight,
-  }));
+  const toX = (index: number): number =>
+    CHART_PADDING + (daily.length === 1 ? 0 : (index / (daily.length - 1)) * innerWidth);
+  const toY = (count: number): number => CHART_HEIGHT - CHART_PADDING - (count / max) * innerHeight;
 
-  const pathD = points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ");
+  const points = daily.map((d, index) => ({ ...d, x: toX(index), y: toY(d.views) }));
+  const visitorPoints = daily.map((d, index) => ({ ...d, x: toX(index), y: toY(d.visitors) }));
+
+  const viewsPath = points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ");
+  const visitorsPath = visitorPoints.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ");
 
   const handlePointerMove = (event: React.PointerEvent<SVGSVGElement>): void => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -116,7 +122,17 @@ function DailyChart({ daily }: { daily: DailyCount[] }): React.JSX.Element {
 
   return (
     <div className="flex flex-col gap-2">
-      <h3 className="font-display text-lg text-ink">Last 30 days</h3>
+      <div className="flex items-center justify-between">
+        <h3 className="font-display text-lg text-ink">Last 30 days</h3>
+        <div className="flex items-center gap-4 font-meta text-xs text-ink/60">
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-0.5 w-3 bg-turmeric" /> Views
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-0.5 w-3 bg-cardamom" /> Unique visitors
+          </span>
+        </div>
+      </div>
       <div className="relative border border-clay-line p-4">
         <svg
           viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
@@ -124,7 +140,7 @@ function DailyChart({ daily }: { daily: DailyCount[] }): React.JSX.Element {
           onPointerMove={handlePointerMove}
           onPointerLeave={() => setHoverIndex(null)}
           role="img"
-          aria-label="Daily visits over the last 30 days"
+          aria-label="Daily views and unique visitors over the last 30 days"
         >
           {GRID_FRACTIONS.map((fraction) => (
             <line
@@ -138,7 +154,15 @@ function DailyChart({ daily }: { daily: DailyCount[] }): React.JSX.Element {
             />
           ))}
           <path
-            d={pathD}
+            d={visitorsPath}
+            fill="none"
+            stroke="var(--cardamom)"
+            strokeWidth={2}
+            strokeLinejoin="round"
+            strokeLinecap="round"
+          />
+          <path
+            d={viewsPath}
             fill="none"
             stroke="var(--turmeric)"
             strokeWidth={2}
@@ -164,6 +188,14 @@ function DailyChart({ daily }: { daily: DailyCount[] }): React.JSX.Element {
                 stroke="var(--parchment)"
                 strokeWidth={2}
               />
+              <circle
+                cx={visitorPoints[hoverIndex ?? 0].x}
+                cy={visitorPoints[hoverIndex ?? 0].y}
+                r={4}
+                fill="var(--cardamom)"
+                stroke="var(--parchment)"
+                strokeWidth={2}
+              />
             </>
           )}
         </svg>
@@ -173,7 +205,8 @@ function DailyChart({ daily }: { daily: DailyCount[] }): React.JSX.Element {
             style={{ left: `${(hovered.x / CHART_WIDTH) * 100}%`, transform: "translateX(-50%)" }}
           >
             <div className="text-ink/60">{hovered.date}</div>
-            <div className="font-medium">{hovered.count.toLocaleString()} visits</div>
+            <div className="font-medium">{hovered.views.toLocaleString()} views</div>
+            <div className="font-medium">{hovered.visitors.toLocaleString()} unique</div>
           </div>
         )}
       </div>
@@ -185,14 +218,16 @@ function DailyChart({ daily }: { daily: DailyCount[] }): React.JSX.Element {
           <thead>
             <tr className="border-b border-clay-line font-meta text-xs uppercase text-ink/50">
               <th className="py-1 font-medium">Date</th>
-              <th className="py-1 font-medium">Visits</th>
+              <th className="py-1 font-medium">Views</th>
+              <th className="py-1 font-medium">Unique</th>
             </tr>
           </thead>
           <tbody>
             {daily.map((d) => (
               <tr key={d.date} className="border-b border-clay-line/50">
                 <td className="py-1 font-meta text-xs text-ink/80">{d.date}</td>
-                <td className="py-1 font-meta text-xs text-ink/80">{d.count}</td>
+                <td className="py-1 font-meta text-xs text-ink/80">{d.views}</td>
+                <td className="py-1 font-meta text-xs text-ink/80">{d.visitors}</td>
               </tr>
             ))}
           </tbody>

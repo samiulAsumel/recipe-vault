@@ -1,10 +1,14 @@
+import type { VisitCounter } from "./VisitCounter";
+
 export interface Env {
   GITHUB_TOKEN: string;
   SESSION_SECRET: string;
-  // Shared with the Section 10 visit-counter endpoint (routes/public.ts).
-  // Admin keys are "admin:"-prefixed, visit counters "visits:"-prefixed —
-  // one namespace, no collision.
+  // Admin credentials + login-throttle state ("admin:"-prefixed keys).
   ANALYTICS: KVNamespace;
+  // Section 10 visit counters (routes/public.ts, worker/VisitCounter.ts) — a
+  // SQLite-backed Durable Object, not KV, so per-view writes never hit KV's
+  // 1-write-per-second-per-key or 1,000-writes/day free-plan limits.
+  VISITS: DurableObjectNamespace<VisitCounter>;
 }
 
 // Mirrors lib/types/recipe.ts's DishEntry. Duplicated (not imported) because the

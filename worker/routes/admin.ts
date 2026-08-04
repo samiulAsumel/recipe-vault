@@ -12,7 +12,7 @@ import {
 } from "../lib/credentials";
 import { issueToken, verifyToken, extractBearerToken, type Session } from "../lib/session";
 import { validateDish } from "../lib/validateDish";
-import { getAnalyticsSummary } from "../lib/analytics";
+import { getVisitCounter } from "../lib/analytics";
 
 function clientIp(request: Request): string {
   return request.headers.get("CF-Connecting-IP") ?? "unknown";
@@ -155,7 +155,7 @@ export async function handleAnalytics(env: Env, request: Request): Promise<Respo
   const result = await requireFullAuth(env, request);
   if (result instanceof Response) return result;
 
-  const summary = await getAnalyticsSummary(env.ANALYTICS);
+  const summary = await getVisitCounter(env).summary();
   return withSessionHeader(adminJson(summary), result.renewedToken);
 }
 

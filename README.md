@@ -13,8 +13,10 @@ Build spec: [`docs/RECIPE_SITE_REBUILD_INSTRUCTION.md`](docs/RECIPE_SITE_REBUILD
   the build spec), read through the `world-kitchen-atlas-proxy` Cloudflare Worker (`worker/index.ts`)
   so the GitHub token never leaves the Worker. The Next.js build fetches from the Worker at build
   time (`lib/data/source.ts`), never from the browser — see "Data layer" below.
-- Other dynamic bits (admin login, visit counters — later phases) will live in the same Worker,
-  called via `fetch()` from the frontend
+- Admin login, CRUD, and visit tracking live in the same Worker, called via `fetch()` from
+  the frontend. Visit counters are a SQLite-backed Durable Object (`worker/VisitCounter.ts`),
+  not KV — KV's 1-write-per-second-per-key and 1,000-writes/day free-plan limits can't
+  survive a per-pageview counter under real traffic
 - Tailwind CSS v4, design tokens as CSS custom properties (`app/globals.css`)
 
 ## Getting started
@@ -40,7 +42,7 @@ This repo lives on an exFAT-mounted drive, which doesn't support symlinks. `.npm
 | `GET /` | `{ countries: CountrySummary[] }` |
 | `GET /dishes` | every dish entry across every country, merged |
 | `GET /countries/{slug}` | one country's entries (`X-Data-Sha` header), 404 if unknown |
-| `GET /api/track?page=&id=` | `{ ok: true }` — increments Cloudflare KV visit counters (Section 10); no cookies, no personal data. `page=country`/`dish` + a valid `id` also increments that item's own counter; any other input still counts toward the site-wide/daily totals rather than erroring |
+| `GET /api/track?page=&id=` | `{ ok: true }` — records one visit (Section 10). Fired by `components/layout/VisitBeacon.tsx` on every route change, including client-side navigation, on every page except `/admin`. `page=country`/`dish` + a valid `id` also increments that page's own counter; any other `page` value still counts toward the site-wide/daily totals rather than erroring. Bots and requests with no `User-Agent` are skipped. No cookies; the daily unique-visitor fingerprint is a one-way HMAC of IP + User-Agent + date (never the raw IP), rotating every day |
 | `POST /admin/login` | `{ token, expiresAt, mustChangePassword }` — PBKDF2 credential check, throttled after 8 failed attempts/IP/15min |
 | `GET /admin/session` | validates a Bearer token (used on page reload) |
 | `POST /admin/password` | changes the admin password, bumps `passwordVersion` (invalidates every existing token) |

@@ -2,7 +2,8 @@ import type { Env, GitHubFileContent } from "../types";
 import { SLUG_PATTERN, DIR, BRANCH } from "../types";
 import { json, errorResponse } from "../lib/http";
 import { gh, fromBase64Utf8, fetchAllDishes } from "../lib/github";
-import { incrementKvCounter } from "../lib/analytics";
+import { getVisitCounter, type PageKind } from "../lib/analytics";
+import { hmacSign } from "../lib/crypto";
 
 // GET /
 export async function handleRoot(env: Env): Promise<Response> {
@@ -51,23 +52,62 @@ export async function handleCountryBySlug(env: Env, slug: string): Promise<Respo
   });
 }
 
-// GET /api/track?page=&id=  — fire-and-forget visit counter, never errors
-// on malformed input: total + daily always increment, and a per-item counter
-// (country/dish) only when page and id are recognized and id passes the same
-// slug guard as /countries/{slug} (stops KV-key injection from arbitrary ids).
-export async function handleTrack(env: Env, url: URL): Promise<Response> {
-  const page = url.searchParams.get("page");
-  const id = url.searchParams.get("id");
-  const today = new Date().toISOString().slice(0, 10);
+const BOT_USER_AGENT =
+  /bot|crawl|spider|slurp|headless|lighthouse|preview|curl|wget|python-requests|facebookexternalhit/i;
 
-  const tasks = [
-    incrementKvCounter(env.ANALYTICS, "visits:total"),
-    incrementKvCounter(env.ANALYTICS, `visits:daily:${today}`),
-  ];
-  if ((page === "country" || page === "dish") && id && SLUG_PATTERN.test(id)) {
-    tasks.push(incrementKvCounter(env.ANALYTICS, `visits:${page}:${id}`));
+const TRACKABLE_PAGES = new Set<PageKind>(["home", "continent", "country", "dish", "other"]);
+
+function normalizePage(value: string | null): PageKind {
+  return value && TRACKABLE_PAGES.has(value as PageKind) ? (value as PageKind) : "other";
+}
+
+// GET /api/track?page=&id=  — fire-and-forget visit counter, never errors on
+// malformed input: unrecognized `page` values still count toward the
+// site-wide/daily totals rather than erroring. `id` only becomes a per-item
+// counter when `page` is "country"/"dish" and `id` passes the same slug
+// guard as /countries/{slug} (stops key injection from arbitrary ids). Bots
+// and requests with no User-Agent are skipped so they never inflate visitor
+// counts, but still get { ok: true } — a blocked beacon must never surface
+// as a client-side error.
+export async function handleTrack(env: Env, request: Request, url: URL): Promise<Response> {
+  const trackJson = json({ ok: true }, 200, { "Cache-Control": "no-store" });
+
+  const userAgent = request.headers.get("User-Agent") ?? "";
+  if (!userAgent || BOT_USER_AGENT.test(userAgent)) {
+    return trackJson;
   }
-  await Promise.all(tasks);
 
-  return json({ ok: true });
+  const page = normalizePage(url.searchParams.get("page"));
+  const id = url.searchParams.get("id");
+  const slug = (page === "country" || page === "dish") && id && SLUG_PATTERN.test(id) ? id : undefined;
+
+  const today = new Date().toISOString().slice(0, 10);
+  const ip = request.headers.get("CF-Connecting-IP") ?? "unknown";
+  // Rotates daily (the date is part of the payload) and never stores the raw
+  // IP — only a one-way HMAC of it, keyed by a secret never exposed client-side.
+  const fingerprint = await hmacSign(env.SESSION_SECRET, `${ip}:${userAgent}:${today}`);
+
+  const referrerHeader = request.headers.get("Referer");
+  let referrerHost: string | undefined;
+  if (referrerHeader) {
+    try {
+      const referrerUrl = new URL(referrerHeader);
+      if (referrerUrl.hostname !== url.hostname) referrerHost = referrerUrl.hostname;
+    } catch {
+      // Malformed Referer header — not a trackable referrer, ignore it.
+    }
+  }
+
+  const cfCountry = request.cf?.country;
+
+  await getVisitCounter(env).record({
+    date: today,
+    fingerprint,
+    page,
+    slug,
+    country: typeof cfCountry === "string" ? cfCountry : undefined,
+    referrerHost,
+  });
+
+  return trackJson;
 }

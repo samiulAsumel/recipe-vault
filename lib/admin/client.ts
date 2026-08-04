@@ -155,12 +155,13 @@ export function deleteDish(countrySlug: string, dishSlug: string, expectedSha: s
   });
 }
 
-// Mirrors worker/lib/analytics.ts's AnalyticsSummary — duplicated, not imported,
+// Mirrors worker/VisitCounter.ts's AnalyticsSummary — duplicated, not imported,
 // same reason the worker duplicates DishEntry (see worker/types.ts): the worker
 // bundles independently and doesn't share this app's tsconfig path aliases.
 export interface DailyCount {
   date: string;
-  count: number;
+  views: number;
+  visitors: number;
 }
 
 export interface TopEntry {
@@ -171,9 +172,13 @@ export interface TopEntry {
 export interface AnalyticsSummary {
   total: number;
   today: number;
+  uniqueToday: number;
+  uniqueTotal: number;
   daily: DailyCount[];
   topCountries: TopEntry[];
   topDishes: TopEntry[];
+  topGeo: TopEntry[];
+  topReferrers: TopEntry[];
 }
 
 export function fetchAnalytics(): Promise<AnalyticsSummary> {

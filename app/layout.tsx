@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono, Noto_Sans_Bengali } from "next/font/google";
 import { ContentProtection } from "@/components/layout/ContentProtection";
+import { VisitBeacon } from "@/components/layout/VisitBeacon";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import "./globals.css";
@@ -56,6 +57,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-screen flex-col bg-parchment text-ink">
         <ContentProtection />
+        <VisitBeacon />
         <SiteHeader />
         <div className="flex-1">{children}</div>
         <SiteFooter />
