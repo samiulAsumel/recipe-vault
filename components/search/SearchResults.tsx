@@ -78,6 +78,9 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
     [dishes, locale],
   );
 
+  // With an active query, Fuse's relevance ranking is the point — DishGrid is
+  // told to preserve it via `preserveOrder`. With no query, DishGrid applies
+  // its own locale-aware alphabetical sort, so no sorting happens here.
   const results = useMemo(() => {
     if (query) {
       return fuse
@@ -85,9 +88,8 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
         .map((result) => result.item)
         .filter((dish) => matchesFilters(dish, filters));
     }
-    const collatorLocale = locale === "bn" ? "bn-BD" : "en-US";
-    return [...filterDishes(dishes, filters)].sort((a, b) => a.name.localeCompare(b.name, collatorLocale));
-  }, [dishes, filters, fuse, query, locale]);
+    return filterDishes(dishes, filters);
+  }, [dishes, filters, fuse, query]);
 
   function submitQuery(next: string): void {
     const trimmed = next.trim();
@@ -132,6 +134,7 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
         dishes={results}
         emptyMessage={query ? dict.search.noResultsForQuery(query) : dict.search.noResultsFilters}
         locale={locale}
+        preserveOrder={Boolean(query)}
       />
     </div>
   );
