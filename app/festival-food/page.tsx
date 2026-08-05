@@ -27,7 +27,6 @@ export default async function FestivalFoodPage(): Promise<React.JSX.Element> {
         <FilteredDishes
           dishes={dishes}
           emptyMessage="No festival dishes documented yet."
-          hideOccasion
         />
       </Suspense>
     </main>

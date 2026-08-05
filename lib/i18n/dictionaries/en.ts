@@ -120,11 +120,7 @@ export const en = {
     continent: "Continent",
     dietary: "Dietary",
     mealTime: "Meal time",
-    occasion: "Occasion",
     clearAll: "Clear all filters",
-    clearOccasion: "Clear occasion filters",
-    occasionSearchPlaceholder: "Search occasions…",
-    occasionNoMatches: "No occasions match your search.",
   },
   dishGrid: {
     emptyDefault: "No dishes match yet.",

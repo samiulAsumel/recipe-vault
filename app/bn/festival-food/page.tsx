@@ -28,7 +28,6 @@ export default async function FestivalFoodPageBn(): Promise<React.JSX.Element> {
         <FilteredDishes
           dishes={dishes}
           emptyMessage={dict.mealHubs.festivalFood.emptyMessage}
-          hideOccasion
         />
       </Suspense>
     </main>

@@ -1,11 +1,10 @@
 import type { ContinentSlug } from "@/lib/constants";
-import type { DietaryFlags, DishEntry, MealTime, Occasion } from "@/lib/types/recipe";
+import type { DietaryFlags, DishEntry, MealTime } from "@/lib/types/recipe";
 
 export interface DishFilters {
   continentSlugs?: ContinentSlug[];
   countrySlug?: string;
   mealTime?: MealTime[];
-  occasion?: Occasion[];
   dietary?: Array<keyof DietaryFlags>;
   streetFood?: boolean;
 }
@@ -20,18 +19,6 @@ function matchesMealTime(entry: DishEntry, mealTime: MealTime[] | undefined): bo
   return mealTime.some((meal) => entry.mealTime.includes(meal));
 }
 
-/** Occasion is free-form per-dish content (Section 4) entered across many
- * recipe files over time, so the same real-world occasion sometimes ends up
- * spelled with different casing/whitespace between dishes (e.g. "Everyday
- * Lunch" vs "Everyday lunch") — match case/whitespace-insensitively so a
- * selected tag matches every dish that means it, not just the one dish that
- * happens to share its exact spelling. */
-function matchesOccasion(entry: DishEntry, occasion: Occasion[] | undefined): boolean {
-  if (!occasion || occasion.length === 0) return true;
-  const selected = new Set(occasion.map(normalizeOccasionTag));
-  return entry.occasion.some((tag) => selected.has(normalizeOccasionTag(tag)));
-}
-
 function normalizeOccasionTag(tag: string): string {
   return tag.trim().toLowerCase();
 }
@@ -42,16 +29,15 @@ function matchesDietary(entry: DishEntry, dietary: Array<keyof DietaryFlags> | u
 }
 
 /**
- * Section 6: dietary filters are AND logic; meal-time/occasion/continent are OR
- * within their own category, AND across categories (country/streetFood behave
- * as additional AND-joined criteria).
+ * Section 6: dietary filters are AND logic; meal-time/continent are OR within
+ * their own category, AND across categories (country/streetFood behave as
+ * additional AND-joined criteria).
  */
 export function matchesFilters(entry: DishEntry, filters: DishFilters): boolean {
   if (!matchesContinent(entry, filters.continentSlugs)) return false;
   if (filters.countrySlug && entry.countrySlug !== filters.countrySlug) return false;
   if (filters.streetFood !== undefined && entry.streetFood !== filters.streetFood) return false;
   if (!matchesMealTime(entry, filters.mealTime)) return false;
-  if (!matchesOccasion(entry, filters.occasion)) return false;
   if (!matchesDietary(entry, filters.dietary)) return false;
   return true;
 }

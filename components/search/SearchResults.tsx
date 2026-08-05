@@ -17,12 +17,10 @@ interface SearchResultsProps {
 
 function parseFilters(params: URLSearchParams): DishFilters {
   const meal = params.get("meal");
-  const occasion = params.get("occasion");
   const diet = params.get("diet");
   const continent = params.get("continent");
   return {
     mealTime: meal ? (meal.split(",") as MealTime[]) : undefined,
-    occasion: occasion ? occasion.split(",") : undefined,
     dietary: diet ? (diet.split(",") as Array<keyof DietaryFlags>) : undefined,
     continentSlugs: continent ? (continent.split(",") as ContinentSlug[]) : undefined,
   };
@@ -91,20 +89,6 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
     return [...filterDishes(dishes, filters)].sort((a, b) => a.name.localeCompare(b.name, collatorLocale));
   }, [dishes, filters, fuse, query, locale]);
 
-  const occasionOptions = useMemo(() => {
-    // See the identical normalization in FilteredDishes.tsx / lib/data/filters.ts —
-    // occasion is free-form content, so the same real-world occasion can appear
-    // with different casing/whitespace across recipe files.
-    const byNormalizedTag = new Map<string, string>();
-    for (const dish of dishes) {
-      for (const tag of dish.occasion) {
-        const key = tag.trim().toLowerCase();
-        if (!byNormalizedTag.has(key)) byNormalizedTag.set(key, tag.trim());
-      }
-    }
-    return [...byNormalizedTag.values()].sort((a, b) => a.localeCompare(b));
-  }, [dishes]);
-
   function submitQuery(next: string): void {
     const trimmed = next.trim();
     const params = new URLSearchParams(searchParams.toString());
@@ -143,7 +127,7 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
         </Button>
       </form>
 
-      <FilterBar occasionOptions={occasionOptions} showContinent />
+      <FilterBar showContinent />
       <DishGrid
         dishes={results}
         emptyMessage={query ? dict.search.noResultsForQuery(query) : dict.search.noResultsFilters}
