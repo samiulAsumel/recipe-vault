@@ -74,63 +74,71 @@ export function FilterBar({
   const continentValues = getValues(PARAM.continent);
   const hasActiveFilters =
     dietaryValues.length + mealValues.length + occasionValues.length + continentValues.length > 0;
+  const showOccasionRow = !hideOccasion && occasionOptions.length > 0;
+
+  const clearAllButton = (
+    <button
+      type="button"
+      onClick={() => router.replace(pathname, { scroll: false })}
+      className="font-meta text-xs text-paprika hover:underline"
+    >
+      {dict.filters.clearAll}
+    </button>
+  );
 
   return (
-    <div className="sticky top-0 z-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-clay-line bg-parchment/90 py-4 backdrop-blur-sm">
-      {showContinent && (
+    <div className="sticky top-0 z-10 flex flex-col gap-3 border-b border-clay-line bg-parchment/90 py-4 backdrop-blur-sm">
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+        {showContinent && (
+          <FilterGroup
+            legend={dict.filters.continent}
+            options={CONTINENTS.map((continent) => ({
+              value: continent.slug,
+              label: localizeContinentName(continent.name, locale),
+            }))}
+            active={continentValues}
+            onToggle={(value) => setValues(PARAM.continent, toggleValue(continentValues, value))}
+          />
+        )}
         <FilterGroup
-          legend={dict.filters.continent}
-          options={CONTINENTS.map((continent) => ({
-            value: continent.slug,
-            label: localizeContinentName(continent.name, locale),
+          legend={dict.filters.dietary}
+          options={DIETARY_FLAGS.map((flag) => ({
+            value: flag.key,
+            label: localizeDietaryLabel(flag.label, locale),
           }))}
-          active={continentValues}
-          onToggle={(value) => setValues(PARAM.continent, toggleValue(continentValues, value))}
+          active={dietaryValues}
+          onToggle={(value) => setValues(PARAM.dietary, toggleValue(dietaryValues, value))}
         />
-      )}
-      <FilterGroup
-        legend={dict.filters.dietary}
-        options={DIETARY_FLAGS.map((flag) => ({
-          value: flag.key,
-          label: localizeDietaryLabel(flag.label, locale),
-        }))}
-        active={dietaryValues}
-        onToggle={(value) => setValues(PARAM.dietary, toggleValue(dietaryValues, value))}
-      />
-      {!hideMealTime && (
-        <FilterGroup
-          legend={dict.filters.mealTime}
-          options={MEAL_TIMES.map((meal) => ({
-            value: meal.name,
-            label: MEAL_TIME_LABELS[locale][meal.name],
-          }))}
-          active={mealValues}
-          onToggle={(value) => setValues(PARAM.mealTime, toggleValue(mealValues, value))}
-        />
-      )}
-      {!hideOccasion && occasionOptions.length > 0 && (
-        <OccasionFilterPopover
-          legend={dict.filters.occasion}
-          clearLabel={dict.filters.clearOccasion}
-          searchPlaceholder={dict.filters.occasionSearchPlaceholder}
-          noMatchesLabel={dict.filters.occasionNoMatches}
-          options={occasionOptions.map((occasion) => ({
-            value: occasion,
-            label: localizeOccasionName(occasion, locale),
-          }))}
-          active={occasionValues}
-          onToggle={(value) => setValues(PARAM.occasion, toggleValue(occasionValues, value))}
-          onClear={() => setValues(PARAM.occasion, [])}
-        />
-      )}
-      {hasActiveFilters && (
-        <button
-          type="button"
-          onClick={() => router.replace(pathname, { scroll: false })}
-          className="font-meta text-xs text-paprika hover:underline"
-        >
-          {dict.filters.clearAll}
-        </button>
+        {!hideMealTime && (
+          <FilterGroup
+            legend={dict.filters.mealTime}
+            options={MEAL_TIMES.map((meal) => ({
+              value: meal.name,
+              label: MEAL_TIME_LABELS[locale][meal.name],
+            }))}
+            active={mealValues}
+            onToggle={(value) => setValues(PARAM.mealTime, toggleValue(mealValues, value))}
+          />
+        )}
+        {!showOccasionRow && hasActiveFilters && clearAllButton}
+      </div>
+      {showOccasionRow && (
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+          <OccasionFilterPopover
+            legend={dict.filters.occasion}
+            clearLabel={dict.filters.clearOccasion}
+            searchPlaceholder={dict.filters.occasionSearchPlaceholder}
+            noMatchesLabel={dict.filters.occasionNoMatches}
+            options={occasionOptions.map((occasion) => ({
+              value: occasion,
+              label: localizeOccasionName(occasion, locale),
+            }))}
+            active={occasionValues}
+            onToggle={(value) => setValues(PARAM.occasion, toggleValue(occasionValues, value))}
+            onClear={() => setValues(PARAM.occasion, [])}
+          />
+          {hasActiveFilters && clearAllButton}
+        </div>
       )}
     </div>
   );
@@ -230,8 +238,8 @@ function OccasionFilterPopover({
   }, [options, query]);
 
   return (
-    <div className="flex items-center gap-2 border-l border-clay-line pl-4">
-      <span className="font-meta text-xs uppercase tracking-wide text-ink/50">{legend}</span>
+    <div className="flex items-center gap-2">
+      <span className="mr-2 font-meta text-xs uppercase tracking-wide text-ink/50">{legend}</span>
       <div ref={containerRef} className="relative">
         <button
           type="button"
