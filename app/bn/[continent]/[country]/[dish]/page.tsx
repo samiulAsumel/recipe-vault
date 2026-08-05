@@ -7,6 +7,7 @@ import { AtlasPin } from "@/components/atlas/AtlasPin";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { DishPlaceholderArt } from "@/components/dish/DishPlaceholderArt";
 import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
+import { RelatedDishes } from "@/components/dish/RelatedDishes";
 import { CookMode } from "@/components/recipe/CookMode";
 import { CookModeLauncher } from "@/components/recipe/CookModeLauncher";
 import { DiscoveryDetail } from "@/components/recipe/DiscoveryDetail";
@@ -309,6 +310,8 @@ export default async function DishPageBn({
             />
           </section>
         )}
+
+        <RelatedDishes dish={dish} allDishes={allDishes} locale="bn" />
         </main>
         <CookMode dish={dish} />
       </RecipeWorkspace>

@@ -63,6 +63,9 @@ export function SiteHeader(): React.JSX.Element {
             <SearchIcon size={15} />
             {dict.nav.search}
           </Link>
+          <Link href={prefix("/substitutions")} className={buttonClasses("ghost", "sm")}>
+            {dict.nav.substitutions}
+          </Link>
           <Link href={prefix("/about")} className={buttonClasses("ghost", "sm")}>
             {dict.nav.about}
           </Link>
@@ -98,6 +101,7 @@ export function SiteHeader(): React.JSX.Element {
           ]}
           extraLinks={[
             { href: prefix("/search"), label: dict.nav.search },
+            { href: prefix("/substitutions"), label: dict.nav.substitutions },
             { href: prefix("/about"), label: dict.nav.about },
           ]}
           langToggle={{ href: langToggleHref, label: langToggleLabel, hrefLang: otherLocale }}

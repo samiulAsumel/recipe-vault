@@ -3,7 +3,7 @@ import { CONTINENTS, MEAL_TIMES, OCCASIONS } from "@/lib/constants";
 import { getAllDishes, getCountries } from "@/lib/data/source";
 import { getSiteUrl } from "@/lib/env";
 
-const STATIC_PATHS = ["/", "/search/", "/about/", "/submit-recipe/"];
+const STATIC_PATHS = ["/", "/search/", "/substitutions/", "/about/", "/submit-recipe/"];
 
 export const dynamic = "force-static";
 

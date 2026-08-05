@@ -10,6 +10,7 @@ export const en = {
   },
   nav: {
     search: "Search",
+    substitutions: "Substitutions",
     about: "About",
     continents: "Continents",
     browse: "Browse",
@@ -72,6 +73,19 @@ export const en = {
     noResultsForQuery: (q: string) => `No dishes match "${q}".`,
     noResultsFilters: "No dishes match these filters.",
   },
+  substitutions: {
+    metaTitle: "Ingredient Substitutions",
+    metaDescription:
+      "Search every documented ingredient substitution across the whole recipe database — what to use instead, and what changes when you do.",
+    heading: "Substitutions",
+    intro: "Search for an ingredient to see every documented swap for it, drawn from every recipe on the site.",
+    srLabel: "Search for an ingredient to substitute",
+    placeholder: "Search an ingredient, e.g. ghee, paneer, mutton…",
+    submit: "Search",
+    swapCount: (n: number) => `${n} documented ${n === 1 ? "swap" : "swaps"}`,
+    documentedIn: "Documented in:",
+    noResultsForQuery: (q: string) => `No documented substitutions for "${q}".`,
+  },
   submitRecipe: {
     metaTitle: "Submit a Recipe",
     metaDescription: "Share a dish for World Kitchen Atlas to research and add.",
@@ -109,6 +123,9 @@ export const en = {
     substitutions: "Substitutions",
     regionalVariations: "Regional variations",
     pairedDrink: "Paired drink",
+  },
+  relatedDishes: {
+    heading: "You Might Also Like",
   },
   discoveryDetail: {
     history: "History",

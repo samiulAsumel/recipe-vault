@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AtlasPin } from "@/components/atlas/AtlasPin";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
 import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
+import { RelatedDishes } from "@/components/dish/RelatedDishes";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { localizeContinentName, localizeCountryName } from "@/lib/i18n/labels";
 import type { DishEntry } from "@/lib/types/recipe";
@@ -87,6 +88,8 @@ export function DiscoveryDetail({
       <p className="rounded-[var(--radius-card)] border border-dashed border-clay-line p-8 text-center font-body text-sm text-ink/60">
         {dict.discoveryDetail.comingSoon}
       </p>
+
+      <RelatedDishes dish={dish} allDishes={allDishes} locale={locale} />
     </main>
   );
 }

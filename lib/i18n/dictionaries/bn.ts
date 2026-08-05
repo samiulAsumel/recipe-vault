@@ -14,6 +14,7 @@ export const bn: Dictionary = {
   },
   nav: {
     search: "অনুসন্ধান",
+    substitutions: "বিকল্প উপকরণ",
     about: "সম্পর্কে",
     continents: "মহাদেশ",
     browse: "ব্রাউজ করুন",
@@ -75,6 +76,19 @@ export const bn: Dictionary = {
     submit: "খুঁজুন",
     noResultsForQuery: (q) => `"${q}"-এর সাথে কোনো পদ মিলছে না।`,
     noResultsFilters: "এই ফিল্টারগুলোর সাথে কোনো পদ মিলছে না।",
+  },
+  substitutions: {
+    metaTitle: "বিকল্প উপকরণ",
+    metaDescription:
+      "পুরো রেসিপি ডেটাবেস জুড়ে নথিভুক্ত প্রতিটি উপকরণ বিকল্প খুঁজুন — কী ব্যবহার করবেন এবং তাতে কী পরিবর্তন হবে।",
+    heading: "বিকল্প উপকরণ",
+    intro: "কোনো উপকরণ খুঁজুন এবং সাইটের সব রেসিপি থেকে সংগৃহীত এর প্রতিটি নথিভুক্ত বিকল্প দেখুন।",
+    srLabel: "বিকল্পের জন্য একটি উপকরণ খুঁজুন",
+    placeholder: "একটি উপকরণ খুঁজুন, যেমন ঘি, পনির, খাসির মাংস…",
+    submit: "খুঁজুন",
+    swapCount: (n) => `${n}টি নথিভুক্ত বিকল্প`,
+    documentedIn: "যেখানে পাওয়া যাবে:",
+    noResultsForQuery: (q) => `"${q}"-এর জন্য কোনো নথিভুক্ত বিকল্প নেই।`,
   },
   submitRecipe: {
     metaTitle: "একটি রেসিপি জমা দিন",
@@ -145,6 +159,9 @@ export const bn: Dictionary = {
     substitutions: "বিকল্প উপকরণ",
     regionalVariations: "আঞ্চলিক ভিন্নতা",
     pairedDrink: "সাথের পানীয়",
+  },
+  relatedDishes: {
+    heading: "আপনার আরও ভালো লাগতে পারে",
   },
   discoveryDetail: {
     history: "ইতিহাস",
