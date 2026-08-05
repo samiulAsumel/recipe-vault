@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ConfidenceBadge } from "@/components/dish/ConfidenceBadge";
+import { DishPlaceholderArt } from "@/components/dish/DishPlaceholderArt";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { DIFFICULTY_LABELS, localizeCountryName } from "@/lib/i18n/labels";
 import { formatMinutesLabel } from "@/lib/recipe/timers";
@@ -28,7 +29,7 @@ export function DishCard({ dish, locale = "en" }: DishCardProps): React.JSX.Elem
     <Link
       href={href}
       data-region={dish.continentSlug}
-      className="group flex h-full flex-col border border-clay-line bg-parchment shadow-[0_1px_2px_rgba(36,27,20,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[0_10px_24px_rgba(36,27,20,0.14)]"
+      className="group flex h-full flex-col border border-clay-line bg-parchment shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[var(--shadow-lift)]"
     >
       <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-clay-line">
         {dish.heroImage ? (
@@ -40,11 +41,10 @@ export function DishCard({ dish, locale = "en" }: DishCardProps): React.JSX.Elem
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-clay-line/10">
-            <span className="font-meta text-xs uppercase tracking-wide text-ink/30">
-              {localizeCountryName(dish.country, locale)}
-            </span>
-          </div>
+          <DishPlaceholderArt
+            country={localizeCountryName(dish.country, locale)}
+            regionSlug={dish.continentSlug}
+          />
         )}
       </div>
 

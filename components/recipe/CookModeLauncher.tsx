@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { useRecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
+import { Button } from "@/components/ui/Button";
 import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
 
 /** Opens Cook Mode. Restores focus to itself when Cook Mode closes, per the
@@ -21,13 +22,8 @@ export function CookModeLauncher(): React.JSX.Element {
   }, [isCookMode]);
 
   return (
-    <button
-      ref={buttonRef}
-      type="button"
-      onClick={openCookMode}
-      className="border border-clay-line px-4 py-2 font-meta text-xs uppercase tracking-wide text-ink hover:border-ink"
-    >
+    <Button ref={buttonRef} variant="primary" onClick={openCookMode}>
       {dict.cookMode.startCooking}
-    </button>
+    </Button>
   );
 }

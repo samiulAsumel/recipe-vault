@@ -11,6 +11,11 @@ export const en = {
   nav: {
     search: "Search",
     about: "About",
+    continents: "Continents",
+    browse: "Browse",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    switchLanguage: "Switch language",
   },
   footer: {
     copyright: (year: number) =>
@@ -24,6 +29,7 @@ export const en = {
     browseByMealTime: "Browse by meal time",
     countryCount: (n: number): string => (n === 1 ? "country" : "countries"),
     dishCount: (n: number): string => (n === 1 ? "dish" : "dishes"),
+    comingSoonLabel: "Coming soon",
   },
   notFound: {
     title: "404",
@@ -116,6 +122,9 @@ export const en = {
     mealTime: "Meal time",
     occasion: "Occasion",
     clearAll: "Clear all filters",
+    clearOccasion: "Clear occasion filters",
+    occasionSearchPlaceholder: "Search occasions…",
+    occasionNoMatches: "No occasions match your search.",
   },
   dishGrid: {
     emptyDefault: "No dishes match yet.",

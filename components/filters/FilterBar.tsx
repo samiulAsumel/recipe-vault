@@ -1,7 +1,9 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { buttonClasses } from "@/components/ui/Button";
+import { ChevronDownIcon } from "@/components/ui/icons";
 import { CONTINENTS, DIETARY_FLAGS, MEAL_TIMES } from "@/lib/constants";
 import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
 import {
@@ -74,7 +76,7 @@ export function FilterBar({
     dietaryValues.length + mealValues.length + occasionValues.length + continentValues.length > 0;
 
   return (
-    <div className="sticky top-0 z-10 flex flex-col gap-4 border-b border-clay-line bg-parchment/95 py-4 backdrop-blur-sm">
+    <div className="sticky top-0 z-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-clay-line bg-parchment/95 py-4 backdrop-blur-sm">
       {showContinent && (
         <FilterGroup
           legend={dict.filters.continent}
@@ -107,21 +109,25 @@ export function FilterBar({
         />
       )}
       {!hideOccasion && occasionOptions.length > 0 && (
-        <FilterGroup
+        <OccasionFilterPopover
           legend={dict.filters.occasion}
+          clearLabel={dict.filters.clearOccasion}
+          searchPlaceholder={dict.filters.occasionSearchPlaceholder}
+          noMatchesLabel={dict.filters.occasionNoMatches}
           options={occasionOptions.map((occasion) => ({
             value: occasion,
             label: localizeOccasionName(occasion, locale),
           }))}
           active={occasionValues}
           onToggle={(value) => setValues(PARAM.occasion, toggleValue(occasionValues, value))}
+          onClear={() => setValues(PARAM.occasion, [])}
         />
       )}
       {hasActiveFilters && (
         <button
           type="button"
           onClick={() => router.replace(pathname, { scroll: false })}
-          className="self-start font-meta text-xs text-paprika hover:underline"
+          className="font-meta text-xs text-paprika hover:underline"
         >
           {dict.filters.clearAll}
         </button>
@@ -130,9 +136,14 @@ export function FilterBar({
   );
 }
 
+interface FilterOption {
+  value: string;
+  label: string;
+}
+
 interface FilterGroupProps {
   legend: string;
-  options: Array<{ value: string; label: string }>;
+  options: FilterOption[];
   active: string[];
   onToggle: (value: string) => void;
 }
@@ -162,5 +173,131 @@ function FilterGroup({ legend, options, active, onToggle }: FilterGroupProps): R
         );
       })}
     </fieldset>
+  );
+}
+
+interface OccasionFilterPopoverProps {
+  legend: string;
+  clearLabel: string;
+  searchPlaceholder: string;
+  noMatchesLabel: string;
+  options: FilterOption[];
+  active: string[];
+  onToggle: (value: string) => void;
+  onClear: () => void;
+}
+
+/** Occasion is a free-form, per-country tag list (India alone has ~60) — showing
+ * every tag inline as its own button would dwarf the actual dish grid, so this
+ * collapses the whole set behind one disclosure button with an in-panel search
+ * instead of following FilterGroup's flat-button pattern. */
+function OccasionFilterPopover({
+  legend,
+  clearLabel,
+  searchPlaceholder,
+  noMatchesLabel,
+  options,
+  active,
+  onToggle,
+  onClear,
+}: OccasionFilterPopoverProps): React.JSX.Element {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handlePointerDown(event: MouseEvent): void {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    function handleKeyDown(event: KeyboardEvent): void {
+      if (event.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
+
+  const filteredOptions = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return options;
+    return options.filter((option) => option.label.toLowerCase().includes(q));
+  }, [options, query]);
+
+  return (
+    <div ref={containerRef} className="relative">
+      <button
+        type="button"
+        aria-expanded={open}
+        onClick={() => setOpen((value) => !value)}
+        className={buttonClasses(active.length > 0 ? "primary" : "secondary", "sm", "gap-1.5")}
+      >
+        {legend}
+        {active.length > 0 && <span className="tabular-nums">({active.length})</span>}
+        <ChevronDownIcon size={12} className={open ? "rotate-180" : ""} />
+      </button>
+      {open && (
+        <div
+          role="dialog"
+          aria-label={legend}
+          className="absolute left-0 top-full z-20 mt-2 w-72 border border-clay-line bg-parchment shadow-[var(--shadow-lift)]"
+        >
+          <div className="border-b border-clay-line p-2">
+            <input
+              type="text"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder={searchPlaceholder}
+              autoFocus
+              className="w-full bg-transparent px-2 py-1.5 font-body text-sm text-ink placeholder:text-ink/40 focus:outline-none"
+            />
+          </div>
+          <ul className="max-h-64 overflow-y-auto p-2">
+            {filteredOptions.length === 0 && (
+              <li className="px-2 py-1.5 font-body text-sm text-ink/50">{noMatchesLabel}</li>
+            )}
+            {filteredOptions.map((option) => {
+              const isActive = active.includes(option.value);
+              return (
+                <li key={option.value}>
+                  <button
+                    type="button"
+                    aria-pressed={isActive}
+                    onClick={() => onToggle(option.value)}
+                    className={`flex w-full items-center gap-2 px-2 py-1.5 text-left font-body text-sm hover:bg-clay-line/10 ${
+                      isActive ? "text-ink" : "text-ink/70"
+                    }`}
+                  >
+                    <span
+                      aria-hidden
+                      className={`h-3.5 w-3.5 shrink-0 border ${
+                        isActive ? "border-accent-1 bg-accent-1" : "border-clay-line"
+                      }`}
+                    />
+                    {option.label}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          {active.length > 0 && (
+            <div className="border-t border-clay-line p-2">
+              <button
+                type="button"
+                onClick={onClear}
+                className="font-meta text-xs text-paprika hover:underline"
+              >
+                {clearLabel}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 }

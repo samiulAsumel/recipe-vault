@@ -1,3 +1,4 @@
+import { CalendarIcon, ChefHatIcon, ClockIcon, FlameIcon } from "@/components/ui/icons";
 import { DIETARY_FLAGS } from "@/lib/constants";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { DIFFICULTY_LABELS, localizeDietaryLabel, SPICE_LEVEL_LABELS } from "@/lib/i18n/labels";
@@ -21,16 +22,29 @@ export function RecipeSummary({ dish, locale = "en" }: RecipeSummaryProps): Reac
 
   return (
     <section className="flex flex-wrap items-center gap-x-8 gap-y-3 border-y border-clay-line py-4 font-meta text-xs text-ink/80">
-      <SummaryItem label={dict.recipeSummary.difficulty} value={DIFFICULTY_LABELS[locale][dish.difficulty]} />
       <SummaryItem
+        icon={<ChefHatIcon className="text-accent-1" />}
+        label={dict.recipeSummary.difficulty}
+        value={DIFFICULTY_LABELS[locale][dish.difficulty]}
+      />
+      <SummaryItem
+        icon={<ClockIcon className="text-accent-1" />}
         label={dict.recipeSummary.totalTime}
         value={formatMinutesLabel(dish.totalTimeMinutes, locale)}
       />
       {dish.spiceLevel && (
-        <SummaryItem label={dict.recipeSummary.spiceLevel} value={SPICE_LEVEL_LABELS[locale][dish.spiceLevel]} />
+        <SummaryItem
+          icon={<FlameIcon className="text-accent-2" />}
+          label={dict.recipeSummary.spiceLevel}
+          value={SPICE_LEVEL_LABELS[locale][dish.spiceLevel]}
+        />
       )}
       {suitableFor && suitableFor.length > 0 && (
-        <SummaryItem label={dict.recipeSummary.bestFor} value={suitableFor.join(", ")} />
+        <SummaryItem
+          icon={<CalendarIcon className="text-accent-3" />}
+          label={dict.recipeSummary.bestFor}
+          value={suitableFor.join(", ")}
+        />
       )}
       {activeDietary.length > 0 && (
         <div className="flex items-center gap-2">
@@ -48,9 +62,18 @@ export function RecipeSummary({ dish, locale = "en" }: RecipeSummaryProps): Reac
   );
 }
 
-function SummaryItem({ label, value }: { label: string; value: string }): React.JSX.Element {
+function SummaryItem({
+  icon,
+  label,
+  value,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+}): React.JSX.Element {
   return (
     <div className="flex items-center gap-2">
+      {icon}
       <span className="uppercase tracking-wide text-ink/50">{label}</span>
       <span className="text-ink">{value}</span>
     </div>

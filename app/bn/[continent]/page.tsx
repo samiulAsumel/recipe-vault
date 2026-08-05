@@ -59,7 +59,7 @@ export default async function ContinentHubPageBn({
             <Link
               key={country.slug}
               href={`/bn/${continent}/${country.slug}/`}
-              className="flex flex-col gap-2 border border-clay-line bg-parchment p-5 transition-colors hover:border-ink"
+              className="flex flex-col gap-2 border border-clay-line bg-parchment p-5 shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[var(--shadow-lift)]"
             >
               <span className="h-1 w-10" style={{ backgroundColor: "var(--accent-1)" }} />
               <h2 className="font-display text-xl text-ink">{country.name}</h2>

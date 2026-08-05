@@ -19,8 +19,8 @@ export function SiteFooter(): React.JSX.Element {
   };
 
   return (
-    <footer lang={locale === "bn" ? "bn" : undefined} className="border-t border-clay-line">
-      <div className="mx-auto max-w-6xl px-6 py-8 font-meta text-xs text-ink/60">
+    <footer lang={locale === "bn" ? "bn" : undefined} className="border-t border-clay-line bg-clay-line/5">
+      <div className="mx-auto max-w-6xl px-6 py-10 font-meta text-xs text-ink/50">
         <span onClick={handleClick}>{dict.footer.copyright(new Date().getFullYear())}</span>
       </div>
     </footer>

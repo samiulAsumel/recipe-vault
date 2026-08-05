@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import { Button } from "@/components/ui/Button";
 import { getDictionary, getLocaleFromPathname, withLocalePrefix } from "@/lib/i18n";
 
 export function SearchBar(): React.JSX.Element {
@@ -32,12 +33,13 @@ export function SearchBar(): React.JSX.Element {
         placeholder={dict.search.placeholder}
         className="w-full bg-transparent px-4 py-3 font-body text-sm text-ink placeholder:text-ink/40 focus:outline-none"
       />
-      <button
+      <Button
         type="submit"
-        className="border-l border-clay-line px-4 py-3 font-meta text-xs uppercase tracking-wide text-ink/70 hover:text-turmeric"
+        variant="primary"
+        className="rounded-none border-l border-clay-line px-5 py-3"
       >
         {dict.search.submit}
-      </button>
+      </Button>
     </form>
   );
 }

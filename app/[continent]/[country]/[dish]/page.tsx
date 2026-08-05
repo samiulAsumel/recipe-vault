@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { AtlasPin } from "@/components/atlas/AtlasPin";
 import { AtlasRule } from "@/components/atlas/AtlasRule";
+import { DishPlaceholderArt } from "@/components/dish/DishPlaceholderArt";
 import { PairedDrinkList } from "@/components/dish/PairedDrinkList";
 import { CookMode } from "@/components/recipe/CookMode";
 import { CookModeLauncher } from "@/components/recipe/CookModeLauncher";
@@ -118,7 +120,7 @@ export default async function DishPage({
             }}
           />
         )}
-        <main className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16">
+        <main className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16">
         <header className="flex flex-col gap-4">
           <div className="flex items-center gap-3 font-meta text-xs uppercase tracking-wide text-ink/50">
             <Link href={`/${dish.continentSlug}/`} className="hover:text-turmeric">
@@ -131,6 +133,20 @@ export default async function DishPage({
             >
               {dish.country}
             </Link>
+          </div>
+          <div className="relative aspect-[21/9] w-full overflow-hidden border border-clay-line">
+            {dish.heroImage ? (
+              <Image
+                src={dish.heroImage}
+                alt={dish.name}
+                fill
+                priority
+                sizes="(min-width: 1024px) 1100px, 100vw"
+                className="object-cover"
+              />
+            ) : (
+              <DishPlaceholderArt country={dish.country} regionSlug={dish.continentSlug} size="lg" />
+            )}
           </div>
           <div className="flex items-start justify-between gap-4">
             <h1 className="font-display text-4xl text-ink sm:text-5xl">{dish.name}</h1>
@@ -146,11 +162,11 @@ export default async function DishPage({
         <RecipeSummary dish={dish} />
 
         {dish.equipment.length > 0 && (
-          <section className="flex flex-col gap-2">
+          <section className="flex flex-col gap-3 bg-clay-line/5 p-5">
             <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">Equipment</h2>
             <ul className="flex flex-wrap gap-2 font-body text-sm text-ink/80">
               {dish.equipment.map((item) => (
-                <li key={item} className="border border-clay-line px-3 py-1">
+                <li key={item} className="border border-clay-line bg-parchment px-3 py-1">
                   {item}
                 </li>
               ))}
@@ -186,7 +202,7 @@ export default async function DishPage({
           </div>
         </div>
 
-        <section className="flex flex-col gap-4 border-t border-clay-line pt-8 sm:flex-row sm:gap-10">
+        <section className="flex flex-col gap-6 bg-clay-line/5 p-6 sm:flex-row sm:gap-10">
           <div className="flex-1">
             <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">Doneness</h2>
             <p className="mt-1 font-body text-sm text-ink/80">{dish.donenessSummary}</p>

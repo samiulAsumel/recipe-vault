@@ -38,7 +38,9 @@ export default async function HomePageBn(): Promise<React.JSX.Element> {
           {dict.home.exploreByContinent}
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {CONTINENTS.map((continent) => {
+          {CONTINENTS.filter(
+            (continent) => dishes.filter((dish) => dish.continentSlug === continent.slug).length > 0,
+          ).map((continent) => {
             const countryCount = countries.filter(
               (country) => country.continentSlug === continent.slug,
             ).length;
@@ -49,7 +51,7 @@ export default async function HomePageBn(): Promise<React.JSX.Element> {
                 key={continent.slug}
                 href={`/bn/${continent.slug}/`}
                 data-region={continent.slug}
-                className="flex flex-col gap-2 border border-clay-line bg-parchment p-5 transition-colors hover:border-ink"
+                className="flex flex-col gap-2 border border-clay-line bg-parchment p-5 shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[var(--shadow-lift)]"
               >
                 <span className="h-1 w-10" style={{ backgroundColor: "var(--accent-1)" }} />
                 <h3 className="font-display text-xl text-ink">
@@ -63,6 +65,19 @@ export default async function HomePageBn(): Promise<React.JSX.Element> {
             );
           })}
         </div>
+        {(() => {
+          const comingSoon = CONTINENTS.filter(
+            (continent) =>
+              dishes.filter((dish) => dish.continentSlug === continent.slug).length === 0,
+          );
+          if (comingSoon.length === 0) return null;
+          return (
+            <p className="font-meta text-xs uppercase tracking-wide text-ink/40">
+              {dict.home.comingSoonLabel}:{" "}
+              {comingSoon.map((continent) => localizeContinentName(continent.name, "bn")).join(", ")}
+            </p>
+          );
+        })()}
       </section>
 
       <section aria-labelledby="meal-times-heading" className="flex flex-col gap-4">

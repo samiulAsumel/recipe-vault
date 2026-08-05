@@ -6,6 +6,7 @@ import { CookStep } from "@/components/recipe/CookStep";
 import { useRecipeWorkspace } from "@/components/recipe/RecipeWorkspace";
 import { useCookTimers, type TimerEntry } from "@/components/recipe/useCookTimers";
 import { useWakeLock } from "@/components/recipe/useWakeLock";
+import { Button } from "@/components/ui/Button";
 import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
 import { primeTimerAudio, playTimerBeep } from "@/lib/recipe/beep";
 import { applyIngredientTranslations, buildIngredientMap } from "@/lib/recipe/instructions";
@@ -21,8 +22,6 @@ interface PersistedCookState {
 
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
-
-const navButtonClass = "border border-clay-line px-4 py-2 font-meta text-sm hover:border-ink disabled:opacity-30";
 
 interface CookModeProps {
   dish: FullRecipe;
@@ -323,21 +322,19 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
           </div>
 
           <footer className="sticky bottom-0 flex items-center justify-between gap-4 border-t border-clay-line bg-parchment px-6 py-4">
-            <button type="button" onClick={goPrevious} disabled={isAtStart} className={navButtonClass}>
+            <Button onClick={goPrevious} disabled={isAtStart}>
               {dict.cookMode.previous}
-            </button>
+            </Button>
             {isLastStep ? (
               <button
                 type="button"
                 onClick={finish}
-                className="border border-cardamom bg-cardamom/10 px-4 py-2 font-meta text-sm text-cardamom hover:border-ink"
+                className="border border-cardamom bg-cardamom/10 px-4 py-2 font-meta text-xs uppercase tracking-wide text-cardamom hover:border-ink"
               >
                 {dict.cookMode.finish}
               </button>
             ) : (
-              <button type="button" onClick={goNext} className={navButtonClass}>
-                {dict.cookMode.next}
-              </button>
+              <Button onClick={goNext}>{dict.cookMode.next}</Button>
             )}
           </footer>
         </div>

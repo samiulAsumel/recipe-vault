@@ -15,6 +15,11 @@ export const bn: Dictionary = {
   nav: {
     search: "অনুসন্ধান",
     about: "সম্পর্কে",
+    continents: "মহাদেশ",
+    browse: "ব্রাউজ করুন",
+    openMenu: "মেনু খুলুন",
+    closeMenu: "মেনু বন্ধ করুন",
+    switchLanguage: "ভাষা পরিবর্তন করুন",
   },
   footer: {
     copyright: (year) =>
@@ -28,6 +33,7 @@ export const bn: Dictionary = {
     browseByMealTime: "খাবারের সময় অনুসারে ব্রাউজ করুন",
     countryCount: () => "দেশ",
     dishCount: () => "পদ",
+    comingSoonLabel: "শীঘ্রই আসছে",
   },
   notFound: {
     title: "404",
@@ -152,6 +158,9 @@ export const bn: Dictionary = {
     mealTime: "খাবারের সময়",
     occasion: "উপলক্ষ",
     clearAll: "সব ফিল্টার মুছুন",
+    clearOccasion: "উপলক্ষের ফিল্টার মুছুন",
+    occasionSearchPlaceholder: "উপলক্ষ খুঁজুন…",
+    occasionNoMatches: "কোনো উপলক্ষ মিলছে না।",
   },
   dishGrid: {
     emptyDefault: "এখনও কোনো পদ মিলছে না।",
