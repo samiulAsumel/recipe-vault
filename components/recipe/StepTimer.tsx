@@ -17,7 +17,7 @@ interface StepTimerProps {
   onAddMinute: () => void;
 }
 
-const buttonClass = "border border-clay-line px-3 py-1 font-meta text-xs hover:border-ink";
+const buttonClass = "rounded-[5px] border border-clay-line px-3 py-1 font-meta text-xs hover:border-turmeric";
 
 export function StepTimer({
   durationMinutes,
@@ -42,8 +42,8 @@ export function StepTimer({
   return (
     <div
       role="timer"
-      className={`flex flex-wrap items-center gap-3 border px-4 py-3 font-meta text-sm ${
-        info.status === "done" ? "border-cardamom bg-cardamom/10 text-cardamom" : "border-clay-line text-ink"
+      className={`flex flex-wrap items-center gap-3 rounded-[var(--radius-card)] border px-4 py-3 font-meta text-sm ${
+        info.status === "done" ? "border-cardamom bg-cardamom/10 text-cardamom" : "border-clay-line bg-surface text-ink"
       }`}
     >
       <span className="min-w-[6.5rem] tabular-nums">

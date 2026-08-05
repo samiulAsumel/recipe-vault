@@ -14,7 +14,7 @@ export function DishGrid({ dishes, emptyMessage, locale = "en" }: DishGridProps)
 
   if (dishes.length === 0) {
     return (
-      <p className="border border-dashed border-clay-line p-8 text-center font-body text-sm text-ink/60">
+      <p className="rounded-[var(--radius-card)] border border-dashed border-clay-line p-8 text-center font-body text-sm text-ink/60">
         {message}
       </p>
     );

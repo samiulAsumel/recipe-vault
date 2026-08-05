@@ -31,7 +31,7 @@ export function DishPlaceholderArt({
         className="text-[var(--accent-1)] opacity-70"
       />
       <span
-        className={`font-meta uppercase tracking-wide text-ink/40 ${
+        className={`font-meta uppercase tracking-wide text-ink/50 ${
           size === "lg" ? "text-sm" : "text-xs"
         }`}
       >

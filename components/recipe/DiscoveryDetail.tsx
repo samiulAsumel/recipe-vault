@@ -84,7 +84,7 @@ export function DiscoveryDetail({
         </div>
       )}
 
-      <p className="border border-dashed border-clay-line p-8 text-center font-body text-sm text-ink/60">
+      <p className="rounded-[var(--radius-card)] border border-dashed border-clay-line p-8 text-center font-body text-sm text-ink/60">
         {dict.discoveryDetail.comingSoon}
       </p>
     </main>

@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { DishGrid } from "@/components/dish/DishGrid";
 import { FilterBar } from "@/components/filters/FilterBar";
+import { Button } from "@/components/ui/Button";
 import type { ContinentSlug } from "@/lib/constants";
 import { filterDishes, matchesFilters, type DishFilters } from "@/lib/data/filters";
 import { getDictionary, getLocaleFromPathname } from "@/lib/i18n";
@@ -118,7 +119,7 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
           event.preventDefault();
           submitQuery(queryInput);
         }}
-        className="flex w-full max-w-xl items-center border border-clay-line bg-parchment focus-within:border-ink"
+        className="flex w-full max-w-xl items-center overflow-hidden rounded-[5px] border border-clay-line bg-surface focus-within:border-turmeric"
       >
         <label htmlFor="search-results-query" className="sr-only">
           {dict.search.srLabel}
@@ -131,12 +132,9 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
           placeholder={dict.search.placeholder}
           className="w-full bg-transparent px-4 py-3 font-body text-sm text-ink placeholder:text-ink/40 focus:outline-none"
         />
-        <button
-          type="submit"
-          className="border-l border-clay-line px-4 py-3 font-meta text-xs uppercase tracking-wide text-ink/70 hover:text-turmeric"
-        >
+        <Button type="submit" variant="primary" className="rounded-none border-l border-clay-line px-5 py-3">
           {dict.search.submit}
-        </button>
+        </Button>
       </form>
 
       <FilterBar occasionOptions={occasionOptions} showContinent />

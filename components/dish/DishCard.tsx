@@ -29,7 +29,7 @@ export function DishCard({ dish, locale = "en" }: DishCardProps): React.JSX.Elem
     <Link
       href={href}
       data-region={dish.continentSlug}
-      className="group flex h-full flex-col border border-clay-line bg-parchment shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[var(--shadow-lift)]"
+      className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-clay-line bg-surface shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-turmeric hover:shadow-[var(--shadow-lift)]"
     >
       <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-clay-line">
         {dish.heroImage ? (

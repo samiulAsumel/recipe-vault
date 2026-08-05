@@ -134,7 +134,7 @@ export default async function DishPage({
               {dish.country}
             </Link>
           </div>
-          <div className="relative aspect-[21/9] w-full overflow-hidden border border-clay-line">
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[var(--radius-card)] border border-clay-line">
             {dish.heroImage ? (
               <Image
                 src={dish.heroImage}
@@ -162,11 +162,11 @@ export default async function DishPage({
         <RecipeSummary dish={dish} />
 
         {dish.equipment.length > 0 && (
-          <section className="flex flex-col gap-3 bg-clay-line/5 p-5">
+          <section className="flex flex-col gap-3 rounded-[var(--radius-card)] bg-clay-line/5 p-5">
             <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">Equipment</h2>
             <ul className="flex flex-wrap gap-2 font-body text-sm text-ink/80">
               {dish.equipment.map((item) => (
-                <li key={item} className="border border-clay-line bg-parchment px-3 py-1">
+                <li key={item} className="rounded-[5px] border border-clay-line bg-surface px-3 py-1">
                   {item}
                 </li>
               ))}
@@ -177,7 +177,7 @@ export default async function DishPage({
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[380px_1fr]">
           <aside className="flex flex-col gap-6 lg:sticky lg:top-20 lg:self-start">
             {dish.miseEnPlace.length > 0 && (
-              <div className="flex flex-col gap-2 border border-clay-line p-4">
+              <div className="flex flex-col gap-2 rounded-[var(--radius-card)] border border-clay-line bg-surface p-4">
                 <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">
                   Mise en place
                 </h2>
@@ -202,7 +202,7 @@ export default async function DishPage({
           </div>
         </div>
 
-        <section className="flex flex-col gap-6 bg-clay-line/5 p-6 sm:flex-row sm:gap-10">
+        <section className="flex flex-col gap-6 rounded-[var(--radius-card)] bg-clay-line/5 p-6 sm:flex-row sm:gap-10">
           <div className="flex-1">
             <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">Doneness</h2>
             <p className="mt-1 font-body text-sm text-ink/80">{dish.donenessSummary}</p>
@@ -218,7 +218,7 @@ export default async function DishPage({
         </section>
 
         {dish.chefTips.length > 0 && (
-          <section className="flex flex-col gap-2 border-l-2 border-turmeric bg-turmeric/5 p-5">
+          <section className="flex flex-col gap-2 rounded-r-[var(--radius-card)] border-l-2 border-turmeric bg-turmeric/5 p-5">
             <h2 className="font-meta text-xs uppercase tracking-wide text-turmeric">Chef&apos;s tips</h2>
             <ul className="flex flex-col gap-1.5 font-body text-sm text-ink/80">
               {dish.chefTips.map((tip) => (

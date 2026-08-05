@@ -143,13 +143,13 @@ function NavDropdown({ label, links }: { label: string; links: NavLink[] }): Rea
         <ChevronDownIcon size={12} className={open ? "rotate-180" : ""} />
       </button>
       {open && (
-        <div className="absolute left-0 top-full z-30 mt-2 grid w-56 grid-cols-1 gap-0.5 border border-clay-line bg-parchment p-2 shadow-[var(--shadow-lift)]">
+        <div className="absolute left-0 top-full z-30 mt-2 grid w-56 grid-cols-1 gap-0.5 rounded-[var(--radius-card)] border border-clay-line bg-surface p-2 shadow-[var(--shadow-lift)]">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="px-2 py-1.5 font-body text-sm text-ink/80 hover:bg-clay-line/10 hover:text-ink"
+              className="rounded-[5px] px-2 py-1.5 font-body text-sm text-ink/80 hover:bg-clay-line/20 hover:text-ink"
             >
               {link.label}
             </Link>
@@ -198,12 +198,12 @@ function MobileDrawer({
         aria-hidden
         tabIndex={-1}
         onClick={onClose}
-        className="absolute inset-0 bg-ink/40"
+        className="absolute inset-0 bg-black/60"
       />
       <div
         role="dialog"
         aria-modal="true"
-        className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col gap-6 overflow-y-auto border-l border-clay-line bg-parchment p-6"
+        className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col gap-6 overflow-y-auto border-l border-clay-line bg-surface p-6"
       >
         <div className="flex items-center justify-between">
           <span className="font-display text-lg text-ink">World Kitchen Atlas</span>

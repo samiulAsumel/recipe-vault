@@ -4,8 +4,11 @@ export type ButtonVariant = "primary" | "secondary" | "ghost";
 export type ButtonSize = "sm" | "md";
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
-  primary: "border border-ink bg-ink text-parchment hover:bg-ink/85",
-  secondary: "border border-clay-line text-ink hover:border-ink hover:shadow-[var(--shadow-card)]",
+  // Gold, not --ink (now the light cream text color) — the strongest CTA on
+  // a near-black ground is the one gold accent thread, with the page's dark
+  // background color reused as the on-gold text for contrast.
+  primary: "border border-turmeric bg-turmeric text-parchment hover:bg-turmeric/85",
+  secondary: "border border-clay-line text-ink hover:border-turmeric hover:shadow-[var(--shadow-card)]",
   ghost: "border border-transparent text-ink/70 hover:border-clay-line hover:text-ink",
 };
 
@@ -22,7 +25,7 @@ export function buttonClasses(
   className = "",
 ): string {
   return [
-    "inline-flex shrink-0 items-center justify-center gap-2 font-meta text-xs uppercase tracking-wide transition-colors duration-150",
+    "inline-flex shrink-0 items-center justify-center gap-2 rounded-[5px] font-meta text-xs uppercase tracking-wide transition-colors duration-150",
     "disabled:cursor-not-allowed disabled:opacity-40",
     VARIANT_CLASSES[variant],
     SIZE_CLASSES[size],

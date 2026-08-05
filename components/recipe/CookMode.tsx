@@ -192,7 +192,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
           </span>
         </div>
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 border border-clay-line px-3 py-1">
+          <div className="flex items-center gap-2 rounded-[var(--radius-card)] border border-clay-line px-3 py-1">
             <span className="font-meta text-xs uppercase tracking-wide text-ink/50">
               {dict.cookMode.servings}
             </span>
@@ -200,7 +200,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
               type="button"
               aria-label={dict.cookMode.decreaseServings}
               onClick={() => setServings(Math.max(1, servings - 1))}
-              className="flex h-6 w-6 items-center justify-center border border-clay-line hover:border-ink"
+              className="flex h-6 w-6 items-center justify-center rounded-[5px] border border-clay-line hover:border-turmeric"
             >
               −
             </button>
@@ -209,7 +209,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
               type="button"
               aria-label={dict.cookMode.increaseServings}
               onClick={() => setServings(servings + 1)}
-              className="flex h-6 w-6 items-center justify-center border border-clay-line hover:border-ink"
+              className="flex h-6 w-6 items-center justify-center rounded-[5px] border border-clay-line hover:border-turmeric"
             >
               +
             </button>
@@ -232,7 +232,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
                   type="button"
                   onClick={() => setCurrentIndex(-1)}
                   aria-current={isPrepPhase ? "step" : undefined}
-                  className={`w-full border px-3 py-2 text-left font-meta text-xs uppercase tracking-wide ${
+                  className={`w-full rounded-[5px] border px-3 py-2 text-left font-meta text-xs uppercase tracking-wide ${
                     isPrepPhase
                       ? "border-accent-1 bg-accent-1/10 text-ink"
                       : "border-transparent text-ink/60 hover:text-ink"
@@ -251,7 +251,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
                     type="button"
                     onClick={() => setCurrentIndex(index)}
                     aria-current={isActive ? "step" : undefined}
-                    className={`flex w-full items-center justify-between gap-2 border px-3 py-2 text-left font-body text-sm ${
+                    className={`flex w-full items-center justify-between gap-2 rounded-[5px] border px-3 py-2 text-left font-body text-sm ${
                       isActive
                         ? "border-accent-1 bg-accent-1/10 text-ink"
                         : "border-transparent text-ink/70 hover:text-ink"
@@ -329,7 +329,7 @@ export function CookMode({ dish }: CookModeProps): React.JSX.Element | null {
               <button
                 type="button"
                 onClick={finish}
-                className="border border-cardamom bg-cardamom/10 px-4 py-2 font-meta text-xs uppercase tracking-wide text-cardamom hover:border-ink"
+                className="rounded-[5px] border border-cardamom bg-cardamom/10 px-4 py-2 font-meta text-xs uppercase tracking-wide text-cardamom hover:border-ink"
               >
                 {dict.cookMode.finish}
               </button>

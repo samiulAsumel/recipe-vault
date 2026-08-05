@@ -27,7 +27,7 @@ export function RecipeSteps({ dish, locale = "en" }: RecipeStepsProps): React.JS
         const heatFlameNote = translatedStep?.heat?.flameNote ?? step.heat?.flameNote;
 
         return (
-          <li key={step.stepNumber} className="border border-clay-line p-5">
+          <li key={step.stepNumber} className="rounded-[var(--radius-card)] border border-clay-line bg-surface p-5">
             <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
               <h3 className="font-display text-lg text-ink">
                 <span className="mr-2 font-meta text-sm text-ink/40">

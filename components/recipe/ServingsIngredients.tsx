@@ -24,7 +24,7 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex items-center justify-between border border-clay-line px-4 py-3">
+      <div className="flex items-center justify-between rounded-[var(--radius-card)] border border-clay-line bg-surface px-4 py-3">
         <span className="font-meta text-xs uppercase tracking-wide text-ink/50">
           {dict.servingsIngredients.servings}
         </span>
@@ -33,7 +33,7 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
             type="button"
             aria-label={dict.servingsIngredients.decreaseServings}
             onClick={() => setServings(Math.max(1, servings - 1))}
-            className="flex h-7 w-7 items-center justify-center border border-clay-line font-meta text-ink hover:border-ink"
+            className="flex h-7 w-7 items-center justify-center rounded-[5px] border border-clay-line font-meta text-ink hover:border-turmeric"
           >
             −
           </button>
@@ -42,7 +42,7 @@ export function ServingsIngredients({ dish }: ServingsIngredientsProps): React.J
             type="button"
             aria-label={dict.servingsIngredients.increaseServings}
             onClick={() => setServings(servings + 1)}
-            className="flex h-7 w-7 items-center justify-center border border-clay-line font-meta text-ink hover:border-ink"
+            className="flex h-7 w-7 items-center justify-center rounded-[5px] border border-clay-line font-meta text-ink hover:border-turmeric"
           >
             +
           </button>

@@ -1,43 +1,53 @@
 @import "tailwindcss";
 
+/* "Midnight Spice" — the site's one committed look (not a light/dark toggle):
+   warm near-black ground, cream ink, and a single gold thread (--turmeric)
+   running through every rule, focus ring, and primary CTA. Token NAMES are
+   unchanged from the earlier parchment identity on purpose — --parchment now
+   holds a near-black value rather than being renamed, so every existing
+   bg-parchment/text-ink usage across the site repaints correctly without
+   touching each component. --surface is new: a step lighter than the page
+   background, for cards/panels that need to read as raised. */
 :root {
-  --ink: #241b14;
-  --parchment: #faf3e7;
-  --turmeric: #d89b2a;
-  --paprika: #b5482e;
-  --cardamom: #4a6357;
-  --clay-line: #c9b89a;
+  --ink: #f2e8d8;
+  --parchment: #120e0a;
+  --surface: #1c1611;
+  --turmeric: #d4a24c;
+  --paprika: #c1495a;
+  --cardamom: #4a8f6f;
+  --clay-line: #3a3226;
 
-  /* Default accent triad for pages with no continent context (home, search, about) */
-  --accent-1: #d89b2a;
-  --accent-2: #b5482e;
-  --accent-3: #4a6357;
+  /* Default accent triad for pages with no continent context (home, search,
+     about) — mirrors Asia's, the only populated continent today. */
+  --accent-1: #d4a24c;
+  --accent-2: #8b2635;
+  --accent-3: #1f4d3d;
 }
 
 [data-region="asia"] {
-  --accent-1: #2c4870;
-  --accent-2: #a83232;
-  --accent-3: #4a6b4e;
+  --accent-1: #d4a24c;
+  --accent-2: #8b2635;
+  --accent-3: #1f4d3d;
 }
 [data-region="europe"] {
-  --accent-1: #6b2737;
-  --accent-2: #6e7548;
+  --accent-1: #9b3a4c;
+  --accent-2: #8a7a3e;
   --accent-3: #a8863e;
 }
 [data-region="africa"] {
-  --accent-1: #b5651d;
-  --accent-2: #8b4a2b;
-  --accent-3: #2c4870;
+  --accent-1: #c17a3d;
+  --accent-2: #6b4226;
+  --accent-3: #8b4a2b;
 }
 [data-region="americas"] {
-  --accent-1: #a8283f;
+  --accent-1: #b5384a;
   --accent-2: #d4941e;
-  --accent-3: #3a8e8c;
+  --accent-3: #5c7a5e;
 }
 [data-region="oceania"] {
-  --accent-1: #a85a2e;
-  --accent-2: #1e5a6e;
-  --accent-3: #e8e0d0;
+  --accent-1: #c17a4a;
+  --accent-2: #2e7a94;
+  --accent-3: #e0a85e;
 }
 
 /* Bengali pages wrap their content in a [lang="bn"] element (see
@@ -54,6 +64,7 @@
 @theme inline {
   --color-ink: var(--ink);
   --color-parchment: var(--parchment);
+  --color-surface: var(--surface);
   --color-turmeric: var(--turmeric);
   --color-paprika: var(--paprika);
   --color-cardamom: var(--cardamom);
@@ -69,15 +80,20 @@
   --shadow-card: var(--shadow-card);
   --shadow-lift: var(--shadow-lift);
   --radius-card: var(--radius-card);
+  --radius-button: var(--radius-button);
 }
 
 /* Shared depth/shape scale — one source of truth for card hover treatments,
    used by DishCard, continent/country cards, and any future card-like link
-   so hover depth stays consistent instead of one-off shadow-[...] values. */
+   so hover depth stays consistent instead of one-off shadow-[...] values.
+   Shadows are black at higher opacity (rather than tinted to --ink, which is
+   now light) since depth on a near-black ground comes from darkening the
+   surrounding area, not from a colored tint. */
 :root {
-  --shadow-card: 0 1px 2px rgba(36, 27, 20, 0.05);
-  --shadow-lift: 0 10px 24px rgba(36, 27, 20, 0.14);
-  --radius-card: 2px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-lift: 0 14px 32px rgba(0, 0, 0, 0.55);
+  --radius-card: 8px;
+  --radius-button: 5px;
 }
 
 /* Section 14 cosmetic content-protection layer on body/img — deters casual
@@ -106,13 +122,15 @@ img {
   outline-offset: 2px;
 }
 
-/* Map-scale-bar rule: hairline + regular tick marks, used under page headers. */
+/* Map-scale-bar rule: hairline + regular tick marks, used under page headers.
+   Ticks run in a muted gold rather than --clay-line — a plain warm-gray tick
+   has too little contrast against the near-black ground to read at all. */
 .atlas-rule {
   height: 8px;
   background-image: repeating-linear-gradient(
     to right,
-    var(--clay-line) 0,
-    var(--clay-line) 1px,
+    color-mix(in srgb, var(--turmeric) 55%, transparent) 0,
+    color-mix(in srgb, var(--turmeric) 55%, transparent) 1px,
     transparent 1px,
     transparent 12px
   );

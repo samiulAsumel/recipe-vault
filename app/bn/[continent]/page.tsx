@@ -50,7 +50,7 @@ export default async function ContinentHubPageBn({
       </header>
 
       {countries.length === 0 ? (
-        <p className="border border-dashed border-clay-line p-8 text-center font-body text-sm text-ink/60">
+        <p className="rounded-[var(--radius-card)] border border-dashed border-clay-line p-8 text-center font-body text-sm text-ink/60">
           {dict.continent.noCountries(name)}
         </p>
       ) : (
@@ -59,7 +59,7 @@ export default async function ContinentHubPageBn({
             <Link
               key={country.slug}
               href={`/bn/${continent}/${country.slug}/`}
-              className="flex flex-col gap-2 border border-clay-line bg-parchment p-5 shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[var(--shadow-lift)]"
+              className="flex flex-col gap-2 rounded-[var(--radius-card)] border border-clay-line bg-surface p-5 shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-turmeric hover:shadow-[var(--shadow-lift)]"
             >
               <span className="h-1 w-10" style={{ backgroundColor: "var(--accent-1)" }} />
               <h2 className="font-display text-xl text-ink">{country.name}</h2>

@@ -20,7 +20,7 @@ export function SearchBar(): React.JSX.Element {
         const trimmed = query.trim();
         router.push(trimmed ? `${searchPath}?q=${encodeURIComponent(trimmed)}` : searchPath);
       }}
-      className="flex w-full max-w-xl items-center border border-clay-line bg-parchment focus-within:border-ink"
+      className="flex w-full max-w-xl items-center overflow-hidden rounded-[5px] border border-clay-line bg-surface focus-within:border-turmeric"
     >
       <label htmlFor="site-search" className="sr-only">
         {dict.search.srLabel}

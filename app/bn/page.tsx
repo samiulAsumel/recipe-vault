@@ -51,7 +51,7 @@ export default async function HomePageBn(): Promise<React.JSX.Element> {
                 key={continent.slug}
                 href={`/bn/${continent.slug}/`}
                 data-region={continent.slug}
-                className="flex flex-col gap-2 border border-clay-line bg-parchment p-5 shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[var(--shadow-lift)]"
+                className="flex flex-col gap-2 rounded-[var(--radius-card)] border border-clay-line bg-surface p-5 shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:border-turmeric hover:shadow-[var(--shadow-lift)]"
               >
                 <span className="h-1 w-10" style={{ backgroundColor: "var(--accent-1)" }} />
                 <h3 className="font-display text-xl text-ink">
@@ -89,7 +89,7 @@ export default async function HomePageBn(): Promise<React.JSX.Element> {
             <Link
               key={mealTime.slug}
               href={`/bn/${mealTime.slug}/`}
-              className="border border-clay-line px-4 py-2 font-body text-sm text-ink/80 hover:border-ink hover:text-ink"
+              className="rounded-[5px] border border-clay-line px-4 py-2 font-body text-sm text-ink/80 hover:border-turmeric hover:text-ink"
             >
               {MEAL_TIME_LABELS.bn[mealTime.name]}
             </Link>
@@ -98,7 +98,7 @@ export default async function HomePageBn(): Promise<React.JSX.Element> {
             <Link
               key={occasion.slug}
               href={`/bn/${occasion.slug}/`}
-              className="border border-clay-line px-4 py-2 font-body text-sm text-ink/80 hover:border-ink hover:text-ink"
+              className="rounded-[5px] border border-clay-line px-4 py-2 font-body text-sm text-ink/80 hover:border-turmeric hover:text-ink"
             >
               {localizeOccasionName(occasion.name, "bn")}
             </Link>

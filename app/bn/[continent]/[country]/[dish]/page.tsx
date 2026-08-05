@@ -153,7 +153,7 @@ export default async function DishPageBn({
               {localizeCountryName(dish.country, "bn")}
             </Link>
           </div>
-          <div className="relative aspect-[21/9] w-full overflow-hidden border border-clay-line">
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[var(--radius-card)] border border-clay-line">
             {dish.heroImage ? (
               <Image
                 src={dish.heroImage}
@@ -190,13 +190,13 @@ export default async function DishPageBn({
         <RecipeSummary dish={dish} locale="bn" />
 
         {equipment.length > 0 && (
-          <section className="flex flex-col gap-3 bg-clay-line/5 p-5">
+          <section className="flex flex-col gap-3 rounded-[var(--radius-card)] bg-clay-line/5 p-5">
             <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">
               {dict.dish.equipment}
             </h2>
             <ul className="flex flex-wrap gap-2 font-body text-sm text-ink/80">
               {equipment.map((item) => (
-                <li key={item} className="border border-clay-line bg-parchment px-3 py-1">
+                <li key={item} className="rounded-[5px] border border-clay-line bg-surface px-3 py-1">
                   {item}
                 </li>
               ))}
@@ -207,7 +207,7 @@ export default async function DishPageBn({
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[380px_1fr]">
           <aside className="flex flex-col gap-6 lg:sticky lg:top-20 lg:self-start">
             {miseEnPlace.length > 0 && (
-              <div className="flex flex-col gap-2 border border-clay-line p-4">
+              <div className="flex flex-col gap-2 rounded-[var(--radius-card)] border border-clay-line bg-surface p-4">
                 <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">
                   {dict.dish.miseEnPlace}
                 </h2>
@@ -232,7 +232,7 @@ export default async function DishPageBn({
           </div>
         </div>
 
-        <section className="flex flex-col gap-6 bg-clay-line/5 p-6 sm:flex-row sm:gap-10">
+        <section className="flex flex-col gap-6 rounded-[var(--radius-card)] bg-clay-line/5 p-6 sm:flex-row sm:gap-10">
           <div className="flex-1">
             <h2 className="font-meta text-xs uppercase tracking-wide text-ink/50">
               {dict.dish.doneness}
@@ -254,7 +254,7 @@ export default async function DishPageBn({
         </section>
 
         {chefTips.length > 0 && (
-          <section className="flex flex-col gap-2 border-l-2 border-turmeric bg-turmeric/5 p-5">
+          <section className="flex flex-col gap-2 rounded-r-[var(--radius-card)] border-l-2 border-turmeric bg-turmeric/5 p-5">
             <h2 className="font-meta text-xs uppercase tracking-wide text-turmeric">
               {dict.dish.chefTips}
             </h2>

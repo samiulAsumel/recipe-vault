@@ -76,7 +76,7 @@ export function FilterBar({
     dietaryValues.length + mealValues.length + occasionValues.length + continentValues.length > 0;
 
   return (
-    <div className="sticky top-0 z-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-clay-line bg-parchment/95 py-4 backdrop-blur-sm">
+    <div className="sticky top-0 z-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-clay-line bg-parchment/90 py-4 backdrop-blur-sm">
       {showContinent && (
         <FilterGroup
           legend={dict.filters.continent}
@@ -162,7 +162,7 @@ function FilterGroup({ legend, options, active, onToggle }: FilterGroupProps): R
             type="button"
             aria-pressed={isActive}
             onClick={() => onToggle(option.value)}
-            className={`border px-3 py-1 font-body text-sm transition-colors ${
+            className={`rounded-[5px] border px-3 py-1 font-body text-sm transition-colors ${
               isActive
                 ? "border-accent-1 bg-accent-1/10 text-ink"
                 : "border-clay-line text-ink/70 hover:border-ink"
@@ -245,7 +245,7 @@ function OccasionFilterPopover({
         <div
           role="dialog"
           aria-label={legend}
-          className="absolute left-0 top-full z-20 mt-2 w-72 border border-clay-line bg-parchment shadow-[var(--shadow-lift)]"
+          className="absolute left-0 top-full z-20 mt-2 w-72 overflow-hidden rounded-[var(--radius-card)] border border-clay-line bg-surface shadow-[var(--shadow-lift)]"
         >
           <div className="border-b border-clay-line p-2">
             <input
@@ -269,13 +269,13 @@ function OccasionFilterPopover({
                     type="button"
                     aria-pressed={isActive}
                     onClick={() => onToggle(option.value)}
-                    className={`flex w-full items-center gap-2 px-2 py-1.5 text-left font-body text-sm hover:bg-clay-line/10 ${
+                    className={`flex w-full items-center gap-2 rounded-[5px] px-2 py-1.5 text-left font-body text-sm hover:bg-clay-line/20 ${
                       isActive ? "text-ink" : "text-ink/70"
                     }`}
                   >
                     <span
                       aria-hidden
-                      className={`h-3.5 w-3.5 shrink-0 border ${
+                      className={`h-3.5 w-3.5 shrink-0 rounded-[3px] border ${
                         isActive ? "border-accent-1 bg-accent-1" : "border-clay-line"
                       }`}
                     />

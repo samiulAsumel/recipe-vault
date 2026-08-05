@@ -38,12 +38,12 @@ export function PairedDrinkList({
             {href ? (
               <Link
                 href={href}
-                className="border border-clay-line px-4 py-2 font-body text-sm text-ink/80 hover:border-ink hover:text-ink"
+                className="rounded-[5px] border border-clay-line px-4 py-2 font-body text-sm text-ink/80 hover:border-turmeric hover:text-ink"
               >
                 {label}
               </Link>
             ) : (
-              <span className="border border-dashed border-clay-line px-4 py-2 font-body text-sm text-ink/60">
+              <span className="rounded-[5px] border border-dashed border-clay-line px-4 py-2 font-body text-sm text-ink/60">
                 {label}
               </span>
             )}
