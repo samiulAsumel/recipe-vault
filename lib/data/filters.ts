@@ -20,9 +20,20 @@ function matchesMealTime(entry: DishEntry, mealTime: MealTime[] | undefined): bo
   return mealTime.some((meal) => entry.mealTime.includes(meal));
 }
 
+/** Occasion is free-form per-dish content (Section 4) entered across many
+ * recipe files over time, so the same real-world occasion sometimes ends up
+ * spelled with different casing/whitespace between dishes (e.g. "Everyday
+ * Lunch" vs "Everyday lunch") — match case/whitespace-insensitively so a
+ * selected tag matches every dish that means it, not just the one dish that
+ * happens to share its exact spelling. */
 function matchesOccasion(entry: DishEntry, occasion: Occasion[] | undefined): boolean {
   if (!occasion || occasion.length === 0) return true;
-  return occasion.some((tag) => entry.occasion.includes(tag));
+  const selected = new Set(occasion.map(normalizeOccasionTag));
+  return entry.occasion.some((tag) => selected.has(normalizeOccasionTag(tag)));
+}
+
+function normalizeOccasionTag(tag: string): string {
+  return tag.trim().toLowerCase();
 }
 
 function matchesDietary(entry: DishEntry, dietary: Array<keyof DietaryFlags> | undefined): boolean {
@@ -57,5 +68,5 @@ const FESTIVAL_OCCASION_TAGS = new Set(["festival", "festival food"]);
  * rather than requiring exact-string discipline from every future content addition.
  */
 export function isFestivalDish(entry: DishEntry): boolean {
-  return entry.occasion.some((tag) => FESTIVAL_OCCASION_TAGS.has(tag.toLowerCase()));
+  return entry.occasion.some((tag) => FESTIVAL_OCCASION_TAGS.has(normalizeOccasionTag(tag)));
 }

@@ -38,11 +38,18 @@ export function FilteredDishes({
   const filtered = useMemo(() => filterDishes(dishes, filters), [dishes, filters]);
 
   const occasionOptions = useMemo(() => {
-    const tags = new Set<string>();
+    // Keyed case/whitespace-insensitively so content drift like "Everyday Lunch"
+    // vs "Everyday lunch" across recipe files collapses into one selectable
+    // option instead of splitting the same real-world occasion into two —
+    // see the matching normalization in lib/data/filters.ts.
+    const byNormalizedTag = new Map<string, string>();
     for (const dish of dishes) {
-      for (const tag of dish.occasion) tags.add(tag);
+      for (const tag of dish.occasion) {
+        const key = tag.trim().toLowerCase();
+        if (!byNormalizedTag.has(key)) byNormalizedTag.set(key, tag.trim());
+      }
     }
-    return [...tags].sort();
+    return [...byNormalizedTag.values()].sort((a, b) => a.localeCompare(b));
   }, [dishes]);
 
   return (

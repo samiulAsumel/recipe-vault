@@ -92,11 +92,17 @@ export function SearchResults({ dishes }: SearchResultsProps): React.JSX.Element
   }, [dishes, filters, fuse, query, locale]);
 
   const occasionOptions = useMemo(() => {
-    const tags = new Set<string>();
+    // See the identical normalization in FilteredDishes.tsx / lib/data/filters.ts —
+    // occasion is free-form content, so the same real-world occasion can appear
+    // with different casing/whitespace across recipe files.
+    const byNormalizedTag = new Map<string, string>();
     for (const dish of dishes) {
-      for (const tag of dish.occasion) tags.add(tag);
+      for (const tag of dish.occasion) {
+        const key = tag.trim().toLowerCase();
+        if (!byNormalizedTag.has(key)) byNormalizedTag.set(key, tag.trim());
+      }
     }
-    return [...tags].sort();
+    return [...byNormalizedTag.values()].sort((a, b) => a.localeCompare(b));
   }, [dishes]);
 
   function submitQuery(next: string): void {
